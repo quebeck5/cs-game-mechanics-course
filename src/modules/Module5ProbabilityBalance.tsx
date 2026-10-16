@@ -3,14 +3,12 @@ import { PageId } from '../data/courseData';
 import { courseAudio } from '../audio/soundEngine';
 import {
   Dices,
-  BarChart3,
   CheckCircle2,
   ArrowRight,
   ArrowLeft,
   Sparkles,
   Play,
-  Sliders,
-  Cpu
+  Sliders
 } from 'lucide-react';
 import { Module5Content } from '../content/Module5Content';
 
@@ -149,7 +147,6 @@ export const Module5ProbabilityBalance: React.FC<Module5Props> = ({
   const runMonteCarloBots = () => {
     courseAudio.playClick(720);
 
-    // Compute power indices with Rock-Paper-Scissors interaction + stochastic variance
     const vPower = vanguardHp * 0.92;
     const rPower = 95 + rangerCritPct * 1.48;
     const aPower = 72 + arcanistBurst * 1.42;
@@ -180,7 +177,6 @@ export const Module5ProbabilityBalance: React.FC<Module5Props> = ({
       runsCompleted: prev.runsCompleted + totalMatches,
     }));
 
-    // Check if all 3 classes are within Nash target band [30%, 37%]
     if (
       vPct >= 30 &&
       vPct <= 37 &&
@@ -203,94 +199,96 @@ export const Module5ProbabilityBalance: React.FC<Module5Props> = ({
     simResults.arcanistWinPct <= 37;
 
   return (
-    <div className="space-y-12 pb-16">
+    <div className="space-y-8 pb-12">
       {/* Header */}
-      <header className="space-y-3 border-b border-slate-800 pb-6">
-        <div className="flex flex-wrap items-center gap-3">
-          <span className="rounded-md bg-gradient-to-r from-violet-500 to-fuchsia-600 px-3 py-1 text-xs font-mono font-bold text-white">
-            MODULE 05 • HOURS 8:00 – 10:00
+      <header className="border-b border-zinc-200 pb-5 space-y-2">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="rounded bg-blue-50 border border-blue-200 px-2 py-0.5 text-xs font-mono font-bold text-blue-700">
+            MODULE 05 • ESTIMATED STUDY TIME: 2.0 HOURS
           </span>
-          <span className="text-xs font-mono text-slate-400">
-            Markov PRD + Shuffle Bags + Game Theory Nash Equilibrium + Monte Carlo Telemetry
+          <span className="text-xs font-mono text-zinc-500">
+            Markov PRD, Shuffle Bags, Game Theory &amp; Monte Carlo Telemetry
           </span>
         </div>
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-          Probability, Game Theory, Telemetry & Automated Balancing
+        <h1 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
+          Probability Architecture, Game Theory &amp; Automated Telemetry Balancing
         </h1>
-        <p className="text-slate-300 max-w-4xl leading-relaxed">
-          Why do players rage-quit when a 90% accuracy shot misses twice in <em>XCOM</em>, or call your critical-hit system "bugged" when you used standard `Math.random()`?
-          In this final module, we master <strong>Psychological vs. Mathematical Randomness</strong>, <strong>Markov Pseudo-Random Distributions (PRD)</strong>, and <strong>Monte Carlo Bot Playtesting</strong>.
+        <p className="text-zinc-700 text-sm sm:text-base leading-relaxed">
+          Why do players complain of unfairness when a 90% accuracy attack misses twice consecutively, or accuse an RNG of being "broken" when it passes strict randomness tests?
+          This final module bridges the divide between mathematical stochastics and human cognitive psychology using <strong>Input vs. Output Randomness</strong>, <strong>Markov Pseudo-Random Distributions (PRD)</strong>, and <strong>Automated Headless Simulation Pipelines</strong>.
         </p>
       </header>
 
       {/* Comprehensive Academic Textbook Chapter */}
-      <section className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
+      <section>
         <Module5Content />
       </section>
 
-      {/* Section 5.1: True Random vs. PRD vs. Shuffle Bags */}
-      <section className="space-y-6">
-        <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-violet-400">
-          <Dices className="h-4 w-4" />
-          <span>5.1 Stochastic Engineering — Shaping Variance Without Altering Expected Value</span>
+      {/* Section 5.1: Stochastic Engineering */}
+      <section className="space-y-5">
+        <div>
+          <div className="text-xs font-semibold uppercase tracking-wider text-blue-700 flex items-center gap-1.5">
+            <Dices className="h-4 w-4" />
+            <span>5.1 Stochastic Engineering &mdash; Shaping Variance While Preserving Expected Value</span>
+          </div>
+          <h2 className="text-xl font-bold text-zinc-950 mt-1">
+            Why Independent Bernoulli Trials Feel Unfair &mdash; And How PRD Solves It
+          </h2>
         </div>
-        <h2 className="text-2xl font-bold text-white">
-          Why True i.i.d. Bernoulli Trials Feel Broken—And How PRD & Shuffle Bags Fix It
-        </h2>
 
-        <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-          In an independent Bernoulli process with $p = 0.25$ (25% crit rate), the probability of missing 10 times in a row is $(0.75)^{10} \approx 5.6\%$. Over a 20-minute match with 300 swings, a player is almost guaranteed to suffer a 12-to-16 miss drought, followed by 3 crits in a row.
-          To preserve $E[X] = 0.25$ while eliminating extreme tail streaks, game engines use two algorithms:
+        <p className="text-sm text-zinc-700 leading-relaxed">
+          In an independent Bernoulli process with p = 0.25 (25% crit rate), the probability of missing 10 consecutive attacks is (0.75)<sup>10</sup> &asymp; 5.6%.
+          Over a typical 20-minute match involving 300 attacks, a player is almost mathematically guaranteed to suffer an excruciating 12-to-16 miss drought.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs">
-          <div className="rounded-xl border border-rose-500/30 bg-rose-950/20 p-4 space-y-1.5">
-            <div className="text-rose-400 font-bold">1. TRUE RNG (Memoryless i.i.d.)</div>
-            <div className="text-white text-sm">P(hit | N misses) = p = 0.25</div>
-            <p className="text-slate-300 font-sans">
-              Geometric distribution with long right tail. Produces frustratingly long dry spells and bursty back-to-back crits on frame 1.
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+            <div className="text-red-700 font-bold">1. TRUE RNG (Memoryless i.i.d.)</div>
+            <div className="text-sm font-bold text-zinc-950">P(hit | N misses) = p = 0.25</div>
+            <p className="text-zinc-600 font-sans">
+              Geometric distribution with heavy right tail. Produces frustrating dry spells and bursty first-hit critical streaks.
             </p>
           </div>
 
-          <div className="rounded-xl border border-violet-500/30 bg-violet-950/20 p-4 space-y-1.5">
-            <div className="text-violet-400 font-bold">2. MARKOV PRD (Dota 2 / Warcraft 3)</div>
-            <div className="text-white text-sm">P(N) = min(1.0, C · N) (C ≈ 0.085)</div>
-            <p className="text-slate-300 font-sans">
-              Starts at 8.5% on swing 1 and increments by +8.5% per miss until guaranteed at $N=12$. Prevents both 1st-hit luck bursts and 15-miss droughts!
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+            <div className="text-blue-700 font-bold">2. MARKOV PRD (Valve / Blizzard)</div>
+            <div className="text-sm font-bold text-zinc-950">P(N) = min(1.0, C &middot; N) (C &asymp; 0.085)</div>
+            <p className="text-zinc-600 font-sans">
+              Starts at 8.5% on hit 1 and increments by +8.5% per miss until reaching 100% at N=12. Eliminates both lucky openers and 15-miss droughts.
             </p>
           </div>
 
-          <div className="rounded-xl border border-emerald-500/30 bg-emerald-950/20 p-4 space-y-1.5">
-            <div className="text-emerald-400 font-bold">3. SHUFFLE BAG (Tetris 7-Bag)</div>
-            <div className="text-white text-sm">Sampling Without Replacement</div>
-            <p className="text-slate-300 font-sans">
-              Places exact quotas (e.g., 2 Crits + 6 Misses) into an array, Fisher-Yates shuffles it, and pops until empty. Strict hard upper bound on variance.
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+            <div className="text-emerald-700 font-bold">3. SHUFFLE BAG (Tetris 7-Bag)</div>
+            <div className="text-sm font-bold text-zinc-950">Sampling Without Replacement</div>
+            <p className="text-zinc-600 font-sans">
+              Places exact quotas into an array, Fisher-Yates shuffles it, and dispenses items sequentially. Enforces hard mathematical variance bounds.
             </p>
           </div>
         </div>
 
-        {/* Interactive Diagram 5.1: 1,000-Roll RNG Comparator */}
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-6 space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
+        {/* Interactive Diagram 5.1 */}
+        <div className="border border-zinc-200 bg-white rounded-lg p-5 space-y-5 shadow-sm">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-zinc-200 pb-3">
             <div>
-              <span className="text-xs font-mono uppercase text-violet-400">Interactive Diagram 5.1</span>
-              <h3 className="text-lg font-bold text-white">1,000-Trial Streak Histogram: True RNG vs. Markov PRD ($E[X] = 25\%$)</h3>
+              <span className="text-xs font-mono uppercase text-blue-700 font-semibold">Interactive Figure 5.1</span>
+              <h3 className="text-base font-bold text-zinc-950">Streak Histogram: True RNG vs. Markov PRD (E[X] = 25%)</h3>
             </div>
             <button
               onClick={runRngComparison}
-              className="inline-flex items-center gap-2 rounded-xl bg-violet-600 hover:bg-violet-500 px-4 py-2 text-xs font-mono font-bold text-white shadow cursor-pointer"
+              className="inline-flex items-center gap-1.5 rounded bg-blue-600 hover:bg-blue-700 px-3.5 py-1.5 text-xs font-medium text-white shadow-sm cursor-pointer"
             >
-              <Dices className="h-4 w-4" />
+              <Dices className="h-3.5 w-3.5" />
               <span>Simulate 1,000 New Attacks ({rngTrialsDone} run)</span>
             </button>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-            <div className="lg:col-span-7 rounded-xl border border-slate-800 bg-slate-950 p-4">
-              <div className="text-xs font-mono text-slate-400 mb-3">
-                Distribution of Consecutive Misses Before Each Crit (Buckets: 0 misses .. 11+ misses)
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center">
+            <div className="lg:col-span-7 border border-zinc-200 bg-zinc-50 rounded-lg p-4">
+              <div className="text-xs font-mono text-zinc-600 mb-2 font-semibold">
+                Distribution of Consecutive Misses Before Each Success (Buckets: 0 .. 11+ misses)
               </div>
-              <div className="grid grid-cols-12 gap-1.5 items-end h-44 pt-4 px-2 border-b border-slate-800">
+              <div className="grid grid-cols-12 gap-1.5 items-end h-40 pt-4 px-2 border-b border-zinc-200">
                 {rngStats.trueStreakHist.map((trueCount, idx) => {
                   const prdCount = rngStats.prdStreakHist[idx] || 0;
                   const maxH = 75;
@@ -298,110 +296,111 @@ export const Module5ProbabilityBalance: React.FC<Module5Props> = ({
                     <div key={idx} className="flex flex-col items-center gap-1 h-full justify-end">
                       <div className="w-full flex gap-0.5 items-end justify-center h-full">
                         <div
-                          className="w-2.5 bg-rose-500/80 rounded-t transition-all duration-300"
+                          className="w-2.5 bg-red-400 rounded-t transition-all duration-300"
                           style={{ height: `${Math.min(100, (trueCount / maxH) * 100)}%` }}
                           title={`True RNG: ${trueCount}`}
                         />
                         <div
-                          className="w-2.5 bg-emerald-400 rounded-t transition-all duration-300"
+                          className="w-2.5 bg-blue-600 rounded-t transition-all duration-300"
                           style={{ height: `${Math.min(100, (prdCount / maxH) * 100)}%` }}
                           title={`Markov PRD: ${prdCount}`}
                         />
                       </div>
-                      <span className="text-[10px] font-mono text-slate-400">{idx === 11 ? '11+' : idx}</span>
+                      <span className="text-[10px] font-mono text-zinc-500">{idx === 11 ? '11+' : idx}</span>
                     </div>
                   );
                 })}
               </div>
-              <div className="flex justify-between text-[11px] font-mono text-slate-400 pt-2">
-                <span className="text-rose-400">■ Rose: True Math.random() (Heavy Tail)</span>
-                <span className="text-emerald-400">■ Emerald: Markov PRD (Bell-Concentrated Around 3 Misses)</span>
+              <div className="flex justify-between text-[11px] font-mono text-zinc-600 pt-2">
+                <span className="text-red-700">&bull; Red: True Math.random() (Heavy Right Tail)</span>
+                <span className="text-blue-700">&bull; Blue: Markov PRD (Concentrated Near Mean)</span>
               </div>
             </div>
 
             <div className="lg:col-span-5 space-y-3">
-              <div className="rounded-xl border border-slate-800 bg-slate-950 p-4 space-y-2 font-mono text-xs">
-                <div className="text-slate-400">EMPIRICAL RESULTS OVER 1,000 SWINGS:</div>
-                <div className="flex justify-between py-1 border-b border-slate-800/80">
-                  <span className="text-rose-300">True RNG Worst Drought:</span>
-                  <strong className="text-white">{rngStats.trueRngMaxMissStreak} misses in a row ({rngStats.trueRngCrits} crits)</strong>
+              <div className="rounded-lg border border-zinc-200 bg-zinc-50 p-3.5 space-y-2 font-mono text-xs">
+                <div className="text-zinc-600 font-semibold">EMPIRICAL RESULTS OVER 1,000 SWINGS:</div>
+                <div className="flex justify-between py-1 border-b border-zinc-200">
+                  <span className="text-red-700">True RNG Worst Drought:</span>
+                  <strong className="text-zinc-950">{rngStats.trueRngMaxMissStreak} misses ({rngStats.trueRngCrits} crits)</strong>
                 </div>
-                <div className="flex justify-between py-1 border-b border-slate-800/80">
-                  <span className="text-emerald-300">Markov PRD Worst Drought:</span>
-                  <strong className="text-white">{rngStats.prdMaxMissStreak} misses in a row ({rngStats.prdCrits} crits)</strong>
+                <div className="flex justify-between py-1 border-b border-zinc-200">
+                  <span className="text-blue-700">Markov PRD Worst Drought:</span>
+                  <strong className="text-zinc-950">{rngStats.prdMaxMissStreak} misses ({rngStats.prdCrits} crits)</strong>
                 </div>
                 <div className="flex justify-between py-1">
-                  <span className="text-cyan-300">8-Card Shuffle Bag Drought:</span>
-                  <strong className="text-white">{rngStats.bagMaxMissStreak} misses in a row ({rngStats.bagCrits} crits)</strong>
+                  <span className="text-emerald-700">8-Card Shuffle Bag Drought:</span>
+                  <strong className="text-zinc-950">{rngStats.bagMaxMissStreak} misses ({rngStats.bagCrits} crits)</strong>
                 </div>
               </div>
 
-              <div className="rounded-xl bg-slate-950 border border-slate-800 p-4 text-xs text-slate-300 leading-relaxed">
-                <strong className="text-violet-300 font-mono">Input vs. Output Randomness:</strong> Use high variance for <em>Input Randomness</em> (procedural map/card dealing <strong>before</strong> the player decides), and tight PRD/bounded variance for <em>Output Randomness</em> (rolling after the player commits).
+              <div className="rounded-lg bg-white border border-zinc-200 p-3 text-xs text-zinc-700 leading-relaxed">
+                <strong className="text-zinc-950 font-mono">Input vs. Output Randomness:</strong> Accept higher variance for <em>Input Randomness</em> (randomized floor layouts before tactical decisions), but enforce tight PRD or shuffle bags for <em>Output Randomness</em> (stochastic execution after player commitment).
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Playable Lab 5: Capstone Monte Carlo Balance & Telemetry Studio */}
-      <section className="rounded-2xl border-2 border-violet-500/40 bg-gradient-to-b from-slate-900 to-slate-950 p-6 sm:p-8 space-y-6 shadow-2xl">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+      {/* Playable Lab 5: Headless Monte Carlo Balance Studio */}
+      <section className="border border-zinc-200 bg-white rounded-lg p-5 space-y-5 shadow-sm">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-zinc-200 pb-3">
           <div>
-            <div className="inline-flex items-center gap-2 text-xs font-mono uppercase text-violet-400 font-bold">
+            <div className="inline-flex items-center gap-1.5 text-xs font-mono uppercase text-blue-700 font-bold">
               <Sparkles className="h-4 w-4" />
-              <span>Playable Engineering Lab 05 • "Headless Monte Carlo Balance Studio"</span>
+              <span>Laboratory 5.1 &bull; Capstone Engineering Lab</span>
             </div>
-            <h2 className="text-2xl font-bold text-white mt-1">
-              Tune Asymmetric Class Parameters & Run 1,000 Automated Bot Matches
+            <h2 className="text-lg font-bold text-zinc-950 mt-0.5">
+              Headless Monte Carlo Balance Studio: 1,000 Automated Match Simulations
             </h2>
           </div>
 
           <div className="flex items-center gap-3">
             {isLabDone || isMetaBalanced ? (
-              <span className="inline-flex items-center gap-1.5 rounded-xl bg-emerald-500/20 border border-emerald-500/40 px-3.5 py-2 text-xs font-mono font-bold text-emerald-300">
-                <CheckCircle2 className="h-4 w-4" /> Nash Equilibrium Achieved (All 30–37%)
+              <span className="inline-flex items-center gap-1 rounded bg-emerald-50 border border-emerald-300 px-3 py-1.5 text-xs font-mono font-semibold text-emerald-800">
+                <CheckCircle2 className="h-3.5 w-3.5" /> Nash Equilibrium Achieved (All 30&ndash;37%)
               </span>
             ) : (
-              <span className="inline-flex items-center gap-1.5 rounded-xl bg-amber-500/10 border border-amber-500/30 px-3.5 py-2 text-xs font-mono text-amber-300">
-                Goal: Balance all 3 classes into 30%–37% Win Rate
+              <span className="inline-flex items-center gap-1 rounded bg-amber-50 border border-amber-300 px-3 py-1.5 text-xs font-mono text-amber-900">
+                Goal: Balance all 3 classes into 30%&ndash;37% Win Rate
               </span>
             )}
           </div>
         </div>
 
-        <p className="text-sm text-slate-300 leading-relaxed">
-          In studio production, you don't guess balance numbers—you write a headless combat loop and run <strong>1,000 Monte Carlo bot matches</strong> in 10 milliseconds.
-          Currently, the <strong>Vanguard Tank</strong> dominates ($44.2\%$ win rate) while the <strong>Arcanist</strong> is underpowered ($20.0\%$). Tune the 3 class parameters below and click <strong>"Run 1,000 Headless Bot Matches"</strong> until all three sit inside the $30\%–37\%$ Nash Equilibrium corridor!
+        <p className="text-sm text-zinc-700 leading-relaxed">
+          Commercial game studios evaluate multiplayer balance through automated headless simulation loops running thousands of heuristic matches.
+          Currently, the Vanguard Tank dominates the metagame (44.2% win rate) while the Arcanist lags (20.0%).
+          Tune the class parameters and execute <strong>1,000 Headless Bot Matches</strong> until all three classes sit within the 30%&ndash;37% Nash Equilibrium corridor.
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-          {/* Win-Rate Telemetry Dashboard */}
-          <div className="lg:col-span-7 rounded-xl border border-slate-800 bg-slate-950 p-5 space-y-5">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center">
+          {/* Win-Rate Dashboard */}
+          <div className="lg:col-span-7 border border-zinc-200 bg-zinc-50 rounded-lg p-4 space-y-4">
             <div className="flex items-center justify-between text-xs font-mono">
-              <span className="text-slate-400">MONTE CARLO TELEMETRY ({simResults.runsCompleted.toLocaleString()} MATCHES SIMULATED)</span>
-              <span className="text-emerald-400">Target Band: 30.0% – 37.0%</span>
+              <span className="text-zinc-600 font-semibold">TELEMETRY ({simResults.runsCompleted.toLocaleString()} MATCHES SIMULATED)</span>
+              <span className="text-emerald-700 font-bold">Target Band: 30.0% &ndash; 37.0%</span>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-3">
               {[
-                { name: 'Vanguard (Heavy Armor / Melee)', pct: simResults.vanguardWinPct, color: 'bg-cyan-400' },
-                { name: 'Ranger (PRD Crit / Kiting)', pct: simResults.rangerWinPct, color: 'bg-emerald-400' },
-                { name: 'Arcanist (High Startup / AoE Burst)', pct: simResults.arcanistWinPct, color: 'bg-violet-400' },
+                { name: 'Vanguard (Heavy Armor / Melee)', pct: simResults.vanguardWinPct, color: 'bg-blue-600' },
+                { name: 'Ranger (PRD Crit / Kiting)', pct: simResults.rangerWinPct, color: 'bg-emerald-600' },
+                { name: 'Arcanist (High Startup / Burst)', pct: simResults.arcanistWinPct, color: 'bg-indigo-600' },
               ].map((cls) => {
                 const inBand = cls.pct >= 30 && cls.pct <= 37;
                 return (
-                  <div key={cls.name} className="space-y-1.5">
+                  <div key={cls.name} className="space-y-1">
                     <div className="flex justify-between text-xs font-mono">
-                      <span className="text-white font-semibold">{cls.name}</span>
-                      <span className={inBand ? 'text-emerald-400 font-bold' : 'text-rose-400 font-bold'}>
+                      <span className="text-zinc-950 font-semibold">{cls.name}</span>
+                      <span className={inBand ? 'text-emerald-700 font-bold' : 'text-red-700 font-bold'}>
                         {cls.pct.toFixed(1)}% {inBand ? '✓ BALANCED' : cls.pct > 37 ? '▲ OVERPOWERED' : '▼ UNDERPOWERED'}
                       </span>
                     </div>
-                    <div className="relative h-4 w-full rounded-full bg-slate-900 border border-slate-800 overflow-hidden">
+                    <div className="relative h-3 w-full rounded-full bg-zinc-200 overflow-hidden">
                       {/* Target Band Marker [30%..37%] */}
                       <div
-                        className="absolute top-0 bottom-0 bg-emerald-500/20 border-x border-emerald-400/50 z-10"
+                        className="absolute top-0 bottom-0 bg-emerald-200 border-x border-emerald-600 z-10"
                         style={{ left: '30%', width: '7%' }}
                       />
                       <div
@@ -416,24 +415,24 @@ export const Module5ProbabilityBalance: React.FC<Module5Props> = ({
 
             <button
               onClick={runMonteCarloBots}
-              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-violet-600 hover:bg-violet-500 py-3 text-xs font-mono font-bold text-white shadow-lg shadow-violet-600/30 transition cursor-pointer"
+              className="w-full inline-flex items-center justify-center gap-2 rounded bg-blue-600 hover:bg-blue-700 py-2.5 text-xs font-semibold text-white shadow-sm transition cursor-pointer"
             >
-              <Play className="h-4 w-4" />
-              <span>Run 1,000 Headless Bot Matches & Update Telemetry</span>
+              <Play className="h-3.5 w-3.5" />
+              <span>Run 1,000 Headless Bot Matches &amp; Update Telemetry</span>
             </button>
           </div>
 
-          {/* Class Balance Sliders */}
-          <div className="lg:col-span-5 rounded-xl border border-slate-800 bg-slate-900/90 p-5 space-y-4">
-            <div className="flex items-center gap-2 text-xs font-mono uppercase text-violet-400 border-b border-slate-800 pb-2">
-              <Sliders className="h-4 w-4" />
-              <span>Asymmetric Class Parameter Tuning</span>
+          {/* Class Tuning Sliders */}
+          <div className="lg:col-span-5 rounded-lg border border-zinc-200 bg-zinc-50 p-4 space-y-3">
+            <div className="flex items-center gap-1.5 text-xs font-mono uppercase text-blue-700 font-bold border-b border-zinc-200 pb-2">
+              <Sliders className="h-3.5 w-3.5" />
+              <span>Asymmetric Parameter Tuning</span>
             </div>
 
             <div>
               <div className="flex justify-between text-xs font-mono mb-1">
-                <span className="text-cyan-300">Vanguard Base Health Pool</span>
-                <span className="text-white font-bold">{vanguardHp} HP</span>
+                <span className="text-zinc-700">Vanguard Base Health</span>
+                <span className="text-blue-700 font-bold">{vanguardHp} HP</span>
               </div>
               <input
                 type="range"
@@ -442,14 +441,14 @@ export const Module5ProbabilityBalance: React.FC<Module5Props> = ({
                 step="5"
                 value={vanguardHp}
                 onChange={(e) => setVanguardHp(parseInt(e.target.value, 10))}
-                className="w-full accent-cyan-400"
+                className="w-full accent-blue-600"
               />
             </div>
 
             <div>
               <div className="flex justify-between text-xs font-mono mb-1">
-                <span className="text-emerald-300">Ranger PRD Crit Probability</span>
-                <span className="text-white font-bold">{rangerCritPct}%</span>
+                <span className="text-zinc-700">Ranger Crit Probability</span>
+                <span className="text-emerald-700 font-bold">{rangerCritPct}%</span>
               </div>
               <input
                 type="range"
@@ -458,14 +457,14 @@ export const Module5ProbabilityBalance: React.FC<Module5Props> = ({
                 step="1"
                 value={rangerCritPct}
                 onChange={(e) => setRangerCritPct(parseInt(e.target.value, 10))}
-                className="w-full accent-emerald-400"
+                className="w-full accent-blue-600"
               />
             </div>
 
             <div>
               <div className="flex justify-between text-xs font-mono mb-1">
-                <span className="text-violet-300">Arcanist Spell Burst Damage</span>
-                <span className="text-white font-bold">{arcanistBurst} DMG</span>
+                <span className="text-zinc-700">Arcanist Spell Damage</span>
+                <span className="text-indigo-700 font-bold">{arcanistBurst} DMG</span>
               </div>
               <input
                 type="range"
@@ -474,23 +473,23 @@ export const Module5ProbabilityBalance: React.FC<Module5Props> = ({
                 step="2"
                 value={arcanistBurst}
                 onChange={(e) => setArcanistBurst(parseInt(e.target.value, 10))}
-                className="w-full accent-violet-400"
+                className="w-full accent-blue-600"
               />
             </div>
 
-            <div className="pt-2 border-t border-slate-800 text-[11px] text-slate-400 leading-relaxed">
-              <strong className="text-slate-200 font-mono">Hint:</strong> Try lowering Vanguard HP to ~145 and raising Arcanist Burst to ~44, then run the simulation!
+            <div className="pt-2 border-t border-zinc-200 text-[11px] text-zinc-500 leading-relaxed">
+              <strong className="text-zinc-700 font-mono">Tuning Hint:</strong> Lower Vanguard HP to ~145 and raise Arcanist Damage to ~44, then execute the simulation.
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer Nav */}
-      <section className="flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl border border-slate-800 bg-slate-900/70 p-6">
+      <section className="flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-zinc-200 pt-6 mt-6">
         <div className="flex items-center gap-3">
           <button
             onClick={() => onNavigate('module-4')}
-            className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-800 hover:bg-slate-700 px-4 py-2.5 text-sm font-medium text-slate-200 transition cursor-pointer"
+            className="inline-flex items-center gap-2 rounded border border-zinc-300 bg-white hover:bg-zinc-50 px-4 py-2 text-sm font-medium text-zinc-800 transition cursor-pointer"
           >
             <ArrowLeft className="h-4 w-4" />
             <span>Prev: Module 04</span>
@@ -501,22 +500,22 @@ export const Module5ProbabilityBalance: React.FC<Module5Props> = ({
               courseAudio.playSuccess();
               onCompleteModule();
             }}
-            className={`inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold transition cursor-pointer ${
+            className={`inline-flex items-center gap-2 rounded px-4 py-2 text-sm font-semibold transition cursor-pointer ${
               isModuleDone
-                ? 'bg-emerald-500/20 border border-emerald-500/40 text-emerald-300'
-                : 'bg-slate-800 hover:bg-slate-700 text-white border border-slate-700'
+                ? 'bg-emerald-50 border border-emerald-300 text-emerald-800'
+                : 'bg-white hover:bg-zinc-50 text-zinc-800 border border-zinc-300'
             }`}
           >
             <CheckCircle2 className="h-4 w-4" />
-            <span>{isModuleDone ? 'Module 05 Completed' : 'Mark Module 05 Theory Complete'}</span>
+            <span>{isModuleDone ? 'Module 05 Complete' : 'Mark Module 05 Theory Complete'}</span>
           </button>
         </div>
 
         <button
           onClick={() => onNavigate('rosetta-library')}
-          className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 px-6 py-3 text-sm font-semibold text-white shadow-lg transition cursor-pointer"
+          className="inline-flex items-center gap-2 rounded bg-blue-600 hover:bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition cursor-pointer"
         >
-          <span>Next: CS Rosetta Stone, Reading List & Final Exam</span>
+          <span>Next: CS Rosetta Stone, Reading List &amp; Final Exam</span>
           <ArrowRight className="h-4 w-4" />
         </button>
       </section>

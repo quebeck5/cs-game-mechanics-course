@@ -81,6 +81,10 @@ class CourseAudioEngine {
     osc.stop(now + 0.045);
   }
 
+  public playBlip(pitch: number = 700) {
+    this.playClick(pitch);
+  }
+
   public playSuccess() {
     const ctx = this.getContext();
     if (!ctx) return;

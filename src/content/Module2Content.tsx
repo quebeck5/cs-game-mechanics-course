@@ -2,59 +2,59 @@ import React from 'react';
 
 export const Module2Content: React.FC = () => {
   return (
-    <article className="prose prose-invert max-w-none space-y-8 text-slate-300 leading-relaxed text-sm sm:text-base">
-      <div className="rounded-2xl border border-emerald-500/30 bg-emerald-950/20 p-6 space-y-3">
-        <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold">
-          <span>CHAPTER 2 TEXTBOOK &amp; LECTURE TRANSCRIPT • ESTIMATED READING &amp; EXERCISE TIME: 2.0 HOURS</span>
+    <article className="space-y-6 text-zinc-900 leading-normal text-sm sm:text-base">
+      <div className="border border-zinc-200 bg-zinc-50 p-5 rounded">
+        <div className="text-xs font-semibold text-blue-700 uppercase tracking-wider mb-1">
+          Chapter 2: Kinematics &amp; Controls • Recommended Study Time: 2.0 Hours
         </div>
-        <h3 className="text-xl sm:text-2xl font-bold text-white">
+        <h2 className="text-2xl font-bold text-zinc-950">
           The Physics of Virtual Sensation: 3Cs, Piecewise Kinematics &amp; Temporal Forgiveness
-        </h3>
-        <p className="text-sm text-slate-300">
+        </h2>
+        <p className="text-sm text-zinc-700 mt-2 leading-relaxed">
           Why does writing standard Newtonian physics <code>velocity += acceleration * dt</code> produce controls that feel unresponsive, sluggish, or impossible to control?
           This chapter examines the biophysical limits of human sensation (the 240ms loop), derives non-Newtonian jump equations parameterized by spatial level design metrics, and implements temporal hysteresis state machines.
         </p>
       </div>
 
-      <section className="space-y-4">
-        <h3 className="text-xl font-bold text-white border-b border-slate-800 pb-2">
+      <section className="space-y-3">
+        <h3 className="text-lg font-bold text-zinc-950 border-b border-zinc-200 pb-1">
           1. The Human Processor Model &amp; The 240ms Latency Budget (Steve Swink)
         </h3>
-        <p>
+        <p className="text-sm leading-relaxed text-zinc-800">
           In <em>Game Feel: A Game Designer's Guide to Virtual Sensation</em>, Steve Swink adapts Card, Moran, and Newell's classic Human Information Processor model to explain why literal real-world physics fails in interactive media:
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 not-prose my-4">
-          <div className="rounded-xl border border-slate-800 bg-slate-900 p-4 space-y-1">
-            <div className="text-xs font-mono text-cyan-400 font-bold">1. PERCEPTUAL PROCESSOR (~100ms)</div>
-            <div className="text-sm font-bold text-white">Retinal &amp; Visual Cortex Lag</div>
-            <p className="text-xs text-slate-300">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 my-2 text-xs">
+          <div className="border border-zinc-200 bg-zinc-50 p-3 rounded space-y-1">
+            <span className="font-mono font-bold text-blue-700">1. PERCEPTUAL PROCESSOR (~100ms)</span>
+            <div className="font-bold text-zinc-900">Retinal &amp; Visual Cortex Lag</div>
+            <p className="text-zinc-600">
               Photons hit the retina, get transduced into electrical impulses, and register in the visual cortex. Minimum cycle time: 50–100ms.
             </p>
           </div>
-          <div className="rounded-xl border border-slate-800 bg-slate-900 p-4 space-y-1">
-            <div className="text-xs font-mono text-emerald-400 font-bold">2. COGNITIVE PROCESSOR (~70ms)</div>
-            <div className="text-sm font-bold text-white">Associative Recognition &amp; Choice</div>
-            <p className="text-xs text-slate-300">
+          <div className="border border-zinc-200 bg-zinc-50 p-3 rounded space-y-1">
+            <span className="font-mono font-bold text-blue-700">2. COGNITIVE PROCESSOR (~70ms)</span>
+            <div className="font-bold text-zinc-900">Associative Recognition &amp; Choice</div>
+            <p className="text-zinc-600">
               Working memory compares current state against mental models and selects a motor program (e.g., "press jump now"). Cycle time: ~70ms.
             </p>
           </div>
-          <div className="rounded-xl border border-slate-800 bg-slate-900 p-4 space-y-1">
-            <div className="text-xs font-mono text-amber-400 font-bold">3. MOTOR PROCESSOR (~70ms)</div>
-            <div className="text-sm font-bold text-white">Efferent Nerve Transmission</div>
-            <p className="text-xs text-slate-300">
+          <div className="border border-zinc-200 bg-zinc-50 p-3 rounded space-y-1">
+            <span className="font-mono font-bold text-blue-700">3. MOTOR PROCESSOR (~70ms)</span>
+            <div className="font-bold text-zinc-900">Efferent Nerve Transmission</div>
+            <p className="text-zinc-600">
               Action potentials travel down spinal motor neurons to contract finger muscles onto the mechanical key switch. Cycle time: ~70ms.
             </p>
           </div>
         </div>
-        <p>
+        <p className="text-sm leading-relaxed text-zinc-800">
           Summing these stages yields approximately <strong>240ms of biological input/output latency</strong>.
           If your game engine requires frame-perfect inputs at 60 FPS (16.6ms per frame) without any tolerance, you are testing biological transmission jitter, not cognitive skill.
           Great games build <em>temporal forgiveness</em> directly into their state machines to bridge this biological gap.
         </p>
       </section>
 
-      <section className="space-y-4">
-        <h3 className="text-xl font-bold text-white border-b border-slate-800 pb-2">
+      <section className="space-y-3">
+        <h3 className="text-lg font-bold text-zinc-950 border-b border-zinc-200 pb-1">
           2. The Mathematics of a Great Jump: Spatial Parameterization vs. Arbitrary Forces
         </h3>
         <p>

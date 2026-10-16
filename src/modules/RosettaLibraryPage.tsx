@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import { ROSETTA_ENTRIES, PageId } from '../data/courseData';
 import { courseAudio } from '../audio/soundEngine';
-import confetti from 'canvas-confetti';
 import {
   BookOpen,
   Award,
   CheckCircle2,
-  ArrowLeft,
-  Terminal,
-  GraduationCap,
+  ArrowRight,
   HelpCircle,
-  Sparkles
+  RotateCcw
 } from 'lucide-react';
 
 interface RosettaLibraryProps {
@@ -31,21 +28,21 @@ const EXAM_QUESTIONS: QuizQuestion[] = [
   {
     id: 'q1',
     question:
-      'In Hunicke, LeBlanc, and Zubek’s MDA Framework, why is debugging "un-fun gameplay" akin to debugging a compiler pipeline in reverse?',
+      'In Hunicke, LeBlanc, and Zubek’s MDA Framework, why is debugging an un-fun game akin to debugging a compiler pipeline in reverse?',
     options: [
-      'Because players read your C++/TypeScript source code before experiencing the visual graphics.',
+      'Because players read the C++/TypeScript source code before experiencing any visual outputs.',
       'Because engineers only author Mechanics (rules/code), which interact at runtime to produce Dynamics, which finally evoke Aesthetics (player emotion).',
       'Because Aesthetics must be hardcoded using pairwise if-else statements before writing any physics equations.',
       'Because Dynamics are deterministic and never depend on human input.'
     ],
     correctIndex: 1,
     explanation:
-      'Designers control Mechanics directly, but players experience Aesthetics first. Tuning a game requires tracing an Aesthetic symptom back through emergent Dynamics to the root Mechanic.'
+      'Designers control Mechanics directly, but players experience Aesthetics first. Diagnosing a game requires tracing an Aesthetic symptom back through emergent Dynamics to the root Mechanic.'
   },
   {
     id: 'q2',
     question:
-      'A playtester complains that jumping in your platformer feels "floaty and unresponsive," and that pressing Jump right as they leave a ledge drops their input. Which engineering fix addresses both issues?',
+      'A playtester complains that jumping in your platformer feels floaty and unresponsive, and that pressing Jump right as they leave a ledge drops their input. Which engineering fix addresses both issues?',
     options: [
       'Locking the camera rigidly to (player.x, player.y) and setting constant gravity g = 9.8 m/s².',
       'Parameterizing jump gravity via (H_max, t_peak) with ~2.4x falling gravity multiplier, plus adding a ~100ms Coyote Time window and ~100ms Input Buffer.',
@@ -59,7 +56,7 @@ const EXAM_QUESTIONS: QuizQuestion[] = [
   {
     id: 'q3',
     question:
-      'In a fighting or action game, your Heavy Hammer has 22 Startup frames, 5 Active frames, and 26 Recovery frames. If an opponent blocks it and suffers 12 frames of Blockstun, what is your Frame Advantage (ΔF)?',
+      'In an action combat system, your Heavy Hammer has 22 Startup frames, 5 Active frames, and 26 Recovery frames. If an opponent blocks it and suffers 12 frames of Blockstun, what is your Frame Advantage (ΔF)?',
     options: [
       '+14 frames (you can attack again before the opponent recovers).',
       '-14 frames (you remain vulnerable in Recovery for 14 frames after the opponent can act, making the move punishable on block).',
@@ -68,12 +65,12 @@ const EXAM_QUESTIONS: QuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Frame Advantage ΔF = F_blockstun - F_recovery = 12 - 26 = -14 frames. Any opponent with a move whose Startup is ≤ 14 frames can land a guaranteed punish.'
+      'Frame Advantage ΔF = F_blockstun - F_recovery = 12 - 26 = -14 frames. Any opponent with an attack whose Startup is ≤ 14 frames can land a guaranteed punish.'
   },
   {
     id: 'q4',
     question:
-      'In Adams & Dormans’ Machinations framework, what happens when an internal economy has a strong Positive Feedback loop (Kills → Gold → Weapon Power → Faster Kills) with zero Negative Feedback Drains?',
+      'In Adams & Dormans’ Machinations framework, what occurs when an internal economy possesses a strong Positive Feedback loop (Kills → Gold → Weapon Power → Faster Kills) with zero Negative Feedback Drains?',
     options: [
       'The game achieves stable rubber-banding where trailing players can always catch up.',
       'Exponential runaway (dx/dt = +kx), causing early advantages to snowball and creating "Dead Time" where the winner is decided long before the match ends.',
@@ -87,9 +84,9 @@ const EXAM_QUESTIONS: QuizQuestion[] = [
   {
     id: 'q5',
     question:
-      'Why do games like Dota 2 and Warcraft III use a Markov Pseudo-Random Distribution P(N) = C · N for a 25% critical hit passive instead of `Math.random() < 0.25`?',
+      'Why do engines like Dota 2 and Warcraft III use a Markov Pseudo-Random Distribution P(N) = C · N for a 25% critical hit passive instead of standard independent random rolls?',
     options: [
-      'Because standard pseudo-random number generators cannot generate floats between 0 and 1.',
+      'Because standard pseudo-random number generators cannot generate floating point values between 0 and 1.',
       'To preserve the 25% long-run expected value while bounding the variance of extreme dry spells (15 misses in a row) and lucky first-hit bursts.',
       'To make critical hits happen 100% of the time on the first swing.',
       'To increase CPU cache misses during combat.'
@@ -116,70 +113,62 @@ export const RosettaLibraryPage: React.FC<RosettaLibraryProps> = ({
     setExamSubmitted(true);
     if (score >= 4) {
       courseAudio.playSuccess();
-      confetti({
-        particleCount: 80,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
     } else {
       courseAudio.playClick(340);
     }
   };
 
   return (
-    <div className="space-y-12 pb-16">
+    <article className="space-y-8 text-zinc-900 leading-normal">
       {/* Header */}
-      <header className="space-y-3 border-b border-slate-800 pb-6">
-        <div className="flex flex-wrap items-center gap-3">
-          <span className="rounded-md bg-gradient-to-r from-blue-500 to-indigo-600 px-3 py-1 text-xs font-mono font-bold text-white">
-            ENGINEERING REFERENCE & CERTIFICATION
-          </span>
-          <span className="text-xs font-mono text-slate-400">
-            CS-to-Game-Design Rosetta Stone • Annotated Bibliography • Final Exam
-          </span>
+      <div className="border-b border-zinc-200 pb-5">
+        <div className="text-xs font-semibold text-blue-700 tracking-wider uppercase mb-1">
+          Technical Reference &amp; Certification
         </div>
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-          The CS-to-Game-Design Rosetta Stone & Mastery Certification
+        <h1 className="text-3xl font-bold tracking-tight text-zinc-950">
+          The CS-to-Game-Design Rosetta Stone &amp; Technical Assessment
         </h1>
-        <p className="text-slate-300 max-w-4xl leading-relaxed">
-          Bookmark this page as your permanent lookup table whenever architecting a new game prototype, diagnosing why a mechanic feels flat, or balancing an internal economy.
+        <p className="text-sm text-zinc-600 mt-2">
+          A formal mapping between standard computer science concepts and game systems architecture, paired with an annotated academic bibliography and diagnostic evaluation.
         </p>
-      </header>
+      </div>
 
-      {/* Complete Rosetta Stone Matrix */}
-      <section className="space-y-4">
-        <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-cyan-400">
-          <Terminal className="h-4 w-4" />
-          <span>Part 1: The Complete CS ↔ Game Mechanics Translation Matrix</span>
-        </div>
+      {/* Rosetta Stone Table */}
+      <section className="space-y-3">
+        <h2 className="text-xl font-bold text-zinc-950 border-b border-zinc-200 pb-1.5">
+          1. The Conceptual Mapping Table
+        </h2>
+        <p className="text-sm text-zinc-700">
+          The table below translates foundational computer science mental models into their exact gameplay architecture equivalents:
+        </p>
 
-        <div className="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/70 shadow-xl">
-          <table className="w-full text-left border-collapse">
-            <thead>
-              <tr className="border-b border-slate-800 bg-slate-950/90 text-[11px] font-mono uppercase text-slate-400">
-                <th className="py-3.5 px-4">Domain</th>
-                <th className="py-3.5 px-4">CS Mental Model & Math</th>
-                <th className="py-3.5 px-4">Game Design Equivalent</th>
-                <th className="py-3.5 px-4">The Engineering Paradigm Shift</th>
+        <div className="border border-zinc-200 rounded overflow-x-auto bg-white">
+          <table className="w-full text-left text-xs border-collapse">
+            <thead className="bg-zinc-100 text-zinc-700 border-b border-zinc-200 font-semibold">
+              <tr>
+                <th className="py-2.5 px-3">Domain</th>
+                <th className="py-2.5 px-3">Computer Science Formalism</th>
+                <th className="py-2.5 px-3">Game Mechanics Equivalent</th>
+                <th className="py-2.5 px-3">The Architectural Paradigm Shift</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-800/80 text-xs">
+            <tbody className="divide-y divide-zinc-200 text-zinc-700">
               {ROSETTA_ENTRIES.map((row) => (
-                <tr key={row.domain} className="hover:bg-slate-900/90 transition">
-                  <td className="py-4 px-4 font-mono font-bold text-indigo-300 whitespace-nowrap">
+                <tr key={row.domain} className="hover:bg-zinc-50">
+                  <td className="py-3 px-3 font-semibold text-zinc-900 align-top whitespace-nowrap">
                     {row.domain}
                   </td>
-                  <td className="py-4 px-4 space-y-1">
-                    <div className="font-semibold text-white">{row.csConcept}</div>
-                    <code className="inline-block rounded bg-slate-950 px-2 py-0.5 text-[11px] text-cyan-300 border border-slate-800">
+                  <td className="py-3 px-3 align-top space-y-1">
+                    <div className="font-semibold text-zinc-900">{row.csConcept}</div>
+                    <code className="text-[11px] text-zinc-600 font-mono bg-zinc-100 px-1 py-0.5 rounded">
                       {row.csFormalism}
                     </code>
                   </td>
-                  <td className="py-4 px-4 space-y-1">
-                    <div className="font-bold text-emerald-300">{row.gameConcept}</div>
-                    <div className="text-[11px] font-mono text-slate-400">{row.bookReference}</div>
+                  <td className="py-3 px-3 align-top space-y-0.5">
+                    <div className="font-semibold text-blue-800">{row.gameConcept}</div>
+                    <div className="text-[11px] text-zinc-500 font-mono">{row.bookReference}</div>
                   </td>
-                  <td className="py-4 px-4 text-slate-300 leading-relaxed max-w-md">
+                  <td className="py-3 px-3 align-top text-zinc-700 leading-relaxed max-w-sm">
                     {row.paradigmShift}
                   </td>
                 </tr>
@@ -189,103 +178,90 @@ export const RosettaLibraryPage: React.FC<RosettaLibraryProps> = ({
         </div>
       </section>
 
-      {/* Annotated Bibliography & University Courses */}
-      <section className="space-y-4">
-        <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-purple-400">
-          <BookOpen className="h-4 w-4" />
-          <span>Part 2: Annotated Bibliography & University Syllabi Used in This Course</span>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {/* Annotated Bibliography */}
+      <section className="space-y-3">
+        <h2 className="text-xl font-bold text-zinc-950 border-b border-zinc-200 pb-1.5">
+          2. Annotated Academic Bibliography
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
           {[
             {
               title: 'Game Feel: A Game Designer’s Guide to Virtual Sensation (2008)',
-              author: 'Steve Swink',
-              why: 'The definitive engineering treatise on the 240ms human perceptual-motor loop, ADSR movement envelopes, Simulated Space, and Polish/Juice.'
+              author: 'Steve Swink • Morgan Kaufmann',
+              desc: 'Presents the 240ms human processor model, ADSR movement envelopes, and quantitative metrics for input response and spatial simulation.'
             },
             {
               title: 'Game Mechanics: Advanced Game Design (2012)',
-              author: 'Ernest Adams & Joris Dormans',
-              why: 'Introduces Machinations (Turing-complete Petri-net resource graphs) for formalizing internal economies, converters, drains, and feedback loops.'
+              author: 'Ernest Adams & Joris Dormans • New Riders',
+              desc: 'Defines Machinations: a formal visual Petri-net language to model, balance, and simulate internal resource economies.'
             },
             {
               title: 'A Theory of Fun for Game Design (2004)',
-              author: 'Raph Koster',
-              why: 'Frames "Fun" via neuroscience and Shannon information theory: the dopaminergic reward of compressing non-trivial state-space patterns.'
+              author: 'Raph Koster • Paraglyph Press',
+              desc: 'Formulates fun as cognitive pattern recognition and Shannon entropy reduction in the human nervous system.'
             },
             {
-              title: 'The Gamer’s Brain: How Neuroscience and UX Can Impact Video Game Design (2017)',
-              author: 'Celia Hodent',
-              why: 'Separates cognitive ergonomics (working memory 4±1 chunks, signposting, affordances) from Self-Determination Theory and Flow.'
+              title: 'The Gamer’s Brain: UX and Neuroscience (2017)',
+              author: 'Celia Hodent • CRC Press',
+              desc: 'Cognitive ergonomics in games: working memory bandwidth limits (4±1 chunks), perception thresholds, and self-determination theory.'
             },
             {
               title: 'Rules of Play: Game Design Fundamentals (2003)',
-              author: 'Katie Salen & Eric Zimmerman',
-              why: 'The foundational MIT Press textbook on games as cybernetic systems, emergent complexity, and information theory.'
+              author: 'Katie Salen & Eric Zimmerman • MIT Press',
+              desc: 'Comprehensive textbook on games as cybernetic systems, information theory in play, and emergent state-space complexity.'
             },
             {
               title: 'Game Programming Patterns (2014)',
-              author: 'Robert Nystrom',
-              why: 'Bridges software engineering design patterns (Command, State/PDA, Observer, Update Method, Spatial Partition) directly to gameplay.'
+              author: 'Robert Nystrom • Genever Benning',
+              desc: 'Software design patterns applied to games: fixed timesteps, hierarchical state machines, command buffering, and bytecode interpreters.'
             }
-          ].map((book) => (
-            <div key={book.title} className="rounded-xl border border-slate-800 bg-slate-900/60 p-5 space-y-1.5">
-              <div className="text-sm font-bold text-white">{book.title}</div>
-              <div className="text-xs font-mono text-indigo-400">{book.author}</div>
-              <p className="text-xs text-slate-300 leading-relaxed pt-1">{book.why}</p>
+          ].map((b) => (
+            <div key={b.title} className="p-3 border border-zinc-200 rounded bg-zinc-50">
+              <div className="font-bold text-zinc-900">{b.title}</div>
+              <div className="text-[11px] font-mono text-blue-700 mt-0.5">{b.author}</div>
+              <p className="text-zinc-600 mt-1 leading-relaxed">{b.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Final Certification Exam */}
-      <section className="rounded-2xl border-2 border-indigo-500/40 bg-gradient-to-b from-slate-900 to-slate-950 p-6 sm:p-8 space-y-6 shadow-2xl">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
-          <div>
-            <div className="inline-flex items-center gap-2 text-xs font-mono uppercase text-indigo-400 font-bold">
-              <GraduationCap className="h-4 w-4" />
-              <span>CS-404 Capstone Mastery Assessment</span>
-            </div>
-            <h2 className="text-2xl font-bold text-white mt-1">
-              5-Question Engineering Diagnostics Exam
-            </h2>
-          </div>
-
+      {/* Capstone Assessment */}
+      <section className="space-y-4">
+        <div className="flex items-center justify-between border-b border-zinc-200 pb-1.5">
+          <h2 className="text-xl font-bold text-zinc-950">
+            3. Diagnostic Technical Assessment
+          </h2>
           {examSubmitted && (
-            <div className={`rounded-xl px-4 py-2 text-xs font-mono font-bold border ${
-              score >= 4
-                ? 'bg-emerald-500/20 border-emerald-500/40 text-emerald-300'
-                : 'bg-amber-500/20 border-amber-500/40 text-amber-300'
+            <span className={`text-xs font-mono font-semibold px-2 py-0.5 rounded border ${
+              score >= 4 ? 'bg-emerald-50 text-emerald-800 border-emerald-300' : 'bg-amber-50 text-amber-800 border-amber-300'
             }`}>
-              Score: {score} / {EXAM_QUESTIONS.length} ({score >= 4 ? 'CERTIFIED SYSTEMS DESIGNER' : 'REVIEW RECOMMENDED'})
-            </div>
+              Score: {score} / {EXAM_QUESTIONS.length} ({score >= 4 ? 'Passed' : 'Needs Review'})
+            </span>
           )}
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-4">
           {EXAM_QUESTIONS.map((q, qIdx) => {
             const picked = selectedAnswers[q.id];
+
             return (
-              <div key={q.id} className="rounded-xl border border-slate-800 bg-slate-950/80 p-5 space-y-3">
-                <div className="text-sm font-bold text-white">
-                  <span className="text-indigo-400 font-mono mr-2">0{qIdx + 1}.</span>
+              <div key={q.id} className="p-4 border border-zinc-200 rounded bg-white space-y-2.5">
+                <div className="text-sm font-semibold text-zinc-900">
+                  <span className="font-mono text-blue-700 mr-1.5">{qIdx + 1}.</span>
                   {q.question}
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-1.5">
                   {q.options.map((opt, oIdx) => {
                     const isSelected = picked === oIdx;
                     const isCorrect = q.correctIndex === oIdx;
 
-                    let btnStyle = 'border-slate-800 bg-slate-900/70 text-slate-300 hover:bg-slate-900';
+                    let rowStyle = 'border-zinc-200 bg-white hover:bg-zinc-50 text-zinc-800';
                     if (examSubmitted) {
-                      if (isCorrect) {
-                        btnStyle = 'border-emerald-500/60 bg-emerald-950/30 text-emerald-200';
-                      } else if (isSelected && !isCorrect) {
-                        btnStyle = 'border-rose-500/60 bg-rose-950/30 text-rose-200';
-                      }
+                      if (isCorrect) rowStyle = 'border-emerald-500 bg-emerald-50/60 text-emerald-900 font-medium';
+                      else if (isSelected && !isCorrect) rowStyle = 'border-rose-400 bg-rose-50/60 text-rose-900';
                     } else if (isSelected) {
-                      btnStyle = 'border-indigo-500 bg-indigo-950/40 text-white';
+                      rowStyle = 'border-blue-700 bg-blue-50 text-blue-900 font-medium';
                     }
 
                     return (
@@ -297,20 +273,20 @@ export const RosettaLibraryPage: React.FC<RosettaLibraryProps> = ({
                             setSelectedAnswers((prev) => ({ ...prev, [q.id]: oIdx }));
                           }
                         }}
-                        className={`w-full text-left rounded-lg border p-3 text-xs transition cursor-pointer ${btnStyle}`}
+                        className={`w-full text-left p-2.5 rounded border text-xs transition cursor-pointer flex items-start gap-2 ${rowStyle}`}
                       >
-                        <span className="font-mono font-bold mr-2">
+                        <span className="font-mono font-bold text-zinc-500">
                           {String.fromCharCode(65 + oIdx)}.
                         </span>
-                        {opt}
+                        <span className="flex-1 leading-normal">{opt}</span>
                       </button>
                     );
                   })}
                 </div>
 
                 {examSubmitted && (
-                  <div className="rounded-lg bg-slate-900 border border-slate-800 p-3 text-xs text-slate-300">
-                    <strong className="text-cyan-400 font-mono">Engineering Rationale:</strong> {q.explanation}
+                  <div className="text-xs text-zinc-600 bg-zinc-50 p-2.5 rounded border border-zinc-200 mt-2">
+                    <strong className="text-zinc-800">Rationale:</strong> {q.explanation}
                   </div>
                 )}
               </div>
@@ -318,13 +294,12 @@ export const RosettaLibraryPage: React.FC<RosettaLibraryProps> = ({
           })}
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
+        <div className="flex items-center gap-3 pt-2">
           <button
             onClick={handleSubmitExam}
-            className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 px-6 py-3 text-sm font-semibold text-white shadow-lg transition cursor-pointer"
+            className="px-4 py-2 bg-blue-700 hover:bg-blue-800 text-white rounded text-xs font-semibold cursor-pointer"
           >
-            <Award className="h-4 w-4" />
-            <span>{examSubmitted ? 'Re-Grade Assessment' : 'Submit Capstone Assessment'}</span>
+            {examSubmitted ? 'Re-Grade Assessment' : 'Submit Assessment'}
           </button>
 
           {examSubmitted && (
@@ -333,13 +308,13 @@ export const RosettaLibraryPage: React.FC<RosettaLibraryProps> = ({
                 setExamSubmitted(false);
                 setSelectedAnswers({});
               }}
-              className="text-xs font-mono text-slate-400 hover:text-white underline cursor-pointer"
+              className="text-xs text-zinc-600 hover:text-zinc-900 underline cursor-pointer"
             >
               Reset Answers
             </button>
           )}
         </div>
       </section>
-    </div>
+    </article>
   );
 };

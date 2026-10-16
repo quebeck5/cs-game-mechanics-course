@@ -2,15 +2,14 @@ import React, { useState, useEffect, useRef } from 'react';
 import { PageId } from '../data/courseData';
 import { courseAudio } from '../audio/soundEngine';
 import {
-  Activity,
   CheckCircle2,
   ArrowRight,
   ArrowLeft,
-  Sparkles,
   Sliders,
   Eye,
   Clock,
-  Zap
+  Zap,
+  Sparkles
 } from 'lucide-react';
 import { Module2Content } from '../content/Module2Content';
 
@@ -38,9 +37,9 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
   const [releaseMs, setReleaseMs] = useState<number>(60);
 
   // Interactive Diagram 2.2: Coyote & Input Buffer Scrubber
-  const [coyoteFrames, setCoyoteFrames] = useState<number>(6); // 100ms at 60fps
-  const [bufferFrames, setBufferFrames] = useState<number>(6); // 100ms at 60fps
-  const [playerPressFrame, setPlayerPressFrame] = useState<number>(15); // Ledge leaves at frame 12, lands at frame 32
+  const [coyoteFrames, setCoyoteFrames] = useState<number>(6);
+  const [bufferFrames, setBufferFrames] = useState<number>(6);
+  const [playerPressFrame, setPlayerPressFrame] = useState<number>(15);
 
   // Playable Lab 2: Platformer Feel Surgery
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -59,7 +58,6 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
 
   for (let step = 0; step <= 60; step++) {
     const t = (step / 60) * (timeToPeakSec * 2.1);
-    // Naive symmetric parabola
     const yNaive = Math.max(0, v0 * t - 0.5 * gRise * t * t);
     const sx = 50 + (step / 60) * 440;
     const syNaive = 210 - (yNaive / 150) * 165;
@@ -77,16 +75,12 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
 
     let currentG = simVy >= 0 ? gRise : gFall;
     if (apexHangBoost && Math.abs(simVy) < v0 * 0.22) {
-      currentG *= 0.45; // Apex anti-gravity hang
+      currentG *= 0.45;
     }
     simVy -= currentG * dt;
     simY = Math.max(0, simY + simVy * dt);
   }
 
-  // Evaluate Coyote/Buffer timeline outcome
-  // Frame 0..12: Grounded on Ledge A
-  // Frame 13..31: Airborne across gap
-  // Frame 32..45: Grounded on Ledge B
   const isStrictJumpSuccess = playerPressFrame <= 12 || playerPressFrame >= 32;
   const isCoyoteJumpSuccess = playerPressFrame > 12 && playerPressFrame <= 12 + coyoteFrames;
   const isBufferJumpSuccess = playerPressFrame < 32 && playerPressFrame >= 32 - bufferFrames;
@@ -99,23 +93,25 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
     if (!ctx) return;
 
     let animId: number;
-    const keys: Record<string, boolean> = {};
 
-    // Player state
-    let px = 65;
-    let py = 240;
+    // Simulation State
+    let px = 60;
+    let py = 250;
     let vx = 0;
     let vy = 0;
     let isGrounded = false;
     let coyoteTimer = 0;
     let jumpBufferTimer = 0;
+    let jumpHeld = false;
+    let hitstop = 0;
+    let shake = 0;
     let scaleX = 1;
     let scaleY = 1;
-    let camX = 65;
-    let camY = 180;
-    let shake = 0;
-    let hitstop = 0;
+    let camX = px;
+    let camY = py;
     let score = 0;
+
+    const keys: Record<string, boolean> = {};
 
     interface Platform {
       x: number;
@@ -124,14 +120,6 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
       h: number;
     }
 
-    const platforms: Platform[] = [
-      { x: 20, y: 280, w: 130, h: 22 },
-      { x: 195, y: 245, w: 95, h: 20 },
-      { x: 335, y: 200, w: 95, h: 20 },
-      { x: 185, y: 140, w: 105, h: 20 },
-      { x: 360, y: 105, w: 150, h: 20 },
-    ];
-
     interface Gem {
       x: number;
       y: number;
@@ -139,29 +127,33 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
       respawnTimer: number;
     }
 
+    const platforms: Platform[] = [
+      { x: 30, y: 280, w: 140, h: 20 },
+      { x: 210, y: 245, w: 100, h: 20 },
+      { x: 350, y: 195, w: 90, h: 20 },
+      { x: 470, y: 145, w: 70, h: 20 },
+    ];
+
     const gems: Gem[] = [
-      { x: 242, y: 215, collected: false, respawnTimer: 0 },
-      { x: 382, y: 170, collected: false, respawnTimer: 0 },
-      { x: 237, y: 110, collected: false, respawnTimer: 0 },
-      { x: 435, y: 75, collected: false, respawnTimer: 0 },
+      { x: 90, y: 240, collected: false, respawnTimer: 0 },
+      { x: 260, y: 205, collected: false, respawnTimer: 0 },
+      { x: 395, y: 155, collected: false, respawnTimer: 0 },
+      { x: 505, y: 105, collected: false, respawnTimer: 0 },
     ];
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', ' '].includes(e.key)) {
-        // Only prevent default if canvas is hovered or active
-      }
       keys[e.key.toLowerCase()] = true;
-      if (e.key === ' ' || e.key === 'ArrowUp' || e.key.toLowerCase() === 'w') {
-        jumpBufferTimer = feelMode === 'celeste' ? bufferFrames : 1;
-      }
-      if (e.key === 'Tab') {
-        e.preventDefault();
-        setFeelMode((prev) => (prev === 'celeste' ? 'naive' : 'celeste'));
+      if (e.key === ' ' || e.key.toLowerCase() === 'w' || e.key === 'ArrowUp') {
+        jumpBufferTimer = bufferFrames;
+        jumpHeld = true;
       }
     };
 
     const handleKeyUp = (e: KeyboardEvent) => {
       keys[e.key.toLowerCase()] = false;
+      if (e.key === ' ' || e.key.toLowerCase() === 'w' || e.key === 'ArrowUp') {
+        jumpHeld = false;
+      }
     };
 
     window.addEventListener('keydown', handleKeyDown);
@@ -170,161 +162,159 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
     const loop = () => {
       if (hitstop > 0) {
         hitstop--;
+        animId = requestAnimationFrame(loop);
+        return;
+      }
+
+      // Input polling
+      const left = keys['arrowleft'] || keys['a'];
+      const right = keys['arrowright'] || keys['d'];
+
+      // Horizontal Kinematics (ADSR Filter)
+      if (feelMode === 'naive') {
+        vx = 0;
+        if (left) vx = -3.8;
+        if (right) vx = 3.8;
       } else {
-        const left = keys['arrowleft'] || keys['a'];
-        const right = keys['arrowright'] || keys['d'];
-        const jumpHeld = keys[' '] || keys['arrowup'] || keys['w'];
+        const targetVx = (right ? 1 : 0) - (left ? 1 : 0);
+        const maxSpeed = 5.2;
+        const attackRate = 1 / (attackMs / 16.6);
+        const releaseRate = 1 / (releaseMs / 16.6);
 
-        const maxSpeed = 4.4;
-        const targetVx = (right ? 1 : 0) * maxSpeed - (left ? 1 : 0) * maxSpeed;
-
-        if (feelMode === 'naive') {
-          // Naive linear sluggish acceleration + slippery friction
-          vx += (targetVx - vx) * 0.08;
+        if (targetVx !== 0) {
+          vx += targetVx * maxSpeed * attackRate;
+          vx = Math.max(-maxSpeed, Math.min(maxSpeed, vx));
         } else {
-          // ADSR snappy attack & crisp release
-          const rate = targetVx !== 0 ? Math.min(0.45, 16 / Math.max(16, attackMs)) : Math.min(0.5, 16 / Math.max(16, releaseMs));
-          vx += (targetVx - vx) * rate;
+          vx *= Math.max(0, 1 - releaseRate);
+          if (Math.abs(vx) < 0.1) vx = 0;
         }
+      }
 
-        // Coyote & Jump Buffer counters
+      // Vertical Kinematics
+      if (feelMode === 'naive') {
+        vy += 0.32;
+        if ((keys[' '] || keys['w'] || keys['arrowup']) && isGrounded) {
+          vy = -8.2;
+          isGrounded = false;
+          courseAudio.playClick(500);
+        }
+      } else {
+        let activeG = vy < 0 ? gRise * 0.0003 : gFall * 0.0003;
+        if (apexHangBoost && Math.abs(vy) < 1.6) {
+          activeG *= 0.45;
+        }
+        if (vy < 0 && !jumpHeld) {
+          activeG *= 2.0;
+        }
+        vy += activeG;
+
         if (isGrounded) {
-          coyoteTimer = feelMode === 'celeste' ? coyoteFrames : 0;
+          coyoteTimer = coyoteFrames;
         } else if (coyoteTimer > 0) {
           coyoteTimer--;
         }
 
         if (jumpBufferTimer > 0) {
           jumpBufferTimer--;
-        }
-
-        // Execute Jump
-        const canJump = isGrounded || coyoteTimer > 0;
-        if (jumpBufferTimer > 0 && canJump) {
-          const jumpV = feelMode === 'celeste' ? -8.8 : -7.6;
-          vy = jumpV;
-          isGrounded = false;
-          coyoteTimer = 0;
-          jumpBufferTimer = 0;
-          if (feelMode === 'celeste') {
-            scaleX = 0.68;
-            scaleY = 1.38;
+          if (coyoteTimer > 0) {
+            vy = -v0 * 0.0165;
+            isGrounded = false;
+            coyoteTimer = 0;
+            jumpBufferTimer = 0;
+            scaleX = 0.65;
+            scaleY = 1.45;
+            courseAudio.playClick(600);
           }
-          courseAudio.playJump(feelMode === 'celeste');
         }
-
-        // Gravity calculation
-        if (feelMode === 'naive') {
-          vy += 0.34; // Constant floaty gravity
-        } else {
-          let g = vy < 0 ? 0.38 : 0.38 * fallGravityMult;
-          // Variable jump height on early button release
-          if (vy < 0 && !jumpHeld) {
-            g *= 2.1;
-          }
-          // Apex hang time
-          if (apexHangBoost && Math.abs(vy) < 1.35) {
-            g *= 0.45;
-          }
-          vy = Math.min(10.5, vy + g);
-        }
-
-        px += vx;
-        py += vy;
-
-        // Keep within horizontal bounds
-        if (px < 24) {
-          px = 24;
-          vx = 0;
-        }
-        if (px > canvas.width - 24) {
-          px = canvas.width - 24;
-          vx = 0;
-        }
-
-        // Fall pit respawn
-        if (py > canvas.height + 40) {
-          px = 65;
-          py = 230;
-          vx = 0;
-          vy = 0;
-        }
-
-        // Platform collisions
-        const wasGrounded = isGrounded;
-        isGrounded = false;
-        const pHalfW = 12;
-        const pHalfH = 15;
-
-        platforms.forEach((plat) => {
-          // Corner correction on upward head bonk in Celeste mode
-          if (
-            feelMode === 'celeste' &&
-            vy < 0 &&
-            py - pHalfH <= plat.y + plat.h &&
-            py - pHalfH >= plat.y &&
-            px + pHalfW > plat.x &&
-            px - pHalfW < plat.x + plat.w
-          ) {
-            // Check if clipping left or right corner by <= 7px
-            if (px + pHalfW - plat.x <= 8) {
-              px = plat.x - pHalfW - 1;
-            } else if (plat.x + plat.w - (px - pHalfW) <= 8) {
-              px = plat.x + plat.w + pHalfW + 1;
-            }
-          }
-
-          // Landing on top of platform
-          if (
-            vy >= 0 &&
-            py + pHalfH >= plat.y &&
-            py + pHalfH - vy <= plat.y + 9 &&
-            px + pHalfW > plat.x &&
-            px - pHalfW < plat.x + plat.w
-          ) {
-            py = plat.y - pHalfH;
-            vy = 0;
-            isGrounded = true;
-            if (!wasGrounded && feelMode === 'celeste') {
-              scaleX = 1.35;
-              scaleY = 0.7;
-            }
-          }
-        });
-
-        // Gem collection
-        gems.forEach((g) => {
-          if (g.collected) {
-            g.respawnTimer--;
-            if (g.respawnTimer <= 0) g.collected = false;
-          } else {
-            const dist = Math.hypot(px - g.x, py - g.y);
-            if (dist < 22) {
-              g.collected = true;
-              g.respawnTimer = 210;
-              score++;
-              setGemsCollected((prev) => {
-                const next = prev + 1;
-                if (next >= 4 && !isLabDone) {
-                  onCompleteLab();
-                }
-                return next;
-              });
-              if (feelMode === 'celeste') {
-                hitstop = 4;
-                shake = 6;
-                scaleX = 1.4;
-                scaleY = 1.4;
-              }
-              courseAudio.playHit(feelMode === 'celeste');
-            }
-          }
-        });
-
-        // Recover squash & stretch
-        scaleX += (1 - scaleX) * 0.22;
-        scaleY += (1 - scaleY) * 0.22;
       }
+
+      // Position update
+      px += vx;
+      py += vy;
+
+      // Platform Collisions (AABB)
+      isGrounded = false;
+      const playerHalfW = 12;
+      const playerH = 28;
+
+      platforms.forEach((plat) => {
+        if (
+          px + playerHalfW > plat.x &&
+          px - playerHalfW < plat.x + plat.w &&
+          py + playerH / 2 >= plat.y &&
+          py + playerH / 2 <= plat.y + plat.h + 8 &&
+          vy >= 0
+        ) {
+          py = plat.y - playerH / 2;
+          vy = 0;
+          isGrounded = true;
+          if (feelMode === 'celeste' && scaleY > 1.1) {
+            scaleX = 1.35;
+            scaleY = 0.7;
+          }
+        }
+
+        // Corner Correction (Celeste algorithm)
+        if (
+          feelMode === 'celeste' &&
+          vy < 0 &&
+          py - playerH / 2 <= plat.y + plat.h &&
+          py - playerH / 2 >= plat.y &&
+          px + playerHalfW > plat.x &&
+          px - playerHalfW < plat.x + plat.w
+        ) {
+          const distToLeft = Math.abs(px + playerHalfW - plat.x);
+          const distToRight = Math.abs(plat.x + plat.w - (px - playerHalfW));
+          if (distToLeft < 9) {
+            px -= distToLeft + 1;
+          } else if (distToRight < 9) {
+            px += distToRight + 1;
+          } else {
+            vy = 0;
+          }
+        }
+      });
+
+      // Pit floor reset
+      if (py > canvas.height + 40) {
+        px = 60;
+        py = 250;
+        vx = 0;
+        vy = 0;
+      }
+
+      // Gem collection
+      gems.forEach((g) => {
+        if (g.collected) {
+          g.respawnTimer--;
+          if (g.respawnTimer <= 0) g.collected = false;
+        } else {
+          const dist = Math.hypot(px - g.x, py - g.y);
+          if (dist < 22) {
+            g.collected = true;
+            g.respawnTimer = 210;
+            score++;
+            setGemsCollected((prev) => {
+              const next = prev + 1;
+              if (next >= 4 && !isLabDone) {
+                onCompleteLab();
+              }
+              return next;
+            });
+            if (feelMode === 'celeste') {
+              hitstop = 4;
+              shake = 5;
+              scaleX = 1.3;
+              scaleY = 1.3;
+            }
+            courseAudio.playHit(feelMode === 'celeste');
+          }
+        }
+      });
+
+      // Recover squash & stretch
+      scaleX += (1 - scaleX) * 0.22;
+      scaleY += (1 - scaleY) * 0.22;
 
       // Camera damping & look-ahead
       if (feelMode === 'naive') {
@@ -341,19 +331,35 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
       const sx = (Math.random() - 0.5) * shake * 2;
       const sy = (Math.random() - 0.5) * shake * 2;
 
-      // Render
+      // Render: Clean light drafting canvas
       ctx.save();
-      ctx.fillStyle = '#070b14';
+      ctx.fillStyle = '#f8fafc';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.translate(sx, sy);
 
+      // Drafting grid
+      ctx.strokeStyle = '#e2e8f0';
+      ctx.lineWidth = 1;
+      for (let gx = 30; gx < canvas.width; gx += 30) {
+        ctx.beginPath();
+        ctx.moveTo(gx, 0);
+        ctx.lineTo(gx, canvas.height);
+        ctx.stroke();
+      }
+      for (let gy = 30; gy < canvas.height; gy += 30) {
+        ctx.beginPath();
+        ctx.moveTo(0, gy);
+        ctx.lineTo(canvas.width, gy);
+        ctx.stroke();
+      }
+
       // Draw platforms
       platforms.forEach((plat) => {
-        ctx.fillStyle = '#1e293b';
-        ctx.strokeStyle = feelMode === 'celeste' ? '#10b981' : '#475569';
+        ctx.fillStyle = '#e2e8f0';
+        ctx.strokeStyle = feelMode === 'celeste' ? '#2563eb' : '#94a3b8';
         ctx.lineWidth = 2;
         ctx.beginPath();
-        ctx.roundRect(plat.x, plat.y, plat.w, plat.h, 5);
+        ctx.roundRect(plat.x, plat.y, plat.w, plat.h, 3);
         ctx.fill();
         ctx.stroke();
       });
@@ -363,9 +369,7 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
         if (!g.collected) {
           ctx.save();
           ctx.translate(g.x, g.y);
-          ctx.fillStyle = '#fbbf24';
-          ctx.shadowColor = '#fbbf24';
-          ctx.shadowBlur = feelMode === 'celeste' ? 12 : 0;
+          ctx.fillStyle = '#d97706';
           ctx.beginPath();
           ctx.moveTo(0, -9);
           ctx.lineTo(8, 0);
@@ -373,6 +377,9 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
           ctx.lineTo(-8, 0);
           ctx.closePath();
           ctx.fill();
+          ctx.strokeStyle = '#92400e';
+          ctx.lineWidth = 1;
+          ctx.stroke();
           ctx.restore();
         }
       });
@@ -381,20 +388,23 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
       ctx.save();
       ctx.translate(px, py);
       ctx.scale(scaleX, scaleY);
-      ctx.fillStyle = feelMode === 'celeste' ? '#34d399' : '#94a3b8';
+      ctx.fillStyle = feelMode === 'celeste' ? '#2563eb' : '#64748b';
       ctx.beginPath();
-      ctx.roundRect(-12, -15, 24, 30, 6);
+      ctx.roundRect(-12, -15, 24, 30, 4);
       ctx.fill();
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
       // Eyes
       const eyeOffset = vx >= 0 ? 4 : -4;
-      ctx.fillStyle = '#090d16';
+      ctx.fillStyle = '#ffffff';
       ctx.fillRect(eyeOffset - 2, -8, 4, 5);
       ctx.restore();
 
       // Engineer X-Ray Telemetry Overlay
       if (xrayDebug) {
         // Velocity Vector
-        ctx.strokeStyle = '#38bdf8';
+        ctx.strokeStyle = '#0284c7';
         ctx.lineWidth = 2;
         ctx.beginPath();
         ctx.moveTo(px, py);
@@ -402,22 +412,22 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
         ctx.stroke();
 
         // Camera Focus Crosshair
-        ctx.strokeStyle = 'rgba(244, 63, 94, 0.7)';
+        ctx.strokeStyle = 'rgba(225, 29, 72, 0.7)';
         ctx.lineWidth = 1.5;
-        ctx.strokeRect(camX - 18, camY - 18, 36, 36);
+        ctx.strokeRect(camX - 16, camY - 16, 32, 32);
 
-        // Coyote & Buffer HUD Bars
-        ctx.fillStyle = '#0f172a';
+        // Coyote & Buffer HUD Box
+        ctx.fillStyle = '#ffffff';
         ctx.fillRect(14, 14, 195, 54);
-        ctx.strokeStyle = '#334155';
+        ctx.strokeStyle = '#cbd5e1';
         ctx.strokeRect(14, 14, 195, 54);
 
-        ctx.fillStyle = '#cbd5e1';
-        ctx.font = '11px JetBrains Mono';
+        ctx.fillStyle = '#0f172a';
+        ctx.font = '11px Segoe UI, monospace';
         ctx.fillText(`MODE: ${feelMode.toUpperCase()}`, 24, 30);
-        ctx.fillStyle = coyoteTimer > 0 ? '#34d399' : '#64748b';
+        ctx.fillStyle = coyoteTimer > 0 ? '#16a34a' : '#64748b';
         ctx.fillText(`COYOTE WINDOW: ${coyoteTimer}f`, 24, 46);
-        ctx.fillStyle = jumpBufferTimer > 0 ? '#fbbf24' : '#64748b';
+        ctx.fillStyle = jumpBufferTimer > 0 ? '#d97706' : '#64748b';
         ctx.fillText(`JUMP BUFFER:   ${jumpBufferTimer}f`, 24, 60);
       }
 
@@ -434,126 +444,125 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
   }, [feelMode, xrayDebug, fallGravityMult, apexHangBoost, attackMs, releaseMs, coyoteFrames, bufferFrames, isLabDone, onCompleteLab]);
 
   return (
-    <div className="space-y-12 pb-16">
+    <div className="space-y-8 pb-12">
       {/* Header */}
-      <header className="space-y-3 border-b border-slate-800 pb-6">
-        <div className="flex flex-wrap items-center gap-3">
-          <span className="rounded-md bg-gradient-to-r from-emerald-500 to-teal-600 px-3 py-1 text-xs font-mono font-bold text-white">
-            MODULE 02 • HOURS 2:00 – 4:00
+      <header className="border-b border-zinc-200 pb-5 space-y-2">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="rounded bg-blue-50 border border-blue-200 px-2 py-0.5 text-xs font-mono font-bold text-blue-700">
+            MODULE 02 • ESTIMATED STUDY TIME: 2.0 HOURS
           </span>
-          <span className="text-xs font-mono text-slate-400">
-            Steve Swink (Game Feel) + Maddy Thorson (Celeste) + Control Theory
+          <span className="text-xs font-mono text-zinc-500">
+            Game Feel (Steve Swink), Maddy Thorson (Celeste), Control Theory
           </span>
         </div>
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-          The Physics of Virtual Sensation: 3Cs, Piecewise Kinematics & Temporal Forgiveness
+        <h1 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
+          The Physics of Virtual Sensation: 3Cs, Piecewise Kinematics &amp; Temporal Forgiveness
         </h1>
-        <p className="text-slate-300 max-w-4xl leading-relaxed">
-          When a CS graduate writes their first platformer or action game, they usually write <code className="text-emerald-300">velocity.y += 9.8 * dt</code> and <code className="text-emerald-300">if (isGrounded && keyPressed) jump()</code>.
-          The result feels floaty, unresponsive, and frustrating. Here is the mathematical and biological reason why—and how to engineer sub-second sensation.
+        <p className="text-zinc-700 text-sm sm:text-base leading-relaxed">
+          When software engineers implement a platformer or action character, they frequently write <code className="bg-zinc-100 px-1 py-0.5 rounded text-zinc-900 border border-zinc-200">velocity.y += 9.8 * dt</code> and <code className="bg-zinc-100 px-1 py-0.5 rounded text-zinc-900 border border-zinc-200">if (isGrounded &amp;&amp; keyPressed) jump()</code>.
+          The result feels floaty, unresponsive, and imprecise.
+          This module covers the human motor-sensory loop latency (~240ms) and how game engines use piecewise acceleration, temporal hysteresis, and visual feedback to achieve responsive tactile controls.
         </p>
       </header>
 
       {/* Comprehensive Academic Textbook Chapter */}
-      <section className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
+      <section>
         <Module2Content />
       </section>
 
-      {/* Section 2.1: The 240ms Human Processor Loop & Piecewise Jump Calculus */}
-      <section className="space-y-6">
-        <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400">
-          <Clock className="h-4 w-4" />
-          <span>2.1 Biological I/O Latency & Non-Newtonian Jump Kinematics</span>
+      {/* Section 2.1: Jump Kinematics */}
+      <section className="space-y-5">
+        <div>
+          <div className="text-xs font-semibold uppercase tracking-wider text-blue-700 flex items-center gap-1.5">
+            <Clock className="h-4 w-4" />
+            <span>2.1 Biological I/O Latency &amp; Non-Newtonian Jump Kinematics</span>
+          </div>
+          <h2 className="text-xl font-bold text-zinc-950 mt-1">
+            Deriving Gravity from Spatial Metrics (H<sub>max</sub>, t<sub>peak</sub>)
+          </h2>
         </div>
-        <h2 className="text-2xl font-bold text-white">
-          Deriving Gravity from Spatial Metrics (H<sub>max</sub>, t<sub>peak</sub>) Instead of Arbitrary Forces
-        </h2>
 
-        <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-          In Steve Swink’s <em>Game Feel</em>, the human player is modeled as a three-stage signal processor: <strong>Perceptual Processor (~100ms) → Cognitive Processor (~70ms) → Motor Processor (~70ms) = ~240ms total loop latency</strong>.
-          Furthermore, real-world constant gravity (g = 9.8 m/s²) produces a symmetric parabola that spends too much time rising slowly and falls too gently.
-          Instead of guessing force constants, game programmers parameterize jumps by <strong>desired level design height (H<sub>max</sub>)</strong> and <strong>time to apex (t<sub>peak</sub>)</strong>:
+        <p className="text-sm text-zinc-700 leading-relaxed">
+          Constant real-world gravity produces a symmetric parabola that spends excessive time rising slowly and descends too sluggishly.
+          Game developers parameterize jumps by level geometry requirements: <strong>desired jump height (H<sub>max</sub>)</strong> and <strong>time to peak (t<sub>peak</sub>)</strong>:
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs">
-          <div className="rounded-xl border border-slate-800 bg-slate-900/90 p-4 space-y-1.5">
-            <div className="text-emerald-400 font-bold">1. INITIAL JUMP VELOCITY (v₀)</div>
-            <div className="text-base text-white font-bold">v₀ = (2 · H_max) / t_peak</div>
-            <p className="text-slate-400 font-sans">
-              Derived directly from integrating v(t) = v₀ − g·t where v(t<sub>peak</sub>) = 0. Current: <strong className="text-emerald-300">{Math.round(v0)} px/s</strong>.
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+            <div className="text-blue-700 font-bold">1. INITIAL JUMP VELOCITY (v₀)</div>
+            <div className="text-base text-zinc-950 font-bold">v₀ = (2 &middot; H_max) / t_peak</div>
+            <p className="text-zinc-600 font-sans">
+              Current: <strong className="text-blue-800">{Math.round(v0)} px/s</strong>
             </p>
           </div>
 
-          <div className="rounded-xl border border-slate-800 bg-slate-900/90 p-4 space-y-1.5">
-            <div className="text-cyan-400 font-bold">2. RISING GRAVITY (g_rise)</div>
-            <div className="text-base text-white font-bold">g_rise = (2 · H_max) / t_peak²</div>
-            <p className="text-slate-400 font-sans">
-              Guarantees the character reaches exact pixel height H<sub>max</sub> at exact time t<sub>peak</sub>. Current: <strong className="text-cyan-300">{Math.round(gRise)} px/s²</strong>.
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+            <div className="text-indigo-700 font-bold">2. RISING GRAVITY (g_rise)</div>
+            <div className="text-base text-zinc-950 font-bold">g_rise = (2 &middot; H_max) / t_peak&sup2;</div>
+            <p className="text-zinc-600 font-sans">
+              Current: <strong className="text-indigo-800">{Math.round(gRise)} px/s&sup2;</strong>
             </p>
           </div>
 
-          <div className="rounded-xl border border-slate-800 bg-slate-900/90 p-4 space-y-1.5">
-            <div className="text-amber-400 font-bold">3. ASYMMETRIC FALL & APEX HANG</div>
-            <div className="text-base text-white font-bold">g_fall = k · g_rise (k ≈ 2.4)</div>
-            <p className="text-slate-400 font-sans">
-              Multiplying gravity by 2.4× when v<sub>y</sub> &lt; 0 snaps the player briskly to the ground, while halving |g| when |v<sub>y</sub>| &lt; ε gives micro-control at the peak.
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+            <div className="text-amber-700 font-bold">3. ASYMMETRIC FALL &amp; APEX HANG</div>
+            <div className="text-base text-zinc-950 font-bold">g_fall = k &middot; g_rise (k &asymp; 2.4)</div>
+            <p className="text-zinc-600 font-sans">
+              Snaps the player briskly to the ground on descent while granting fine control at the peak.
             </p>
           </div>
         </div>
 
-        {/* Interactive Diagram 2.1: Live Jump Parabola & ADSR Oscilloscope */}
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-6 space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-4">
+        {/* Interactive Diagram 2.1 */}
+        <div className="border border-zinc-200 bg-white rounded-lg p-5 space-y-5 shadow-sm">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-zinc-200 pb-3">
             <div>
-              <span className="text-xs font-mono uppercase text-emerald-400">Interactive Diagram 2.1</span>
-              <h3 className="text-lg font-bold text-white">Piecewise Jump Trajectory vs. Naive Newtonian Parabola</h3>
+              <span className="text-xs font-mono uppercase text-blue-700 font-semibold">Interactive Figure 2.1</span>
+              <h3 className="text-base font-bold text-zinc-950">Piecewise Jump Trajectory vs. Constant Gravity</h3>
             </div>
-            <span className="text-xs font-mono text-slate-400">
-              Compare dashed gray (Newtonian constant g) vs. solid emerald (Tuned Piecewise Curve)
+            <span className="text-xs text-zinc-500">
+              Dashed line: Newtonian constant g &bull; Solid blue: Piecewise tuned jump
             </span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-            <div className="lg:col-span-7 rounded-xl border border-slate-800 bg-slate-950 p-4">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center">
+            <div className="lg:col-span-7 border border-zinc-200 bg-zinc-50 rounded-lg p-4">
               <svg viewBox="0 0 530 245" className="w-full h-auto">
-                {/* Grid lines */}
-                <line x1="50" y1="210" x2="500" y2="210" stroke="#475569" strokeWidth="2" />
-                <line x1="50" y1="210" x2="50" y2="25" stroke="#475569" strokeWidth="2" />
+                <line x1="50" y1="210" x2="500" y2="210" stroke="#94a3b8" strokeWidth="2" />
+                <line x1="50" y1="210" x2="50" y2="25" stroke="#94a3b8" strokeWidth="2" />
 
-                {/* Target Height Guide */}
                 <line
                   x1="50"
                   y1={210 - (jumpHeightPx / 150) * 165}
                   x2="500"
                   y2={210 - (jumpHeightPx / 150) * 165}
-                  stroke="#1e293b"
+                  stroke="#cbd5e1"
                   strokeDasharray="4 4"
                 />
-                <text x="58" y={204 - (jumpHeightPx / 150) * 165} fill="#64748b" fontSize="10" fontFamily="JetBrains Mono">
+                <text x="58" y={204 - (jumpHeightPx / 150) * 165} fill="#64748b" fontSize="10" fontFamily="Segoe UI, monospace">
                   H_max = {jumpHeightPx}px
                 </text>
 
                 {/* Naive Curve */}
-                <path d={naiveJumpPoints.join(' ')} fill="none" stroke="#64748b" strokeWidth="2.5" strokeDasharray="5 5" />
+                <path d={naiveJumpPoints.join(' ')} fill="none" stroke="#94a3b8" strokeWidth="2" strokeDasharray="5 5" />
 
                 {/* Tuned Piecewise Curve */}
-                <path d={tunedJumpPoints.join(' ')} fill="none" stroke="#10b981" strokeWidth="3.5" strokeLinecap="round" />
+                <path d={tunedJumpPoints.join(' ')} fill="none" stroke="#2563eb" strokeWidth="3" strokeLinecap="round" />
 
-                {/* Labels */}
-                <text x="370" y="50" fill="#10b981" fontSize="11" fontFamily="JetBrains Mono" fontWeight="bold">
-                  — Tuned Piecewise Jump (Snappy Descent + Apex Hang)
+                <text x="320" y="50" fill="#2563eb" fontSize="11" fontFamily="Segoe UI, monospace" fontWeight="bold">
+                  &mdash; Tuned Piecewise Jump (Crisp Descent + Apex Hang)
                 </text>
-                <text x="370" y="68" fill="#94a3b8" fontSize="11" fontFamily="JetBrains Mono">
+                <text x="320" y="68" fill="#64748b" fontSize="11" fontFamily="Segoe UI, monospace">
                   -- Naive Constant Gravity (Floaty Descent)
                 </text>
               </svg>
             </div>
 
-            <div className="lg:col-span-5 space-y-4 bg-slate-950 p-5 rounded-xl border border-slate-800">
+            <div className="lg:col-span-5 space-y-3 bg-zinc-50 p-4 rounded-lg border border-zinc-200">
               <div>
                 <div className="flex justify-between text-xs font-mono mb-1">
-                  <span className="text-slate-300">Desired Jump Height (H_max)</span>
-                  <span className="text-emerald-400">{jumpHeightPx} px</span>
+                  <span className="text-zinc-700">Target Jump Height (H_max)</span>
+                  <span className="text-blue-700 font-bold">{jumpHeightPx} px</span>
                 </div>
                 <input
                   type="range"
@@ -562,14 +571,14 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
                   step="5"
                   value={jumpHeightPx}
                   onChange={(e) => setJumpHeightPx(parseInt(e.target.value, 10))}
-                  className="w-full accent-emerald-400"
+                  className="w-full accent-blue-600"
                 />
               </div>
 
               <div>
                 <div className="flex justify-between text-xs font-mono mb-1">
-                  <span className="text-slate-300">Time to Apex (t_peak)</span>
-                  <span className="text-emerald-400">{timeToPeakSec.toFixed(2)} sec</span>
+                  <span className="text-zinc-700">Time to Apex (t_peak)</span>
+                  <span className="text-blue-700 font-bold">{timeToPeakSec.toFixed(2)} sec</span>
                 </div>
                 <input
                   type="range"
@@ -578,14 +587,14 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
                   step="0.02"
                   value={timeToPeakSec}
                   onChange={(e) => setTimeToPeakSec(parseFloat(e.target.value))}
-                  className="w-full accent-emerald-400"
+                  className="w-full accent-blue-600"
                 />
               </div>
 
               <div>
                 <div className="flex justify-between text-xs font-mono mb-1">
-                  <span className="text-slate-300">Falling Gravity Multiplier (k_fall)</span>
-                  <span className="text-emerald-400">{fallGravityMult.toFixed(1)}x</span>
+                  <span className="text-zinc-700">Falling Gravity Multiplier (k_fall)</span>
+                  <span className="text-blue-700 font-bold">{fallGravityMult.toFixed(1)}x</span>
                 </div>
                 <input
                   type="range"
@@ -594,17 +603,17 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
                   step="0.1"
                   value={fallGravityMult}
                   onChange={(e) => setFallGravityMult(parseFloat(e.target.value))}
-                  className="w-full accent-emerald-400"
+                  className="w-full accent-blue-600"
                 />
               </div>
 
-              <div className="flex items-center justify-between pt-2 border-t border-slate-800">
-                <span className="text-xs font-mono text-slate-300">Apex Hang Time (|v_y| &lt; ε → 0.45g)</span>
+              <div className="flex items-center justify-between pt-2 border-t border-zinc-200">
+                <span className="text-xs font-mono text-zinc-700">Apex Hang Time (|v_y| &lt; &epsilon; &rarr; 0.45g)</span>
                 <input
                   type="checkbox"
                   checked={apexHangBoost}
                   onChange={(e) => setApexHangBoost(e.target.checked)}
-                  className="h-4 w-4 accent-emerald-400"
+                  className="h-4 w-4 accent-blue-600"
                 />
               </div>
             </div>
@@ -612,92 +621,88 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
         </div>
       </section>
 
-      {/* Section 2.2: Temporal Hysteresis — Coyote Time & Input Buffering */}
-      <section className="space-y-6">
-        <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-amber-400">
-          <Zap className="h-4 w-4" />
-          <span>2.2 State Machine Temporal Hysteresis</span>
+      {/* Section 2.2: Coyote Time & Input Buffering */}
+      <section className="space-y-5">
+        <div>
+          <div className="text-xs font-semibold uppercase tracking-wider text-blue-700 flex items-center gap-1.5">
+            <Zap className="h-4 w-4" />
+            <span>2.2 Temporal Hysteresis &mdash; Coyote Time &amp; Input Ring Buffering</span>
+          </div>
+          <h2 className="text-xl font-bold text-zinc-950 mt-1">
+            Mitigating Human Timing Discrepancies at 60 FPS
+          </h2>
         </div>
-        <h2 className="text-2xl font-bold text-white">
-          Coyote Time & Input Ring Buffers: Forgiving Human Timing Errors
-        </h2>
 
-        <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-          Suppose a player runs toward a pit to jump at the last millisecond, or presses Jump 50ms <em>before</em> their feet touch the ground on landing.
-          A strict FSM (<code className="text-rose-300">if (state === GROUNDED && input === JUMP_PRESSED)</code>) drops the input on the floor, making the player swear the keyboard broke.
-          By adding two temporal hysteresis windows—<strong>Coyote Time</strong> (allowing jump for Δt ≈ 100ms after leaving a ledge) and <strong>Input Buffering</strong> (queuing a jump press for Δt ≈ 100ms until landing)—the controller feels responsive.
-        </p>
-
-        {/* Interactive Diagram 2.2: 60 FPS Logic Analyzer Timeline */}
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-6 space-y-5">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-4">
+        {/* Interactive Diagram 2.2 */}
+        <div className="border border-zinc-200 bg-white rounded-lg p-5 space-y-5 shadow-sm">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-zinc-200 pb-3">
             <div>
-              <span className="text-xs font-mono uppercase text-amber-400">Interactive Diagram 2.2</span>
-              <h3 className="text-lg font-bold text-white">60 FPS Frame-by-Frame Input Logic Analyzer</h3>
+              <span className="text-xs font-mono uppercase text-blue-700 font-semibold">Interactive Figure 2.2</span>
+              <h3 className="text-base font-bold text-zinc-950">Frame-by-Frame Input Logic Timeline</h3>
             </div>
             <div className="text-xs font-mono">
               {isStrictJumpSuccess ? (
-                <span className="rounded bg-emerald-500/20 text-emerald-300 px-2.5 py-1 border border-emerald-500/40">
-                  ✓ Jump Executes (On Solid Ground)
+                <span className="rounded bg-emerald-50 text-emerald-800 px-2 py-0.5 border border-emerald-300 font-semibold">
+                  ✓ Jump Executes (On Ground)
                 </span>
               ) : isCoyoteJumpSuccess ? (
-                <span className="rounded bg-cyan-500/20 text-cyan-300 px-2.5 py-1 border border-cyan-500/40">
-                  ✓ Saved by COYOTE TIME ({playerPressFrame - 12} frames after ledge!)
+                <span className="rounded bg-blue-50 text-blue-800 px-2 py-0.5 border border-blue-300 font-semibold">
+                  ✓ Saved by Coyote Window ({playerPressFrame - 12} frames past ledge)
                 </span>
               ) : isBufferJumpSuccess ? (
-                <span className="rounded bg-amber-500/20 text-amber-300 px-2.5 py-1 border border-amber-500/40">
-                  ✓ Saved by INPUT BUFFER ({32 - playerPressFrame} frames before landing!)
+                <span className="rounded bg-amber-50 text-amber-800 px-2 py-0.5 border border-amber-300 font-semibold">
+                  ✓ Saved by Input Buffer ({32 - playerPressFrame} frames before landing)
                 </span>
               ) : (
-                <span className="rounded bg-rose-500/20 text-rose-300 px-2.5 py-1 border border-rose-500/40">
-                  ✗ Input Dropped (Mid-Air Deadzone — Player Dies!)
+                <span className="rounded bg-red-50 text-red-800 px-2 py-0.5 border border-red-300 font-semibold">
+                  ✗ Input Dropped (Deadzone &bull; Player Falls)
                 </span>
               )}
             </div>
           </div>
 
           {/* Frame Timeline SVG */}
-          <div className="overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4">
+          <div className="overflow-x-auto border border-zinc-200 bg-zinc-50 rounded-lg p-4">
             <svg viewBox="0 0 760 150" className="w-full min-w-[620px] h-auto">
-              {/* Ground Ledge A (Frames 0 to 12) */}
-              <rect x="30" y="35" width={12 * 15} height="28" rx="4" fill="#065f46" stroke="#10b981" />
-              <text x="120" y="53" fill="#ecfdf5" fontSize="11" fontFamily="JetBrains Mono" textAnchor="middle">
+              {/* Ground Ledge A */}
+              <rect x="30" y="35" width={12 * 15} height="28" rx="3" fill="#e2e8f0" stroke="#94a3b8" />
+              <text x="120" y="53" fill="#0f172a" fontSize="11" fontFamily="Segoe UI, monospace" textAnchor="middle">
                 LEDGE A (Grounded 0..12)
               </text>
 
-              {/* Coyote Window (Frames 12 to 12 + coyoteFrames) */}
+              {/* Coyote Window */}
               <rect
                 x={30 + 12 * 15}
                 y="35"
                 width={coyoteFrames * 15}
                 height="28"
-                rx="4"
-                fill="rgba(6, 182, 212, 0.28)"
-                stroke="#22d3ee"
+                rx="3"
+                fill="rgba(37, 99, 235, 0.12)"
+                stroke="#2563eb"
                 strokeDasharray="3 3"
               />
-              <text x={30 + (12 + coyoteFrames / 2) * 15} y="26" fill="#22d3ee" fontSize="10" fontFamily="JetBrains Mono" textAnchor="middle">
+              <text x={30 + (12 + coyoteFrames / 2) * 15} y="26" fill="#1d4ed8" fontSize="10" fontFamily="Segoe UI, monospace" textAnchor="middle">
                 Coyote ({coyoteFrames}f)
               </text>
 
-              {/* Input Buffer Window before Ledge B (Frames 32 - bufferFrames to 32) */}
+              {/* Input Buffer Window */}
               <rect
                 x={30 + (32 - bufferFrames) * 15}
                 y="35"
                 width={bufferFrames * 15}
                 height="28"
-                rx="4"
-                fill="rgba(245, 158, 11, 0.28)"
-                stroke="#fbbf24"
+                rx="3"
+                fill="rgba(217, 119, 6, 0.15)"
+                stroke="#d97706"
                 strokeDasharray="3 3"
               />
-              <text x={30 + (32 - bufferFrames / 2) * 15} y="26" fill="#fbbf24" fontSize="10" fontFamily="JetBrains Mono" textAnchor="middle">
+              <text x={30 + (32 - bufferFrames / 2) * 15} y="26" fill="#b45309" fontSize="10" fontFamily="Segoe UI, monospace" textAnchor="middle">
                 Buffer ({bufferFrames}f)
               </text>
 
-              {/* Ground Ledge B (Frames 32 to 45) */}
-              <rect x={30 + 32 * 15} y="35" width={13 * 15} height="28" rx="4" fill="#065f46" stroke="#10b981" />
-              <text x={30 + 38.5 * 15} y="53" fill="#ecfdf5" fontSize="11" fontFamily="JetBrains Mono" textAnchor="middle">
+              {/* Ground Ledge B */}
+              <rect x={30 + 32 * 15} y="35" width={13 * 15} height="28" rx="3" fill="#e2e8f0" stroke="#94a3b8" />
+              <text x={30 + 38.5 * 15} y="53" fill="#0f172a" fontSize="11" fontFamily="Segoe UI, monospace" textAnchor="middle">
                 LEDGE B (Land at f=32)
               </text>
 
@@ -709,7 +714,7 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
                   y1="75"
                   x2={30 + f * 15}
                   y2={f % 5 === 0 ? '92' : '83'}
-                  stroke="#475569"
+                  stroke="#94a3b8"
                   strokeWidth="1.5"
                 />
               ))}
@@ -720,29 +725,29 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
                 y1="12"
                 x2={30 + playerPressFrame * 15}
                 y2="122"
-                stroke="#f43f5e"
-                strokeWidth="3"
+                stroke="#dc2626"
+                strokeWidth="2.5"
               />
-              <circle cx={30 + playerPressFrame * 15} cy="122" r="6" fill="#f43f5e" />
+              <circle cx={30 + playerPressFrame * 15} cy="122" r="5" fill="#dc2626" />
               <text
                 x={Math.min(660, Math.max(90, 30 + playerPressFrame * 15))}
                 y="142"
-                fill="#fda4af"
+                fill="#991b1b"
                 fontSize="11"
-                fontFamily="JetBrains Mono"
+                fontFamily="Segoe UI, monospace"
                 fontWeight="bold"
                 textAnchor="middle"
               >
-                Player Presses JUMP at Frame {playerPressFrame}
+                Jump Input Press at Frame {playerPressFrame}
               </text>
             </svg>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-slate-950 p-3.5 rounded-xl border border-slate-800">
+            <div className="bg-zinc-50 p-3.5 rounded-lg border border-zinc-200">
               <div className="flex justify-between text-xs font-mono mb-1">
-                <span className="text-rose-300">Scrub Button Press Frame</span>
-                <span className="text-white font-bold">Frame {playerPressFrame}</span>
+                <span className="text-zinc-700">Scrub Jump Input Frame</span>
+                <span className="text-zinc-950 font-bold">Frame {playerPressFrame}</span>
               </div>
               <input
                 type="range"
@@ -751,86 +756,86 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
                 step="1"
                 value={playerPressFrame}
                 onChange={(e) => setPlayerPressFrame(parseInt(e.target.value, 10))}
-                className="w-full accent-rose-500"
+                className="w-full accent-blue-600"
               />
             </div>
 
-            <div className="bg-slate-950 p-3.5 rounded-xl border border-slate-800">
+            <div className="bg-zinc-50 p-3.5 rounded-lg border border-zinc-200">
               <div className="flex justify-between text-xs font-mono mb-1">
-                <span className="text-cyan-300">Coyote Grace Window</span>
-                <span className="text-white font-bold">{coyoteFrames}f ({Math.round(coyoteFrames * 16.6)}ms)</span>
+                <span className="text-zinc-700">Coyote Window Length</span>
+                <span className="text-blue-700 font-bold">{coyoteFrames} frames ({Math.round(coyoteFrames * 16.6)}ms)</span>
               </div>
               <input
                 type="range"
                 min="0"
-                max="10"
+                max="12"
                 step="1"
                 value={coyoteFrames}
                 onChange={(e) => setCoyoteFrames(parseInt(e.target.value, 10))}
-                className="w-full accent-cyan-400"
+                className="w-full accent-blue-600"
               />
             </div>
 
-            <div className="bg-slate-950 p-3.5 rounded-xl border border-slate-800">
+            <div className="bg-zinc-50 p-3.5 rounded-lg border border-zinc-200">
               <div className="flex justify-between text-xs font-mono mb-1">
-                <span className="text-amber-300">Jump Input Buffer</span>
-                <span className="text-white font-bold">{bufferFrames}f ({Math.round(bufferFrames * 16.6)}ms)</span>
+                <span className="text-zinc-700">Input Buffer Window Length</span>
+                <span className="text-amber-700 font-bold">{bufferFrames} frames ({Math.round(bufferFrames * 16.6)}ms)</span>
               </div>
               <input
                 type="range"
                 min="0"
-                max="10"
+                max="12"
                 step="1"
                 value={bufferFrames}
                 onChange={(e) => setBufferFrames(parseInt(e.target.value, 10))}
-                className="w-full accent-amber-400"
+                className="w-full accent-blue-600"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Playable Lab 2: The Platformer Feel Surgery */}
-      <section className="rounded-2xl border-2 border-emerald-500/40 bg-gradient-to-b from-slate-900 to-slate-950 p-6 sm:p-8 space-y-6 shadow-2xl">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+      {/* Playable Lab 2 */}
+      <section className="border border-zinc-200 bg-white rounded-lg p-5 space-y-5 shadow-sm">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-zinc-200 pb-3">
           <div>
-            <div className="inline-flex items-center gap-2 text-xs font-mono uppercase text-emerald-400 font-bold">
+            <div className="inline-flex items-center gap-1.5 text-xs font-mono uppercase text-blue-700 font-bold">
               <Sparkles className="h-4 w-4" />
-              <span>Playable Engineering Lab 02 • "The Platformer Feel Surgery"</span>
+              <span>Laboratory 2.1 &bull; Hands-On Experiment</span>
             </div>
-            <h2 className="text-2xl font-bold text-white mt-1">
-              A/B Live Feel Comparator: Naive Rigid Physics vs. Tuned *Celeste* Controller
+            <h2 className="text-lg font-bold text-zinc-950 mt-0.5">
+              Live Feel Comparator: Naive Rigid Kinematics vs. Tuned Responsive Controller
             </h2>
           </div>
 
           <div className="flex items-center gap-3">
-            <div className="rounded-xl bg-slate-900 border border-slate-700 px-3.5 py-2 text-xs font-mono">
-              Gems Collected: <strong className="text-amber-400 text-sm">{gemsCollected} / 4</strong>
+            <div className="border border-zinc-200 bg-zinc-50 px-3 py-1.5 rounded text-xs font-mono">
+              Gems Collected: <strong className="text-amber-700">{gemsCollected} / 4</strong>
             </div>
             {isLabDone ? (
-              <span className="inline-flex items-center gap-1.5 rounded-xl bg-emerald-500/20 border border-emerald-500/40 px-3.5 py-2 text-xs font-mono font-bold text-emerald-300">
-                <CheckCircle2 className="h-4 w-4" /> Lab Completed!
+              <span className="inline-flex items-center gap-1 rounded bg-emerald-50 border border-emerald-300 px-3 py-1.5 text-xs font-mono font-semibold text-emerald-800">
+                <CheckCircle2 className="h-3.5 w-3.5" /> Lab Complete!
               </span>
             ) : (
-              <span className="inline-flex items-center gap-1.5 rounded-xl bg-amber-500/10 border border-amber-500/30 px-3.5 py-2 text-xs font-mono text-amber-300">
+              <span className="inline-flex items-center gap-1 rounded bg-amber-50 border border-amber-300 px-3 py-1.5 text-xs font-mono text-amber-900">
                 Goal: Collect 4 Gems
               </span>
             )}
           </div>
         </div>
 
-        <p className="text-sm text-slate-300 leading-relaxed">
-          Use <kbd className="rounded bg-slate-800 px-1.5 py-0.5 font-mono text-xs">A</kbd>/<kbd className="rounded bg-slate-800 px-1.5 py-0.5 font-mono text-xs">D</kbd> (or Arrow Keys) to move and <kbd className="rounded bg-slate-800 px-1.5 py-0.5 font-mono text-xs">W</kbd>/<kbd className="rounded bg-slate-800 px-1.5 py-0.5 font-mono text-xs">Space</kbd> to jump across the platforms to collect 4 golden crystals.
-          Toggle between <strong>Naive CS Physics</strong> and <strong>Tuned Celeste Feel</strong> at any moment to feel the difference in muscle memory.
+        <p className="text-sm text-zinc-700 leading-relaxed">
+          Use <kbd className="rounded bg-zinc-100 border border-zinc-300 px-1.5 py-0.5 font-mono text-xs">A</kbd>/<kbd className="rounded bg-zinc-100 border border-zinc-300 px-1.5 py-0.5 font-mono text-xs">D</kbd> (or Arrow Keys) to move and <kbd className="rounded bg-zinc-100 border border-zinc-300 px-1.5 py-0.5 font-mono text-xs">W</kbd>/<kbd className="rounded bg-zinc-100 border border-zinc-300 px-1.5 py-0.5 font-mono text-xs">Space</kbd> to jump across the platforms.
+          Toggle between Mode A (Naive Physics) and Mode B (Tuned Controller) to experience the difference.
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
           <div className="lg:col-span-7 space-y-3">
             <canvas
               ref={canvasRef}
               width={560}
               height={320}
-              className="w-full rounded-xl border border-slate-700 bg-slate-950 shadow-inner"
+              className="w-full rounded border border-zinc-300 bg-zinc-50 shadow-sm"
             />
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div className="flex gap-2">
@@ -839,49 +844,49 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
                     courseAudio.playClick(420);
                     setFeelMode('naive');
                   }}
-                  className={`rounded-lg px-3.5 py-2 text-xs font-mono font-semibold transition cursor-pointer ${
+                  className={`rounded px-3 py-1.5 text-xs font-medium transition cursor-pointer ${
                     feelMode === 'naive'
-                      ? 'bg-rose-600 text-white'
-                      : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                      ? 'bg-zinc-800 text-white font-semibold'
+                      : 'bg-white border border-zinc-300 text-zinc-700 hover:bg-zinc-50'
                   }`}
                 >
-                  Mode A: Naive CS Physics (Floaty/Unbuffered)
+                  Mode A: Naive Kinematics (Floaty/Rigid)
                 </button>
                 <button
                   onClick={() => {
                     courseAudio.playClick(680);
                     setFeelMode('celeste');
                   }}
-                  className={`rounded-lg px-3.5 py-2 text-xs font-mono font-semibold transition cursor-pointer ${
+                  className={`rounded px-3 py-1.5 text-xs font-medium transition cursor-pointer ${
                     feelMode === 'celeste'
-                      ? 'bg-emerald-600 text-white'
-                      : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                      ? 'bg-blue-600 text-white font-semibold'
+                      : 'bg-white border border-zinc-300 text-zinc-700 hover:bg-zinc-50'
                   }`}
                 >
-                  Mode B: Tuned Celeste Controller (3Cs + Juice)
+                  Mode B: Tuned Controller (3Cs + Juice)
                 </button>
               </div>
 
               <button
                 onClick={() => setXrayDebug((v) => !v)}
-                className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-xs font-mono text-cyan-300 cursor-pointer"
+                className="inline-flex items-center gap-1.5 rounded border border-zinc-300 bg-white hover:bg-zinc-50 px-3 py-1.5 text-xs font-mono text-zinc-700 cursor-pointer shadow-sm"
               >
                 <Eye className="h-3.5 w-3.5" />
-                <span>X-Ray Telemetry: {xrayDebug ? 'ON' : 'OFF'}</span>
+                <span>X-Ray HUD: {xrayDebug ? 'ON' : 'OFF'}</span>
               </button>
             </div>
           </div>
 
-          <div className="lg:col-span-5 rounded-xl border border-slate-800 bg-slate-900/90 p-5 space-y-4">
-            <div className="flex items-center gap-2 text-xs font-mono uppercase text-emerald-400 border-b border-slate-800 pb-2.5">
-              <Sliders className="h-4 w-4" />
-              <span>ADSR & Feel Envelope Controls</span>
+          <div className="lg:col-span-5 rounded-lg border border-zinc-200 bg-zinc-50 p-4 space-y-3">
+            <div className="flex items-center gap-1.5 text-xs font-mono uppercase text-blue-700 font-bold border-b border-zinc-200 pb-2">
+              <Sliders className="h-3.5 w-3.5" />
+              <span>ADSR Envelope &amp; Responsiveness Controls</span>
             </div>
 
             <div>
               <div className="flex justify-between text-xs font-mono mb-1">
-                <span className="text-slate-300">Horizontal Attack Time (τ_attack)</span>
-                <span className="text-emerald-400">{attackMs} ms</span>
+                <span className="text-zinc-700">Attack Acceleration Time (&tau;_attack)</span>
+                <span className="text-blue-700 font-bold">{attackMs} ms</span>
               </div>
               <input
                 type="range"
@@ -890,14 +895,14 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
                 step="10"
                 value={attackMs}
                 onChange={(e) => setAttackMs(parseInt(e.target.value, 10))}
-                className="w-full accent-emerald-400"
+                className="w-full accent-blue-600"
               />
             </div>
 
             <div>
               <div className="flex justify-between text-xs font-mono mb-1">
-                <span className="text-slate-300">Horizontal Release / Friction (τ_release)</span>
-                <span className="text-emerald-400">{releaseMs} ms</span>
+                <span className="text-zinc-700">Release / Deceleration (&tau;_release)</span>
+                <span className="text-blue-700 font-bold">{releaseMs} ms</span>
               </div>
               <input
                 type="range"
@@ -906,19 +911,18 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
                 step="10"
                 value={releaseMs}
                 onChange={(e) => setReleaseMs(parseInt(e.target.value, 10))}
-                className="w-full accent-emerald-400"
+                className="w-full accent-blue-600"
               />
             </div>
 
-            <div className="rounded-lg bg-slate-950 border border-slate-800 p-3.5 space-y-2 text-xs text-slate-300">
-              <div className="font-mono font-bold text-emerald-300">6 Active Feel Enhancements in Mode B:</div>
-              <ul className="list-disc pl-4 space-y-1 text-slate-400">
-                <li><strong className="text-slate-200">ADSR Envelopes:</strong> Sub-80ms acceleration & crisp stopping.</li>
-                <li><strong className="text-slate-200">Asymmetric Gravity:</strong> {fallGravityMult.toFixed(1)}x faster descent + early-release hop.</li>
-                <li><strong className="text-slate-200">Coyote & Buffer:</strong> {coyoteFrames}f ledge forgiveness & {bufferFrames}f landing queue.</li>
-                <li><strong className="text-slate-200">Corner Correction:</strong> 8px horizontal nudge when clipping a platform edge from below.</li>
-                <li><strong className="text-slate-200">Look-Ahead PID Camera:</strong> Red crosshair leads velocity vector smoothly.</li>
-                <li><strong className="text-slate-200">Squash & Hitstop:</strong> Volume-preserving deformation ($s_x \cdot s_y = 1$) + 4f freeze on gem pickup.</li>
+            <div className="bg-white border border-zinc-200 p-3 rounded text-xs space-y-1.5 text-zinc-700">
+              <div className="font-mono font-bold text-zinc-950">Active Kinematic Enhancements in Mode B:</div>
+              <ul className="list-disc pl-4 space-y-1 text-zinc-600">
+                <li><strong>ADSR Envelopes:</strong> Sub-80ms acceleration &amp; crisp stopping.</li>
+                <li><strong>Asymmetric Gravity:</strong> {fallGravityMult.toFixed(1)}x faster descent + early-release hop.</li>
+                <li><strong>Coyote &amp; Buffer:</strong> {coyoteFrames}f ledge forgiveness &amp; {bufferFrames}f landing queue.</li>
+                <li><strong>Corner Correction:</strong> Horizontal nudge when clipping platform edges from beneath.</li>
+                <li><strong>Look-Ahead Camera:</strong> Crosshair leads velocity vector smoothly.</li>
               </ul>
             </div>
           </div>
@@ -926,11 +930,11 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
       </section>
 
       {/* Footer Nav */}
-      <section className="flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl border border-slate-800 bg-slate-900/70 p-6">
+      <section className="flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-zinc-200 pt-6 mt-6">
         <div className="flex items-center gap-3">
           <button
             onClick={() => onNavigate('module-1')}
-            className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-800 hover:bg-slate-700 px-4 py-2.5 text-sm font-medium text-slate-200 transition cursor-pointer"
+            className="inline-flex items-center gap-2 rounded border border-zinc-300 bg-white hover:bg-zinc-50 px-4 py-2 text-sm font-medium text-zinc-800 transition cursor-pointer"
           >
             <ArrowLeft className="h-4 w-4" />
             <span>Prev: Module 01</span>
@@ -941,22 +945,22 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
               courseAudio.playSuccess();
               onCompleteModule();
             }}
-            className={`inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold transition cursor-pointer ${
+            className={`inline-flex items-center gap-2 rounded px-4 py-2 text-sm font-semibold transition cursor-pointer ${
               isModuleDone
-                ? 'bg-emerald-500/20 border border-emerald-500/40 text-emerald-300'
-                : 'bg-slate-800 hover:bg-slate-700 text-white border border-slate-700'
+                ? 'bg-emerald-50 border border-emerald-300 text-emerald-800'
+                : 'bg-white hover:bg-zinc-50 text-zinc-800 border border-zinc-300'
             }`}
           >
             <CheckCircle2 className="h-4 w-4" />
-            <span>{isModuleDone ? 'Module 02 Completed' : 'Mark Module 02 Theory Complete'}</span>
+            <span>{isModuleDone ? 'Module 02 Complete' : 'Mark Module 02 Theory Complete'}</span>
           </button>
         </div>
 
         <button
           onClick={() => onNavigate('module-3')}
-          className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 px-6 py-3 text-sm font-semibold text-white shadow-lg transition cursor-pointer"
+          className="inline-flex items-center gap-2 rounded bg-blue-600 hover:bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition cursor-pointer"
         >
-          <span>Next: Module 03 (Decisions, Frame Data & Level Graph Topology)</span>
+          <span>Next: Module 03 (Decisions, Frame Data &amp; Level Topology)</span>
           <ArrowRight className="h-4 w-4" />
         </button>
       </section>

@@ -3,8 +3,7 @@ import { COURSE_MODULES, PageId } from '../data/courseData';
 import {
   BookOpen,
   ArrowRight,
-  CheckCircle2,
-  FileText
+  CheckCircle2
 } from 'lucide-react';
 
 interface OverviewPageProps {
@@ -31,7 +30,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
           Game Mechanics &amp; Systems Architecture: Engineering Virtual Sensation
         </h1>
         <p className="text-sm text-zinc-600 mt-2 font-mono">
-          Course ID: CS-404 • Prerequisites: Data Structures, Algorithms, Discrete Mathematics • Total Duration: 10 Hours
+          Course ID: CS-404 &bull; Prerequisites: Data Structures, Algorithms, Discrete Mathematics &bull; Total Duration: 10 Hours
         </p>
       </div>
 
@@ -51,6 +50,59 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
           If an enterprise engineer were tasked with optimizing <em>Super Mario Bros.</em>, the optimal solution would be a single button that triggers the victory screen immediately.
           In game development, <strong>friction is the entire medium</strong>: the engineer's objective is to construct formal mathematical rules whose dynamic interaction evokes targeted psychological and physical sensations.
         </p>
+      </section>
+
+      {/* The Five Mental Model Shifts */}
+      <section className="space-y-4">
+        <h2 className="text-xl font-bold text-zinc-950 border-b border-zinc-200 pb-1.5">
+          The Five Mental Model Shifts for Computer Scientists
+        </h2>
+        <p className="text-sm text-zinc-700 leading-relaxed">
+          Transitioning from conventional software engineering to game systems design requires reprogramming five foundational instincts:
+        </p>
+
+        <div className="space-y-3 text-xs sm:text-sm">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
+            <div className="font-bold text-blue-700">1. From Latency Elimination to Latency Shaping</div>
+            <p className="text-zinc-600 leading-relaxed">
+              In distributed systems, zero millisecond latency is the ideal.
+              In game combat, instantaneous actions feel weightless and remove counter-play.
+              Mastering game feel requires intentionally injecting structured latency: wind-up startup frames (telegraphing), hitstop freeze frames (communicating physical mass), and recovery frames (opportunity cost).
+            </p>
+          </div>
+
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
+            <div className="font-bold text-blue-700">2. From Mathematical Fairness to Perceived Fairness</div>
+            <p className="text-zinc-600 leading-relaxed">
+              A standard <code className="font-mono bg-zinc-100 px-1 py-0.5 rounded border border-zinc-200 text-zinc-900">Math.random() &lt; 0.20</code> Bernoulli trial is memoryless and fair to a statistician, but produces 12-miss droughts that enrage human players.
+              Game systems engineers replace memoryless stochastics with Markov Pseudo-Random Distributions (PRD) and Fisher-Yates shuffle bags that dynamically shape variance while preserving expected value.
+            </p>
+          </div>
+
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
+            <div className="font-bold text-blue-700">3. From Monolithic OOP Callbacks to Decoupled Tag Chemistry</div>
+            <p className="text-zinc-600 leading-relaxed">
+              Scripting pairwise object interactions (<code className="font-mono bg-zinc-100 px-1 py-0.5 rounded border border-zinc-200 text-zinc-900">onSwordHitWoodenDoor</code>) scales at O(N&sup2;) and yields brittle code.
+              Modern systems decompose entities into orthogonal property tags (<code className="font-mono bg-zinc-100 px-1 py-0.5 rounded border border-zinc-200 text-zinc-900">[Flammable, Conductive, Magnetic]</code>), authoring O(N) system rules that allow players to discover O(N&sup2;) emergent systemic behaviors.
+            </p>
+          </div>
+
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
+            <div className="font-bold text-blue-700">4. From Constant Newtonian Forces to Level-Metric Piecewise Kinematics</div>
+            <p className="text-zinc-600 leading-relaxed">
+              Real-world constant gravity (g = 9.8 m/s&sup2;) makes platformers feel floaty and unresponsive.
+              Game engineers parameterize movement from level design constraints (H<sub>max</sub>, t<sub>peak</sub>), deriving asymmetric piecewise accelerations (g<sub>fall</sub> &asymp; 2.4 &middot; g<sub>rise</sub>) that snap avatars crisply to the ground.
+            </p>
+          </div>
+
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
+            <div className="font-bold text-blue-700">5. From Monotonic Progression to Sawtooth Flow Oscillation</div>
+            <p className="text-zinc-600 leading-relaxed">
+              A flat linear difficulty ramp causes cognitive exhaustion.
+              Human psychology demands rhythmic oscillation: introducing mechanics in safety, escalating challenge to a peak climax, and dropping into an empowerment valley before beginning the next cycle.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Clear SVG Architecture Diagram (Light Mode Technical Style) */}
@@ -79,7 +131,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
 
             <line x1="195" y1="61" x2="640" y2="61" stroke="#71717a" strokeWidth="2" strokeDasharray="4 3" markerEnd="url(#arrowGray)" />
             <text x="415" y="55" fill="#71717a" fontSize="10" fontFamily="sans-serif" textAnchor="middle">
-              Shortest Path • Zero Friction • O(1) Time Complexity
+              Shortest Path &bull; Zero Friction &bull; O(1) Time Complexity
             </text>
 
             <rect x="650" y="45" width="180" height="32" rx="3" fill="#f4f4f5" stroke="#a1a1aa" />
@@ -229,7 +281,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
           className="text-xs text-zinc-600 hover:text-zinc-900 flex items-center gap-1 cursor-pointer"
         >
           <BookOpen className="h-3.5 w-3.5" />
-          <span>View CS ↔ Game Design Rosetta Stone</span>
+          <span>View CS &harr; Game Design Rosetta Stone</span>
         </button>
 
         <button

@@ -13,6 +13,7 @@ import {
   Play,
   RotateCcw
 } from 'lucide-react';
+import { Module3Content } from '../content/Module3Content';
 
 interface Module3Props {
   onNavigate: (page: PageId) => void;
@@ -391,6 +392,11 @@ export const Module3DecisionsSpace: React.FC<Module3Props> = ({
           In Module 3, we formalize combat risk-reward via <strong>Startup/Active/Recovery Automata</strong>, <strong>Cognitive Affordances</strong>, and <strong>Level Graph Topology</strong>.
         </p>
       </header>
+
+      {/* Comprehensive Academic Textbook Chapter */}
+      <section className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
+        <Module3Content />
+      </section>
 
       {/* Section 3.1: Combat Frame Data & Frame Advantage */}
       <section className="space-y-6">

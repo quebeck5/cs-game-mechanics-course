@@ -12,6 +12,7 @@ import {
   Clock,
   Zap
 } from 'lucide-react';
+import { Module2Content } from '../content/Module2Content';
 
 interface Module2Props {
   onNavigate: (page: PageId) => void;
@@ -452,6 +453,11 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
           The result feels floaty, unresponsive, and frustrating. Here is the mathematical and biological reason why—and how to engineer sub-second sensation.
         </p>
       </header>
+
+      {/* Comprehensive Academic Textbook Chapter */}
+      <section className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
+        <Module2Content />
+      </section>
 
       {/* Section 2.1: The 240ms Human Processor Loop & Piecewise Jump Calculus */}
       <section className="space-y-6">

@@ -12,6 +12,7 @@ import {
   Sliders,
   Cpu
 } from 'lucide-react';
+import { Module5Content } from '../content/Module5Content';
 
 interface Module5Props {
   onNavigate: (page: PageId) => void;
@@ -221,6 +222,11 @@ export const Module5ProbabilityBalance: React.FC<Module5Props> = ({
           In this final module, we master <strong>Psychological vs. Mathematical Randomness</strong>, <strong>Markov Pseudo-Random Distributions (PRD)</strong>, and <strong>Monte Carlo Bot Playtesting</strong>.
         </p>
       </header>
+
+      {/* Comprehensive Academic Textbook Chapter */}
+      <section className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
+        <Module5Content />
+      </section>
 
       {/* Section 5.1: True Random vs. PRD vs. Shuffle Bags */}
       <section className="space-y-6">

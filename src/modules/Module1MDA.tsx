@@ -13,6 +13,7 @@ import {
   Activity,
   BookOpen
 } from 'lucide-react';
+import { Module1Content } from '../content/Module1Content';
 
 interface Module1Props {
   onNavigate: (page: PageId) => void;
@@ -495,6 +496,11 @@ export const Module1MDA: React.FC<Module1Props> = ({
           <strong> The MDA Bidirectional Pipeline</strong>, <strong>Raph Koster’s Information Theory of Fun</strong>, and <strong>Sawtooth Flow Phase Portraits</strong>.
         </p>
       </header>
+
+      {/* Comprehensive Academic Textbook Chapter */}
+      <section className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
+        <Module1Content />
+      </section>
 
       {/* Section 1: The MDA Framework as a Compiler Pipeline */}
       <section className="space-y-6">

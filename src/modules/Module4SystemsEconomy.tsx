@@ -12,6 +12,7 @@ import {
   Cpu,
   RefreshCw
 } from 'lucide-react';
+import { Module4Content } from '../content/Module4Content';
 
 interface Module4Props {
   onNavigate: (page: PageId) => void;
@@ -166,6 +167,11 @@ export const Module4SystemsEconomy: React.FC<Module4Props> = ({
           By modeling your game as a <strong className="text-rose-300">Petri-Net Resource Economy (Machinations)</strong> governed by coupled positive and negative differential feedback loops, and replacing brittle `if-else` scripts with $O(N^2)$ <strong>Systemic Chemistry Engines</strong>.
         </p>
       </header>
+
+      {/* Comprehensive Academic Textbook Chapter */}
+      <section className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
+        <Module4Content />
+      </section>
 
       {/* Section 4.1: Cybernetic Feedback Loops & Machinations */}
       <section className="space-y-6">

@@ -37,6 +37,18 @@ export const Module2Content: React.FC = () => {
           </footer>
         </blockquote>
 
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 8: Cognitive Processor Allocation)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> In an educational mini-game, the student&rsquo;s <em>Cognitive Processor</em> (&tau;<sub>c</sub>) is heavily taxed by learning an unfamiliar academic subject (e.g., pointer arithmetic, orbital mechanics, or stoichiometry). If your interface also demands split-second 240ms twitch motor reflexes at the same time, the student&rsquo;s biological pipeline saturates and learning halts.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Implement <strong>Time-Dilation / Tactical Pause</strong> (&ldquo;Bullet Time for Thinking&rdquo;). When the student opens a vector-math aimer or logic-gate radial menu during an action sequence, drop the simulation clock scale to <code className="bg-white px-1 py-0.5 rounded font-mono border border-blue-200">timeScale = 0.10</code> (or <code className="bg-white px-1 py-0.5 rounded font-mono border border-blue-200">0.0</code>). This expands the cognitive decision window from 240ms to 3,000ms+ while preserving real-time physics execution once they release the control.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-3 text-xs sm:text-sm">
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <div className="font-mono font-bold text-blue-700">1. PERCEPTUAL PROCESSOR (&tau;<sub>p</sub> &asymp; 100ms)</div>
@@ -110,6 +122,18 @@ export const Module2Content: React.FC = () => {
             &mdash; Derek Yu, <em>Spelunky</em> (Boss Fight Books, 2016, p. 58)
           </footer>
         </blockquote>
+
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 9: Zero-Hurdle Control Parameterization)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> Students playing a 30&ndash;60 minute educational mini-game have wildly varying gaming backgrounds (some play competitive shooters; others never play action games). If movement or node manipulation feels floaty or requires pixel-perfect physics, non-gamers spend 40 minutes fighting the controller instead of learning the curriculum.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Derive all movement and drag-and-drop kinematics from discrete <strong>Grid-Quantized Metrics</strong> (H<sub>max</sub> = exact grid multiples) with snappy asymmetric settling (g<sub>fall</sub> = 2.5 &middot; g<sub>rise</sub>) and magnetic snap-to-grid radii (<code className="bg-white px-1 py-0.5 rounded font-mono border border-blue-200">snapRadius = 24px</code>). The student&rsquo;s conceptual intent should translate into clean spatial alignment without fussy micro-adjustments.
+          </p>
+        </div>
 
         <h4 className="text-base font-bold text-zinc-900 mt-2">The Parameter Inversion: Spatial Metrics First</h4>
         <p className="text-sm leading-relaxed text-zinc-800">
@@ -247,6 +271,18 @@ export const Module2Content: React.FC = () => {
           </footer>
         </blockquote>
 
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 10: Pedagogical Intent Forgiveness)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> Just as an action game shouldn&rsquo;t punish a player for pressing jump 4 frames late, an educational mini-game must never punish a student for minor syntactic or motor-timing slips when their underlying <em>conceptual reasoning</em> is correct.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Build <strong>Semantic Forgiveness Buffers</strong> into the evaluator: (1) If the mini-game involves timing or rhythm (e.g., triggering a defibrillator on a QRS cardiac wave in a medical mini-game), widen the acceptance window by +120ms in the student&rsquo;s favor; (2) If the mini-game involves expression or code input, auto-heal missing semicolons, minor capitalization typos, or off-by-one wire drops by snapping to valid adjacent pins and highlighting the auto-correction gently rather than throwing a fatal syntax error.
+          </p>
+        </div>
+
         <h4 className="text-base font-bold text-zinc-900 mt-4">Scenario B: The Pre-Landing Disconnect (Input Buffering)</h4>
         <p className="text-sm leading-relaxed text-zinc-800">
           Conversely, when falling toward a platform and intending to bunny-hop immediately upon landing, players routinely press Jump 50ms <em>before</em> their feet touch the surface.
@@ -328,6 +364,18 @@ function updateCharacter(dt: number) {
           </footer>
         </blockquote>
 
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 11: Embodied Abstract Concepts)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> Educational concepts (like electrical resistance, algorithmic sorting, or chemical bond enthalpy) are invisible and abstract. By mapping an abstract variable onto a real-time 3Cs physical object, the student experiences the math through embodied sensorimotor intuition.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> In a 40-minute Ohm&rsquo;s Law (<code>V = I &middot; R</code>) mini-game, let the player directly pilot an electron charge carrier through a circuit. When entering a high-resistance <em>R</em> resistor zone, increase the physics drag coefficient and controller rumble proportional to <em>R</em>; when voltage <em>V</em> increases, boost acceleration force. The student physically <em>feels</em> <code>I = V / R</code> through the 3Cs within seconds.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 my-2 text-xs sm:text-sm">
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
             <span className="font-bold text-blue-700">1. CONTROLS</span>
@@ -365,6 +413,18 @@ function updateCharacter(dt: number) {
           </footer>
         </blockquote>
 
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 12: Predictive Pedagogical Camera Framing)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> In an educational mini-game, students must see both the <em>causal input node</em> they are adjusting and the <em>downstream output effect</em> simultaneously. If the camera stays locked on the avatar or requires manual panning, the student misses the cause-and-effect relationship.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Implement <strong>Context-Sensitive Target Lead &amp; Auto-Framing</strong>: when the student interacts with an input variable (e.g., adjusting launch angle in a kinematics mini-game or modifying a router weight in Dijkstra&rsquo;s algorithm), automatically shift the camera&rsquo;s <code>targetCam</code> toward the centroid between the input controller and the downstream target node, zooming out smoothly so the entire causal chain fits inside the viewport.
+          </p>
+        </div>
+
         <h4 className="text-base font-bold text-zinc-900 mt-3">The PID / Exponential Lead-Ahead Camera</h4>
         <p className="text-sm leading-relaxed text-zinc-800">
           Modern cameras use an exponential decay filter combined with a velocity lead-ahead vector:
@@ -396,6 +456,18 @@ function updateCharacter(dt: number) {
             &mdash; Martin Jonasson &amp; Petri Purho, <em>Juice It or Lose It</em> (Nordic Game Conference, 2012)
           </footer>
         </blockquote>
+
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 13: Semantic Juiciness Without Distraction)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> Educational software is notoriously dry and sterile, which causes student attention to drift after 15 minutes. However, random explosions that obscure text or graphs harm learning. In an educational mini-game, every drop of &ldquo;Juice&rdquo; must encode <em>semantic state information</em>.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Tie audiovisual cascades directly to mathematical milestones: when a student balances both sides of a chemical equation or completes a valid spanning tree, trigger a harmonic chord progression (rising in pitch with each connected node) and a directional pulse along the solved graph edges. The juice celebrates cognitive mastery and visually traces the valid proof path.
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-3 text-xs sm:text-sm">
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
@@ -436,19 +508,39 @@ function updateCharacter(dt: number) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 my-2">
-          <blockquote className="border-l-4 border-zinc-400 bg-zinc-50 pl-4 py-2 text-xs sm:text-sm italic text-zinc-700">
-            &ldquo;Adding screen shake and a few frames of sleep when you hit something makes the player feel like they are doing real damage.&rdquo;
-            <footer className="not-italic text-xs text-zinc-500 font-medium mt-1">
-              &mdash; Jan Willem Nijman, <em>The Art of Screenshake</em> (Vlambeer / INDIGO, 2013)
-            </footer>
-          </blockquote>
+          <div className="space-y-2">
+            <blockquote className="border-l-4 border-zinc-400 bg-zinc-50 pl-4 py-2 text-xs sm:text-sm italic text-zinc-700">
+              &ldquo;Adding screen shake and a few frames of sleep when you hit something makes the player feel like they are doing real damage.&rdquo;
+              <footer className="not-italic text-xs text-zinc-500 font-medium mt-1">
+                &mdash; Jan Willem Nijman, <em>The Art of Screenshake</em> (Vlambeer / INDIGO, 2013)
+              </footer>
+            </blockquote>
+            <div className="border border-blue-200 bg-blue-50/50 p-3 rounded-lg space-y-1 text-xs">
+              <div className="font-mono font-bold text-blue-800 uppercase tracking-wider">
+                30&ndash;60 Min Educational Mini-Game (Point 14: Diagnostic Hitstop)
+              </div>
+              <p className="text-zinc-800 leading-relaxed">
+                <strong>Relation &amp; Implementation:</strong> When a student&rsquo;s simulation fails (e.g., a bridge truss snaps in a statics mini-game or a stack overflows), apply a <strong>12-frame Diagnostic Hitstop freeze</strong> (<code>sleep(200ms)</code>) with a localized camera shake centered on the exact failing joint before the structure collapses, ensuring the student&rsquo;s eye locks onto the root cause of failure.
+              </p>
+            </div>
+          </div>
 
-          <blockquote className="border-l-4 border-zinc-400 bg-zinc-50 pl-4 py-2 text-xs sm:text-sm italic text-zinc-700">
-            &ldquo;This action gives the illusion of weight and volume to a character as it moves; the most important rule to remember is that the volume must remain constant.&rdquo;
-            <footer className="not-italic text-xs text-zinc-500 font-medium mt-1">
-              &mdash; Frank Thomas &amp; Ollie Johnston, <em>The Illusion of Life: Disney Animation</em> (Hyperion, 1981, p. 47)
-            </footer>
-          </blockquote>
+          <div className="space-y-2">
+            <blockquote className="border-l-4 border-zinc-400 bg-zinc-50 pl-4 py-2 text-xs sm:text-sm italic text-zinc-700">
+              &ldquo;This action gives the illusion of weight and volume to a character as it moves; the most important rule to remember is that the volume must remain constant.&rdquo;
+              <footer className="not-italic text-xs text-zinc-500 font-medium mt-1">
+                &mdash; Frank Thomas &amp; Ollie Johnston, <em>The Illusion of Life: Disney Animation</em> (Hyperion, 1981, p. 47)
+              </footer>
+            </blockquote>
+            <div className="border border-blue-200 bg-blue-50/50 p-3 rounded-lg space-y-1 text-xs">
+              <div className="font-mono font-bold text-blue-800 uppercase tracking-wider">
+                30&ndash;60 Min Educational Mini-Game (Point 15: Visual Conservation Laws)
+              </div>
+              <p className="text-zinc-800 leading-relaxed">
+                <strong>Relation &amp; Implementation:</strong> Constant-volume Squash &amp; Stretch (<code>s<sub>x</sub> &middot; s<sub>y</sub> = 1</code>) is a direct visual manifestation of <strong>Conservation of Mass / Energy / Continuity (<code>A<sub>1</sub>v<sub>1</sub> = A<sub>2</sub>v<sub>2</sub></code>)</strong>. In fluid dynamics, fractions, or matrix determinant mini-games, enforce strict area-preserving sprite deformation so the student visually perceives invariant quantity under transformation.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </article>

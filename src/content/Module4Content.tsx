@@ -36,6 +36,18 @@ export const Module4Content: React.FC = () => {
           </footer>
         </blockquote>
 
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 21: Closed-Loop Adaptive Scaffolding / ZPD Regulator)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> In a 30&ndash;60 minute classroom or self-study session, a human teacher cannot manually tune puzzle parameters for 30 different students simultaneously. The game engine itself must act as a cybernetic tutor keeping each student in Vygotsky&rsquo;s <em>Zone of Proximal Development (ZPD)</em>.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Build a 4-stage <strong>Cybernetic Pedagogical Regulator</strong>: (1) <em>Sensor</em>: track time-to-solution and consecutive failed test runs; (2) <em>Comparator</em>: compare against target mastery window (e(t) = t<sub>actual</sub> - 180s); (3) <em>Effector</em>: if a student fails 3 times in 180 seconds, automatically inject a visual ghost trace of the intermediate state rather than giving away the final answer.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-3 text-xs sm:text-sm">
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <div className="font-mono font-bold text-blue-700">1. SENSOR (STATE EVALUATION)</div>
@@ -94,6 +106,18 @@ export const Module4Content: React.FC = () => {
             &mdash; Katie Salen &amp; Eric Zimmerman, <em>Rules of Play: Game Design Fundamentals</em> (MIT Press, 2004, Chapter 18, p. 216)
           </footer>
         </blockquote>
+
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 22: Anti-Snowballing Failure Recovery &amp; Mastery Acceleration)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> Many educational games accidentally punish wrong answers by deducting health, currency, or time. That creates a <em>destructive positive feedback loop for struggling students</em>: making a mistake leaves them with fewer resources, making the next problem even harder until they fail out at minute 20.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Never penalize errors with resource starvation. Instead, pair <strong>Negative Feedback on Errors</strong> (each failed attempt slightly slows down incoming wave speed or highlights the faulty sub-expression) with <strong>Positive Feedback on Mastery Streaks</strong> (solving 3 problems cleanly unlocks &ldquo;Fast-Forward / Auto-Complete&rdquo; macros that let advanced students breeze past basic drills into bonus challenge tiers within the 45-minute window).
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-3 text-xs sm:text-sm">
           {/* Positive Feedback */}
@@ -177,6 +201,18 @@ export const Module4Content: React.FC = () => {
           </footer>
         </blockquote>
 
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 23: Playable Petri-Net Domain Models)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> Almost every STEM and social science system—cellular ATP respiration, macroeconomic inflation, OS thread scheduling, or chemical equilibrium—is fundamentally a Machinations resource graph of Sources, Pools, Converters, and Drains.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Expose the Machinations Petri-Net <em>directly as the playable canvas</em> in a 45-minute simulation mini-game. For example, to teach Cellular Respiration (Glycolysis &rarr; Krebs Cycle &rarr; Electron Transport Chain), represent Glucose and Oxygen as <strong>Sources</strong>, NADH/FADH2 as intermediate <strong>Pools</strong>, mitochondrial enzymes as <strong>Converters</strong>, and cellular work as <strong>Drains</strong>. Ask the student to tune enzyme converter rates to prevent lactic acid overflow during a 3-stage simulated sprint.
+          </p>
+        </div>
+
         <p className="text-sm leading-relaxed text-zinc-800">
           The framework models every economic system through five canonical node primitives connected by resource and state connection arcs:
         </p>
@@ -244,6 +280,18 @@ export const Module4Content: React.FC = () => {
             &mdash; Harvey Smith, <em>The Future of Game Design: Moving Beyond Deus Ex and Other Old Ideas</em> (GDC, 2001)
           </footer>
         </blockquote>
+
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 24: Constructivist Emergent Discovery)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> When an educational puzzle only accepts a single hardcoded sequence of steps, students feel like they are guessing the teacher&rsquo;s password. Constructivist pedagogy thrives when students combine primitive rules to invent valid, unexpected solutions.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Grade puzzles by <strong>Output State Verification (Unit Tests)</strong> rather than AST/Step matching. In a 45-minute digital logic or physics mini-game, if the level asks for a frequency divider and the student constructs an emergent ring-oscillator out of 3 inverters and a delay line instead of the textbook flip-flop, the simulation engine validates the output waveform and awards a &ldquo;Creative Engineering&rdquo; badge.
+          </p>
+        </div>
         
         <p className="text-sm leading-relaxed text-zinc-800">
           In traditional object-oriented game programming, interactions between objects are implemented via bespoke, pairwise inheritance callbacks:
@@ -273,6 +321,18 @@ export const Module4Content: React.FC = () => {
             &mdash; Robert Nystrom, <em>Game Programming Patterns</em> (Genever Benning, 2014, p. 195)
           </footer>
         </blockquote>
+
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 25: Decoupled Curriculum Tag Architecture)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> Educational courseware frequently needs to be adapted across grade levels or expanded with new lab modules. If puzzle objects are tightly coupled to specific levels (<code>Level3Acid hits Level3Base</code>), authoring a suite of ten 45-minute mini-games becomes an unmaintainable <code>O(N<sup>2</sup>)</code> nightmare.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Architect the educational simulation using an <strong>Entity-Component-System (ECS) Property Tag Matrix</strong> (<code>[pH: 2.0, Molarity: 1.0, Conductive: true, Exothermic: true]</code>) decoupled from an Event Bus that broadcasts domain reactions to the UI graphing panel, achievement tracker, and hint system without coupling simulation math to level scripts.
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-2 text-xs font-mono">
           <div className="border border-zinc-200 bg-white p-3 rounded">

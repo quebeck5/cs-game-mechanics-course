@@ -37,6 +37,18 @@ export const Module1Content: React.FC = () => {
           </footer>
         </blockquote>
 
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 1: The Lusory Attitude)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> In a 30&ndash;60 minute educational mini-game, the <em>Constitutive Rules</em> (the artificial restrictions) are the exact pedagogical tool used to force the learner to abandon brute-force habits and internalize a new theoretical concept.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Suppose you are building a 40-minute mini-game teaching <strong>Dynamic Programming / Memoization</strong>. If the student can solve levels using a naive O(2<sup>n</sup>) recursive clicker with infinite energy, they will brute-force every puzzle. Implement a strict <em>Constitutive Rule</em>: limit the player&rsquo;s CPU Energy budget to O(n) operations per level and provide a physical &ldquo;Cache Register&rdquo; slot. The artificial constraint makes brute-forcing impossible and transforms caching sub-problems into a satisfying puzzle.
+          </p>
+        </div>
+
         <p className="text-sm leading-relaxed text-zinc-800">
           To understand this definition as a computer scientist, dissect its four constituent variables:
         </p>
@@ -101,6 +113,18 @@ export const Module1Content: React.FC = () => {
           </footer>
         </blockquote>
 
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 2: Meaningful Play &amp; Feedback)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> In a short 30&ndash;60 minute session, students do not have time to decipher delayed or ambiguous grading rubrics. Every student action must be both <em>discernible</em> (immediate state feedback) and <em>integrated</em> (causally altering the simulation trajectory).
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Replace end-of-level &ldquo;Score: 72% (Failed)&rdquo; summary screens with real-time systemic feedback. In a 30-minute SQL / Relational Algebra mini-game, when the player constructs a <code>JOIN</code> filter, render the data rows physically flowing through pipe junctions in real time: valid rows glow emerald and power the generator, while Cartesian-product duplicates visibly clog the pipe and trigger a pressure-relief alarm within 200ms.
+          </p>
+        </div>
+
         <div className="bg-amber-50/70 border-l-4 border-amber-500 p-4 text-xs sm:text-sm text-amber-950">
           <span className="font-bold">Architectural Takeaway:</span> Your job as a game systems engineer is not to eliminate difficulty or streamline state transitions. Your job is to construct an elegant, mathematically coherent set of unnecessary obstacles that reward player mastery.
         </div>
@@ -123,6 +147,18 @@ export const Module1Content: React.FC = () => {
             &mdash; Robin Hunicke, Marc LeBlanc, &amp; Robert Zubek, <em>MDA: A Formal Approach to Game Design and Game Research</em> (AAAI Press, 2004, p. 2)
           </footer>
         </blockquote>
+
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 3: MDA Backward Curriculum Design)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> Educational designers often start with Mechanics (&ldquo;let&rsquo;s code a card deck of chemical elements&rdquo;) without defining the target cognitive Aesthetic. MDA forces you to design backward from the target learning emotion to the runtime dynamic, and finally to the underlying code rules.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> For a 45-minute Cybersecurity mini-game: (1) Define the <strong>Aesthetic</strong>: the player should feel the paranoid vigilance of a network defender; (2) Engineer the <strong>Dynamic</strong>: inspecting packet payloads under time pressure while balancing firewall false-positives vs. throughput; (3) Author the <strong>Mechanics</strong>: a token-stream spawner emitting normal and malformed packets at 1.5 tokens/sec, plus a configurable regex filter gate that consumes 5% CPU per active rule.
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 my-3 text-xs sm:text-sm">
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
@@ -182,6 +218,18 @@ export const Module1Content: React.FC = () => {
             &mdash; Marc LeBlanc, <em>MDA: A Formal Approach to Game Design and Game Research</em> (AAAI Press, 2004, p. 2)
           </footer>
         </blockquote>
+
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 4: Aesthetic Scoping)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> A 30&ndash;60 minute educational mini-game cannot simultaneously serve all 8 aesthetics without diluting focus and blowing past the 60-minute time limit (e.g., sprawling <em>Narrative</em> cutscenes or massive <em>Fantasy</em> world-building waste precious session time).
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Restrict any 30&ndash;60 minute educational mini-game to <strong>at most two primary Aesthetics</strong>: typically <strong>Discovery</strong> (uncovering how an unfamiliar system behaves) + <strong>Challenge</strong> (mastering the rule to solve an exam puzzle) or <strong>Expression</strong> (designing a custom circuit/algorithm solution). Cut all non-essential narrative text and tutorial pop-ups exceeding 40 words.
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 my-2 text-xs">
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
@@ -250,6 +298,18 @@ export const Module1Content: React.FC = () => {
           </footer>
         </blockquote>
 
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 5: Entropy Compression Pacing)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> In an educational mini-game, the learning objective and the fun mechanism are identical: both are Shannon entropy reduction (<code>dH/dt &lt; 0</code>). However, once a student extracts the pattern of a single concept, <code>H &rarr; 0</code> and boredom strikes immediately; if you force them to repeat 20 identical drill problems, engagement collapses.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Structure a 45-minute mini-game around <strong>Progressive Rule Layering</strong> rather than repetitive drills. Once the telemetry tracker detects the player has solved 3 consecutive levels without error (confirming schema compression <code>H &rarr; 0</code>), immediately inject a new orthogonal variable (e.g., in a Boolean logic gate mini-game, introduce propagation delay glitches at minute 15, and clock-edge flip-flops at minute 30) to keep <code>dH/dt</code> actively negative for the entire session.
+          </p>
+        </div>
+
         <p className="text-sm leading-relaxed text-zinc-800">
           The human brain is a <strong>lossy pattern-compression engine</strong>.
           Every second, our senses receive millions of bits of unstructured environmental data.
@@ -259,7 +319,7 @@ export const Module1Content: React.FC = () => {
 
         <h4 className="text-base font-bold text-zinc-900 mt-2">Formalizing Fun as Shannon Entropy Reduction</h4>
         <p className="text-sm leading-relaxed text-zinc-800">
-          In Claude Shannon's mathematical theory of communication (1948), the entropy $H(X)$ of a discrete random variable $X$ with possible outcomes $x_1, \dots, x_n$ is defined as:
+          In Claude Shannon's mathematical theory of communication (1948), the entropy <em>H(X)</em> of a discrete random variable <em>X</em> with possible outcomes <em>x<sub>1</sub>, &hellip;, x<sub>n</sub></em> is defined as:
         </p>
 
         <div className="font-mono bg-zinc-100 p-3 rounded border border-zinc-200 text-xs sm:text-sm text-center text-zinc-900">
@@ -267,7 +327,7 @@ export const Module1Content: React.FC = () => {
         </div>
 
         <p className="text-sm leading-relaxed text-zinc-800">
-          In a game system, $H$ represents the player's uncertainty regarding the system's state space and behavioral outcomes.
+          In a game system, <em>H</em> represents the player's uncertainty regarding the system's state space and behavioral outcomes.
           Koster's fundamental theorem posits that <strong>fun is the first derivative of cognitive entropy reduction over time</strong>:
         </p>
 
@@ -302,7 +362,7 @@ export const Module1Content: React.FC = () => {
             <p className="text-zinc-700">
               Once the mental model is 100% predictive and the state space is completely compressed, no further entropy can be extracted.
               Consider <strong>Tic-Tac-Toe</strong>: for a 5-year-old child, the combinatorial space contains entropy, making it engaging.
-              Once a computer science student derives the minimax tree and recognizes that optimal play forces an invariant draw, $H = 0$.
+              Once a computer science student derives the minimax tree and recognizes that optimal play forces an invariant draw, <code>H = 0</code>.
               The game is "solved." The brain immediately halts dopamine release, and the game becomes unbearably dull.
             </p>
           </div>
@@ -329,6 +389,22 @@ export const Module1Content: React.FC = () => {
             &mdash; Mihaly Csikszentmihalyi, <em>Flow: The Psychology of Optimal Experience</em> (Harper &amp; Row, 1990, p. 6)
           </footer>
         </blockquote>
+
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 6: 4-Cycle Sawtooth Session Architecture)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> A 30&ndash;60 minute educational mini-game is long enough to induce cognitive burnout if difficulty rises monotonically, yet short enough that getting stuck in the Anxiety Zone for 10 minutes ruins the entire class period.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Partition a 45-minute educational mini-game into <strong>three 12-minute Kish&#333;tenketsu sawtooth cycles</strong> followed by a 9-minute capstone synthesis:
+            Cycle 1 (Mins 0&ndash;12): Introduce Sub-Concept A in a zero-penalty sandbox &rarr; escalate &rarr; mini-test &rarr; empowerment valley.
+            Cycle 2 (Mins 12&ndash;24): Introduce Sub-Concept B in safety &rarr; escalate &rarr; mini-test.
+            Cycle 3 (Mins 24&ndash;36): Combine A + B with a twist.
+            Capstone (Mins 36&ndash;45): A multi-stage boss puzzle where the student uses their newly unlocked automation tools to effortlessly crush an oversized challenge.
+          </p>
+        </div>
 
         <p className="text-sm leading-relaxed text-zinc-800">
           In classical game design literature, the Flow Channel is depicted as a linear corridor between two boundary zones:
@@ -423,6 +499,18 @@ export const Module1Content: React.FC = () => {
             &mdash; Shigeru Miyamoto, <em>Iwata Asks: New Super Mario Bros. Wii</em> (Nintendo, 2009)
           </footer>
         </blockquote>
+
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 7: Tactile Sandbox Toy &amp; Multi-Problem Verb)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> In a 30&ndash;60 minute educational mini-game, you cannot afford 15 minutes of dry text onboarding or five separate single-purpose UI tools. You need a single tactile &ldquo;Toy&rdquo; verb that solves multiple pedagogical problems at once and is immediately fun to manipulate in the first 90 seconds.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Begin the first 3 minutes in a zero-objective <strong>Interactive Toy Sandbox</strong> where the student plays with a single multipurpose manipulative—for example, in a Fourier Transform / Wave Physics mini-game, a spring-loaded frequency slider that bends laser beams, shatters resonant glass barriers, and tunes radio receivers. One interactive verb serves as the movement tool, the puzzle solver, and the visual graphing instrument simultaneously.
+          </p>
+        </div>
 
         <p className="text-sm leading-relaxed text-zinc-800">
           During the development of <em>Super Mario 64</em>, the engineering and design team spent nearly three months with Mario in a flat, featureless grid environment containing nothing but a single wooden box and a bouncing rubber ball.

@@ -43,6 +43,18 @@ export const Module5Content: React.FC = () => {
           </footer>
         </blockquote>
 
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 26: Loss-Aversion-Safe Grading Framing)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> Because losses hurt 2.25&times; more than equivalent gains (Prospect Theory), starting a student at &ldquo;100% Grade&rdquo; and subtracting points for every failed experiment triggers severe academic anxiety and makes students terrified to experiment during a 30&ndash;60 minute lab.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Frame all progress as <strong>Monotonic Additive Mastery &amp; Ratcheted Checkpoints</strong>: start the student at 0 XP and award positive discovery points even for falsified hypotheses (&ldquo;Edge Case Discovered: +15 Lab Data&rdquo;). Never deduct earned mastery points or revert completed sub-stages upon failure.
+          </p>
+        </div>
+
         <div className="space-y-3 text-xs sm:text-sm">
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
             <div className="font-mono font-bold text-blue-700">1. THE CLUSTERING ILLUSION (STREAK BIAS)</div>
@@ -95,6 +107,18 @@ export const Module5Content: React.FC = () => {
             &mdash; Geoff Engelstein &amp; Isaac Shalev, <em>Building Blocks of Tabletop Game Design: An Encyclopedia of Mechanisms</em> (CRC Press, 2019, p. 248)
           </footer>
         </blockquote>
+
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 27: Input Randomness for Anti-Cheating &amp; Zero Output Randomness)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> In an educational mini-game, <strong>Output Randomness is toxic</strong>: if a student calculates the exact right trajectory or algorithm, and a post-decision dice roll causes it to fail 10% of the time, the student&rsquo;s mental model of the subject is corrupted. Conversely, <strong>Input Randomness is essential</strong> so students cannot simply copy a classmate&rsquo;s hardcoded coordinates.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Use seeded <strong>Procedural Input Randomness</strong> to generate unique initial problem parameters (e.g., randomized resistor values or unsorted input arrays) at the start of each 5-minute puzzle, then evaluate the student&rsquo;s solution using <strong>100% Deterministic Output Resolution</strong>.
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-3 text-xs sm:text-sm">
           {/* Input Randomness */}
@@ -166,6 +190,18 @@ export const Module5Content: React.FC = () => {
           </footer>
         </blockquote>
 
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 28: PRD for Small-Sample Probabilistic Simulations)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> Because a 30&ndash;60 minute mini-game only has time for a small number of trials (N &asymp; 15 to 30 events), a pure Bernoulli RNG will frequently produce unrepresentative sample distributions (e.g., a 25% genetic recessive trait appearing 0 times in 12 offspring in a Mendelian genetics mini-game), misleading the student about the underlying law.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Drive small-sample educational simulations with a <strong>Markov PRD</strong> (P(N) = min(1, C &middot; N)) so that within just 8&ndash;12 student trials, the empirical frequency converges reliably to the theoretical probability p, guaranteeing the student observes the intended statistical phenomenon inside their 40-minute session.
+          </p>
+        </div>
+
         <div className="font-mono bg-zinc-100 p-3 rounded border border-zinc-200 text-xs sm:text-sm text-center text-zinc-900">
           P(N) = min(1.0, C &middot; N)
         </div>
@@ -201,6 +237,18 @@ export const Module5Content: React.FC = () => {
           </footer>
         </blockquote>
 
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 29: Curriculum Topic N-Bag Shuffler)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> If an educational mini-game uses <code className="bg-white px-1 py-0.5 rounded font-mono border border-blue-200">Math.random()</code> to pick which concept variant to test next, a student might get 5 <code className="bg-white px-1 py-0.5 rounded font-mono border border-blue-200">for</code>-loop puzzles in a row and zero <code className="bg-white px-1 py-0.5 rounded font-mono border border-blue-200">while</code>-loop or recursion puzzles during their 40-minute session.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Load all required syllabus competencies [C<sub>1</sub>, C<sub>2</sub>, &hellip;, C<sub>k</sub>] into a <strong>Fisher-Yates Curriculum Shuffle Bag</strong>. Every cycle of k encounters is mathematically guaranteed to test 100% of the learning objectives without repetition droughts, while still feeling unpredictable and fresh on every playthrough.
+          </p>
+        </div>
+
         <div className="font-mono bg-zinc-100 p-2.5 rounded border border-zinc-200 text-xs text-zinc-900">
           // 7-Bag invariant guarantees max gap between any identical piece is 12:
           [I, J, L, O, S, T, Z] &rarr; Shuffle &rarr; [O, S, T, Z, J, L, I] | [I, Z, ...]
@@ -232,6 +280,18 @@ export const Module5Content: React.FC = () => {
             &mdash; Soren Johnson, <em>Designer Notes</em> (Gamasutra, 2011)
           </footer>
         </blockquote>
+
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 30: Anti-Gaming-the-System &amp; Session-Duration Telemetry)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> In educational games, Soren Johnson&rsquo;s law manifests as <strong>&ldquo;students will optimize the learning out of an educational game.&rdquo;</strong> If students can pass a 45-minute circuit mini-game by hardcoding <code>return true</code> or spamming 50 cheap batteries instead of calculating series-parallel resistance, they will exploit the degenerate strategy every time.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> (1) Run <strong>Randomized Hidden Property Tests</strong> on submission (testing 5 unseen edge-case inputs simultaneously so hardcoded solutions fail); (2) Run headless Monte Carlo bot simulations with synthetic novice/intermediate/expert student profiles prior to deployment to verify that the 10th-to-90th percentile completion time falls strictly inside the target <strong>30&ndash;60 minute window</strong>.
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 my-3 text-xs sm:text-sm">
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">

@@ -35,6 +35,18 @@ export const Module3Content: React.FC = () => {
           </footer>
         </blockquote>
 
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 16: Pareto Trade-Offs vs. Multiple-Choice Drills)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> Traditional multiple-choice questions have 1 correct answer (a Dominant Strategy once known) and 3 wrong answers (Blind Choices if unknown). Neither is an &ldquo;interesting decision&rdquo; in Sid Meier&rsquo;s taxonomy. Real engineering education is about navigating multi-objective trade-offs.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> In a 45-minute Data Structures &amp; Systems Design mini-game, present puzzles with no single dominant structure: let the student choose between a <strong>Hash Table</strong> (<code>O(1)</code> lookup, high memory footprint, zero range-query support), a <strong>B-Tree</strong> (<code>O(log n)</code> lookup, cache-friendly range scans), or a <strong>Bloom Filter</strong> (tiny memory, probabilistic false positives) under changing RAM and latency budgets.
+          </p>
+        </div>
+
         <div className="space-y-3 text-xs sm:text-sm">
           <div className="border border-red-200 bg-red-50/40 p-4 rounded-lg space-y-1">
             <div className="font-mono font-bold text-red-800">CATEGORY 1: DOMINANT STRATEGIES (A &succ; B UNDER ALL STATES)</div>
@@ -146,6 +158,18 @@ export const Module3Content: React.FC = () => {
             &mdash; David Sirlin, <em>Playing to Win: Becoming the Champion</em> / <em>Designing Yomi</em> (Sirlin Games, 2010)
           </footer>
         </blockquote>
+
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 17: Commitment Phases to Prevent Trial-and-Error Spamming)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> If pressing &ldquo;Run / Test Hypothesis&rdquo; in an educational mini-game has zero startup or recovery cost, students stop thinking and resort to rapid trial-and-error button mashing (&ldquo;guess-and-check spamming&rdquo;) until they stumble on the solution.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Model hypothesis execution as a <strong>3-Stage Commitment Automaton</strong>: (1) <em>Startup (2.0s)</em>: the machine powers up and traces the predicted trajectory; (2) <em>Active (3.0s)</em>: the test batch runs through the student&rsquo;s logic pipeline; (3) <em>Recovery / Cooldown (1.5s)</em>: if the test fails, the machine vents steam while highlighting the failed test case. This small commitment window makes thoughtful mental simulation faster than blind clicking.
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-3 text-xs sm:text-sm">
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
@@ -262,6 +286,18 @@ export const Module3Content: React.FC = () => {
           </footer>
         </blockquote>
 
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 18: Self-Documenting Shape Signifiers)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> In a 30&ndash;60 minute educational mini-game, every minute spent reading a &ldquo;How to Play&rdquo; manual is a minute stolen from learning. The interface must be 100% self-documenting through visual <em>Signifiers</em>.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Encode type-safety and domain constraints directly into physical socket geometry (like jigsaw puzzle teeth): in a Functional Programming or Type-System mini-game, make <code className="bg-white px-1 py-0.5 rounded font-mono border border-blue-200">Int</code> outputs hexagonal plugs, <code className="bg-white px-1 py-0.5 rounded font-mono border border-blue-200">String</code> outputs circular plugs, and <code className="bg-white px-1 py-0.5 rounded font-mono border border-blue-200">List&lt;T&gt;</code> outputs slotted rails. When the student drags a block, valid target sockets pulse with an animated border signifier while incompatible sockets dim to 20% opacity.
+          </p>
+        </div>
+
         <ul className="list-disc pl-6 space-y-1 text-sm text-zinc-800">
           <li><strong>Affordance:</strong> The actual physical or logical properties that determine what actions are possible (e.g., a door affords pushing; a boss attack affords dodging).</li>
           <li><strong>Signifier:</strong> The perceptual signal that communicates <em>how</em> and <em>when</em> that affordance can be interacted with (e.g., a flat metal push-plate on a door; an expanding red circle beneath a boss).</li>
@@ -279,6 +315,18 @@ export const Module3Content: React.FC = () => {
           </footer>
         </blockquote>
 
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 19: Working-Memory Budget &le; 4 Chunks)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> Human working memory holds only 4 &plusmn; 1 active chunks of information at once (Cowan&rsquo;s Law). When learning a brand-new subject in a 30&ndash;60 minute mini-game, 3 of those 4 slots are already occupied by the academic domain rules.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Enforce a strict <strong>HUD &amp; Rule Offloading Budget</strong>: never display more than 3 active HUD metrics at once, and externalize reference formulas directly onto the world canvas (e.g., rendering live truth-tables or current/voltage values directly beside the wire nodes) so the student never has to memorize UI state or switch tabs.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 my-2 text-xs sm:text-sm">
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
             <span className="font-bold text-blue-700">1. ACOUSTIC SIGNIFIER (&Delta;t = -400ms)</span>
@@ -293,7 +341,7 @@ export const Module3Content: React.FC = () => {
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
             <span className="font-bold text-blue-700">3. SPATIAL DECAL RING (&Delta;t = -200ms)</span>
             <div className="font-semibold text-zinc-950">Exact Boundary Projection</div>
-            <p className="text-zinc-600">An expanding circular or cone decal renders on the floor collision mesh, displaying the exact geometric boundary that will become lethal.</p>
+            <p className="text-zinc-600">An expanding circular or cone decal renders on the collision mesh, displaying the exact geometric boundary that will become lethal.</p>
           </div>
         </div>
 
@@ -320,6 +368,18 @@ export const Module3Content: React.FC = () => {
             &mdash; Ernest Adams &amp; Joris Dormans, <em>Game Mechanics: Advanced Game Design</em> (New Riders, 2012, p. 57)
           </footer>
         </blockquote>
+
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 20: Hub-and-Spoke Knowledge Graph Topology)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> A purely linear 12-level sequence (V<sub>1</sub> &rarr; V<sub>2</sub> &rarr; &hellip; &rarr; V<sub>12</sub>) creates a fatal Cut-Vertex bottleneck: if a student gets stuck on Level 5 at minute 20, their entire session stalls. Conversely, an open world is too large for 45 minutes.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Structure the 30&ndash;60 minute mini-game as a <strong>Compact Hub-and-Spoke Graph</strong>: after a 5-minute introductory root node, unlock a Central Laboratory Hub connected to 3 parallel 10-minute spoke wings (e.g., Wing A: Series Circuits, Wing B: Parallel Circuits, Wing C: Capacitor Timing). If a student gets stuck on Wing B, they can pivot to Wing C, gain confidence, and unlock a <em>One-Way Conceptual Shortcut</em> that illuminates how to solve Wing B before entering the final 10-minute Capstone Boss node.
+          </p>
+        </div>
 
         <ul className="list-disc pl-6 space-y-1 text-sm text-zinc-800">
           <li><strong>Vertices (V):</strong> Discrete spatial zones, rooms, arenas, or resource nodes.</li>

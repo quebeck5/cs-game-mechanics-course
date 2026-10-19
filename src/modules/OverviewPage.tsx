@@ -57,6 +57,18 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
             &mdash; Jesse Schell, <em>The Art of Game Design: A Book of Lenses</em> (Morgan Kaufmann / CRC Press, 2008, p. 10)
           </footer>
         </blockquote>
+
+        <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
+          <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
+            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 0: The Experiential Inversion)
+          </div>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>How It Relates:</strong> In a 30&ndash;60 minute educational mini-game, the software artifact (UI, sprites, textbook text) is not the learning outcome; the <em>cognitive intuition</em> formed inside the student&rsquo;s mind during problem-solving is the true experience.
+          </p>
+          <p className="text-zinc-800 leading-relaxed">
+            <strong>Implementation Pattern:</strong> Avoid &ldquo;chocolate-covered broccoli&rdquo; (interrupting a generic platformer with pop-up multiple-choice quizzes). Instead, implement <strong>Endogenous Mechanics</strong> where the educational rule <em>is</em> the physics engine rule. For example, in a 45-minute mini-game teaching TCP/IP networking, the player does not read definitions of packet loss; they actively route data packets across unstable nodes, adjusting window sizes and timeouts in real time to prevent buffer overflow before a 60-minute session timer expires.
+          </p>
+        </div>
       </section>
 
       {/* The Five Mental Model Shifts */}

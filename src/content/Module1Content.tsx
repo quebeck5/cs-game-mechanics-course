@@ -39,13 +39,13 @@ export const Module1Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 1: The Lusory Attitude)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 1: The Lusory Attitude)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> In a 30&ndash;60 minute educational mini-game, the <em>Constitutive Rules</em> (the artificial restrictions) are the exact pedagogical tool used to force the learner to abandon brute-force habits and internalize a new theoretical concept.
+            <strong>How It Relates:</strong> In a 30&ndash;60 minute primary-school mini-game (for ages 6&ndash;11), the <em>Constitutive Rules</em> (playful restrictions) prevent young children from tapping objects one-by-one (&ldquo;counting on fingers&rdquo;) and gently nudge them to discover a higher-level primary math strategy like grouping by tens or multiplication arrays.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Suppose you are building a 40-minute mini-game teaching <strong>Dynamic Programming / Memoization</strong>. If the student can solve levels using a naive O(2<sup>n</sup>) recursive clicker with infinite energy, they will brute-force every puzzle. Implement a strict <em>Constitutive Rule</em>: limit the player&rsquo;s CPU Energy budget to O(n) operations per level and provide a physical &ldquo;Cache Register&rdquo; slot. The artificial constraint makes brute-forcing impossible and transforms caching sub-problems into a satisfying puzzle.
+            <strong>Implementation Pattern:</strong> Suppose you are building a 40-minute Grade 2 mini-game teaching <strong>Base-10 Place Value (Ones, Tens, and Hundreds)</strong>. If a 7-year-old can load a cargo train with 64 apples by tapping a single-apple button 64 times, they will brute-force every level without learning place value. Implement a <em>Constitutive Rule</em>: the train departs after <strong>at most 10 crane drops</strong>, and the child is given <code>10-Apple Crates</code> and <code>1-Apple Baskets</code>. This playful constraint makes counting by ones impossible and turns bundling 6 crates of ten + 4 single baskets into an exciting puzzle.
           </p>
         </div>
 
@@ -61,7 +61,7 @@ export const Module1Content: React.FC = () => {
               A state of affairs that can be described without referencing the game’s rules. In Golf, the pre-lusory goal is depositing a 1.68-inch sphere into a 4.25-inch hole in the turf. In Chess, it is trapping the opponent's wooden King piece so it has no legal moves.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game:</strong> State the concrete, visual target outcome at second 0 of each level (e.g., &ldquo;Deliver 100V to the hospital grid&rdquo; or &ldquo;Sort the 16 cargo crates in ascending weight&rdquo;) so the student immediately understands the end goal without reading a syllabus rubric.
+              <strong className="text-blue-900">30&ndash;60 Min Primary-School Mini-Game:</strong> Show the concrete visual goal at second 0 using spoken audio and big animated icons (e.g., &ldquo;Feed the friendly dragon exactly 3/4 of a berry pie!&rdquo; or &ldquo;Build a 24-tile bridge so the puppy can cross the river!&rdquo;) so a 7-year-old understands the goal without reading a paragraph of text.
             </div>
           </div>
 
@@ -72,7 +72,7 @@ export const Module1Content: React.FC = () => {
               Rules that explicitly forbid the most efficient physical or logical means of reaching the pre-lusory goal. If an enterprise engineer optimized Golf, the optimal algorithm is trivial: walk to the hole and drop the ball inside. Time complexity: O(d). Error rate: 0%. The constitutive rules mandate that you stand 400 yards away and swat the sphere with an absurdly thin piece of bent metal.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game:</strong> Block naive brute-forcing via resource caps. In a sorting mini-game, forbid manual drag-and-drop swapping and restrict the student to a comparator-swapper crane with a strict <code>N &middot; log<sub>2</sub>(N)</code> energy battery so only divide-and-conquer algorithms succeed.
+              <strong className="text-blue-900">30&ndash;60 Min Primary-School Mini-Game:</strong> Prevent 1-by-1 counting brute force via backpack slot limits. In a Grade 3 multiplication garden game, limit the child&rsquo;s seed bag to 3 rectangular array stamps (e.g., <code>4 &times; 6</code>) rather than 24 individual seed taps.
             </div>
           </div>
 
@@ -83,7 +83,7 @@ export const Module1Content: React.FC = () => {
               The severely restricted subset of actions permitted by the rules. You may hit the golf ball with a club, but you may not throw it, carry it, or kick it. You may move a Chess Knight in an L-shape, but you may not slide it diagonally across the board.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game:</strong> Make the permitted player verbs isomorphic to the target operators of the subject (e.g., in a Linear Algebra mini-game, the only permitted player verbs are <code>Scale</code>, <code>Rotate</code>, and <code>Shear</code> matrix transformations applied to the level geometry).
+              <strong className="text-blue-900">30&ndash;60 Min Primary-School Mini-Game:</strong> Make the child&rsquo;s touch verbs directly mirror the primary-school manipulative—such as a <code>Slice Knife</code> (divides a pizza into 2, 3, or 4 equal slices) and a <code>Glue Wand</code> (fuses unit fractions back together).
             </div>
           </div>
 
@@ -94,7 +94,7 @@ export const Module1Content: React.FC = () => {
               The psychological state where the player willingly embraces these inefficient, arbitrary constraints solely because they make the resulting activity possible. If you are forced at gunpoint to play Golf, you are not playing a game; you are performing labor under duress.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game:</strong> Preserve voluntary curiosity during a mandatory 45-minute class session by offering optional &ldquo;Optimization Star Challenges&rdquo; (e.g., solve in &le;5 lines) and zero-penalty sandbox experimentation rather than coercive countdown timers that induce test anxiety.
+              <strong className="text-blue-900">30&ndash;60 Min Primary-School Mini-Game:</strong> Protect children&rsquo;s playful spirit during a 40-minute school lesson by removing stressful ticking red countdown clocks and offering optional &ldquo;Golden Star Sticker Challenges&rdquo; (e.g., &ldquo;Can you light the treehouse using only 2 mirrors?&rdquo;).
             </div>
           </div>
         </div>
@@ -113,13 +113,13 @@ export const Module1Content: React.FC = () => {
           <li>
             <strong>Constitutive Friction (Good Resistance):</strong> Obstacles engineered to test cognitive processing, spatial anticipation, or motor execution within the player's flow corridor. Overcoming constitutive friction releases dopamine and fosters a sense of competence.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game:</strong> Place all resistance inside the <em>domain problem</em> itself—such as requiring the student to balance voltage drops across parallel branches or resolve a deadlock between two philosopher threads.
+              <strong className="text-blue-900">30&ndash;60 Min Primary-School Mini-Game:</strong> Put all challenge inside the <em>curriculum puzzle</em> itself—such as figuring out how to combine <code>1/2</code> and <code>1/4</code> potion bottles to fill a <code>3/4</code> cauldron, or choosing the right angle mirror to bounce a sunbeam onto a flower.
             </div>
           </li>
           <li>
             <strong>Extraneous Friction (Bad Resistance):</strong> Arbitrary obstacles caused by unresponsive controls, confusing visual affordances, dropped input frames, unskippable cutscenes, or untelegraphed instant deaths. Extraneous friction triggers cognitive fatigue and frustration rather than mastery.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game:</strong> Eliminate all arithmetic drudgery and UI friction—provide built-in live calculators on hover, instant 1-key Undo/Redo (<code>Ctrl+Z</code>), and instant level restarts (<code>R</code> key &lt; 50ms) so zero minutes of the 45-minute session are wasted on tedious re-entry.
+              <strong className="text-blue-900">30&ndash;60 Min Primary-School Mini-Game:</strong> Eliminate all fine-motor and reading barriers for 6&ndash;11 year olds—avoid keyboard typing, use oversized 48px tap targets with 32px magnetic snapping, provide spoken voiceover on every icon, and include a big friendly 1-tap Undo button so clumsy finger slips never frustrate a child.
             </div>
           </li>
         </ul>
@@ -133,13 +133,13 @@ export const Module1Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 2: Meaningful Play &amp; Feedback)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 2: Meaningful Play &amp; Feedback)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> In a short 30&ndash;60 minute session, students do not have time to decipher delayed or ambiguous grading rubrics. Every student action must be both <em>discernible</em> (immediate state feedback) and <em>integrated</em> (causally altering the simulation trajectory).
+            <strong>How It Relates:</strong> Primary school children (ages 6&ndash;11) think concretely and cannot learn from delayed end-of-worksheet scores (&ldquo;7/10 Correct&rdquo;). Every touch action must be both <em>discernible</em> (immediate physical and audio response) and <em>integrated</em> (visibly changing the game world).
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Replace end-of-level &ldquo;Score: 72% (Failed)&rdquo; summary screens with real-time systemic feedback. In a 30-minute SQL / Relational Algebra mini-game, when the player constructs a <code>JOIN</code> filter, render the data rows physically flowing through pipe junctions in real time: valid rows glow emerald and power the generator, while Cartesian-product duplicates visibly clog the pipe and trigger a pressure-relief alarm within 200ms.
+            <strong>Implementation Pattern:</strong> Replace abstract &ldquo;Correct / Wrong&rdquo; pop-ups with immediate physical consequence. In a 35-minute Grade 2 balance-scale math game, when a child places a <code>7</code> block on the left pan and a <code>4 + 2</code> pair on the right pan, the scale physically tips left with a creaking seesaw sound, and the little hamster character slides toward the heavier side within 150ms, showing the child <em>why</em> 6 is less than 7 without a punitive red X.
           </p>
         </div>
 
@@ -168,13 +168,13 @@ export const Module1Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 3: MDA Backward Curriculum Design)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 3: MDA Backward Curriculum Design)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> Educational designers often start with Mechanics (&ldquo;let&rsquo;s code a card deck of chemical elements&rdquo;) without defining the target cognitive Aesthetic. MDA forces you to design backward from the target learning emotion to the runtime dynamic, and finally to the underlying code rules.
+            <strong>How It Relates:</strong> Primary-school ed-tech developers often start with Mechanics (&ldquo;let&rsquo;s code flashcards of multiplication facts&rdquo;) without designing how the child will emotionally experience the activity. MDA requires designing backward from the child&rsquo;s target emotion (Aesthetics) to their play behavior (Dynamics), and finally to the code rules (Mechanics).
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> For a 45-minute Cybersecurity mini-game: (1) Define the <strong>Aesthetic</strong>: the player should feel the paranoid vigilance of a network defender; (2) Engineer the <strong>Dynamic</strong>: inspecting packet payloads under time pressure while balancing firewall false-positives vs. throughput; (3) Author the <strong>Mechanics</strong>: a token-stream spawner emitting normal and malformed packets at 1.5 tokens/sec, plus a configurable regex filter gate that consumes 5% CPU per active rule.
+            <strong>Implementation Pattern:</strong> For a 40-minute Grade 3 Animal Bakery money-and-change mini-game: (1) Define the <strong>Aesthetic</strong>: the child should feel proud, cozy shopkeeper ownership and tactile delight; (2) Engineer the <strong>Dynamic</strong>: baking treats and handing exact coin change ($1, 50&cent;, 25&cent;, 10&cent;, 5&cent;) to impatient woodland creatures; (3) Author the <strong>Mechanics</strong>: a cash-register coin tray where coins magnetically stack into $1 towers when their sum reaches 100 cents.
           </p>
         </div>
 
@@ -186,7 +186,7 @@ export const Module1Content: React.FC = () => {
               The formal rules, algorithms, data representations, state machine tables, and physics update functions written by the software engineer. Mechanics are deterministic, static at rest, and completely controlled by the programmer.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game:</strong> Encode the exact mathematical law of the syllabus (e.g., Snell&rsquo;s Law <code>n<sub>1</sub>sin(&theta;<sub>1</sub>) = n<sub>2</sub>sin(&theta;<sub>2</sub>)</code> or Kirchhoff&rsquo;s Current Law) as the deterministic simulation tick function.
+              <strong className="text-blue-900">30&ndash;60 Min Primary-School Mini-Game:</strong> Encode the primary curriculum rule (e.g., 10 ones-cubes automatically fuse into a 10-rod, or light reflects at equal angles <code>&theta;<sub>i</sub> = &theta;<sub>r</sub></code>) directly in the physics update loop.
             </div>
           </div>
 
@@ -197,7 +197,7 @@ export const Module1Content: React.FC = () => {
               The execution trace generated when human player input couples with mechanics over time. Dynamics encompass emergent behaviors, economic flows, pacing oscillations, and tactical strategies that arise at runtime.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game:</strong> Design the interactive loop of hypothesis &rarr; parameter tweak &rarr; real-time visual feedback trace so students observe emergent trade-offs (e.g., increasing refractive index bends the beam sharper but triggers total internal reflection).
+              <strong className="text-blue-900">30&ndash;60 Min Primary-School Mini-Game:</strong> Design the child&rsquo;s play loop of dragging, testing, and watching immediate physical results (e.g., rotating a mirror and watching the sunbeam bounce across the treehouse room in real time).
             </div>
           </div>
 
@@ -208,7 +208,7 @@ export const Module1Content: React.FC = () => {
               The emotional, psychological, and neurobiological response evoked in the player as they interact with the dynamic system. Crucially, aesthetics in MDA does NOT mean graphics or visual art; it means the taxonomy of "fun".
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game:</strong> Target the epistemic emotion of <em>&ldquo;Eureka! / Insight&rdquo;</em>—the neurobiological rush when a complex abstract formula suddenly clicks into intuitive visual clarity.
+              <strong className="text-blue-900">30&ndash;60 Min Primary-School Mini-Game:</strong> Target joyful <em>Sensation</em> + <em>Discovery</em> (&ldquo;Look! Two 1/4 slices fit inside the 1/2 pie pan!&rdquo;) so the child feels proud mastery rather than test anxiety.
             </div>
           </div>
         </div>
@@ -248,13 +248,13 @@ export const Module1Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 4: Aesthetic Scoping)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 4: Aesthetic Scoping)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> A 30&ndash;60 minute educational mini-game cannot simultaneously serve all 8 aesthetics without diluting focus and blowing past the 60-minute time limit (e.g., sprawling <em>Narrative</em> cutscenes or massive <em>Fantasy</em> world-building waste precious session time).
+            <strong>How It Relates:</strong> Primary school students (ages 6&ndash;11) have developing reading skills and a 40-minute classroom period. Long text-heavy <em>Narrative</em> cutscenes bore early readers and eat up precious interactive play time.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Restrict any 30&ndash;60 minute educational mini-game to <strong>at most two primary Aesthetics</strong>: typically <strong>Discovery</strong> (uncovering how an unfamiliar system behaves) + <strong>Challenge</strong> (mastering the rule to solve an exam puzzle) or <strong>Expression</strong> (designing a custom circuit/algorithm solution). Cut all non-essential narrative text and tutorial pop-ups exceeding 40 words.
+            <strong>Implementation Pattern:</strong> Focus a 30&ndash;60 minute primary-school mini-game on <strong>Sensation</strong> (squishy, musical toys), <strong>Discovery</strong> (testing how blocks/potions combine), and gentle <strong>Expression</strong> (decorating a pet habitat or custom garden with earned math blocks). Keep any story intro to a 15-second voice-acted cartoon animation with zero reading required.
           </p>
         </div>
 
@@ -264,7 +264,7 @@ export const Module1Content: React.FC = () => {
             <div className="font-semibold text-zinc-900">Visceral Sensory Pleasure</div>
             <p className="text-zinc-600">Tactile motor response, responsive controls, visual feedback, sound design (e.g., <em>Geometry Wars, Rez</em>).</p>
             <div className="border-t border-zinc-100 pt-1 text-[11px] text-blue-950">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Sonify waveforms and render fluid/field shaders in real time as students drag sliders.
+              <strong>Primary-School Mini-Game:</strong> Play ascending xylophone notes and jelly-like squash-and-stretch as a child stacks counting blocks.
             </div>
           </div>
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
@@ -272,7 +272,7 @@ export const Module1Content: React.FC = () => {
             <div className="font-semibold text-zinc-900">Make-Believe &amp; Immersion</div>
             <p className="text-zinc-600">Inhabiting an alternate reality, role-playing a fictional persona (e.g., <em>Skyrim, Elite Dangerous</em>).</p>
             <div className="border-t border-zinc-100 pt-1 text-[11px] text-blue-950">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Frame the 45-min lab as a concrete role (e.g., &ldquo;Mars Rover Telemetry Engineer&rdquo; or &ldquo;ICU Virologist&rdquo;) in a single 15-second briefing.
+              <strong>Primary-School Mini-Game:</strong> Cast the child in an imaginative kid-friendly role (&ldquo;Monster Pizza Chef&rdquo;, &ldquo;Space Puppy Rescuer&rdquo;, or &ldquo;Treehouse Inventor&rdquo;).
             </div>
           </div>
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
@@ -280,7 +280,7 @@ export const Module1Content: React.FC = () => {
             <div className="font-semibold text-zinc-900">Dramatic Progression</div>
             <p className="text-zinc-600">Story, character arcs, emotional catharsis, escalating stakes (e.g., <em>The Last of Us, Disco Elysium</em>).</p>
             <div className="border-t border-zinc-100 pt-1 text-[11px] text-blue-950">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Use a 3-act escalating incident log (Anomaly &rarr; Cascade &rarr; System Stabilization) delivered via non-blocking side-panel alerts.
+              <strong>Primary-School Mini-Game:</strong> Use a visual 3-step picture storybook (The Bridge Broke &rarr; Build Sub-Spans &rarr; The Parade Crosses!) with spoken voiceover.
             </div>
           </div>
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
@@ -288,7 +288,7 @@ export const Module1Content: React.FC = () => {
             <div className="font-semibold text-zinc-900">Mastery &amp; Competence</div>
             <p className="text-zinc-600">Overcoming difficult obstacles through skill acquisition, problem-solving (e.g., <em>Dark Souls, Celeste</em>).</p>
             <div className="border-t border-zinc-100 pt-1 text-[11px] text-blue-950">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Present a final 10-minute Capstone Boss Puzzle that requires synthesizing all 3 sub-concepts under strict cost/latency constraints.
+              <strong>Primary-School Mini-Game:</strong> End the 40-minute session with a friendly &ldquo;Giant Chef Order&rdquo; boss puzzle that combines tens-bundling and fraction slicing.
             </div>
           </div>
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
@@ -296,7 +296,7 @@ export const Module1Content: React.FC = () => {
             <div className="font-semibold text-zinc-900">Social Interdependence</div>
             <p className="text-zinc-600">Cooperation, communication, team coordination, communal bonds (e.g., <em>Left 4 Dead, World of Warcraft</em>).</p>
             <div className="border-t border-zinc-100 pt-1 text-[11px] text-blue-950">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Support asymmetric 2-player classroom pairing (Student A controls Producer/Sender, Student B controls Consumer/Receiver).
+              <strong>Primary-School Mini-Game:</strong> Let two classmates share one iPad or pair up (Child A slices fraction ingredients, Child B bakes and serves the customer).
             </div>
           </div>
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
@@ -304,7 +304,7 @@ export const Module1Content: React.FC = () => {
             <div className="font-semibold text-zinc-900">Uncharted Exploration</div>
             <p className="text-zinc-600">Mapping unfamiliar territory, uncovering hidden mechanics or secrets (e.g., <em>Outer Wilds, Metroid</em>).</p>
             <div className="border-t border-zinc-100 pt-1 text-[11px] text-blue-950">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Let students uncover the formula empirically by probing an unknown black-box system before revealing the formal equation.
+              <strong>Primary-School Mini-Game:</strong> Let children heat and cool mystery blocks (ice &rarr; water &rarr; steam) in a play kitchen before naming states of matter.
             </div>
           </div>
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
@@ -312,7 +312,7 @@ export const Module1Content: React.FC = () => {
             <div className="font-semibold text-zinc-900">Creative Agency</div>
             <p className="text-zinc-600">Self-expression, building, customizing, choosing unique playstyles (e.g., <em>Minecraft, Armored Core</em>).</p>
             <div className="border-t border-zinc-100 pt-1 text-[11px] text-blue-950">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Allow open-ended sandbox architecture where students compare pareto histograms of their custom circuit/code against classmates.
+              <strong>Primary-School Mini-Game:</strong> Let kids decorate their classroom aquarium or dress up their robot mascot using geometry shapes they solved.
             </div>
           </div>
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
@@ -320,7 +320,7 @@ export const Module1Content: React.FC = () => {
             <div className="font-semibold text-zinc-900">Abiding Routine / Zen</div>
             <p className="text-zinc-600">Rhythmic relaxation, low-cognitive-load ritual, unwinding (e.g., <em>Animal Crossing, Tetris</em>).</p>
             <div className="border-t border-zinc-100 pt-1 text-[11px] text-blue-950">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Use brief 90-second rhythmic consolidation intervals between hard conceptual spikes so working memory can consolidate.
+              <strong>Primary-School Mini-Game:</strong> Insert a 90-second cozy pet-feeding or sticker-album break every 10 minutes so young brains can rest and consolidate.
             </div>
           </div>
         </div>
@@ -351,13 +351,13 @@ export const Module1Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 5: Entropy Compression Pacing)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 5: Entropy Compression Pacing)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> In an educational mini-game, the learning objective and the fun mechanism are identical: both are Shannon entropy reduction (<code>dH/dt &lt; 0</code>). However, once a student extracts the pattern of a single concept, <code>H &rarr; 0</code> and boredom strikes immediately; if you force them to repeat 20 identical drill problems, engagement collapses.
+            <strong>How It Relates:</strong> Young children (ages 6&ndash;11) experience huge dopamine rushes when they spot a pattern (<code>dH/dt &lt; 0</code>), but they also lose patience rapidly when forced to repeat 25 identical arithmetic drills after they have already figured out the trick (<code>H &rarr; 0</code>).
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Structure a 45-minute mini-game around <strong>Progressive Rule Layering</strong> rather than repetitive drills. Once the telemetry tracker detects the player has solved 3 consecutive levels without error (confirming schema compression <code>H &rarr; 0</code>), immediately inject a new orthogonal variable (e.g., in a Boolean logic gate mini-game, introduce propagation delay glitches at minute 15, and clock-edge flip-flops at minute 30) to keep <code>dH/dt</code> actively negative for the entire session.
+            <strong>Implementation Pattern:</strong> Replace static 20-question drill worksheets with <strong>3-Clean-Solve Mastery Promotion</strong>. As soon as your telemetry sees a Grade 2 student solve 3 number-bond puzzles in a row without mistakes (confirming pattern compression <code>H &rarr; 0</code>), celebrate with confetti and immediately introduce the next playful twist (e.g., mystery missing-addend boxes <code>4 + [?] = 10</code> at Minute 12, and balancing two sides of a seesaw <code>3 + 7 = 6 + [?]</code> at Minute 24).
           </p>
         </div>
 
@@ -398,7 +398,7 @@ export const Module1Content: React.FC = () => {
               Entropy remains maximal. The player experiences cognitive overload, helplessness, and acute anxiety.
             </p>
             <div className="border-l-2 border-red-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Happens when a mini-game dumps a full 15-parameter simulator on the student at Minute 1; prevent this by locking 13 parameters and isolating a single observable cause-and-effect relationship per level.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Happens when a screen shows 8 different buttons, unfamiliar math symbols, and multi-step instructions all at once to a 7-year-old; prevent this by introducing <strong>one visual toy at a time</strong> (e.g., start with only <code>1/2</code> pizza slices before ever showing <code>1/4</code> or <code>1/8</code>).
             </div>
           </div>
 
@@ -410,7 +410,7 @@ export const Module1Content: React.FC = () => {
               The rate of entropy reduction is high. The player experiences the neurobiological state colloquially known as "fun" or "grokking".
             </p>
             <div className="border-l-2 border-blue-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Target Mins 5&ndash;40 for this regime by designing puzzles where the academic theorem is the hidden regularity—when the student deduces the invariant rule (e.g., Kirchhoff's Current Law in a circuit puzzle), their brain fires a massive dopamine reward.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Keep children in this sweet spot for Minutes 5&ndash;35 by letting them discover visual patterns—like noticing that rotating a <code>3 &times; 4</code> flower bed by 90 degrees automatically makes a <code>4 &times; 3</code> flower bed with the exact same 12 flowers (commutativity).
             </div>
           </div>
 
@@ -423,7 +423,7 @@ export const Module1Content: React.FC = () => {
               The game is "solved." The brain immediately halts dopamine release, and the game becomes unbearably dull.
             </p>
             <div className="border-l-2 border-zinc-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Once the student solves 3 consecutive puzzles with zero errors (proving <code>H = 0</code> for that sub-concept), immediately auto-advance or unlock a macro-tool that automates that step rather than forcing 10 more repetitive drill levels.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> As soon as a child solves 3 puzzles in a row cleanly (proving <code>H = 0</code> for counting by ones), unlock a &ldquo;Super 10-Wand&rdquo; that bundles 10 cubes in one tap so they never get bored doing repetitive finger-tapping.
             </div>
           </div>
         </div>
@@ -452,17 +452,17 @@ export const Module1Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 6: 4-Cycle Sawtooth Session Architecture)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 6: 4-Cycle Sawtooth Session Architecture)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> A 30&ndash;60 minute educational mini-game is long enough to induce cognitive burnout if difficulty rises monotonically, yet short enough that getting stuck in the Anxiety Zone for 10 minutes ruins the entire class period.
+            <strong>How It Relates:</strong> Primary school students (ages 6&ndash;11) have an active focused attention cycle of roughly 8&ndash;10 minutes before mental fatigue sets in, and they shut down emotionally if stuck in the Anxiety Zone for even 2 minutes.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Partition a 45-minute educational mini-game into <strong>three 12-minute Kish&#333;tenketsu sawtooth cycles</strong> followed by a 9-minute capstone synthesis:
-            Cycle 1 (Mins 0&ndash;12): Introduce Sub-Concept A in a zero-penalty sandbox &rarr; escalate &rarr; mini-test &rarr; empowerment valley.
-            Cycle 2 (Mins 12&ndash;24): Introduce Sub-Concept B in safety &rarr; escalate &rarr; mini-test.
-            Cycle 3 (Mins 24&ndash;36): Combine A + B with a twist.
-            Capstone (Mins 36&ndash;45): A multi-stage boss puzzle where the student uses their newly unlocked automation tools to effortlessly crush an oversized challenge.
+            <strong>Implementation Pattern:</strong> Partition a 40-minute primary-school mini-game into <strong>four 10-minute Kish&#333;tenketsu sawtooth cycles</strong>:
+            Cycle 1 (Mins 0&ndash;10): Playful sandbox with unit blocks (e.g., <code>1/2</code> slices) &rarr; mini-order &rarr; pet sticker reward valley.
+            Cycle 2 (Mins 10&ndash;20): Introduce smaller slices (<code>1/4</code>) &rarr; equivalence matching &rarr; unlock Magic Fraction Cutter.
+            Cycle 3 (Mins 20&ndash;30): Combine <code>1/2</code> and <code>1/4</code> to fill mixed orders.
+            Capstone (Mins 30&ndash;40): The &ldquo;Grand Monster Party&rdquo; where the child uses their Magic Fraction Cutter to joyously serve giant multi-pizza orders.
           </p>
         </div>
 
@@ -474,13 +474,13 @@ export const Module1Content: React.FC = () => {
           <li>
             <strong>The Anxiety Zone (Challenge &gt;&gt; Skill):</strong> The task overwhelms the player's computational and motor capacity, causing stress and surrender.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Detect anxiety within 90 seconds via telemetry (e.g., 3 failed submissions or 45s of mouse inactivity) and dynamically spawn contextual scaffolding hints or highlight the faulty node so the student never stalls out of the 45-minute session.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Detect child frustration within 45 seconds (e.g., 2 wrong block drops or 20 seconds of idle touch) and have a friendly Owl Helper mascot fly in to ghost-outline the matching piece so the child never cries or gives up.
             </div>
           </li>
           <li>
             <strong>The Boredom Zone (Skill &gt;&gt; Challenge):</strong> The task demands trivial effort, reducing entropy reduction to zero and inducing apathy.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Detect mastery when a student solves a stage in under 30 seconds on their first attempt, offering a &ldquo;Fast-Track Express Gate&rdquo; that skips drill variants and jumps straight to the twist challenge.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> When a child solves 3 stages in under 15 seconds each, spawn a &ldquo;Rainbow Warp Pipe&rdquo; that lets them skip basic practice levels and jump straight to the next fun gadget twist.
             </div>
           </li>
         </ul>
@@ -517,25 +517,25 @@ export const Module1Content: React.FC = () => {
           <li>
             <strong>Introduction (Low Tension Valley):</strong> A new mechanic or enemy type is introduced in a safe, controlled environment where failure has zero consequence. Challenge drops, allowing the player to safely begin pattern compression.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Mins 0&ndash;3 of each 12-minute cycle: introduce the new concept (e.g., an <code>INDEX</code> lookup or a <code>while</code> loop block) in a single-screen interactive sandbox with zero timers and instant undo.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Mins 0&ndash;2 of each 10-minute cycle: let the child freely play with the new block or coding tile (e.g., a <code>Repeat 3</code> loop block) in a safe playroom with silly animations and zero wrong answers.
             </div>
           </li>
           <li>
             <strong>Development (Rising Tension Slope):</strong> The mechanic is layered with previously mastered obstacles, demanding higher cognitive integration and spatial accuracy.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Mins 3&ndash;8 of each cycle: combine the new mechanic with constraints from the previous cycle (e.g., indexing under a memory-bandwidth budget).
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Mins 2&ndash;6 of each cycle: guide the puppy across stepping stones that combine <code>Repeat 3</code> with <code>Jump Over Puddle</code> blocks.
             </div>
           </li>
           <li>
             <strong>Twist / Climax (Peak Tension Spike):</strong> A boss battle, timed escape sequence, or complex exam room forces the player to execute the mechanic under severe pressure. Tension peaks near the anxiety threshold.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Mins 8&ndash;10 of each cycle: present a diagnostic &ldquo;Boss Anomaly&rdquo; (e.g., an adversarial traffic surge or edge-case input) that tests whether the student truly grokked the underlying invariant rather than memorizing a pattern.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Mins 6&ndash;8 of each cycle: a playful &ldquo;Sleepy Dragon Bridge&rdquo; puzzle where the child must fit their loop blocks into a 4-slot backpack to tiptoe past the dragon.
             </div>
           </li>
           <li>
             <strong>Empowerment Valley (Rest &amp; Catharsis):</strong> Following the climax, difficulty drops sharply. The player is granted a reward, safe narrative dialogue, or the opportunity to use their newly mastered power to effortlessly defeat earlier enemy types. This allows the parasympathetic nervous system to recover before the next cycle begins.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Mins 10&ndash;12 of each cycle: reward the student by encapsulating their manual solution into a reusable 1-click macro chip and letting them vaporize a swarm of earlier manual problems in 30 seconds.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Mins 8&ndash;10 of each cycle: award a shiny new hat or sticker for the child&rsquo;s puppy and let them use a 1-tap &ldquo;Super-Jump Stamp&rdquo; to zoom across a bonus coin stage before the next 10-minute topic begins.
             </div>
           </li>
         </ol>
@@ -560,7 +560,7 @@ export const Module1Content: React.FC = () => {
               A ball, a yo-yo, or a sandbox are toys. You interact with them simply because the physical manipulation itself is intrinsically satisfying.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Build the core domain object—such as a draggable vector arrow, a fluid pressure valve, or a live regex highlighter—with spring physics, crisp audio clicks, and immediate visual response so students love playing with it before any grading rubric appears.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Build the core primary-school manipulative—such as squishy number-blocks that snap together with eyes and voices (like <em>Numberblocks</em>), a stretchy geometric geoboard rubber band, or a sloshing fraction beaker—so a 7-year-old giggles and plays with it before any question is asked.
             </div>
           </div>
 
@@ -572,7 +572,7 @@ export const Module1Content: React.FC = () => {
               Basketball takes a rubber ball (toy) and introduces a hoop, a shot clock, and a traveling rule (game).
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Layer the curriculum syllabus on top of the tactile toy as a sequence of 8–10 structured puzzle goals, resource budgets, and star ratings that guide the student through the 45-minute lesson plan.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Wrap the squishy toy in 8&ndash;10 bite-sized customer orders or treasure-map stages with 1-to-3 gold star rewards that guide the child through the 40-minute primary curriculum goal.
             </div>
           </div>
         </div>
@@ -590,13 +590,13 @@ export const Module1Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 7: Tactile Sandbox Toy &amp; Multi-Problem Verb)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 7: Tactile Sandbox Toy &amp; Multi-Problem Verb)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> In a 30&ndash;60 minute educational mini-game, you cannot afford 15 minutes of dry text onboarding or five separate single-purpose UI tools. You need a single tactile &ldquo;Toy&rdquo; verb that solves multiple pedagogical problems at once and is immediately fun to manipulate in the first 90 seconds.
+            <strong>How It Relates:</strong> Primary school children (ages 6&ndash;11) get overwhelmed when an educational game has 6 different toolbar buttons and complex menus. You need a single intuitive &ldquo;Toy&rdquo; gesture that solves multiple classroom problems at once and can be learned in 15 seconds with zero reading.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Begin the first 3 minutes in a zero-objective <strong>Interactive Toy Sandbox</strong> where the student plays with a single multipurpose manipulative—for example, in a Fourier Transform / Wave Physics mini-game, a spring-loaded frequency slider that bends laser beams, shatters resonant glass barriers, and tunes radio receivers. One interactive verb serves as the movement tool, the puzzle solver, and the visual graphing instrument simultaneously.
+            <strong>Implementation Pattern:</strong> Start the first 2 minutes in an open <strong>Toy Playroom</strong> where the child plays with one multipurpose tool—for example, in a Grade 3 Geometry &amp; Fractions mini-game, a <em>Elastic Laser Slicer</em> that stretches between pegs on a grid. Pulling and releasing the band slices pizzas into equal fractions, measures perimeter around garden plots, and bounces character marbles across gaps—one joyful finger gesture powers movement, slicing, and measurement simultaneously.
           </p>
         </div>
 
@@ -606,22 +606,22 @@ export const Module1Content: React.FC = () => {
         </p>
 
         <div className="bg-emerald-50 border-l-4 border-emerald-600 p-4 text-xs sm:text-sm text-emerald-950">
-          <span className="font-bold">Summary for Chapter 1 (with 30&ndash;60 Min Educational Mini-Game Blueprint):</span>
+          <span className="font-bold">Summary for Chapter 1 (with 30&ndash;60 Min Primary-School Mini-Game Blueprint):</span>
           <ol className="list-decimal pl-5 mt-2 space-y-1.5">
             <li>
-              <strong>Lusory Attitude (Suits):</strong> Games require voluntary acceptance of inefficient means to achieve goals. <em>(Mini-Game: Block brute-force hardcoding so the student must use the target CS/math algorithm to solve the 45-minute challenge.)</em>
+              <strong>Lusory Attitude (Suits):</strong> Games require voluntary acceptance of inefficient means to achieve goals. <em>(Primary Mini-Game: Limit crane drops to 10 so a 7-year-old bundles Tens-crates instead of tapping 64 single apples one by one.)</em>
             </li>
             <li>
-              <strong>MDA Bidirectional Loop (Hunicke et al.):</strong> Engineers author Mechanics; players experience Aesthetics; Dynamics emerge in between. <em>(Mini-Game: Start from the desired student &ldquo;Aha!&rdquo; Aesthetic and work backward to the minimal ruleset that fits in a 45-minute session.)</em>
+              <strong>MDA Bidirectional Loop (Hunicke et al.):</strong> Engineers author Mechanics; players experience Aesthetics; Dynamics emerge in between. <em>(Primary Mini-Game: Design backward from child wonder and shopkeeper pride to tactile coin-stacking and pizza-slicing rules.)</em>
             </li>
             <li>
-              <strong>Cognitive Entropy Reduction (Koster):</strong> Fun is the cognitive sensation of pattern extraction and entropy reduction over time. <em>(Mini-Game: Make the learning objective itself the hidden systemic pattern that compresses puzzle entropy.)</em>
+              <strong>Cognitive Entropy Reduction (Koster):</strong> Fun is the cognitive sensation of pattern extraction and entropy reduction over time. <em>(Primary Mini-Game: Promote the child to a new toy twist after 3 clean solves so they never suffer boring worksheet drills.)</em>
             </li>
             <li>
-              <strong>Sawtooth Flow Pacing (Csikszentmihalyi):</strong> Difficulty must oscillate in a sawtooth wave to prevent psychological burnout. <em>(Mini-Game: Structure the 45-minute session into three 12-minute tension-and-release cycles plus a 9-minute synthesis.)</em>
+              <strong>Sawtooth Flow Pacing (Csikszentmihalyi):</strong> Difficulty must oscillate in a sawtooth wave to prevent psychological burnout. <em>(Primary Mini-Game: Structure a 40-minute class period into four 10-minute cycles with celebratory pet/sticker empowerment valleys.)</em>
             </li>
             <li>
-              <strong>The Toy Principle (Miyamoto):</strong> Validate the intrinsic tactile joy of the core toy before constructing rules, goals, or narrative systems. <em>(Mini-Game: Open with a 3-minute zero-penalty interactive sandbox using a tactile domain manipulative.)</em>
+              <strong>The Toy Principle (Miyamoto):</strong> Validate the intrinsic tactile joy of the core toy before constructing rules, goals, or narrative systems. <em>(Primary Mini-Game: Open with a 2-minute zero-penalty playroom featuring a bouncy, musical math manipulative.)</em>
             </li>
           </ol>
         </div>

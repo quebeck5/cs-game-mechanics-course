@@ -60,13 +60,13 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 0: The Experiential Inversion)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 0: The Experiential Inversion)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> In a 30&ndash;60 minute educational mini-game, the software artifact (UI, sprites, textbook text) is not the learning outcome; the <em>cognitive intuition</em> formed inside the student&rsquo;s mind during problem-solving is the true experience.
+            <strong>How It Relates:</strong> In a 30&ndash;60 minute primary-school educational mini-game (for children aged 6&ndash;11), the software artifact (tablet sprites, reward stickers, and animations) is not the learning outcome; the <em>embodied number-sense or scientific intuition</em> formed inside the child&rsquo;s mind during play is the true experience.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Avoid &ldquo;chocolate-covered broccoli&rdquo; (interrupting a generic platformer with pop-up multiple-choice quizzes). Instead, implement <strong>Endogenous Mechanics</strong> where the educational rule <em>is</em> the physics engine rule. For example, in a 45-minute mini-game teaching TCP/IP networking, the player does not read definitions of packet loss; they actively route data packets across unstable nodes, adjusting window sizes and timeouts in real time to prevent buffer overflow before a 60-minute session timer expires.
+            <strong>Implementation Pattern:</strong> Never build &ldquo;chocolate-covered broccoli&rdquo; (interrupting a cute cartoon platformer with a pop-up arithmetic worksheet). Instead, implement <strong>Endogenous Primary-School Mechanics</strong> where the curriculum rule <em>is</em> the toy&rsquo;s physical rule. For example, in a 40-minute Grade 3 fractions mini-game, an 8-year-old does not select multiple-choice fraction definitions; they physically slice pizzas and pour glowing potion cylinders of size 1/2, 1/4, and 1/8 to feed hungry monster customers before the 40-minute bakery shift ends.
           </p>
         </div>
       </section>
@@ -89,7 +89,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
               Mastering game feel requires intentionally injecting structured latency: wind-up startup frames (telegraphing), hitstop freeze frames (communicating physical mass), and recovery frames (opportunity cost).
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-3 py-1.5 text-xs text-zinc-800">
-              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game Relation &amp; Implementation:</strong> When a student clicks &ldquo;Execute / Test Hypothesis&rdquo; in a 45-minute coding or physics lab, zero-millisecond instant grading encourages mindless trial-and-error spamming. Inject a <strong>1.5-second animated Startup Phase</strong> (visualizing signal propagation through their circuit/algorithm) and a <strong>200ms Diagnostic Hitstop freeze</strong> on the exact node where an error or invariant violation occurs so the student visually traces cause and effect.
+              <strong className="text-blue-900">30&ndash;60 Min Primary-School Mini-Game Relation &amp; Implementation:</strong> Primary school children (ages 6&ndash;11) are highly prone to impulsive &ldquo;button mashing&rdquo; on classroom iPads when feedback is instantaneous (0ms). When a child presses &ldquo;Launch!&rdquo; in a 40-minute block-coding turtle game or math bridge-builder, inject a <strong>1.2-second animated Startup Phase</strong> (the turtle winds up its spring shoes as each command block lights up sequentially) and a <strong>150ms Hitstop freeze</strong> on the exact tile where the turtle bumps into a wall, allowing an 8-year-old to visually connect their code block to the physical outcome.
             </div>
           </div>
 
@@ -100,7 +100,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
               Game systems engineers replace memoryless stochastics with Markov Pseudo-Random Distributions (PRD) and Fisher-Yates shuffle bags that dynamically shape variance while preserving expected value.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-3 py-1.5 text-xs text-zinc-800">
-              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game Relation &amp; Implementation:</strong> In a 40-minute classroom mini-game, a student only performs 15&ndash;25 trials. Under raw <code className="font-mono">Math.random()</code>, a student might get 6 identical topic questions in a row or observe skewed small-sample probabilities that contradict the textbook law. Implement a <strong>Fisher-Yates Curriculum Shuffle Bag</strong> to guarantee every syllabus concept is tested once per cycle, and use <strong>Markov PRD</strong> for stochastic simulations so small-sample experiments converge reliably within 40 minutes.
+              <strong className="text-blue-900">30&ndash;60 Min Primary-School Mini-Game Relation &amp; Implementation:</strong> Young children (ages 6&ndash;11) have low frustration tolerance for perceived &ldquo;unfairness&rdquo; and only complete 15&ndash;25 rounds in a 35-minute classroom period. Under raw <code className="font-mono">Math.random()</code>, a child might draw five hard <code className="font-mono">7 &times; 8</code> multiplication monsters in a row or never see a rare collectable sticker drop, triggering tears. Implement a <strong>Fisher-Yates Curriculum Shuffle Bag</strong> of size 10 (guaranteeing balanced coverage of easy/medium/hard facts) and <strong>Markov PRD</strong> for mystery treasure chests so every child experiences fair, predictable reward pacing within 35 minutes.
             </div>
           </div>
 
@@ -111,7 +111,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
               Modern systems decompose entities into orthogonal property tags (<code className="font-mono bg-zinc-100 px-1 py-0.5 rounded border border-zinc-200 text-zinc-900">[Flammable, Conductive, Magnetic]</code>), authoring O(N) system rules that allow players to discover O(N&sup2;) emergent systemic behaviors.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-3 py-1.5 text-xs text-zinc-800">
-              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game Relation &amp; Implementation:</strong> Hardcoded educational puzzles reject valid student solutions that don&rsquo;t match the teacher&rsquo;s exact keystroke sequence. Instead, attach orthogonal domain property tags (<code className="font-mono">[pH, Molarity, Conductive, Resistance]</code>) to lab components and grade via <strong>Output State Unit Tests</strong>, allowing students in a 45-minute lab to invent emergent, mathematically valid solutions.
+              <strong className="text-blue-900">30&ndash;60 Min Primary-School Mini-Game Relation &amp; Implementation:</strong> Children love creative experimentation (&ldquo;What if I use a metal spoon instead of a wire to light the treehouse bulb?&rdquo;). Hardcoded puzzles crush primary-school curiosity when they reject clever solutions. Attach simple property tags (<code className="font-mono">[Metal, Conductive, Heavy, Magnetic, Floats]</code>) to everyday classroom objects so a 9-year-old in a 45-minute science mini-game can bridge an electric circuit with a brass key or melt an ice wall with a magnifying glass through emergent tag chemistry.
             </div>
           </div>
 
@@ -122,7 +122,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
               Game engineers parameterize movement from level design constraints (H<sub>max</sub>, t<sub>peak</sub>), deriving asymmetric piecewise accelerations (g<sub>fall</sub> &asymp; 2.4 &middot; g<sub>rise</sub>) that snap avatars crisply to the ground.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-3 py-1.5 text-xs text-zinc-800">
-              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game Relation &amp; Implementation:</strong> Half of a university or K-12 class may be non-gamers. If an educational physics or geometry mini-game requires fussy pixel-perfect motor control, non-gamers waste 30 minutes fighting the mouse/keyboard. Parameterize all movement and drag-and-drop tools using <strong>Grid-Quantized Spatial Metrics</strong> and a <strong>24px Magnetic Snap Radius</strong> so conceptual understanding immediately translates into clean execution.
+              <strong className="text-blue-900">30&ndash;60 Min Primary-School Mini-Game Relation &amp; Implementation:</strong> Children aged 6&ndash;9 have developing fine-motor coordination on iPads and school Chromebook trackpads, plus slower perceptual-motor reaction times (~350&ndash;450ms). Parameterize primary-school platformers and drag-and-drop manipulatives with <strong>generous 160ms Coyote Time</strong>, <strong>oversized 48px touch hitboxes</strong>, and a <strong>32px Magnetic Grid Snap</strong> so a 7-year-old dragging base-10 blocks or jumping to a number-line platform never fails a math question due to clumsy finger slips.
             </div>
           </div>
 
@@ -133,7 +133,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
               Human psychology demands rhythmic oscillation: introducing mechanics in safety, escalating challenge to a peak climax, and dropping into an empowerment valley before beginning the next cycle.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-3 py-1.5 text-xs text-zinc-800">
-              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game Relation &amp; Implementation:</strong> A continuous 45-minute exam ramp causes severe cognitive fatigue by minute 25. Partition the 45-minute mini-game into <strong>three 12-minute Kish&#333;tenketsu sawtooth cycles</strong> plus a 9-minute capstone: after each 12-minute concept test, reward the student with an <em>Automation Macro Block</em> that turns the previous hard calculation into a 1-click tool, creating a gratifying empowerment valley before the next concept begins.
+              <strong className="text-blue-900">30&ndash;60 Min Primary-School Mini-Game Relation &amp; Implementation:</strong> Primary school students have an active focused attention span of roughly 8&ndash;12 minutes before cognitive fatigue sets in. Structure a 40-minute classroom mini-game into <strong>four 10-minute Kish&#333;tenketsu sawtooth cycles</strong>: after a child masters single-digit addition blocks and defeats the 10-minute mini-boss, grant them a <em>Super Ten-Rod Magnet</em> that fuses ten ones-cubes into a glowing 10-bar with one tap, giving them a joyous 2-minute Empowerment Valley before introducing two-digit place value.
             </div>
           </div>
         </div>
@@ -280,7 +280,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
                 <th className="py-2.5 px-3">University / Text</th>
                 <th className="py-2.5 px-3">Primary Authors</th>
                 <th className="py-2.5 px-3">Core Contribution Adopted in Course</th>
-                <th className="py-2.5 px-3">30&ndash;60 Min Educational Mini-Game Implementation</th>
+                <th className="py-2.5 px-3">30&ndash;60 Min Primary-School Mini-Game Implementation</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-zinc-200 text-zinc-700">
@@ -288,31 +288,31 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
                 <td className="py-2.5 px-3 font-semibold text-zinc-900">MIT CMS.608 / 6.073</td>
                 <td className="py-2.5 px-3">Philip Tan, Jason Begy</td>
                 <td className="py-2.5 px-3">Treating games as formal cybernetic state machines; MDA framework; rule pruning.</td>
-                <td className="py-2.5 px-3">Prune non-essential UI chrome and lore so 100% of rules in a 45-minute session directly manipulate the target syllabus state machine.</td>
+                <td className="py-2.5 px-3">Prune dense text walls and complex menus so 100% of rules in a 40-minute primary-school session directly manipulate the target math or science toy (e.g., snapping base-10 blocks or fraction slices).</td>
               </tr>
               <tr>
                 <td className="py-2.5 px-3 font-semibold text-zinc-900">Stanford CS146 / CS247G</td>
                 <td className="py-2.5 px-3">Christina Wodtke</td>
                 <td className="py-2.5 px-3">Playcentric human-computer interaction, spatial metrics, and mechanical prototyping.</td>
-                <td className="py-2.5 px-3">Prototype the core educational manipulative as a paper/greybox toy playable within 90 seconds before adding grading rubrics.</td>
+                <td className="py-2.5 px-3">Prototype the core primary-school manipulative (e.g., slicing pizzas into 1/4s or aiming angle mirrors) as a greybox toy that a 7-year-old can play within 30 seconds without reading instructions.</td>
               </tr>
               <tr>
                 <td className="py-2.5 px-3 font-semibold text-zinc-900">Game Feel (2008)</td>
                 <td className="py-2.5 px-3">Steve Swink</td>
                 <td className="py-2.5 px-3">The 240ms Human Processor Loop, ADSR control profiles, virtual tactile feedback.</td>
-                <td className="py-2.5 px-3">Bind invisible equations (e.g., Ohm&rsquo;s Law, Hooke&rsquo;s Law) to physical ADSR drag, spring stiffness, and camera lead for embodied intuition.</td>
+                <td className="py-2.5 px-3">Bind primary-school concepts (heavy vs. light mass, 100-blocks vs. 1-cubes, ice vs. mud friction) to bouncy ADSR physics, squash-and-stretch, and joyful marimba chimes for embodied child intuition.</td>
               </tr>
               <tr>
                 <td className="py-2.5 px-3 font-semibold text-zinc-900">Game Mechanics (2012)</td>
                 <td className="py-2.5 px-3">Ernest Adams, Joris Dormans</td>
                 <td className="py-2.5 px-3">Machinations visual language for internal resource economies (Sources, Pools, Drains).</td>
-                <td className="py-2.5 px-3">Model biological, chemical, or network flows directly as interactive Sources, Pools, Converters, and Drains on the student&rsquo;s lab canvas.</td>
+                <td className="py-2.5 px-3">Model primary-school nature and shop systems (sunlight &rarr; plants &rarr; rabbits, or coin saving in an animal bakery) as visible picture-icon Sources, Pools, and Drains.</td>
               </tr>
               <tr>
                 <td className="py-2.5 px-3 font-semibold text-zinc-900">A Theory of Fun (2004)</td>
                 <td className="py-2.5 px-3">Raph Koster</td>
                 <td className="py-2.5 px-3">Neurobiological pattern recognition and Shannon entropy reduction as the basis of fun.</td>
-                <td className="py-2.5 px-3">Use telemetry to detect when a student has compressed a concept (3 clean solves) and immediately layer in the next orthogonal rule twist.</td>
+                <td className="py-2.5 px-3">Detect when a child achieves 3 consecutive clean solves (mastering single-digit bonds) and immediately promote them to the next toy upgrade before boredom sets in during a 40-minute class period.</td>
               </tr>
             </tbody>
           </table>

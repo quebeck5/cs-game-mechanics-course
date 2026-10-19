@@ -39,13 +39,13 @@ export const Module2Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 8: Cognitive Processor Allocation)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 8: Cognitive Processor Allocation)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> In an educational mini-game, the student&rsquo;s <em>Cognitive Processor</em> (&tau;<sub>c</sub>) is heavily taxed by learning an unfamiliar academic subject (e.g., pointer arithmetic, orbital mechanics, or stoichiometry). If your interface also demands split-second 240ms twitch motor reflexes at the same time, the student&rsquo;s biological pipeline saturates and learning halts.
+            <strong>How It Relates:</strong> Developmental psychology shows that primary school children (ages 6&ndash;9) have a slower perceptual-motor loop (~350&ndash;450ms vs. 240ms in adults) AND their <em>Cognitive Processor</em> (&tau;<sub>c</sub>) is working hard to count blocks, sound out phonics, or compare fractions. If a primary-school game demands fast arcade reflexes while doing math, young brains freeze up in frustration.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Implement <strong>Time-Dilation / Tactical Pause</strong> (&ldquo;Bullet Time for Thinking&rdquo;). When the student opens a vector-math aimer or logic-gate radial menu during an action sequence, drop the simulation clock scale to <code className="bg-white px-1 py-0.5 rounded font-mono border border-blue-200">timeScale = 0.10</code> (or <code className="bg-white px-1 py-0.5 rounded font-mono border border-blue-200">0.0</code>). This expands the cognitive decision window from 240ms to 3,000ms+ while preserving real-time physics execution once they release the control.
+            <strong>Implementation Pattern:</strong> Implement <strong>&ldquo;Cozy Thinking Time&rdquo; (Automatic Time-Dilation)</strong>. Whenever a 7-year-old taps a catapult to aim a number-ball or opens their fraction potion belt, automatically pause or slow the world clock (<code className="bg-white px-1 py-0.5 rounded font-mono border border-blue-200">timeScale = 0.05</code>) and draw a dotted rainbow aiming preview arc. This gives the child 5+ seconds of calm thinking time before launching the bouncy physics action.
           </p>
         </div>
 
@@ -58,7 +58,7 @@ export const Module2Content: React.FC = () => {
               Chemical rhodopsin phototransduction occurs, and electrical impulses travel along the optic nerve into the primary visual cortex (V1) buffer.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Use pre-attentive visual channels (high-contrast color + motion pulse + distinct shape silhouette) on active variables so the student&rsquo;s 100ms Perceptual Processor locates the changing data node without scanning clutter.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Use big friendly cartoon eyes, gentle bouncing idle animations, and high-contrast primary colors on interactive math blocks so a 6-year-old&rsquo;s Perceptual Processor spots what to tap without reading a single word.
             </div>
           </div>
 
@@ -70,7 +70,7 @@ export const Module2Content: React.FC = () => {
               The brain formulates an intentional motor response (e.g., "execute jump").
             </p>
             <div className="border-l-2 border-indigo-500 bg-indigo-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Because novel academic reasoning stretches &tau;<sub>c</sub> from 70ms to 2,000ms+, offload working memory onto the canvas using persistent ghost previews and live trajectory arcs.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Because a child working out <code>8 + 5</code> needs 3&ndash;6 seconds of cognitive time, show visual 10-frame slots right on the game board so they don&rsquo;t have to hold numbers invisibly in their head.
             </div>
           </div>
 
@@ -81,7 +81,7 @@ export const Module2Content: React.FC = () => {
               Efferent nerve signals travel down the spinal cord into the hand muscles, contracting the flexor digitorum muscle to depress the physical gamepad button or spacebar.
             </p>
             <div className="border-l-2 border-purple-500 bg-purple-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Minimize motor execution steps via single-click/drag interactions and generous 32px hit targets so students on laptop trackpads never fail due to motor precision.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Children aged 6&ndash;9 have developing fine-motor control on iPads and Chromebook trackpads; use oversized 48px touch targets and support both tap-to-move and drag-and-drop.
             </div>
           </div>
         </div>
@@ -103,25 +103,25 @@ export const Module2Content: React.FC = () => {
           <li>
             <strong>USB Polling Rate:</strong> 125Hz to 1000Hz (1ms to 8ms polling delay).
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Sample pointer/touch events via coalesced browser events (<code>getCoalescedEvents()</code>) so drawing vectors or wiring circuits on 60Hz school Chromebooks never drops intermediate curve points.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Smooth touch/stylus input on school tablets so when a Grade 1 child traces letters or shapes with their finger, the rainbow ink trail stays silky smooth.
             </div>
           </li>
           <li>
             <strong>Engine Frame Interval:</strong> At 60 FPS, each frame takes 16.66ms. If an input arrives 0.1ms after the input poll, it waits 16.5ms for the next frame tick.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Decouple fixed-step educational simulation math (e.g., 120Hz RK4 physics or circuit solver) from the <code>requestAnimationFrame</code> render tick so simulation accuracy never drifts on low-end classroom laptops.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Run a fixed-step physics update so a bouncing math frog lands on the exact same number-line lilypad even on an older 30 FPS classroom Chromebook.
             </div>
           </li>
           <li>
             <strong>Double / Triple Buffering:</strong> Graphics driver swap chain queue introduces 1 to 3 frames of buffering (16.6ms to 50ms).
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Render dragged educational tokens using hardware-accelerated CSS/Canvas cursor layers so dragged items stay zero-latency locked to the student&rsquo;s mouse pointer.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Keep dragged counting blocks glued directly to the child&rsquo;s fingertip with zero lag and lift the block 15px upward so their chubby finger doesn&rsquo;t cover up the number label!
             </div>
           </li>
           <li>
             <strong>Display Refresh &amp; Pixel Response:</strong> Monitor GtG response time (1ms to 15ms).
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Avoid thin 1px moving lines that ghost on budget 60Hz classroom LCD panels; use bold 3px high-contrast strokes with motion trails for moving signal packets.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Use thick 4px outlines and bright, friendly shapes that remain crisp on budget school projectors and shared classroom iPads.
             </div>
           </li>
         </ol>
@@ -154,13 +154,13 @@ export const Module2Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 9: Zero-Hurdle Control Parameterization)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 9: Zero-Hurdle Control Parameterization)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> Students playing a 30&ndash;60 minute educational mini-game have wildly varying gaming backgrounds (some play competitive shooters; others never play action games). If movement or node manipulation feels floaty or requires pixel-perfect physics, non-gamers spend 40 minutes fighting the controller instead of learning the curriculum.
+            <strong>How It Relates:</strong> In a primary school classroom, some 7-year-olds play console games daily while others are still learning how to drag a mouse or tap accurately on a tablet. If jumping onto a number-line platform or dragging a fraction slice requires pixel-perfect skill, less-experienced children cry because the controls block them from showing the math they know.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Derive all movement and drag-and-drop kinematics from discrete <strong>Grid-Quantized Metrics</strong> (H<sub>max</sub> = exact grid multiples) with snappy asymmetric settling (g<sub>fall</sub> = 2.5 &middot; g<sub>rise</sub>) and magnetic snap-to-grid radii (<code className="bg-white px-1 py-0.5 rounded font-mono border border-blue-200">snapRadius = 24px</code>). The student&rsquo;s conceptual intent should translate into clean spatial alignment without fussy micro-adjustments.
+            <strong>Implementation Pattern:</strong> Parameterize all primary-school movement and drag-and-drop manipulatives using <strong>Whole-Number Tile Metrics</strong> (H<sub>max</sub> = exact block heights), snappy settling (g<sub>fall</sub> = 2.4 &middot; g<sub>rise</sub>), and a generous <strong>32px Magnetic Snap Radius</strong>. When a child drags a <code>1/4</code> pie slice anywhere near the pie pan, it should happily magnet-snap into place with a musical pop.
           </p>
         </div>
 
@@ -174,13 +174,13 @@ export const Module2Content: React.FC = () => {
           <li>
             <strong>H<sub>max</sub> (Jump Height):</strong> The exact maximum height in pixels or units the character must reach to clear obstacles (e.g., 120 pixels, exactly 3 grid tiles).
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Align <code>H<sub>max</sub></code> directly to visible coordinate grid lines (e.g., 1 jump = exactly 4 integer units on the Cartesian y-axis) so students can read parabola heights and vertex coordinates by eye without messy decimals.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Match <code>H<sub>max</sub></code> directly to visible counting-block heights (e.g., a 5-Block Spring Pad bounces the character exactly 5 unit-blocks high) so children visually see number magnitude as jump height.
             </div>
           </li>
           <li>
             <strong>t<sub>peak</sub> (Time to Apex):</strong> The exact duration in seconds from the moment the jump button is pressed until the character reaches zero vertical velocity at the apex (typically 0.28 to 0.38 seconds).
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Set <code>t<sub>peak</sub> = 0.32s</code> for avatar traversal between puzzle stations so navigating across the lab takes seconds, preserving 90% of the 45-minute session for cognitive problem solving.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Set <code>t<sub>peak</sub> = 0.32s</code> so hopping between math islands feels zippy and playful, keeping 8-year-olds energized throughout the 40-minute lesson.
             </div>
           </li>
         </ul>
@@ -243,7 +243,7 @@ export const Module2Content: React.FC = () => {
               This snaps the avatar down to the ground briskly, eliminating the floaty sensation and returning grounded movement control to the player.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Apply fast 2.5x settling gravity when dropping blocks, logic gates, or data packets into slots so students don&rsquo;t wait for slow animations during rapid hypothesis testing.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Apply crisp 2.4x falling gravity when a child drops base-10 blocks into a place-value column so the blocks clack into place with satisfying Toy-Block weight.
             </div>
           </div>
 
@@ -254,7 +254,7 @@ export const Module2Content: React.FC = () => {
               This gives the player continuous analog control over jump height (tap for a micro-hop, hold for a maximum leap).
             </p>
             <div className="border-l-2 border-indigo-500 bg-indigo-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Support both tap-to-increment (fine +1 step) and hold-to-accelerate (coarse sweep) on all numerical parameter sliders so students can dial in exact values effortlessly.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Let a quick tap add <code>+1</code> unit cube while holding down a button streams a <code>+10</code> rod, giving young learners intuitive control over small and large numbers.
             </div>
           </div>
 
@@ -265,7 +265,7 @@ export const Module2Content: React.FC = () => {
               This produces an anti-gravity "hang" at the peak, granting a brief window of aerial maneuverability to line up difficult landings.
             </p>
             <div className="border-l-2 border-amber-500 bg-amber-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> In a calculus or projectile physics mini-game, briefly slow simulation time by 0.4x as a particle passes through local extrema (<code>dy/dt = 0</code>) so the student clearly observes zero-slope tangent lines at the apex.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> In a number-line frog jumper or phonics bubble-catcher, grant extra apex hang time (<code>0.4x</code> gravity at the top of the jump) so a 7-year-old has plenty of time to steer onto the right answer platform.
             </div>
           </div>
         </div>
@@ -311,7 +311,7 @@ export const Module2Content: React.FC = () => {
             As long as <code className="font-mono">coyoteTimer &gt; 0</code>, treat the character as legally grounded and permit jump execution!
           </p>
           <div className="border-l-2 border-blue-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
-            <strong>30&ndash;60 Min Educational Mini-Game:</strong> Grant a 150ms grace window on timed signal-routing switches or rhythm-based frequency gates so a student who understands the concept isn&rsquo;t penalized for pressing the trigger 3 frames after the packet passes the node.
+            <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Because 6-to-9-year-olds have slower reaction times (~350&ndash;450ms), expand Coyote Time to <strong>10 frames (~166ms)</strong> in number-line platformers and grant a 200ms grace window on rhythm-clapping phonics games so kids never feel cheated.
           </div>
         </div>
 
@@ -324,13 +324,13 @@ export const Module2Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 10: Pedagogical Intent Forgiveness)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 10: Pedagogical Intent Forgiveness)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> Just as an action game shouldn&rsquo;t punish a player for pressing jump 4 frames late, an educational mini-game must never punish a student for minor syntactic or motor-timing slips when their underlying <em>conceptual reasoning</em> is correct.
+            <strong>How It Relates:</strong> When an 8-year-old drags a <code>10-block</code> toward the Tens column or rotates a mirror to 45&deg; in a geometry game, their finger often lifts up 15 pixels short or 4 degrees off. Punishing a primary school child for a tiny motor slip when they knew the right math answer causes immediate tears.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Build <strong>Semantic Forgiveness Buffers</strong> into the evaluator: (1) If the mini-game involves timing or rhythm (e.g., triggering a defibrillator on a QRS cardiac wave in a medical mini-game), widen the acceptance window by +120ms in the student&rsquo;s favor; (2) If the mini-game involves expression or code input, auto-heal missing semicolons, minor capitalization typos, or off-by-one wire drops by snapping to valid adjacent pins and highlighting the auto-correction gently rather than throwing a fatal syntax error.
+            <strong>Implementation Pattern:</strong> Build <strong>Child-Friendly Intent Forgiveness</strong> into every interaction: (1) Use a <strong>32px Magnetic Drop Halo</strong> that pulls near-miss block drops into the valid slot with a gentle elastic tween; (2) Quantize angle mirrors and protractors to <strong>5-degree or 15-degree magnetic detents</strong> so when a child aims near 45&deg; or 90&deg;, the mirror clicks cleanly into the exact geometric angle.
           </p>
         </div>
 
@@ -348,7 +348,7 @@ export const Module2Content: React.FC = () => {
             On every frame tick, if the character becomes grounded and <code className="font-mono">jumpBufferTimer &gt; 0</code>, immediately execute the jump on frame 0 of touchdown and consume the buffer!
           </p>
           <div className="border-l-2 border-blue-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
-            <strong>30&ndash;60 Min Educational Mini-Game:</strong> Queue student interactions clicked while an animation or step-debugger transition is still playing (<code>actionQueue.push(cmd)</code>) and execute them on Frame 0 of state completion instead of ignoring clicks during UI transitions.
+            <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Young children frequently tap the next number block or command card while the previous celebration animation is still finishing; queue their tap in a 200ms Input Buffer so the tablet never ignores their eager finger tap.
           </div>
         </div>
 
@@ -420,13 +420,13 @@ function updateCharacter(dt: number) {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 11: Embodied Abstract Concepts)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 11: Embodied Abstract Concepts)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> Educational concepts (like electrical resistance, algorithmic sorting, or chemical bond enthalpy) are invisible and abstract. By mapping an abstract variable onto a real-time 3Cs physical object, the student experiences the math through embodied sensorimotor intuition.
+            <strong>How It Relates:</strong> According to Piaget&rsquo;s developmental stages, primary school children (ages 7&ndash;11) are in the <em>Concrete Operational Stage</em>—they struggle with disembodied symbols but grasp concepts rapidly when tied to physical weight, speed, and touch.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> In a 40-minute Ohm&rsquo;s Law (<code>V = I &middot; R</code>) mini-game, let the player directly pilot an electron charge carrier through a circuit. When entering a high-resistance <em>R</em> resistor zone, increase the physics drag coefficient and controller rumble proportional to <em>R</em>; when voltage <em>V</em> increases, boost acceleration force. The student physically <em>feels</em> <code>I = V / R</code> through the 3Cs within seconds.
+            <strong>Implementation Pattern:</strong> In a 35-minute Grade 3 Science mini-game teaching <strong>Friction &amp; Forces</strong> (or Place Value weight), let the child pilot a delivery sled across Ice, Wood, and Sticky Mud tiles while carrying 1-kg, 10-kg, and 100-kg cargo blocks. Bind the surface friction coefficient <em>&mu;</em> directly to the ADSR Release deceleration time and bind cargo mass to the Attack acceleration ramp. The child physically <em>feels</em> inertia and friction through their fingers.
           </p>
         </div>
 
@@ -436,7 +436,7 @@ function updateCharacter(dt: number) {
             <div className="font-semibold text-zinc-900">Physical Input Mapping</div>
             <p className="text-zinc-600">Analog stick deadzones, transfer curves, acceleration envelopes, temporal buffering, and polling frequencies.</p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Map controls 1:1 to the domain variable (e.g., mouse wheel = frequency, drag = vector magnitude) with zero nested sub-menus.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Use direct 1-finger touch gestures (pull-back slingshot, drag-to-stack) with zero multi-button keyboard combos.
             </div>
           </div>
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
@@ -444,7 +444,7 @@ function updateCharacter(dt: number) {
             <div className="font-semibold text-zinc-900">Virtual Avatar Simulation</div>
             <p className="text-zinc-600">Collision AABBs, mass, momentum restitution, animation state blending, and squash &amp; stretch deformation.</p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Make the avatar or manipulated token visually reflect its mathematical state (e.g., glowing brighter with kinetic energy or expanding with array capacity).
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Give number blocks and science characters expressive faces that puff up, stretch, or shiver as their quantity or temperature changes.
             </div>
           </div>
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
@@ -452,7 +452,7 @@ function updateCharacter(dt: number) {
             <div className="font-semibold text-zinc-900">Virtual Observer Lens</div>
             <p className="text-zinc-600">Framing, look-ahead lead vectors, smoothing filters, vertical deadzones, and framing composition.</p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Auto-frame both the manipulated input parameter and the resulting output graph inside the viewport simultaneously.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Automatically zoom and pan the camera so both the child&rsquo;s slingshot/mirror and the target monster/flower stay on screen together.
             </div>
           </div>
         </div>
@@ -468,13 +468,13 @@ function updateCharacter(dt: number) {
           <li>
             <strong>Micro-Jitter:</strong> Every single step, collision resolution jitter, or small bump instantly shifts the entire monitor viewport, triggering nausea and eye strain.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Never parent text labels, equations, or HUD readouts to a jittering physics body; anchor educational annotations to smoothed screen-space coordinates so students can read numbers effortlessly.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Keep number labels, fraction bars, and sight-word cards anchored on steady, non-jittering banners so early readers (ages 6&ndash;8) never lose their place while reading.
             </div>
           </li>
           <li>
             <strong>Zero Forward Horizon:</strong> With the player centered on screen, 50% of the display shows space the player has already walked through, while only 50% shows incoming obstacles in front of them.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Offset the avatar or signal source to the left 25% of the viewport so 75% of the screen displays the upcoming circuit, graph, or level geometry ahead.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Position the child&rsquo;s character on the left 25% of the screen so 75% of the tablet shows the upcoming number-line bridges and math gates ahead.
             </div>
           </li>
         </ul>
@@ -488,13 +488,13 @@ function updateCharacter(dt: number) {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 12: Predictive Pedagogical Camera Framing)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 12: Predictive Pedagogical Camera Framing)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> In an educational mini-game, students must see both the <em>causal input node</em> they are adjusting and the <em>downstream output effect</em> simultaneously. If the camera stays locked on the avatar or requires manual panning, the student misses the cause-and-effect relationship.
+            <strong>How It Relates:</strong> Young children struggle to pan or zoom a camera manually while solving a puzzle; if the target disappears off-screen, a 7-year-old assumes it vanished and gets confused.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Implement <strong>Context-Sensitive Target Lead &amp; Auto-Framing</strong>: when the student interacts with an input variable (e.g., adjusting launch angle in a kinematics mini-game or modifying a router weight in Dijkstra&rsquo;s algorithm), automatically shift the camera&rsquo;s <code>targetCam</code> toward the centroid between the input controller and the downstream target node, zooming out smoothly so the entire causal chain fits inside the viewport.
+            <strong>Implementation Pattern:</strong> Implement <strong>Automatic Two-Point Bounding-Box Framing</strong>: when a child pulls back a number-catapult or rotates a light mirror, compute the bounding box containing both the launcher and the target chest, and smoothly interpolate the camera position and zoom so both endpoints remain comfortably inside the tablet screen with zero manual camera controls needed.
           </p>
         </div>
 
@@ -532,13 +532,13 @@ function updateCharacter(dt: number) {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 13: Semantic Juiciness Without Distraction)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 13: Semantic Juiciness Without Distraction)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> Educational software is notoriously dry and sterile, which causes student attention to drift after 15 minutes. However, random explosions that obscure text or graphs harm learning. In an educational mini-game, every drop of &ldquo;Juice&rdquo; must encode <em>semantic state information</em>.
+            <strong>How It Relates:</strong> Primary school children adore playful sensory feedback (sparkles, marimba chimes, happy characters), which keeps them engaged for a full 40-minute period. However, if wrong answers also trigger funny explosions, kids will intentionally pick wrong answers just to watch the explosion!
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Tie audiovisual cascades directly to mathematical milestones: when a student balances both sides of a chemical equation or completes a valid spanning tree, trigger a harmonic chord progression (rising in pitch with each connected node) and a directional pulse along the solved graph edges. The juice celebrates cognitive mastery and visually traces the valid proof path.
+            <strong>Implementation Pattern:</strong> Make <strong>Juice Proportional to Mathematical Structure</strong>: when ten <code>1-cubes</code> snap together to form a <code>10-rod</code>, play a 10-note ascending xylophone glissando and pop a golden star burst; conversely, if a child tries to snap <code>4 + 5</code> into a <code>10-slot</code>, use a gentle, low-key rubber &ldquo;boing&rdquo; bounce back to the tray with zero screen shake so wrong guesses are never more entertaining than solving the puzzle.
           </p>
         </div>
 
@@ -551,7 +551,7 @@ function updateCharacter(dt: number) {
               This momentary pause tricks the human visual cortex into feeling physical resistance and mass, transforming a hollow collision into a bone-crunching impact (used universally in <em>Super Smash Bros</em> and <em>Hollow Knight</em>).
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Pause the simulation for 150ms at the exact frame an invariant is satisfied or violated (e.g., resonant frequency reached or array out-of-bounds) so the student&rsquo;s eye registers the exact state snapshot.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Freeze for 120ms with a golden glow at the exact moment two fraction blocks fuse into 1 Whole, or pause on the exact command block where a coding turtle bumps a rock so an 8-year-old sees which block caused the bump.
             </div>
           </div>
 
@@ -563,7 +563,7 @@ function updateCharacter(dt: number) {
               Squaring the trauma ensures that minor impacts produce subtle rumbles while major explosions feel exponentially violent, decaying smoothly over 0.2 seconds.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Apply localized trauma-squared shake only to the specific UI container or node experiencing overload (e.g., a shaking resistor overheating at <code>P = I&sup2;R</code>) while keeping surrounding text labels steady and readable.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Shake only the heavy 100-Block crate when it lands with a deep bass thud (teaching relative place-value magnitude: 1-cube = tiny tap, 10-rod = medium clack, 100-flat = big rumble) while keeping UI numbers still.
             </div>
           </div>
 
@@ -575,7 +575,7 @@ function updateCharacter(dt: number) {
               The critical mathematical rule is <strong>volume conservation</strong>: s<sub>x</sub> &middot; s<sub>y</sub> &middot; s<sub>z</sub> = 1.0. If a character squashes to s<sub>y</sub> = 0.65 on landing, s<sub>x</sub> must expand to 1 / 0.65 &asymp; 1.54.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Use area-preserving deformation (<code>s<sub>x</sub> &middot; s<sub>y</sub> = det(A)</code>) in linear algebra, fraction, and fluid-continuity mini-games so conservation laws are visually self-evident.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Use area-preserving Squash &amp; Stretch (<code>width &times; height = Area</code>) when a child reshapes a <code>2 &times; 6</code> garden rectangle into a <code>3 &times; 4</code> rectangle so they visually see that 12 square tiles conserve area!
             </div>
           </div>
 
@@ -587,7 +587,7 @@ function updateCharacter(dt: number) {
               Sound effects must have an immediate attack transient (0ms rise time) aligned with the exact collision frame to ensure the brain binds the acoustic wave to the visual event.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Map pitch frequency directly to numerical magnitude (sonification)—such as rising pitch for array element values during Quicksort partitioning—with sub-16ms WebAudio scheduling so students hear algorithmic convergence.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Map musical scale pitches (Do-Re-Mi-Fa-Sol-La-Ti-Do) directly to counting numbers 1&ndash;10 with sub-16ms WebAudio response so primary learners hear number magnitude as a rising melody.
             </div>
           </div>
         </div>
@@ -602,10 +602,10 @@ function updateCharacter(dt: number) {
             </blockquote>
             <div className="border border-blue-200 bg-blue-50/50 p-3 rounded-lg space-y-1 text-xs">
               <div className="font-mono font-bold text-blue-800 uppercase tracking-wider">
-                30&ndash;60 Min Educational Mini-Game (Point 14: Diagnostic Hitstop)
+                30&ndash;60 Min Primary-School Mini-Game (Point 14: Diagnostic Hitstop)
               </div>
               <p className="text-zinc-800 leading-relaxed">
-                <strong>Relation &amp; Implementation:</strong> When a student&rsquo;s simulation fails (e.g., a bridge truss snaps in a statics mini-game or a stack overflows), apply a <strong>12-frame Diagnostic Hitstop freeze</strong> (<code>sleep(200ms)</code>) with a localized camera shake centered on the exact failing joint before the structure collapses, ensuring the student&rsquo;s eye locks onto the root cause of failure.
+                <strong>Relation &amp; Implementation:</strong> When a child&rsquo;s block-built bridge has a gap or their coding puppy steps onto a mud tile, apply a <strong>10-frame Diagnostic Hitstop freeze</strong> (<code>160ms</code>) with a comical wiggle on the exact missing tile before the puppy splashes, helping a 7-year-old spot the exact step to fix.
               </p>
             </div>
           </div>
@@ -619,10 +619,10 @@ function updateCharacter(dt: number) {
             </blockquote>
             <div className="border border-blue-200 bg-blue-50/50 p-3 rounded-lg space-y-1 text-xs">
               <div className="font-mono font-bold text-blue-800 uppercase tracking-wider">
-                30&ndash;60 Min Educational Mini-Game (Point 15: Visual Conservation Laws)
+                30&ndash;60 Min Primary-School Mini-Game (Point 15: Visual Conservation Laws)
               </div>
               <p className="text-zinc-800 leading-relaxed">
-                <strong>Relation &amp; Implementation:</strong> Constant-volume Squash &amp; Stretch (<code>s<sub>x</sub> &middot; s<sub>y</sub> = 1</code>) is a direct visual manifestation of <strong>Conservation of Mass / Energy / Continuity (<code>A<sub>1</sub>v<sub>1</sub> = A<sub>2</sub>v<sub>2</sub></code>)</strong>. In fluid dynamics, fractions, or matrix determinant mini-games, enforce strict area-preserving sprite deformation so the student visually perceives invariant quantity under transformation.
+                <strong>Relation &amp; Implementation:</strong> Young children (ages 6&ndash;8) famously struggle with <strong>Piagetian Conservation of Quantity</strong> (thinking a tall thin beaker holds more water than a wide short beaker). By animating liquid pours and area rectangles with strict constant-area Squash &amp; Stretch (<code>s<sub>x</sub> &middot; s<sub>y</sub> = 1</code>), children visually see that quantity stays constant when shape changes.
               </p>
             </div>
           </div>

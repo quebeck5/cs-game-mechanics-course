@@ -45,13 +45,13 @@ export const Module5Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 26: Loss-Aversion-Safe Grading Framing)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 26: Loss-Aversion-Safe Additive Star &amp; Sticker Framing)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> Because losses hurt 2.25&times; more than equivalent gains (Prospect Theory), starting a student at &ldquo;100% Grade&rdquo; and subtracting points for every failed experiment triggers severe academic anxiety and makes students terrified to experiment during a 30&ndash;60 minute lab.
+            <strong>How It Relates (Primary School Grades 1&ndash;6):</strong> Because losses hurt 2.25&times; more than equivalent gains (Prospect Theory) and young children (ages 6&ndash;11) have heightened emotional sensitivity to punishment, starting a primary school student with &ldquo;3 Hearts&rdquo; or &ldquo;100 Gold Stars&rdquo; and taking them away when they miscalculate a fraction triggers tears, math anxiety, and refusal to experiment during a 30&ndash;60 minute classroom session.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Frame all progress as <strong>Monotonic Additive Mastery &amp; Ratcheted Checkpoints</strong>: start the student at 0 XP and award positive discovery points even for falsified hypotheses (&ldquo;Edge Case Discovered: +15 Lab Data&rdquo;). Never deduct earned mastery points or revert completed sub-stages upon failure.
+            <strong>Implementation Pattern:</strong> Frame all progress as <strong>Monotonic Additive Mastery &amp; Ratcheted Sticker Checkpoints</strong>: start the child at 0 Stars and award positive discovery badges even for testing wrong hypotheses (&ldquo;Curious Scientist! +5 Discovery Gems for testing what happens when the bridge is too heavy!&rdquo;). Never deduct earned stars, pop collected stickers, or revert completed sub-stages upon an incorrect answer.
           </p>
         </div>
 
@@ -69,7 +69,7 @@ export const Module5Content: React.FC = () => {
               There is an almost 80% chance of a 10-miss drought! When this occurs during a boss fight, the player concludes the RNG algorithm is bugged or rigged.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Prevent random clustering of identical problem types or unlucky particle spawns during a 45-minute lab by using stratified sampling so students don&rsquo;t misinterpret random streaks as a causal law.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Prevent random clustering of identical math problems or unlucky weather spawns during a 45-minute primary school activity by using stratified sampling, so 8-year-olds don&rsquo;t get five <code>&times; 9</code> multiplication problems in a row or conclude the game is &ldquo;mean to them.&rdquo;
             </div>
           </div>
 
@@ -80,7 +80,7 @@ export const Module5Content: React.FC = () => {
               When the sixth attack misses, psychological frustration escalates non-linearly because the player feels their cognitive expectation was violated.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> In probability and statistics mini-games, explicitly visualize the memoryless sample tree alongside empirical rolls so students confront and overcome the Gambler&rsquo;s Fallacy firsthand.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> In a Grade 5&ndash;6 chance &amp; data mini-game (like spinning a color wheel or flipping a frog coin), display the live marble-bag or spinner slices alongside a bar chart of past rolls so children see visually why a fair spinner has no memory.
             </div>
           </div>
 
@@ -90,7 +90,7 @@ export const Module5Content: React.FC = () => {
               Conversely, landing three critical hits in the opening 2 seconds of a multiplayer match produces an unearned instant kill, stripping the victim of all counter-play agency and leaving the victor unsatisfied.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Never allow an accidental lucky parameter initialization on Trial 1 to auto-pass a level; require the student&rsquo;s solution to hold across 3 distinct seed states before awarding mastery.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Never allow an accidental lucky button mash on Trial 1 to auto-pass a primary school puzzle; require the child to feed 3 different hungry monsters in a row using the rule before awarding the gold mastery star.
             </div>
           </div>
         </div>
@@ -119,13 +119,13 @@ export const Module5Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 27: Input Randomness for Anti-Cheating &amp; Zero Output Randomness)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 27: Input Randomness for Neighbor-Proof Puzzles &amp; Zero Output Randomness)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> In an educational mini-game, <strong>Output Randomness is toxic</strong>: if a student calculates the exact right trajectory or algorithm, and a post-decision dice roll causes it to fail 10% of the time, the student&rsquo;s mental model of the subject is corrupted. Conversely, <strong>Input Randomness is essential</strong> so students cannot simply copy a classmate&rsquo;s hardcoded coordinates.
+            <strong>How It Relates (Primary School Grades 1&ndash;6):</strong> In a primary school classroom where kids sit side-by-side at shared tables, <strong>Output Randomness is toxic</strong>: if an 8-year-old carefully counts out <code>3/4</code> of a pizza and a post-answer dice roll causes the oven to burn the pizza 10% of the time, the child thinks their math was wrong! Conversely, <strong>Input Randomness is essential</strong> so a child cannot simply lean over and copy their table-partner&rsquo;s screen.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Use seeded <strong>Procedural Input Randomness</strong> to generate unique initial problem parameters (e.g., randomized resistor values or unsorted input arrays) at the start of each 5-minute puzzle, then evaluate the student&rsquo;s solution using <strong>100% Deterministic Output Resolution</strong>.
+            <strong>Implementation Pattern:</strong> Use seeded <strong>Procedural Input Randomness</strong> to generate unique customer orders, coin combinations, or garden grid dimensions at the start of each 5-minute round (e.g., Student A gets <code>2/4 + 1/4</code> while Student B next to them gets <code>1/3 + 1/3</code>), then evaluate the child&rsquo;s answer using <strong>100% Deterministic Output Resolution</strong>.
           </p>
         </div>
 
@@ -145,7 +145,7 @@ export const Module5Content: React.FC = () => {
               </p>
             </div>
             <div className="border-l-2 border-emerald-500 bg-white/90 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Randomize the starting dataset, graph weights, or target coordinates per student session seed so every student solves a fresh, cheat-proof instance using the same underlying theorem.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Deal randomized number tiles, coin purses, or word-root cards at the start of each turn so every child at a classroom table solves a fresh, copy-proof puzzle using the same primary math or phonics rule.
             </div>
           </div>
 
@@ -164,7 +164,7 @@ export const Module5Content: React.FC = () => {
               </p>
             </div>
             <div className="border-l-2 border-red-500 bg-white/90 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Eliminate output randomness from deterministic subjects (math, physics, CS); only use output randomness when the learning objective itself is stochastic (e.g., noisy communication channels or quantum measurement).
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Eliminate output randomness from primary math, spelling, and science rules; if a child builds a valid bridge or spells the word right, it must succeed 100% of the time without random failure rolls.
             </div>
           </div>
         </div>
@@ -174,19 +174,19 @@ export const Module5Content: React.FC = () => {
           <li>
             <strong>1. Graceful Degradation (Glancing Blows):</strong> Rather than binary Hit/Miss (100% or 0%), map misses to 40% partial damage or secondary status debuffs. The player’s turn is never completely wasted.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Award partial credit and visual proximity feedback (e.g., &ldquo;85% Signal Integrity — Phase offset by 12&deg;&rdquo;) rather than binary Pass/Fail when a student&rsquo;s solution is close.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Show warm visual proximity feedback (e.g., the monster eats 3 of the 4 slices and holds up 1 finger showing &ldquo;Just 1 more quarter-slice needed!&rdquo;) rather than a harsh red <code>WRONG</code> buzzer when a child&rsquo;s answer is close.
             </div>
           </li>
           <li>
             <strong>2. Deterministic Telegraphing:</strong> Give players warning of heavy enemy critical strikes or randomized status procs 1 turn or 60 frames in advance, allowing them to reposition or pop defensive shields.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Telegraph upcoming stochastic disturbances (e.g., &ldquo;Solar Flare Noise Spike in 5s&rdquo; in a coding/networking mini-game) so students can actively test their error-correcting code (ECC) under load.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Telegraph upcoming environmental challenges (e.g., a friendly weather forecast cloud showing &ldquo;Rainstorm in 1 Turn!&rdquo; in a Grade 3 plant-growth game) so children can proactively place a greenhouse roof over their seedlings.
             </div>
           </li>
           <li>
             <strong>3. Risk Mitigation Consumables:</strong> Provide players with consumable rerolls, luck tokens, or positioning options that convert 95% probabilities into guaranteed 100% certainty when it matters most.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Give students engineering redundancy tools (e.g., checksum parity bits, backup capacitors, or retry policies) that turn unreliable 90% components into 99.99% fault-tolerant systems.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Give students a free &ldquo;Swap Tile&rdquo; or &ldquo;Friendly Owl Magnifying Glass&rdquo; button so they are never stuck with an awkward letter or number hand during a 40-minute classroom game.
             </div>
           </li>
         </ul>
@@ -216,13 +216,13 @@ export const Module5Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 28: PRD for Small-Sample Probabilistic Simulations)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 28: PRD for Small-Sample Classroom Discovery)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> Because a 30&ndash;60 minute mini-game only has time for a small number of trials (N &asymp; 15 to 30 events), a pure Bernoulli RNG will frequently produce unrepresentative sample distributions (e.g., a 25% genetic recessive trait appearing 0 times in 12 offspring in a Mendelian genetics mini-game), misleading the student about the underlying law.
+            <strong>How It Relates (Primary School Grades 1&ndash;6):</strong> Because a 30&ndash;60 minute primary school mini-game only has time for a small number of trials (N &asymp; 12 to 25 actions), a pure Bernoulli RNG will frequently produce unrepresentative streaks (e.g., a 25% rare golden beetle or rainbow weather event appearing 0 times in 15 tries for one child while appearing 6 times for the child sitting next to them), causing classroom tears and confusion.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Drive small-sample educational simulations with a <strong>Markov PRD</strong> (P(N) = min(1, C &middot; N)) so that within just 8&ndash;12 student trials, the empirical frequency converges reliably to the theoretical probability p, guaranteeing the student observes the intended statistical phenomenon inside their 40-minute session.
+            <strong>Implementation Pattern:</strong> Drive small-sample primary science &amp; reward events with a <strong>Markov PRD</strong> (P(N) = min(1, C &middot; N)) so that within just 8&ndash;12 student turns, every child in the classroom is mathematically guaranteed to observe the rare animal, fossil, or weather pattern inside their 40-minute lesson.
           </p>
         </div>
 
@@ -243,7 +243,7 @@ export const Module5Content: React.FC = () => {
           <div className="text-zinc-700">Attack 6: P(6) = 50.8%</div>
           <div className="text-zinc-700">Attack 12: P(12) = 100.0% (Hard ceiling: drought cannot exceed 11 misses)</div>
           <div className="font-sans border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-zinc-800">
-            <strong>30&ndash;60 Min Educational Mini-Game:</strong> Guarantees that a 25% rare event (e.g., a cache miss, packet collision, or recessive allele) is observed by the student at least once every 12 steps during a short classroom lab.
+            <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Guarantees that a 25% discovery event (e.g., unearthing a rare dinosaur fossil or spotting a desert oasis in a Grade 3 habitat game) happens for every child at least once every 12 digs during a short school period.
           </div>
         </div>
 
@@ -266,13 +266,13 @@ export const Module5Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 29: Curriculum Topic N-Bag Shuffler)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 29: Primary Curriculum Topic N-Bag Shuffler)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> If an educational mini-game uses <code className="bg-white px-1 py-0.5 rounded font-mono border border-blue-200">Math.random()</code> to pick which concept variant to test next, a student might get 5 <code className="bg-white px-1 py-0.5 rounded font-mono border border-blue-200">for</code>-loop puzzles in a row and zero <code className="bg-white px-1 py-0.5 rounded font-mono border border-blue-200">while</code>-loop or recursion puzzles during their 40-minute session.
+            <strong>How It Relates (Primary School Grades 1&ndash;6):</strong> If a primary math or phonics mini-game uses raw <code className="bg-white px-1 py-0.5 rounded font-mono border border-blue-200">Math.random()</code> to pick which question type to ask next, an 8-year-old might get five <code>+ 10</code> addition puzzles in a row and zero subtraction or missing-addend puzzles during their 40-minute computer lab period.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Load all required syllabus competencies [C<sub>1</sub>, C<sub>2</sub>, &hellip;, C<sub>k</sub>] into a <strong>Fisher-Yates Curriculum Shuffle Bag</strong>. Every cycle of k encounters is mathematically guaranteed to test 100% of the learning objectives without repetition droughts, while still feeling unpredictable and fresh on every playthrough.
+            <strong>Implementation Pattern:</strong> Load all required primary lesson skills [Skill<sub>1</sub>, Skill<sub>2</sub>, &hellip;, Skill<sub>6</sub>] (e.g., 2 halves, 2 thirds, 2 quarters) into a <strong>Fisher-Yates Curriculum Shuffle Bag</strong>. Every cycle of 6 customer orders is mathematically guaranteed to practice 100% of the teacher&rsquo;s lesson objectives without boring repetition streaks, while still feeling like a surprise game on every turn.
           </p>
         </div>
 
@@ -310,13 +310,13 @@ export const Module5Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 30: Anti-Gaming-the-System &amp; Session-Duration Telemetry)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 30: Anti-Guess-Spamming &amp; Classroom Bell-Schedule Telemetry)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> In educational games, Soren Johnson&rsquo;s law manifests as <strong>&ldquo;students will optimize the learning out of an educational game.&rdquo;</strong> If students can pass a 45-minute circuit mini-game by hardcoding <code>return true</code> or spamming 50 cheap batteries instead of calculating series-parallel resistance, they will exploit the degenerate strategy every time.
+            <strong>How It Relates (Primary School Grades 1&ndash;6):</strong> In primary school educational games, Soren Johnson&rsquo;s law manifests as <strong>&ldquo;children will optimize the learning out of a game by rapidly tapping every button or dragging thirty <code>1</code>-blocks instead of regrouping a <code>10</code>-rod.&rdquo;</strong> If a 7-year-old can beat a 45-minute math game by brute-force tapping all 4 multiple-choice buttons in 1.5 seconds, they will never read the math problem.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> (1) Run <strong>Randomized Hidden Property Tests</strong> on submission (testing 5 unseen edge-case inputs simultaneously so hardcoded solutions fail); (2) Run headless Monte Carlo bot simulations with synthetic novice/intermediate/expert student profiles prior to deployment to verify that the 10th-to-90th percentile completion time falls strictly inside the target <strong>30&ndash;60 minute window</strong>.
+            <strong>Implementation Pattern:</strong> (1) Replace tap-spamming multiple choice with <strong>Constructive Manipulative Verification</strong> (plus a gentle 1.5-second thoughtful-pause animation if rapid guessing is detected) and test 3 varied customer orders per stage; (2) Run headless Monte Carlo simulations modelling struggling, average, and fast primary readers prior to classroom deployment to verify that the 10th-to-90th percentile completion time falls strictly inside the teacher&rsquo;s <strong>30&ndash;60 minute school period</strong>.
           </p>
         </div>
 
@@ -328,7 +328,7 @@ export const Module5Content: React.FC = () => {
               Plotting hero pick frequency vs. match win percentage. High pick rate + high win rate indicates an overpowered dominant strategy requiring immediate nerf. Low pick rate + high win rate indicates an effective niche specialist.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Plot <strong>Tool Usage Rate vs. First-Try Solve Rate</strong> to spot degenerate &ldquo;cheese&rdquo; tools (95% usage + 100% pass without learning) vs. confusingly designed tools (5% usage + high error rate).
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Plot <strong>Block/Tool Pick Rate vs. First-Try Solve Rate</strong> to spot degenerate &ldquo;unit-block spam&rdquo; (95% usage without regrouping) vs. confusingly illustrated tools (5% usage + high child confusion).
             </div>
           </div>
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
@@ -338,7 +338,7 @@ export const Module5Content: React.FC = () => {
               Measuring the exact millisecond duration of combat encounters across weapon classes. Bimodal distributions reveal unbalanced weapons that bypass counter-play windows.
             </p>
             <div className="border-l-2 border-indigo-500 bg-indigo-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Track <strong>Time-to-Mastery (TTM) Histograms</strong> per level and across the whole game to ensure the 10th&ndash;90th percentile session duration stays tightly bounded between 32 and 55 minutes.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Track <strong>Time-to-Mastery (TTM) Histograms</strong> per stage across Grades 1&ndash;6 so 90% of primary school students finish the core learning arc between Minute 32 and Minute 50 before cleanup bell.
             </div>
           </div>
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
@@ -348,7 +348,7 @@ export const Module5Content: React.FC = () => {
               Aggregating coordinate death and objective capture events onto level collision geometry to detect choke points, spawn camping zones, and underutilized map regions.
             </p>
             <div className="border-l-2 border-emerald-500 bg-emerald-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Aggregate <strong>Misconception &amp; Undo Heatmaps</strong> onto the puzzle canvas or AST nodes so instructors see the exact step where students get stuck during the 45-minute lab.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Aggregate <strong>Tap-Miss &amp; Misconception Heatmaps</strong> onto the classroom teacher dashboard so the teacher sees at a glance which fraction or phonics stage puzzled the class during the 45-minute lesson.
             </div>
           </div>
         </div>

@@ -495,7 +495,7 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
               Current: <strong className="text-blue-800">{Math.round(v0)} px/s</strong>
             </p>
             <div className="font-sans border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Derive initial impulse from exact grid-tile heights so student trajectories align with integer coordinate lines.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Derive jump impulse from exact counting-block heights (1 to 10 blocks) so young learners see number height match jump height.
             </div>
           </div>
 
@@ -506,7 +506,7 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
               Current: <strong className="text-indigo-800">{Math.round(gRise)} px/s&sup2;</strong>
             </p>
             <div className="font-sans border-l-2 border-indigo-500 bg-indigo-50/50 pl-2 py-1 text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Keep <code>t_peak &le; 0.35s</code> so moving between lab stations never wastes classroom time.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Keep <code>t_peak &le; 0.35s</code> and add 160ms Coyote Time so 7-year-olds on school tablets hop effortlessly between number islands.
             </div>
           </div>
 
@@ -517,7 +517,7 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
               Snaps the player briskly to the ground on descent while granting fine control at the peak.
             </p>
             <div className="font-sans border-l-2 border-amber-500 bg-amber-50/50 pl-2 py-1 text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Use fast 2.4x settling on dropped puzzle blocks and brief apex slowdown at <code>dy/dt = 0</code> extrema.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Use crisp 2.4x settling on dropped base-10 blocks and extra apex hang time so children can steer onto the right answer lilypad.
             </div>
           </div>
         </div>

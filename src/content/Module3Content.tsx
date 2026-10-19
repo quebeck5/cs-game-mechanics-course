@@ -37,13 +37,13 @@ export const Module3Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 16: Pareto Trade-Offs vs. Multiple-Choice Drills)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 16: Pareto Trade-Offs vs. Multiple-Choice Drills)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> Traditional multiple-choice questions have 1 correct answer (a Dominant Strategy once known) and 3 wrong answers (Blind Choices if unknown). Neither is an &ldquo;interesting decision&rdquo; in Sid Meier&rsquo;s taxonomy. Real engineering education is about navigating multi-objective trade-offs.
+            <strong>How It Relates:</strong> Traditional primary-school quiz apps have 1 right answer (a Dominant Strategy once memorized) and 3 wrong answers (Blind Guessing if unknown). Neither teaches flexible number sense! True primary mathematical thinking comes from choosing between valid strategies with different trade-offs.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> In a 45-minute Data Structures &amp; Systems Design mini-game, present puzzles with no single dominant structure: let the student choose between a <strong>Hash Table</strong> (<code>O(1)</code> lookup, high memory footprint, zero range-query support), a <strong>B-Tree</strong> (<code>O(log n)</code> lookup, cache-friendly range scans), or a <strong>Bloom Filter</strong> (tiny memory, probabilistic false positives) under changing RAM and latency budgets.
+            <strong>Implementation Pattern:</strong> In a 40-minute Grade 3 Bridge-Builder &amp; Place-Value mini-game, give the child three Pareto-balanced building blocks to span a 36-meter river: <strong>10-Meter Stone Beams</strong> (fast to place, cheap, but too long for narrow 1-meter gaps), <strong>5-Meter Wood Planks</strong> (medium reach, flexible), and <strong>1-Meter Lego Bricks</strong> (exact precision, but takes too many backpack slots if used for the whole river). The child must weigh speed, slot limits, and precision to pick the right combination!
           </p>
         </div>
 
@@ -58,7 +58,7 @@ export const Module3Content: React.FC = () => {
               Dominant choices destroy agency; the player does not make a creative decision, but merely computes the obvious maximum.
             </p>
             <div className="border-l-2 border-red-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Prevent a single tool (e.g., a universal <code>Array.sort()</code> or infinite-wattage power source) from solving every level by attaching resource budgets (CPU cycles, memory bytes, thermal heat) that make the &ldquo;easy&rdquo; tool fail on constrained levels.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Prevent children from solving every problem by tapping the <code>+1</code> block 50 times in a row by capping the bridge crane at 8 total moves per level, encouraging them to use <code>+10</code> rods and <code>&times;2</code> doublers.
             </div>
           </div>
 
@@ -70,7 +70,7 @@ export const Module3Content: React.FC = () => {
               Because the decision space contains no discernable pattern, success feels like unearned luck, and failure feels like unfair punishment.
             </p>
             <div className="border-l-2 border-amber-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Never ask a student to guess a parameter value or formula constant blindly; always provide an interactive probe tool (e.g., an oscilloscope, packet inspector, or test-input previewer) so they can deduce the right choice before committing.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Never make a 7-year-old guess blindly between mystery doors or unlabelled fractions; always provide a &ldquo;X-Ray Magnifying Glass&rdquo; or visual grid overlay so they can count the slices and deduce the right answer before tapping.
             </div>
           </div>
 
@@ -82,7 +82,7 @@ export const Module3Content: React.FC = () => {
               Speed vs. Safety, Resource Consumption vs. Immediate Output, Short-Term Survival vs. Long-Term Compounding, or High Certainty vs. High-Variance Upside.
             </p>
             <div className="border-l-2 border-blue-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Design each 10-minute puzzle stage around a real-world engineering Pareto frontier (e.g., Time Complexity vs. Space Complexity, or Precision vs. Recall in an ML classifier mini-game) and grade the student on matching the trade-off to the level&rsquo;s specification.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Let children choose between different ways to make the same value (e.g., paying 75&cent; at the animal bakery using three 25&cent; quarters for a &ldquo;Speed Star&rdquo; vs. seven 10&cent; dimes + one 5&cent; nickel when quarters run out).
             </div>
           </div>
         </div>
@@ -102,7 +102,7 @@ export const Module3Content: React.FC = () => {
                 <th className="pb-2 pr-2">Damage per Hit</th>
                 <th className="pb-2 pr-2">Recovery (Punish Risk)</th>
                 <th className="pb-2 pr-2">Tactical Purpose</th>
-                <th className="pb-2">30&ndash;60 Min Edu Mini-Game Analog</th>
+                <th className="pb-2">30&ndash;60 Min Primary-School Mini-Game Analog</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-zinc-100 text-zinc-800">
@@ -113,7 +113,7 @@ export const Module3Content: React.FC = () => {
                 <td className="pr-2">9 HP (Low)</td>
                 <td className="pr-2">8 frames (Extremely Safe)</td>
                 <td className="pr-2">Interrupting enemy startup; low risk</td>
-                <td className="font-sans text-zinc-700"><strong>L1 Cache / Hash Lookup:</strong> Instant <code>O(1)</code> response, small capacity, zero setup penalty.</td>
+                <td className="font-sans text-zinc-700"><strong>1-Unit Cube / Penny Coin:</strong> Instant fine-grained precision for filling tiny 1-unit gaps, but takes too many moves for big numbers.</td>
               </tr>
               <tr>
                 <td className="py-2 pr-2 font-bold text-emerald-700">Halberd Spear</td>
@@ -122,7 +122,7 @@ export const Module3Content: React.FC = () => {
                 <td className="pr-2">17 HP (Medium)</td>
                 <td className="pr-2">14 frames (Moderate)</td>
                 <td className="pr-2">Out-ranging enemies from safe distance</td>
-                <td className="font-sans text-zinc-700"><strong>Balanced B-Tree Index:</strong> Moderate <code>O(log n)</code> latency, wide range-query reach, safe general-purpose performance.</td>
+                <td className="font-sans text-zinc-700"><strong>10-Rod / Dime Coin:</strong> Balanced reach for building medium bridges (20&ndash;50 units) quickly and safely.</td>
               </tr>
               <tr>
                 <td className="py-2 pr-2 font-bold text-amber-700">Seismic Hammer</td>
@@ -131,7 +131,7 @@ export const Module3Content: React.FC = () => {
                 <td className="pr-2">34 HP (Massive)</td>
                 <td className="pr-2">22 frames (Lethally Unsafe)</td>
                 <td className="pr-2">Punishing boss recovery windows for burst</td>
-                <td className="font-sans text-zinc-700"><strong>GPU Batch / MapReduce Job:</strong> High startup overhead, massive throughput burst on large datasets, costly if misconfigured.</td>
+                <td className="font-sans text-zinc-700"><strong>100-Flat / Dollar Bill:</strong> Huge power to cross giant 100-unit canyons in 1 move, but overshoots and bounces back if the gap is only 60 units!</td>
               </tr>
             </tbody>
           </table>
@@ -174,13 +174,13 @@ export const Module3Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 17: Commitment Phases to Prevent Trial-and-Error Spamming)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 17: Commitment Phases to Prevent Impulsive Tapping)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> If pressing &ldquo;Run / Test Hypothesis&rdquo; in an educational mini-game has zero startup or recovery cost, students stop thinking and resort to rapid trial-and-error button mashing (&ldquo;guess-and-check spamming&rdquo;) until they stumble on the solution.
+            <strong>How It Relates:</strong> Primary school children (ages 6&ndash;11) frequently exhibit impulsive &ldquo;guess-and-tap spamming&rdquo;—rapidly tapping every multiple-choice bubble on an iPad in 1 second until the green chime plays, learning zero math.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Model hypothesis execution as a <strong>3-Stage Commitment Automaton</strong>: (1) <em>Startup (2.0s)</em>: the machine powers up and traces the predicted trajectory; (2) <em>Active (3.0s)</em>: the test batch runs through the student&rsquo;s logic pipeline; (3) <em>Recovery / Cooldown (1.5s)</em>: if the test fails, the machine vents steam while highlighting the failed test case. This small commitment window makes thoughtful mental simulation faster than blind clicking.
+            <strong>Implementation Pattern:</strong> Replace instant answer buttons with a <strong>3-Stage Playful Delivery Automaton</strong>: (1) <em>Startup (1.5s)</em>: the child loads their chosen fraction pie onto the Conveyor Belt and the delivery robot winds up its wheels; (2) <em>Active (2.0s)</em>: the robot rolls up to the Monster Customer and serves the pie slices one by one; (3) <em>Recovery (1.5s)</em>: if the pie size doesn&rsquo;t match, the robot scratches its head and rolls back to the kitchen counter while showing the gap. Because each delivery takes 5 seconds of charming animation, counting once is much faster than random tapping!
           </p>
         </div>
 
@@ -194,7 +194,7 @@ export const Module3Content: React.FC = () => {
               <strong> Biological Rule:</strong> Because human visual-motor reaction time is &asymp; 200ms (~12 frames at 60 FPS), any attack with F<sub>startup</sub> &lt; 12 frames cannot be dodged on reaction—it can only be anticipated on tactical prediction.
             </p>
             <div className="border-l-2 border-amber-500 bg-amber-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Use a 1.5s visual wind-up phase when the student clicks &ldquo;Compile &amp; Run&rdquo; that highlights the input state vector entering the system, prompting the student to mentally predict the output before it arrives.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Use a 1.2s animated wind-up when the child presses &ldquo;Go!&rdquo; where the character counts out loud (&ldquo;One, two, three, launch!&rdquo;), prompting the child to watch and predict where their block will land.
             </div>
           </div>
 
@@ -206,7 +206,7 @@ export const Module3Content: React.FC = () => {
               If the active hitbox intersects the enemy's hurtbox, damage and hitstun are applied.
             </p>
             <div className="border-l-2 border-red-500 bg-red-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Animate the active evaluation of each unit test case (Normal Case, Boundary Case, Adversarial Edge Case) colliding against the student&rsquo;s algorithm or structure in real time.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Animate the child&rsquo;s blocks or coding turtle physically stepping across each tile of the bridge one square at a time with musical notes so they can count along.
             </div>
           </div>
 
@@ -218,7 +218,7 @@ export const Module3Content: React.FC = () => {
               If the attack missed ("whiffed"), the opponent has F<sub>recovery</sub> frames to close the distance and execute a guaranteed counter-strike ("Whiff Punish").
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> When a test run fails, hold the simulation in a 2-second diagnostic recovery state displaying the exact counterexample diff before resetting, discouraging mindless button spamming.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> If the answer was too big or too small, hold a 1.5-second gentle recovery animation where the helper mascot points to the leftover gap before resetting the blocks, turning mistakes into visual clues.
             </div>
           </div>
         </div>
@@ -245,13 +245,13 @@ export const Module3Content: React.FC = () => {
           <li>
             <strong>Attacker Recovery:</strong> The attacker must spend F<sub>recovery</sub> frames completing their follow-through animation.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Represents the cooldown/overhead time of the student&rsquo;s chosen algorithm or action (e.g., garbage collection pause or re-indexing cost).
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Represents how long the child&rsquo;s helper crane or bakery oven takes to finish its action before it can pick up the next block.
             </div>
           </li>
           <li>
             <strong>Defender Stun:</strong> The defender is locked in an involuntary flinch state (F<sub>hitstun</sub> if the attack hit, or F<sub>blockstun</sub> if the attack was blocked).
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Represents how long the problem state is suppressed or buffered (e.g., how many seconds an incoming network packet wave is stalled by the student&rsquo;s load balancer).
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Represents how long the friendly monster customer is happily munching on a snack before asking for the next order.
             </div>
           </li>
         </ol>
@@ -276,7 +276,7 @@ export const Module3Content: React.FC = () => {
               The attacker retains absolute tactical initiative. If the attacker initiates another attack whose startup is faster than the defender's fastest option plus &Delta;F, the defender cannot interrupt.
             </p>
             <div className="border-l-2 border-emerald-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> When a student chooses an asymptotically optimal algorithm (<code>O(log n)</code> vs <code>O(n)</code>), their worker finishes ahead of the arrival clock (<code>&Delta;F &gt; 0</code>), banking extra time to pre-compute or set up the next stage.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> When a child uses smart grouping (e.g., dropping a single <code>10-pack</code> instead of ten <code>1-blocks</code>), their crane finishes way ahead of the customer timer (<code>&Delta;F &gt; 0</code>), earning bonus time to decorate their bakery!
             </div>
           </div>
 
@@ -287,7 +287,7 @@ export const Module3Content: React.FC = () => {
               Initiative is tied; the next encounter is decided purely by whose subsequent input has a faster startup window.
             </p>
             <div className="border-l-2 border-zinc-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Occurs when the student&rsquo;s throughput exactly matches the arrival rate (<code>&lambda; = &mu;</code> in queueing theory); the system stays stable for now but has zero slack for upcoming burst waves.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Occurs when the child&rsquo;s counting method finishes just in time as the next friendly customer walks through the door—steady progress, but a hint that bundling by 5s or 10s could make life even easier.
             </div>
           </div>
 
@@ -304,7 +304,7 @@ export const Module3Content: React.FC = () => {
               <div className="text-red-700">if (abs(&Delta;F) &ge; FastestDefenderStartup) &rarr; PUNISHABLE (-12 on block vs 8-frame strike)</div>
             </div>
             <div className="border-l-2 border-red-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Choosing an <code>O(n&sup2;)</code> bubble sort on a large dataset leaves the student&rsquo;s CPU locked in recovery while the next wave arrives (<code>&Delta;F &ll; 0</code>), visually demonstrating algorithmic bottleneck punishment.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> If a child tries to fill a <code>50-berry</code> order by dropping fifty individual <code>1-berries</code> one at a time, the crane gets tired and lags behind the queue (<code>&Delta;F &lt; 0</code>), gently motivating them to try the <code>10-berry</code> crate.
             </div>
           </div>
         </div>
@@ -329,13 +329,13 @@ export const Module3Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 18: Self-Documenting Shape Signifiers)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 18: Self-Documenting Shape Signifiers)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> In a 30&ndash;60 minute educational mini-game, every minute spent reading a &ldquo;How to Play&rdquo; manual is a minute stolen from learning. The interface must be 100% self-documenting through visual <em>Signifiers</em>.
+            <strong>How It Relates:</strong> Many 6-to-8-year-olds are still learning to read! If your 40-minute primary-school mini-game relies on written tutorial pop-ups, early readers get stuck before the math or science even begins. The interface must be 100% self-explanatory through visual <em>Shape Signifiers</em>.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Encode type-safety and domain constraints directly into physical socket geometry (like jigsaw puzzle teeth): in a Functional Programming or Type-System mini-game, make <code className="bg-white px-1 py-0.5 rounded font-mono border border-blue-200">Int</code> outputs hexagonal plugs, <code className="bg-white px-1 py-0.5 rounded font-mono border border-blue-200">String</code> outputs circular plugs, and <code className="bg-white px-1 py-0.5 rounded font-mono border border-blue-200">List&lt;T&gt;</code> outputs slotted rails. When the student drags a block, valid target sockets pulse with an animated border signifier while incompatible sockets dim to 20% opacity.
+            <strong>Implementation Pattern:</strong> Encode mathematical and coding rules into physical <strong>Puzzle-Piece Socket Shapes</strong> (just like <em>ScratchJr</em> or wooden shape sorters): make <code>Action Verbs</code> (Move, Jump) blue jigsaw blocks with bottom tabs, <code>Number Inputs</code> round pegs that only fit inside round holes, and <code>Repeat Loops</code> C-shaped alligator mouths that wrap around other blocks. When a child picks up a block with their finger, valid sockets wiggle and glow gold while incompatible sockets stay asleep.
           </p>
         </div>
 
@@ -343,13 +343,13 @@ export const Module3Content: React.FC = () => {
           <li>
             <strong>Affordance:</strong> The actual physical or logical properties that determine what actions are possible (e.g., a door affords pushing; a boss attack affords dodging).
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Give interactive mathematical objects true manipulation affordances (e.g., a parabola curve itself can be grabbed at its vertex or roots and dragged directly on the coordinate plane).
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Make every primary manipulative directly touch-interactive—a clock&rsquo;s minute hand affords dragging around the dial, and a pizza affords slicing with a finger swipe.
             </div>
           </li>
           <li>
             <strong>Signifier:</strong> The perceptual signal that communicates <em>how</em> and <em>when</em> that affordance can be interacted with (e.g., a flat metal push-plate on a door; an expanding red circle beneath a boss).
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Render tactile grab-handle dots, hover cursors, and directional arrows directly on the vertex and roots of the parabola so the student immediately sees they are draggable without reading instructions.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Draw a glowing cartoon glove handle on the clock&rsquo;s minute hand and a dotted scissor line across the pizza so a 6-year-old immediately sees where to touch without reading a single word.
             </div>
           </li>
         </ul>
@@ -368,13 +368,13 @@ export const Module3Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 19: Working-Memory Budget &le; 4 Chunks)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 19: Working-Memory Budget of 2&ndash;3 Chunks for Children)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> Human working memory holds only 4 &plusmn; 1 active chunks of information at once (Cowan&rsquo;s Law). When learning a brand-new subject in a 30&ndash;60 minute mini-game, 3 of those 4 slots are already occupied by the academic domain rules.
+            <strong>How It Relates:</strong> While adults hold 4 &plusmn; 1 chunks in working memory, developmental neuroscience shows that children aged 6&ndash;8 hold only <strong>2 to 3 chunks</strong> at once! Cluttered screens with scoreboards, timers, health bars, and text boxes instantly overload a child&rsquo;s working memory.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Enforce a strict <strong>HUD &amp; Rule Offloading Budget</strong>: never display more than 3 active HUD metrics at once, and externalize reference formulas directly onto the world canvas (e.g., rendering live truth-tables or current/voltage values directly beside the wire nodes) so the student never has to memorize UI state or switch tabs.
+            <strong>Implementation Pattern:</strong> Enforce a strict <strong>Zero-Clutter Primary HUD Budget</strong>: show at most <strong>2 screen elements</strong> (the interactive toy in the center and the visual goal on the right), and put all memory aids directly on the objects themselves (e.g., a <code>5-block</code> always has 5 countable dots painted on its body so a 7-year-old never has to remember what color means 5).
           </p>
         </div>
 
@@ -384,7 +384,7 @@ export const Module3Content: React.FC = () => {
             <div className="font-semibold text-zinc-950">Ear-Before-Eye Priming</div>
             <p className="text-zinc-600">Human auditory processing takes ~10ms compared to ~50ms for visual processing. A distinctive audio chime primes attention before visual action begins.</p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Play a distinct rising acoustic tone 400ms before a critical state transition (e.g., buffer saturation or resonance peak) so the student looks at the right node in time.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Play a cheerful whistle or slide-flute sound 500ms before a new customer order or moving number-cloud appears so the child looks at the right spot on the iPad.
             </div>
           </div>
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
@@ -392,7 +392,7 @@ export const Module3Content: React.FC = () => {
             <div className="font-semibold text-zinc-950">Visual Anticipation Pose</div>
             <p className="text-zinc-600">The enemy character pulls back their weapon, raises both arms, or flares energy particles, clearly breaking their idle silhouette.</p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Visually swell the silhouette and border thickness of a logic gate or server node that is about to trigger an exception or state flip.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Have the friendly monster open its mouth wide and hold up 3 fingers when it wants a <code>3-slice</code> snack so its silhouette telegraphs the math goal.
             </div>
           </div>
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
@@ -400,14 +400,14 @@ export const Module3Content: React.FC = () => {
             <div className="font-semibold text-zinc-950">Exact Boundary Projection</div>
             <p className="text-zinc-600">An expanding circular or cone decal renders on the collision mesh, displaying the exact geometric boundary that will become lethal.</p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Project dashed preview rings or field-line decals showing the exact spatial radius of a magnetic field, wireless router, or blast wave before execution.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Draw a glowing dotted landing circle on the number line or garden grid showing the exact tiles a block or sprinkler will cover before the child drops it.
             </div>
           </div>
         </div>
 
         <div className="bg-blue-50 border-l-4 border-blue-600 p-4 text-xs sm:text-sm text-blue-950">
-          <span className="font-bold">The Golden Rule of Telegraphing:</span> The duration of the telegraph window must be strictly greater than the human perceptual-motor latency: <code className="font-mono">TelegraphWindow &ge; 240ms</code>.
-          If an unblockable boss attack has a 120ms telegraph, the player is physically incapable of reacting in time. The hit is perceived as cheap and unfair.
+          <span className="font-bold">The Golden Rule of Telegraphing:</span> The duration of the telegraph window must be strictly greater than the human perceptual-motor latency: <code className="font-mono">TelegraphWindow &ge; 240ms</code> (and <code className="font-mono">&ge; 450ms</code> for primary school children aged 6&ndash;9).
+          If an obstacle or timed event has a 120ms telegraph, a child is physically incapable of reacting in time.
         </div>
       </section>
 
@@ -431,13 +431,13 @@ export const Module3Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 20: Hub-and-Spoke Knowledge Graph Topology)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 20: Treehouse Hub-and-Spoke Map Topology)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> A purely linear 12-level sequence (V<sub>1</sub> &rarr; V<sub>2</sub> &rarr; &hellip; &rarr; V<sub>12</sub>) creates a fatal Cut-Vertex bottleneck: if a student gets stuck on Level 5 at minute 20, their entire session stalls. Conversely, an open world is too large for 45 minutes.
+            <strong>How It Relates:</strong> In a strictly linear 10-level sequence (V<sub>1</sub> &rarr; V<sub>2</sub> &rarr; &hellip; &rarr; V<sub>10</sub>), if an 8-year-old gets stuck on Puzzle 4 at Minute 15, they are completely blocked for the remaining 25 minutes of class and raise their hand in distress.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Structure the 30&ndash;60 minute mini-game as a <strong>Compact Hub-and-Spoke Graph</strong>: after a 5-minute introductory root node, unlock a Central Laboratory Hub connected to 3 parallel 10-minute spoke wings (e.g., Wing A: Series Circuits, Wing B: Parallel Circuits, Wing C: Capacitor Timing). If a student gets stuck on Wing B, they can pivot to Wing C, gain confidence, and unlock a <em>One-Way Conceptual Shortcut</em> that illuminates how to solve Wing B before entering the final 10-minute Capstone Boss node.
+            <strong>Implementation Pattern:</strong> Structure the 30&ndash;60 minute primary-school mini-game around a cozy <strong>Treehouse / Town Square Hub</strong> connected to 3 parallel 10-minute Adventure Islands (e.g., Island A: Pizza Fractions, Island B: Potion Beakers, Island C: Garden Array Tiles). If a child finds one puzzle on Island B tricky, they can hop back to the Treehouse Hub, play Island C to earn a helper gadget, and return with fresh confidence before unlocking the final 10-minute Castle Party!
           </p>
         </div>
 
@@ -445,13 +445,13 @@ export const Module3Content: React.FC = () => {
           <li>
             <strong>Vertices (V):</strong> Discrete spatial zones, rooms, arenas, or resource nodes.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Map each Vertex <code>V<sub>i</sub></code> to a discrete, self-contained 4-to-5 minute micro-concept lab room (8 to 10 vertices total for a 45-minute session).
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Make each Vertex <code>V<sub>i</sub></code> a bite-sized 3-to-4 minute play station on an illustrated island map (8 to 10 stations total for a 40-minute class period).
             </div>
           </li>
           <li>
             <strong>Edges (E):</strong> Traversal paths, corridors, doorways, or elevators connecting zones.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Gate directed edges <code>E(u, v)</code> by competency locks (requiring a concept badge or tool unlocked in node <code>u</code>) rather than arbitrary keys.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Connect stations with rainbow bridges that unlock when the child earns 2 out of 3 stars, ensuring one tricky optional star never blocks a child from exploring the map.
             </div>
           </li>
         </ul>
@@ -468,13 +468,13 @@ export const Module3Content: React.FC = () => {
           <li>
             <strong>Zero navigational choice:</strong> The player can only move forward or backward along a single path.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Eliminates student agency and causes total session failure if a single intermediate puzzle phrasing doesn&rsquo;t click with the student.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Strips away a child&rsquo;s sense of play choice and causes classroom bottlenecks whenever a single puzzle trips up an early reader.
             </div>
           </li>
           <li>
             <strong>Backtracking fatigue:</strong> If the player finds a key in Room 4 that unlocks a door in Room 1, they must re-traverse Rooms 3 and 2 through already-cleared, empty territory.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Never force a student to manually walk back through solved rooms in a 45-minute session; provide instant 1-click node teleportation on the Knowledge Graph HUD map.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Never make young children walk slowly backward through empty rooms; let them tap any island on their sticker map to bounce there instantly on a trampoline!
             </div>
           </li>
         </ul>
@@ -490,7 +490,7 @@ export const Module3Content: React.FC = () => {
             <div className="font-semibold text-zinc-950">Orienting Anchors</div>
             <p className="text-zinc-600">High-degree vertices (such as Firelink Shrine) that connect to multiple branching wings, providing a constant spatial anchor.</p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Use a Central Interactive Sandbox Hub where all newly unlocked tools and visualizers accumulate, anchoring the student&rsquo;s progress across all 3 learning wings.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Use a cozy Central Treehouse or Pet Garden where every rescued critter and unlocked math gadget lives, giving the child a proud visual home base.
             </div>
           </div>
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
@@ -498,7 +498,7 @@ export const Module3Content: React.FC = () => {
             <div className="font-semibold text-zinc-950">Alternative Paths</div>
             <p className="text-zinc-600">Loops that provide multiple routes around hazardous choke points, allowing stealth players or high-mobility builds to flank enemies.</p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Offer two parallel representations for difficult concepts (e.g., an Algebraic Path and a Geometric/Visual Path) that converge on the same node, accommodating different learning styles.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Offer two parallel paths for every concept—a <em>Visual Block Path</em> (slicing pies) and a <em>Number-Line Path</em> (hopping frogs)—so both visual and numerical learners reach the goal.
             </div>
           </div>
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
@@ -506,7 +506,7 @@ export const Module3Content: React.FC = () => {
             <div className="font-semibold text-zinc-950">Spatial Eureka Moments</div>
             <p className="text-zinc-600">Directed edges that are locked from side A, requiring a long treacherous loop to reach side B. Once unlocked from side B, the edge becomes bidirectional, permanently connecting deep dungeon zones back to safety.</p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Place a visible &ldquo;Locked Challenge Door&rdquo; in the Minute-2 Hub that requires a theorem learned at Minute 30; returning to unlock it delivers a massive pedagogical Eureka moment.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Place a big mysterious &ldquo;100-Block Treasure Chest&rdquo; right in the Minute-1 Treehouse that the child can finally pop open at Minute 30 once they unlock the <code>10 &times; 10</code> Hundred-Maker!
             </div>
           </div>
         </div>

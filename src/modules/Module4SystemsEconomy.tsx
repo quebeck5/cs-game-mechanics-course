@@ -190,7 +190,7 @@ export const Module4SystemsEconomy: React.FC<Module4Props> = ({
               <strong> Danger:</strong> Unchecked positive feedback creates "Dead Time", where the victor is mathematically determined early but the match continues.
             </p>
             <div className="border-l-2 border-red-500 bg-red-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Use positive feedback on mastery streaks to unlock macro-tools that fast-forward advanced students past basic drills into higher-order synthesis challenges.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Use positive feedback on 3-solve mastery streaks to unlock a &ldquo;10-Block Magnet Wand&rdquo; that lets confident children bundle tens in 1 tap and zoom into fun bonus challenges.
             </div>
           </div>
 
@@ -205,7 +205,7 @@ export const Module4SystemsEconomy: React.FC<Module4Props> = ({
               <strong> Danger:</strong> Aggressive negative feedback punishes skillful play.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Apply negative feedback on repeated errors (injecting visual scaffolding traces or slowing incoming wave rates) so struggling students never stall out of the 45-minute session.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Never deduct earned stars on mistakes! Instead, use negative feedback to spawn a friendly Owl Helper with visual counting dots after 2 misses so no child falls behind.
             </div>
           </div>
         </div>

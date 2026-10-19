@@ -41,7 +41,7 @@ const MDA_RULES: MechanicRuleToggle[] = [
     name: 'Blood-Ammo Coupling (Spells cost HP, Melee restores HP)',
     codeRule: 'onCast(): hp -= 15; onMeleeHit(): hp = min(maxHp, hp + 20);',
     dynamicEffect: 'Eliminates passive turtling: when low on HP, the player is forced to dash into close-quarters danger rather than hiding behind cover.',
-    eduMiniGame: '30–60 Min Edu Mini-Game: Make Hints cost Energy while solving a sub-step manually restores Energy, encouraging students to alternate between assisted and independent derivation.',
+    eduMiniGame: '30–60 Min Primary-School Mini-Game: Make "Magic Owl Hints" cost 1 Battery Star while solving the next number-block step by yourself recharges 2 Battery Stars, encouraging 8-year-olds to try on their own after peeking at a hint.',
     aestheticsDelta: { sensation: 25, challenge: 35, discovery: 5, expression: 15, submission: -30, tension: 40 }
   },
   {
@@ -49,7 +49,7 @@ const MDA_RULES: MechanicRuleToggle[] = [
     name: 'Velocity-Scaled Damage Multiplier',
     codeRule: 'damage = baseDmg * (1.0 + norm(velocity) / maxSpeed);',
     dynamicEffect: 'Transforms spatial movement into an offensive resource; players chain wall-bounces and dashes before striking instead of standing still.',
-    eduMiniGame: '30–60 Min Edu Mini-Game: Scale Mastery XP by a streak multiplier when the student solves consecutive puzzles without relying on brute-force trial-and-error.',
+    eduMiniGame: '30–60 Min Primary-School Mini-Game: Light up a "Rainbow Streak Meter" when a child solves 3 fraction or spelling puzzles carefully without random guessing taps, unlocking bonus pet stickers.',
     aestheticsDelta: { sensation: 35, challenge: 20, discovery: 15, expression: 35, submission: -10, tension: 20 }
   },
   {
@@ -57,7 +57,7 @@ const MDA_RULES: MechanicRuleToggle[] = [
     name: 'Single-Chance Corpse Recovery (Dark Souls / Hollow Knight)',
     codeRule: 'onDeath(): dropCurrencyAt(pos); if (dieBeforePickup) clearDroppedCurrency();',
     dynamicEffect: 'Creates an asymmetric risk spike on the journey back to the death location, turning routine traversal into a high-stakes retrieval mission.',
-    eduMiniGame: '30–60 Min Edu Mini-Game: When a test run fails, drop a "Bug Bounty Token" on the failing edge case; fixing that exact bug on the next run awards 2x diagnostic XP.',
+    eduMiniGame: '30–60 Min Primary-School Mini-Game: Never take away earned stars from young children! Instead, if a bridge collapses on a tricky math problem, leave a glowing "Golden Wrench" on that spot that awards double stars when they fix it.',
     aestheticsDelta: { sensation: 5, challenge: 30, discovery: 10, expression: 0, submission: -25, tension: 45 }
   },
   {
@@ -65,7 +65,7 @@ const MDA_RULES: MechanicRuleToggle[] = [
     name: 'Harmonic Magnet & Zero-Penalty Misses',
     codeRule: 'onUpdate(): attractOrbs(radius=250); onMiss(): keepComboAlive();',
     dynamicEffect: 'Removes failure anxiety and execution stress; shifts cognitive load from survival to rhythmic audiovisual flow.',
-    eduMiniGame: '30–60 Min Edu Mini-Game: Enable during the first 5-minute onboarding sandbox so students can freely explore domain mechanics with zero failure anxiety.',
+    eduMiniGame: '30–60 Min Primary-School Mini-Game: Enable during the first 3-minute Playroom Sandbox and for Grades 1–2 learners so magnetic block-snapping and zero-penalty tries eliminate classroom anxiety.',
     aestheticsDelta: { sensation: 30, challenge: -35, discovery: 10, expression: 20, submission: 50, tension: -40 }
   }
 ];
@@ -524,7 +524,7 @@ export const Module1MDA: React.FC<Module1Props> = ({
               <em> Example:</em> <code>hp -= 15</code> when casting a spell; <code>hp += 20</code> on melee strike.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Encode the mathematical or scientific domain equations directly as your simulation rules.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Encode the primary-school math or science rule directly into the toy (e.g., 10 unit cubes magnetically snap into a 10-rod).
             </div>
           </div>
 
@@ -535,7 +535,7 @@ export const Module1MDA: React.FC<Module1Props> = ({
               How the mechanics behave at runtime when coupled with a human optimizer. You do not directly author dynamics; they <strong>emerge</strong> from rule interactions (e.g., aggressive close-range play when low on HP).
             </p>
             <div className="border-l-2 border-indigo-500 bg-indigo-50/50 pl-2 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> The student&rsquo;s real-time hypothesis-testing loop (adjusting parameters, observing outputs, isolating variables).
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> The child&rsquo;s hands-on play loop of slicing, stacking, and watching characters react in real time on their tablet.
             </div>
           </div>
 
@@ -546,7 +546,7 @@ export const Module1MDA: React.FC<Module1Props> = ({
               In MDA, aesthetics refers to the <strong>cognitive and emotional taxonomy</strong> evoked in the player: <em>Challenge, Sensation, Discovery, Expression, Submission, Tension</em>.
             </p>
             <div className="border-l-2 border-violet-500 bg-violet-50/50 pl-2 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Target Discovery + Challenge + Sensation so the student achieves an authentic &ldquo;Aha!&rdquo; insight within 45 minutes.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Target Sensation + Discovery + Expression so an 8-year-old experiences joyful &ldquo;I figured it out!&rdquo; pride within 40 minutes.
             </div>
           </div>
         </div>

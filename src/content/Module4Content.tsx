@@ -38,13 +38,13 @@ export const Module4Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 21: Closed-Loop Adaptive Scaffolding / ZPD Regulator)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 21: Closed-Loop Adaptive Scaffolding / Friendly Helper Mascot)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> In a 30&ndash;60 minute classroom or self-study session, a human teacher cannot manually tune puzzle parameters for 30 different students simultaneously. The game engine itself must act as a cybernetic tutor keeping each student in Vygotsky&rsquo;s <em>Zone of Proximal Development (ZPD)</em>.
+            <strong>How It Relates:</strong> In a primary school classroom of 28 children aged 6&ndash;11, one teacher cannot stand behind every child&rsquo;s iPad at once. Some kids breeze through single-digit addition in 2 minutes, while others get stuck counting on their fingers. The game engine itself must act as a gentle cybernetic tutor keeping each child inside Vygotsky&rsquo;s <em>Zone of Proximal Development (ZPD)</em>.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Build a 4-stage <strong>Cybernetic Pedagogical Regulator</strong>: (1) <em>Sensor</em>: track time-to-solution and consecutive failed test runs; (2) <em>Comparator</em>: compare against target mastery window (e(t) = t<sub>actual</sub> - 180s); (3) <em>Effector</em>: if a student fails 3 times in 180 seconds, automatically inject a visual ghost trace of the intermediate state rather than giving away the final answer.
+            <strong>Implementation Pattern:</strong> Build a 4-stage <strong>Friendly Mascot Cybernetic Regulator</strong>: (1) <em>Sensor</em>: track time-per-puzzle and wrong block drops; (2) <em>Comparator</em>: compare against a 45-second target solve window; (3) <em>Effector</em>: if a child makes 2 mistakes in 45 seconds, have the friendly Owl Mascot fly down and split a <code>10-frame</code> tray onto the board to scaffold the visual counting step without giving away the final number.
           </p>
         </div>
 
@@ -56,7 +56,7 @@ export const Module4Content: React.FC = () => {
               The subsystem that measures the simulation's state vector S&#8407;(t) &isin; &#8477;<sup>n</sup> at runtime (e.g., current player HP, distance between racing vehicles, aggregate team gold, kill/death differential).
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Instrument a lightweight client-side telemetry sensor that samples time-on-step, undo count, and specific misconception patterns (e.g., confusing series vs. parallel resistance).
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Quietly monitor child-specific signals: idle finger time (&gt;15s), repeated Undo taps, or common primary misconceptions (like thinking <code>1/8</code> is bigger than <code>1/4</code> because 8 &gt; 4).
             </div>
           </div>
 
@@ -68,7 +68,7 @@ export const Module4Content: React.FC = () => {
               <span className="font-mono ml-1">e(t) = S<sub>actual</sub>(t) - S<sub>target</sub>(t)</span>.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Compare the student&rsquo;s current solve pace against the 45-minute syllabus schedule (e.g., target = 4.5 minutes per puzzle node) to detect stalls or boredom early.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Compare the child&rsquo;s current pace against the 40-minute classroom schedule (target = ~3 minutes per mini-station) to spot early frustration or boredom.
             </div>
           </div>
 
@@ -79,7 +79,7 @@ export const Module4Content: React.FC = () => {
               The subsystem that alters game parameters to steer the system based on the computed error (e.g., modulating enemy spawn rates, adjusting rubber-band slipstream acceleration, scaling loot drop qualities).
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Modulate scaffolding dynamically—if <code>e(t) &gt; +90s</code> (student is stuck), highlight the specific violating wire or spawn a worked sub-example; if <code>e(t) &lt; -60s</code>, unlock an optional optimization constraint.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> If the child is stuck (<code>e(t) &gt; +45s</code>), turn on dotted fraction-slice helper lines; if the child is breezing through (<code>e(t) &lt; -20s</code>), spawn a bonus &ldquo;Golden Mystery Order&rdquo; with mixed fractions.
             </div>
           </div>
 
@@ -90,7 +90,7 @@ export const Module4Content: React.FC = () => {
               The underlying physics engine and game world whose state evolves over time as a coupled function of human player inputs and actuator interventions.
             </p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> The live interactive domain sandbox (circuit solver, physics world, or SQL query engine) that evolves deterministically in response to both student edits and effector scaffolding.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> The playful interactive toy world (the Monster Pizza Kitchen, Animal Coin Bakery, or Treehouse Circuit Lab) that responds smoothly to the child&rsquo;s fingers and helper hints.
             </div>
           </div>
         </div>
@@ -121,13 +121,13 @@ export const Module4Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 22: Anti-Snowballing Failure Recovery &amp; Mastery Acceleration)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 22: Never Deduct Earned Stars &amp; Gentle Rubber-Banding)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> Many educational games accidentally punish wrong answers by deducting health, currency, or time. That creates a <em>destructive positive feedback loop for struggling students</em>: making a mistake leaves them with fewer resources, making the next problem even harder until they fail out at minute 20.
+            <strong>How It Relates:</strong> Young children (ages 6&ndash;11) are intensely sensitive to loss: if an educational game takes away earned stars, coins, or pet hearts when they get a math question wrong, it triggers a <em>destructive snowball loop</em>—the child gets upset, rushes even more, loses all their stars, and refuses to play.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Never penalize errors with resource starvation. Instead, pair <strong>Negative Feedback on Errors</strong> (each failed attempt slightly slows down incoming wave speed or highlights the faulty sub-expression) with <strong>Positive Feedback on Mastery Streaks</strong> (solving 3 problems cleanly unlocks &ldquo;Fast-Forward / Auto-Complete&rdquo; macros that let advanced students breeze past basic drills into bonus challenge tiers within the 45-minute window).
+            <strong>Implementation Pattern:</strong> <strong>Never deduct earned stars or coins on wrong answers!</strong> Instead, pair <strong>Protective Negative Feedback on Mistakes</strong> (after 2 wrong tries, a friendly Rainbow Helper Bridge appears that breaks a hard <code>8 + 7</code> problem into <code>8 + 2 + 5</code>) with <strong>Positive Feedback on Mastery</strong> (solving 3 problems cleanly unlocks a &ldquo;10-Block Magnet Wand&rdquo; that lets confident students bundle tens with 1 tap and zoom into fun bonus levels).
           </p>
         </div>
 
@@ -154,7 +154,7 @@ export const Module4Content: React.FC = () => {
               </p>
             </div>
             <div className="border-l-2 border-red-500 bg-white/90 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Use positive feedback <em>only</em> to accelerate mastered sub-skills—when a student proves they can balance basic equations 3 times in a row, award a &ldquo;Stoichiometry Auto-Calculator&rdquo; upgrade so they finish the basic tier decisively and reach higher-order synthesis problems.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Use positive feedback to reward mastered skills—once an 8-year-old proves they can count ten <code>1-cubes</code> three times in a row, unlock the &ldquo;Auto-Ten Bundler&rdquo; gadget so they can build big 100-castles rapidly.
             </div>
           </div>
 
@@ -180,7 +180,7 @@ export const Module4Content: React.FC = () => {
               </p>
             </div>
             <div className="border-l-2 border-blue-500 bg-white/90 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Use negative feedback as a protective safety net on errors (e.g., spawning visual step-by-step traces or relaxing timer pressure after 2 failed runs) without reducing the final mastery badge value once the student solves it.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Use negative feedback as a warm safety net when a child struggles—spawning visual counting dots or slowing down moving number clouds after 2 misses while still letting the child earn all 3 gold stars once they solve it!
             </div>
           </div>
         </div>
@@ -190,25 +190,25 @@ export const Module4Content: React.FC = () => {
           <li>
             <strong>1. Diminishing Marginal Returns (Concave Scaling):</strong> Rather than linear power scaling (P = k &middot; G), apply concave functions (P = &radic;G or P = log<sub>2</sub>(G)). The first 1,000 gold buys 50 DPS; the next 1,000 gold buys only 25 DPS.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Cap hint-token or brute-force power-up scaling with <code>log<sub>2</sub>(N)</code> diminishing returns (e.g., adding more parallel worker threads in an Amdahl&rsquo;s Law mini-game yields diminishing speedup), teaching real-world scaling limits.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> In a Grade 4 Ecosystem mini-game, planting the first 5 flowers attracts lots of bees, but planting 50 flowers in one tiny pot shows crowding and diminishing nectar returns.
             </div>
           </li>
           <li>
             <strong>2. Progressive Upkeep Tax Sinks:</strong> High-tier armies consume continuous maintenance (e.g., <em>Warcraft III</em> Upkeep system, where exceeding 50 food taxes gold mine income by 30%, and exceeding 80 food taxes it by 60%).
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Charge a continuous &ldquo;Complexity / Power Upkeep Cost&rdquo; for every logic gate, server node, or line of code placed on the board so students learn to refactor and simplify bloated solutions.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Give each coding block or bridge plank a 1-Coin cost from a 6-Coin level purse so children learn to replace four <code>Move Forward</code> blocks with a neat <code>Repeat 4</code> loop!
             </div>
           </li>
           <li>
             <strong>3. Asymmetric High-Leverage Bounties:</strong> Eliminating a player on a massive killstreak awards bonus gold to the trailing team, creating a high-stakes comeback mechanism.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Award a massive &ldquo;Bug-Hunter Comeback Bounty&rdquo; when a struggling student diagnoses and fixes a previously failed test case, restoring full streak momentum immediately.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Award a celebratory &ldquo;Super Try-Again Rainbow Star&rdquo; when a child sticks with a tricky problem and solves it after a mistake, teaching growth mindset!
             </div>
           </li>
           <li>
             <strong>4. Geometric Perimeter Vulnerability:</strong> Expanding territory forces an empire to defend a wider geographic boundary, diluting defensive density and creating natural vulnerabilities.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> In network security or distributed systems mini-games, expanding cluster size increases the attack surface area (<code>2&pi;r</code>) and synchronization overhead automatically.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> In a Grade 4 Area vs. Perimeter garden game, expanding a garden bed shows how a long skinny <code>1 &times; 12</code> plot needs 26 fence posts while a compact <code>3 &times; 4</code> plot needs only 14 fence posts for the exact same 12 carrots!
             </div>
           </li>
         </ul>
@@ -233,13 +233,13 @@ export const Module4Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 23: Playable Petri-Net Domain Models)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 23: Playable Petri-Net Nature &amp; Shop Models)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> Almost every STEM and social science system—cellular ATP respiration, macroeconomic inflation, OS thread scheduling, or chemical equilibrium—is fundamentally a Machinations resource graph of Sources, Pools, Converters, and Drains.
+            <strong>How It Relates:</strong> Core primary-school science and math topics—such as <strong>Food Chains &amp; Ecosystems</strong> (Sunlight &rarr; Grass &rarr; Rabbits &rarr; Foxes), <strong>The Water Cycle</strong> (Evaporation &rarr; Clouds &rarr; Rain &rarr; Rivers), and <strong>Piggy-Bank Saving &amp; Spending</strong>—are pure Machinations graphs of Sources, Pools, Converters, and Drains!
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Expose the Machinations Petri-Net <em>directly as the playable canvas</em> in a 45-minute simulation mini-game. For example, to teach Cellular Respiration (Glycolysis &rarr; Krebs Cycle &rarr; Electron Transport Chain), represent Glucose and Oxygen as <strong>Sources</strong>, NADH/FADH2 as intermediate <strong>Pools</strong>, mitochondrial enzymes as <strong>Converters</strong>, and cellular work as <strong>Drains</strong>. Ask the student to tune enzyme converter rates to prevent lactic acid overflow during a 3-stage simulated sprint.
+            <strong>Implementation Pattern:</strong> Turn the Machinations graph into a <strong>Touch-Interactive Picture Terrarium</strong> for a 40-minute Grade 3 Science lesson: represent the Sun as a <strong>Source</strong> emitting golden sun-drops, Clover Patches as <strong>Converters</strong> turning sun-drops into leaves, a Bunny Burrow as a <strong>Pool</strong>, and Bunny Hunger as a <strong>Drain</strong>. Let 8-year-olds adjust rain and sunlight sliders to keep their bunny meadow in happy equilibrium for 4 seasons!
           </p>
         </div>
 
@@ -253,7 +253,7 @@ export const Module4Content: React.FC = () => {
             <div className="font-semibold text-zinc-900">Token Generator</div>
             <p className="text-zinc-600">Generates resources ex nihilo at specified intervals or triggers (e.g., gold mines, regenerating shields, respawning enemies).</p>
             <div className="border-l-2 border-emerald-500 bg-emerald-50/50 pl-2 py-1 text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Spawns incoming HTTP requests, glucose molecules, or raw sensor data packets at a configurable arrival rate <code>&lambda;</code>.
+              <strong>Primary-School Mini-Game:</strong> The shining Sun emitting sunbeams in a food-chain game, or customer orders arriving at an animal bakery.
             </div>
           </div>
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
@@ -261,7 +261,7 @@ export const Module4Content: React.FC = () => {
             <div className="font-semibold text-zinc-900">State Accumulator</div>
             <p className="text-zinc-600">Stores discrete quantities of tokens (e.g., character wallet, ammunition reserve, experience points, player inventory).</p>
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Visualizes bounded memory buffers, capacitor charge, or chemical concentrations with real-time fill bars.
+              <strong>Primary-School Mini-Game:</strong> A transparent Piggy Bank holding 10-cent coins, a water pond, or a basket of counted apples.
             </div>
           </div>
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
@@ -269,7 +269,7 @@ export const Module4Content: React.FC = () => {
             <div className="font-semibold text-zinc-900">Token Transformer</div>
             <p className="text-zinc-600">Consumes N tokens of resource A to synthesize M tokens of resource B (e.g., crafting tables, blacksmith forging, merchant exchanges).</p>
             <div className="border-l-2 border-purple-500 bg-purple-50/50 pl-2 py-1 text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Represents pure functions, stoichiometric reaction ratios (<code>2H<sub>2</sub> + O<sub>2</sub> &rarr; 2H<sub>2</sub>O</code>), or compiler stages.
+              <strong>Primary-School Mini-Game:</strong> A &ldquo;Ten-Bundler Machine&rdquo; that eats 10 unit-cubes and pops out 1 Ten-Rod, or a plant turning sunlight + water into berries.
             </div>
           </div>
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
@@ -277,7 +277,7 @@ export const Module4Content: React.FC = () => {
             <div className="font-semibold text-zinc-900">Permanent Sink</div>
             <p className="text-zinc-600">Permanently destroys tokens from the economic graph (e.g., ammunition spent, armor durability decay, repair fees, taxes).</p>
             <div className="border-l-2 border-red-500 bg-red-50/50 pl-2 py-1 text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Models thermal dissipation (<code>I&sup2;R</code> heat loss), garbage collection reclamation, or completed client responses.
+              <strong>Primary-School Mini-Game:</strong> Hungry rabbits eating berries in the meadow, or spending saved coins at the sticker shop.
             </div>
           </div>
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
@@ -285,7 +285,7 @@ export const Module4Content: React.FC = () => {
             <div className="font-semibold text-zinc-900">Flow Router</div>
             <p className="text-zinc-600">Routes flowing tokens conditionally or probabilistically along branching edges (e.g., critical hit checks, branching skill trees).</p>
             <div className="border-l-2 border-amber-500 bg-amber-50/50 pl-2 py-1 text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Implements <code>if/else</code> branch predicates, load-balancer routing rules, or semi-permeable membrane filters.
+              <strong>Primary-School Mini-Game:</strong> A sorting chute that sends <code>Even Numbers</code> down the left slide and <code>Odd Numbers</code> down the right slide!
             </div>
           </div>
         </div>
@@ -309,7 +309,7 @@ export const Module4Content: React.FC = () => {
               <strong>Economic Hyperinflation (Inflows &gt;&gt; Outflows):</strong> If sources persistently outpace drains, currency pool P &rarr; &infin;. Scarcity collapses, prices become trivial, and economic decisions lose all meaningful tension (e.g., late-game RPGs where players hoard millions of gold with nothing to buy).
             </div>
             <div className="border-l-2 border-red-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> If a student receives unlimited energy/memory tokens by Minute 15, they can brute-force every remaining puzzle with 50 redundant nodes instead of learning the optimal minimal design.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> In a Grade 3 Ecosystem game, if rabbits multiply with zero predators or food limits, the meadow overflows with rabbits that eat all the grass—visually teaching carrying capacity!
             </div>
           </div>
           <div className="border border-amber-200 bg-amber-50/40 p-3 rounded-lg space-y-1.5">
@@ -317,7 +317,7 @@ export const Module4Content: React.FC = () => {
               <strong>Economic Starvation (Outflows &gt;&gt; Inflows):</strong> If drains outpace sources without adequate player agency, progression stalls entirely, forcing tedious, repetitive grinding.
             </div>
             <div className="border-l-2 border-amber-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Never lock basic experimentation behind scarce consumable tokens in a 45-minute educational game; make component placement and undo 100% free and refund 100% of resources on deletion.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Never let a child run out of basic building blocks or undo moves in a 40-minute classroom game; picking up and rearranging math blocks on the workspace must always be 100% free!
             </div>
           </div>
         </div>
@@ -338,13 +338,13 @@ export const Module4Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 24: Constructivist Emergent Discovery)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 24: Constructivist Emergent Discovery)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> When an educational puzzle only accepts a single hardcoded sequence of steps, students feel like they are guessing the teacher&rsquo;s password. Constructivist pedagogy thrives when students combine primitive rules to invent valid, unexpected solutions.
+            <strong>How It Relates:</strong> Primary school children are natural scientists who love asking &ldquo;What happens if I combine these two things?&rdquo; If a math or science puzzle only accepts one rigid answer (e.g., rejecting <code>5 + 5 + 2</code> when the teacher wrote <code>10 + 2</code>), children feel like math is about memorizing rules rather than making sense.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Grade puzzles by <strong>Output State Verification (Unit Tests)</strong> rather than AST/Step matching. In a 45-minute digital logic or physics mini-game, if the level asks for a frequency divider and the student constructs an emergent ring-oscillator out of 3 inverters and a delay line instead of the textbook flip-flop, the simulation engine validates the output waveform and awards a &ldquo;Creative Engineering&rdquo; badge.
+            <strong>Implementation Pattern:</strong> Grade primary-school puzzles by <strong>Target Value / Physical Outcome Verification</strong> rather than rigid step matching. In a 40-minute Fraction Potion or Number-Bond game, if the customer asks for <code>1 Whole</code> potion and an 8-year-old mixes one <code>1/2</code> beaker + two <code>1/8</code> beakers + one <code>1/4</code> beaker, the cauldron bubbles gold and awards a &ldquo;Master Potion Inventor!&rdquo; badge because <code>0.5 + 0.25 + 0.25 === 1.0</code>!
           </p>
         </div>
         
@@ -379,13 +379,13 @@ export const Module4Content: React.FC = () => {
 
         <div className="border border-blue-200 bg-blue-50/50 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm my-3">
           <div className="font-mono font-bold text-blue-800 uppercase tracking-wider text-xs">
-            Applied Architecture: 30&ndash;60 Minute Educational Mini-Game (Point 25: Decoupled Curriculum Tag Architecture)
+            Applied Architecture: 30&ndash;60 Minute Primary-School Educational Mini-Game (Point 25: Decoupled Primary Science Tag Architecture)
           </div>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>How It Relates:</strong> Educational courseware frequently needs to be adapted across grade levels or expanded with new lab modules. If puzzle objects are tightly coupled to specific levels (<code>Level3Acid hits Level3Base</code>), authoring a suite of ten 45-minute mini-games becomes an unmaintainable <code>O(N<sup>2</sup>)</code> nightmare.
+            <strong>How It Relates:</strong> A primary-school game studio often builds dozens of 30&ndash;60 minute mini-games across Grades 1 to 6 (Materials, Magnetism, Circuits, Buoyancy, States of Matter). Hardcoding item interactions per level makes it impossible to share objects across lessons.
           </p>
           <p className="text-zinc-800 leading-relaxed">
-            <strong>Implementation Pattern:</strong> Architect the educational simulation using an <strong>Entity-Component-System (ECS) Property Tag Matrix</strong> (<code>[pH: 2.0, Molarity: 1.0, Conductive: true, Exothermic: true]</code>) decoupled from an Event Bus that broadcasts domain reactions to the UI graphing panel, achievement tracker, and hint system without coupling simulation math to level scripts.
+            <strong>Implementation Pattern:</strong> Tag every toy object in your primary-school asset library with simple physical components (<code>[Material: Metal, Conductive: true, Magnetic: true, Density: 7.8, MeltingPoint: High]</code>) and connect a decoupled Event Bus that notifies the Owl Helper mascot and teacher progress dashboard whenever a child discovers a valid physical interaction.
           </p>
         </div>
 
@@ -394,21 +394,21 @@ export const Module4Content: React.FC = () => {
             <span className="font-bold text-zinc-950">Entity: WoodenDoor</span>
             <div className="text-zinc-600">[Flammable, Rigid, Heavy]</div>
             <div className="font-sans border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Passive obstacle node tagged with domain properties (e.g., <code>[Dielectric, Insulator, BreakdownVoltage: 500V]</code>).
+              <strong>Primary-School Mini-Game:</strong> Everyday classroom item like a <code>Wooden Toy Boat</code> tagged <code>[FloatsInWater, Insulator, NonMagnetic]</code>.
             </div>
           </div>
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
             <span className="font-bold text-zinc-950">Entity: FireArrow</span>
             <div className="text-zinc-600">[Igniter, Kinetic, Piercing]</div>
             <div className="font-sans border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Active probe or stimulus injected by the student (e.g., <code>[HighFrequencyAC, 1000V, Sinusoidal]</code>).
+              <strong>Primary-School Mini-Game:</strong> Science tool like a <code>Warm Sunbeam</code> or <code>Horseshoe Magnet</code> tagged <code>[HeatSource, MagneticField]</code>.
             </div>
           </div>
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
             <span className="font-bold text-zinc-950">Entity: MetalShield</span>
             <div className="text-zinc-600">[Conductive, Magnetic, Fireproof]</div>
             <div className="font-sans border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Modular component placed to route or shield forces (e.g., <code>[FaradayCage, Grounded, Ferromagnetic]</code>).
+              <strong>Primary-School Mini-Game:</strong> Everyday item like a <code>Steel Paperclip</code> tagged <code>[Conductive, Magnetic, SinksInWater]</code>.
             </div>
           </div>
         </div>
@@ -420,19 +420,19 @@ export const Module4Content: React.FC = () => {
           <li>
             <code>Igniter</code> + <code>Flammable</code> &rarr; Trigger <code>CombustionReaction</code> (spreads heat, spawns smoke, consumes entity durability).
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> <code>Acid(pH &lt; 7)</code> + <code>Base(pH &gt; 7)</code> &rarr; Trigger universal <code>NeutralizationReaction</code> producing salt + water + exothermic heat ΔH across any level where those tags meet.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> <code>HeatSource</code> + <code>IceBlock</code> &rarr; Melts solid ice into liquid water (and boils water into rising steam clouds that spin a windmill!), teaching States of Matter through play.
             </div>
           </li>
           <li>
             <code>Conductive</code> + <code>Electrified</code> &rarr; Propagate electrical current to all adjacent <code>Conductive</code> entities in radius R.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> <code>MutableSharedState</code> + <code>ConcurrentThread</code> &rarr; Trigger <code>DataRaceHazard</code> unless guarded by a <code>MutexLock</code> tag.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> <code>BatteryWire</code> + <code>Conductive</code> (e.g., a brass key or copper coin) &rarr; Completes the treehouse circuit and lights up the bulb, while a <code>RubberEraser</code> (<code>Insulator</code>) blocks the current!
             </div>
           </li>
           <li>
             <code>Cryogenic</code> + <code>Liquid</code> &rarr; Phase transition: convert liquid volume into solid frozen platform.
             <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
-              <strong>30&ndash;60 Min Educational Mini-Game:</strong> <code>Temperature &lt; T_freeze</code> + <code>AqueousSolution</code> &rarr; Trigger phase transition with colligative freezing-point depression proportional to dissolved solute molality.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> <code>FreezerRay</code> + <code>WaterPond</code> &rarr; Freezes the pond into a solid ice bridge so the child&rsquo;s character can slide across to the next math island!
             </div>
           </li>
         </ul>

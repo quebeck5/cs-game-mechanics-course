@@ -423,7 +423,7 @@ export const Module3DecisionsSpace: React.FC<Module3Props> = ({
               Wind-up animation before hitbox emission. Provides &ge; 200ms for defender reaction and locks the attacker into a spatial commitment.
             </p>
             <div className="font-sans border-l-2 border-amber-500 bg-amber-50/50 pl-2 py-1 text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Use a 1.5s pre-execution preview when the student clicks &ldquo;Test Hypothesis&rdquo; so they mentally predict the output before evaluation.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Use a 1.5s animated conveyor wind-up when a child taps &ldquo;Serve Order!&rdquo; so they count their blocks and predict the result before it arrives.
             </div>
           </div>
 
@@ -434,7 +434,7 @@ export const Module3DecisionsSpace: React.FC<Module3Props> = ({
               The discrete interval where the collision volume is active in world space. High damage attacks typically possess narrower active windows.
             </p>
             <div className="font-sans border-l-2 border-red-500 bg-red-50/50 pl-2 py-1 text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Visually step through each test case (Normal, Boundary, Edge Case) colliding against the student&rsquo;s solution.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Animate the blocks or coding puppy stepping across each bridge tile one by one with musical chimes so children can count along.
             </div>
           </div>
 
@@ -445,7 +445,7 @@ export const Module3DecisionsSpace: React.FC<Module3Props> = ({
               Upon whiff or block, attacker cannot act for F<sub>recovery</sub> frames. Frame Advantage is &Delta;F = F<sub>stun</sub> &minus; F<sub>recovery</sub>.
             </p>
             <div className="font-sans border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Enforce a brief 2.0s diagnostic cooldown on failed test runs to prevent mindless trial-and-error button spamming.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Use a gentle 1.5s reset animation when a guess doesn&rsquo;t fit so impulsive button-mashing is slower than counting once carefully.
             </div>
           </div>
         </div>

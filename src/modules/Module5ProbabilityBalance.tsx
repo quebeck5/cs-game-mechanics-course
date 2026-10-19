@@ -249,7 +249,7 @@ export const Module5ProbabilityBalance: React.FC<Module5Props> = ({
               Geometric distribution with heavy right tail. Produces frustrating dry spells and bursty first-hit critical streaks.
             </p>
             <div className="font-sans border-l-2 border-red-500 bg-red-50/50 pl-2 py-1 text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Avoid raw <code>Math.random()</code> for small-sample classroom demos (<code>N &lt; 25</code>), as tail streaks skew empirical observations.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Avoid raw <code>Math.random()</code> for small-sample classroom activities (<code>N &lt; 25</code>), as unlucky dry spells frustrate young children and skew discovery.
             </div>
           </div>
 
@@ -260,7 +260,7 @@ export const Module5ProbabilityBalance: React.FC<Module5Props> = ({
               Starts at 8.5% on hit 1 and increments by +8.5% per miss until reaching 100% at N=12. Eliminates both lucky openers and 15-miss droughts.
             </p>
             <div className="font-sans border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Use Markov PRD so rare scientific events (e.g., 25% recessive traits) reliably manifest within 10–12 student trials.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Use Markov PRD so rare classroom discoveries (e.g., a 25% golden fossil or rainbow weather event) reliably appear within 10&ndash;12 child turns.
             </div>
           </div>
 
@@ -271,7 +271,7 @@ export const Module5ProbabilityBalance: React.FC<Module5Props> = ({
               Places exact quotas into an array, Fisher-Yates shuffles it, and dispenses items sequentially. Enforces hard mathematical variance bounds.
             </p>
             <div className="font-sans border-l-2 border-emerald-500 bg-emerald-50/50 pl-2 py-1 text-zinc-800">
-              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Put all syllabus topic variants into a Fisher-Yates Shuffle Bag so 100% of learning objectives are covered in 45 minutes.
+              <strong>30&ndash;60 Min Primary-School Mini-Game:</strong> Put all primary math/phonics problem types into a Fisher-Yates Shuffle Bag so 100% of lesson skills are practiced in 45 minutes without boring streaks.
             </div>
           </div>
         </div>

@@ -150,7 +150,7 @@ export const RosettaLibraryPage: React.FC<RosettaLibraryProps> = ({
                 <th className="py-2.5 px-3">Computer Science Formalism</th>
                 <th className="py-2.5 px-3">Game Mechanics Equivalent</th>
                 <th className="py-2.5 px-3">The Architectural Paradigm Shift</th>
-                <th className="py-2.5 px-3">30&ndash;60 Min Educational Mini-Game Implementation</th>
+                <th className="py-2.5 px-3">30&ndash;60 Min Primary-School Mini-Game Implementation</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-zinc-200 text-zinc-700">
@@ -193,37 +193,37 @@ export const RosettaLibraryPage: React.FC<RosettaLibraryProps> = ({
               title: 'Game Feel: A Game Designer’s Guide to Virtual Sensation (2008)',
               author: 'Steve Swink • Morgan Kaufmann',
               desc: 'Presents the 240ms human processor model, ADSR movement envelopes, and quantitative metrics for input response and spatial simulation.',
-              eduApp: 'Use Swink’s 3Cs and time-dilation when students manipulate equations in real time so cognitive processing (τ_c) is never starved by twitch motor demands.'
+              eduApp: 'Compensate for young children’s developing fine-motor skills (ages 6–9) using generous 160ms Coyote Time, 32px magnetic snap targets, and tactile squash-and-stretch on number blocks.'
             },
             {
               title: 'Game Mechanics: Advanced Game Design (2012)',
               author: 'Ernest Adams & Joris Dormans • New Riders',
               desc: 'Defines Machinations: a formal visual Petri-net language to model, balance, and simulate internal resource economies.',
-              eduApp: 'Expose Sources, Pools, Converters, and Drains directly as the playable canvas to teach conservation laws, metabolism, or network queuing in 45 minutes.'
+              eduApp: 'Expose picture-based Sources, Pools, Converters, and Drains directly on the tablet canvas to teach primary-school food chains (sunlight → plants → rabbits) or piggy-bank budgeting in 40 minutes.'
             },
             {
               title: 'A Theory of Fun for Game Design (2004)',
               author: 'Raph Koster • Paraglyph Press',
               desc: 'Formulates fun as cognitive pattern recognition and Shannon entropy reduction in the human nervous system.',
-              eduApp: 'Monitor consecutive clean solves; as soon as a student compresses the current rule (H → 0), skip repetitive drills and inject the next orthogonal curriculum variable.'
+              eduApp: 'Track consecutive clean solves in primary-school math; as soon as a child compresses single-digit addition (H → 0), unlock a Super 10-Rod combiner tool and introduce two-digit place value.'
             },
             {
               title: 'The Gamer’s Brain: UX and Neuroscience (2017)',
               author: 'Celia Hodent • CRC Press',
               desc: 'Cognitive ergonomics in games: working memory bandwidth limits (4±1 chunks), perception thresholds, and self-determination theory.',
-              eduApp: 'Cap HUD metrics to ≤3 items and embed reference formulas directly onto world-space nodes so 100% of working memory is reserved for germane learning.'
+              eduApp: 'Respect children’s smaller working memory (2–3 chunks for ages 6–8) by replacing text walls with voiceover icons, shape-coded affordances, and a maximum of 2 HUD elements.'
             },
             {
               title: 'Rules of Play: Game Design Fundamentals (2003)',
               author: 'Katie Salen & Eric Zimmerman • MIT Press',
               desc: 'Comprehensive textbook on games as cybernetic systems, information theory in play, and emergent state-space complexity.',
-              eduApp: 'Replace end-of-level percentage grades with sub-200ms discernible visual state feedback and negative-feedback error scaffolding so struggling learners never snowball.'
+              eduApp: 'Replace scary red "WRONG!" screens with sub-200ms physical feedback (a bridge wobbles if a fraction block is too small) and a friendly helper mascot that scaffolds struggling learners.'
             },
             {
               title: 'Game Programming Patterns (2014)',
               author: 'Robert Nystrom • Genever Benning',
               desc: 'Software design patterns applied to games: fixed timesteps, hierarchical state machines, command buffering, and bytecode interpreters.',
-              eduApp: 'Build reusable 30–60 min educational lab modules using decoupled ECS property tags and an Event Bus that connects domain physics to live graphing and hint systems.'
+              eduApp: 'Build reusable 30–60 min primary-school science sandboxes using decoupled property tags ([Conductive, Magnetic, Floats]) and an Event Bus that logs teacher telemetry without touching physics code.'
             }
           ].map((b) => (
             <div key={b.title} className="p-3 border border-zinc-200 rounded bg-zinc-50 space-y-1.5">
@@ -231,7 +231,7 @@ export const RosettaLibraryPage: React.FC<RosettaLibraryProps> = ({
               <div className="text-[11px] font-mono text-blue-700">{b.author}</div>
               <p className="text-zinc-600 leading-relaxed">{b.desc}</p>
               <div className="border-l-2 border-blue-500 bg-blue-50/60 pl-2.5 py-1 text-[11px] text-zinc-800">
-                <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game:</strong> {b.eduApp}
+                <strong className="text-blue-900">30&ndash;60 Min Primary-School Mini-Game:</strong> {b.eduApp}
               </div>
             </div>
           ))}

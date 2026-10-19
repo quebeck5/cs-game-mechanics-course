@@ -33,7 +33,7 @@ export const COURSE_MODULES: CourseSectionMeta[] = [
     csConcepts: ['Compiler Pipelines', 'State Space Complexity', 'Control Systems', 'Heuristic Optimization'],
     gameDesignConcepts: ['Lusory Attitude', 'MDA Framework', '3Cs & Game Feel', 'Machinations Economies'],
     keyTakeaway: 'Games are real-time cybernetic loops where your code (Mechanics) compiles with human biological I/O into emergent runtime behavior (Dynamics) to evoke neurobiological pattern recognition (Aesthetics/Fun).',
-    educationalMiniGameImplementation: 'In a 30–60 min educational mini-game, replace passive lecture slides and pop-up quizzes with an endogenous simulation where the curriculum law is the core state-transition mechanic.'
+    educationalMiniGameImplementation: 'In a 30–60 min primary-school mini-game (ages 6–11), replace multiple-choice flashcard interruptions with an endogenous play mechanic—such as slicing pizza fractions to feed hungry dragons or snapping tens-and-ones blocks to build bridges.'
   },
   {
     id: 'module-1',
@@ -46,7 +46,7 @@ export const COURSE_MODULES: CourseSectionMeta[] = [
     csConcepts: ['Data Compression & Shannon Entropy', 'State Transition Graphs G=(S,E)', 'Phase Portraits', 'Bidirectional Compilers'],
     gameDesignConcepts: ['Hunicke/LeBlanc/Zubek MDA', 'Koster’s Theory of Fun', 'Flow Channel Trajectory', 'The Toy Before The Game'],
     keyTakeaway: 'Fun is the brain’s dopaminergic reward for compressing a non-trivial state space. When entropy hits zero (Tic-Tac-Toe solved), fun terminates; when entropy exceeds working memory, anxiety sets in.',
-    educationalMiniGameImplementation: 'Start with a 3-minute zero-penalty Toy Sandbox manipulative, then pace the remaining 42 minutes across three 12-minute Kishōtenketsu sawtooth cycles and a 6-minute capstone synthesis.'
+    educationalMiniGameImplementation: 'Open with a 3-minute zero-penalty tactile Toy Sandbox (e.g., bouncy base-10 number slime or a musical fraction slicer), then pace the 45-minute primary-school computer lab period into four 10-minute sawtooth cycles with celebratory sticker/pet empowerment valleys.'
   },
   {
     id: 'module-2',
@@ -59,7 +59,7 @@ export const COURSE_MODULES: CourseSectionMeta[] = [
     csConcepts: ['ADSR Signal Envelopes', 'Piecewise ODEs & Kinematics', 'Ring Buffers & Hysteresis FSMs', 'Critically Damped PID Cameras'],
     gameDesignConcepts: ['Swink’s Game Feel', 'Asymmetric Jump Gravity & Apex Hang', 'Coyote Time & Jump Buffering', 'Hitstop & Trauma Shake'],
     keyTakeaway: 'Real-world physics (constant g = 9.8m/s², step-function velocities, zero input forgiveness) feels sluggish and broken because of human 240ms perceptual-motor lag. Great game feel cheats time and physics in the player’s favor.',
-    educationalMiniGameImplementation: 'Embody abstract variables into 3Cs physics (e.g., resistance = drag), add time-dilation when students open math/logic menus, and use magnetic snap-to-grid buffers so non-gamers never fail due to motor slips.'
+    educationalMiniGameImplementation: 'Account for primary-schoolers’ developing fine motor skills on iPads and Chromebook trackpads by using oversized 48px touch targets, 32px magnetic snap-to-grid radii, 160ms Coyote Time windows, and playful squash-and-stretch area conservation.'
   },
   {
     id: 'module-3',
@@ -72,7 +72,7 @@ export const COURSE_MODULES: CourseSectionMeta[] = [
     csConcepts: ['Pushdown Automata & Frame Windows', 'Pareto Frontiers & Dominance', 'DAGs, Cycles & Cut Vertices', 'Working Memory Limits (4±1)'],
     gameDesignConcepts: ['Startup / Active / Recovery Frames', 'Frame Advantage (ΔF)', 'Meaningful Choices & Telegraphing', 'Lock-and-Key Spatial Topology'],
     keyTakeaway: 'Every meaningful tactical decision requires orthogonal trade-offs (speed vs. reach vs. recovery vulnerability) and clear 200ms+ perceptual telegraphs so failure feels attributable to player choice, not unfairness.',
-    educationalMiniGameImplementation: 'Replace single-answer multiple choice with Pareto engineering trade-offs, add a 2s Startup commitment phase to "Run Test" to prevent guess-and-check spamming, and organize topics into a Central Hub with 3 parallel 10-min spoke wings.'
+    educationalMiniGameImplementation: 'Respect young learners’ working memory (2–3 chunks for ages 6–8) with zero-text shape/color socket signifiers, add a 2-second animated Startup wind-up when testing an answer to prevent random tablet-tapping, and organize levels around a Central Treehouse Hub.'
   },
   {
     id: 'module-4',
@@ -85,7 +85,7 @@ export const COURSE_MODULES: CourseSectionMeta[] = [
     csConcepts: ['Petri Nets & Token Queues', 'Cybernetic Feedback (dx/dt = ±kx)', 'Orthogonal Tag Composition O(N²)', 'Dynamic Equilibrium'],
     gameDesignConcepts: ['Sources, Pools, Converters, Drains', 'Snowballing vs. Rubber-Banding', 'Engine Building vs. Upkeep Sinks', 'Systemic Chemistry (BotW / Spelunky)'],
     keyTakeaway: 'Unchecked positive feedback loops (Kills → Gold → Power → Faster Kills) cause runaway snowballing and dead time. Robust internal economies pair growth engines with dynamic friction drains.',
-    educationalMiniGameImplementation: 'Use a closed-loop cybernetic ZPD regulator to inject visual scaffolding after 3 errors, expose Machinations Petri-Nets directly as the playable lab canvas, and grade solutions via emergent unit-test verification.'
+    educationalMiniGameImplementation: 'Use a closed-loop cybernetic helper mascot that gently spawns visual counting blocks after 2 mistakes (preventing frustration tears), and turn primary science topics (plant photosynthesis, food chains, water cycle) into playable token-flow sandboxes.'
   },
   {
     id: 'module-5',
@@ -98,7 +98,7 @@ export const COURSE_MODULES: CourseSectionMeta[] = [
     csConcepts: ['Markov Chains & PRD (P(N) = C·N)', 'Sampling Without Replacement', 'Payoff Matrices & Replicator Dynamics', 'Monte Carlo Headless Simulation'],
     gameDesignConcepts: ['Input vs. Output Randomness', 'Streak-Bounding Crit & Loot Systems', 'Intransitive Asymmetric Balance', 'Telemetry Heatmaps & Playtesting'],
     keyTakeaway: 'Humans misperceive independent Bernoulli trials (clustering illusion). Game engineers shape variance using Markov PRD or Shuffle Bags, and validate asymmetric balance via headless Monte Carlo simulations.',
-    educationalMiniGameImplementation: 'Use monotonic additive XP (avoiding loss-aversion point deductions), seeded Input Randomness with 100% deterministic Output grading, N-Bag topic shufflers, and Monte Carlo student-bot pacing verification.'
+    educationalMiniGameImplementation: 'Protect young children from loss-aversion meltdowns by never taking away earned stars, use a Fisher-Yates Shuffle Bag so a 40-minute game tests every phonics/times-table family evenly, and run telemetry heatmaps for the classroom teacher dashboard.'
   },
   {
     id: 'rosetta-library',
@@ -111,7 +111,7 @@ export const COURSE_MODULES: CourseSectionMeta[] = [
     csConcepts: ['Full-Stack Systems Mapping', 'Game Programming Patterns', 'Architectural Decoupling'],
     gameDesignConcepts: ['Academic Syllabi Synthesis', 'Foundational Literature', 'Capstone Mastery Verification'],
     keyTakeaway: 'Use this permanent engineering reference whenever designing a new prototype, debugging why a mechanic feels flat, or balancing a progression curve.',
-    educationalMiniGameImplementation: 'Cross-reference every CS formalism with its pedagogical mini-game architecture pattern to translate university syllabus topics into 30–60 minute playable interactive labs.'
+    educationalMiniGameImplementation: 'Cross-reference every CS formalism with its primary-school (ages 6–11) mini-game implementation pattern to design joyful, curriculum-aligned 30–60 minute classroom games.'
   }
 ];
 
@@ -133,7 +133,7 @@ export const ROSETTA_ENTRIES: RosettaEntry[] = [
     gameConcept: 'MDA Framework (Mechanics → Dynamics → Aesthetics)',
     paradigmShift: 'In enterprise apps, you minimize user steps to reach the goal. In games, you write formal rules (Mechanics) that compile with human input into emergent runtime challenges (Dynamics) to evoke emotion (Aesthetics).',
     bookReference: 'Hunicke, LeBlanc & Zubek (2004); MIT CMS.608',
-    educationalMiniGameImplementation: 'Design backward from the target learning Aesthetic (e.g., debugging eureka) → Dynamic (observing live data-flow bottlenecks) → Mechanic (placing algorithmic filter nodes under a CPU budget).'
+    educationalMiniGameImplementation: 'Design backward from the child’s target Aesthetic (e.g., giggling as a monster eats equal pizza fractions) → Dynamic (slicing and combining toppings) → Mechanic (denominator division & numerator addition rules).'
   },
   {
     domain: 'Input & Kinematics',
@@ -142,7 +142,7 @@ export const ROSETTA_ENTRIES: RosettaEntry[] = [
     gameConcept: 'Swink’s Game Feel & Horizontal Movement Profiles',
     paradigmShift: 'Raw boolean keydown (v = 300 instantly) feels robotic; naive linear acceleration feels sluggish. Great controllers shape Attack, Decay, Sustain, and Release curves over 50–150ms.',
     bookReference: 'Steve Swink — Game Feel (2008)',
-    educationalMiniGameImplementation: 'Map domain parameters (mass, viscosity, electrical resistance, bond stiffness) directly onto the ADSR attack/release envelopes of the manipulative cursor or avatar so students physically feel parameter changes.'
+    educationalMiniGameImplementation: 'In a primary-school forces & friction mini-game, map surface materials (ice, grass, sticky mud) directly onto the ADSR acceleration/deceleration envelopes of a sledding penguin so 8-year-olds physically feel friction.'
   },
   {
     domain: 'Physics & Control',
@@ -151,7 +151,7 @@ export const ROSETTA_ENTRIES: RosettaEntry[] = [
     gameConcept: 'Non-Newtonian Jump Curves & Apex Hang Time',
     paradigmShift: 'Never tune a jump by guessing force F and gravity g. Parameterize by exact spatial level metrics: Max Height (H) and Time to Peak (t_p), then increase gravity on descent and halve gravity near the apex (|v_y| < ε).',
     bookReference: 'GDC "Math for Game Programmers: Building a Better Jump"',
-    educationalMiniGameImplementation: 'Align all spatial puzzle coordinates and jump heights to integer grid multiples (H_max = N tiles) with magnetic snap-to-grid landing so non-gamer students never fail a solved math problem due to clumsy platforming.'
+    educationalMiniGameImplementation: 'Quantize jump heights to exact number-line steps (e.g., Frog Jumps of +2, +5, or +10 tiles) with generous apex hang time so young children on tablets never miss a platform after solving the arithmetic.'
   },
   {
     domain: 'State Machines & I/O',
@@ -160,7 +160,7 @@ export const ROSETTA_ENTRIES: RosettaEntry[] = [
     gameConcept: 'Coyote Time (~100ms) & Input Buffering (~100ms)',
     paradigmShift: 'The human perceptual-motor loop takes ~240ms. Strict boolean state checks (`if (isGrounded && keyJustPressed)`) punish biological latency. Temporal tolerance windows make controls feel telepathic.',
     bookReference: 'Steve Swink — Game Feel; Maddy Thorson (Celeste)',
-    educationalMiniGameImplementation: 'Add a +120ms semantic forgiveness window on synchronous timing interactions (e.g., clock-edge triggers) and auto-snap wire/block drops within 24px of valid sockets so motor slips never masquerade as conceptual errors.'
+    educationalMiniGameImplementation: 'Because 6–9 year olds have slower perceptual-motor reaction times (~350–450ms) and developing fine motor control, widen Coyote Time to 160ms and add 32px magnetic drop-snapping for puzzle pieces.'
   },
   {
     domain: 'Control Theory',
@@ -169,7 +169,7 @@ export const ROSETTA_ENTRIES: RosettaEntry[] = [
     gameConcept: '3rd C: Camera Look-Ahead, Deadzones & Trauma Shake',
     paradigmShift: 'Locking camera `(cx, cy) = (px, py)` causes visual jitter and hides upcoming obstacles. Use a velocity look-ahead target with critically damped spring smoothing (ζ ≈ 1.0) and a spatial deadzone.',
     bookReference: 'Squirrel Eiserloh — GDC Camera & Trauma Systems',
-    educationalMiniGameImplementation: 'Automatically pan and zoom the camera via a critically damped spring to frame the centroid between the input slider the student is adjusting and the downstream graph/node where the causal effect occurs.'
+    educationalMiniGameImplementation: 'Never require primary school children to manually pan a camera while solving a puzzle; smoothly auto-pan and zoom the camera to frame both the lever the child pulls and the bridge/door it opens.'
   },
   {
     domain: 'Information Theory',
@@ -178,7 +178,7 @@ export const ROSETTA_ENTRIES: RosettaEntry[] = [
     gameConcept: 'Raph Koster’s Theory of Fun & Flow Channel',
     paradigmShift: 'Fun is the rate at which the human brain discovers and compresses hidden patterns in a state space. High uncompressible entropy = chaotic noise (anxiety); zero remaining entropy = solved system (boredom).',
     bookReference: 'Raph Koster — A Theory of Fun for Game Design (2004)',
-    educationalMiniGameImplementation: 'Track consecutive error-free solutions in telemetry; as soon as a student solves 3 puzzles cleanly (indicating schema compression H → 0), skip repetitive drills and layer in the next orthogonal curriculum variable.'
+    educationalMiniGameImplementation: 'When a child solves 3 addition-carrying puzzles in a row without mistakes (H → 0), automatically award a "Magic Ten-Bundler Wand" that automates ones-to-tens regrouping and advances them to hundreds.'
   },
   {
     domain: 'Concurrency & Petri Nets',
@@ -187,7 +187,7 @@ export const ROSETTA_ENTRIES: RosettaEntry[] = [
     gameConcept: 'Machinations Internal Economies (Sources, Pools, Converters, Drains)',
     paradigmShift: 'Health, mana, gold, and threat are tokens flowing through a directed graph. Positive feedback loops accelerate termination (snowballing); negative feedback loops stabilize equilibrium (rubber-banding).',
     bookReference: 'Ernest Adams & Joris Dormans — Game Mechanics (2012)',
-    educationalMiniGameImplementation: 'Render biological, chemical, or computing systems directly as playable Machinations graphs (Sources, Pools, Converters, Drains) and use negative feedback scaffolding on errors so struggling students never snowball into failure.'
+    educationalMiniGameImplementation: 'Model primary-school nature systems (Sunlight + Water → Plant Growth → caterpillars → birds) as visible cartoon token flows, and use negative-feedback helper hints when a child’s garden wilts.'
   },
   {
     domain: 'Probability & Stochastics',
@@ -196,7 +196,7 @@ export const ROSETTA_ENTRIES: RosettaEntry[] = [
     gameConcept: 'Pseudo-Random Distribution (PRD) & Shuffle Bags',
     paradigmShift: 'True `Math.random() < 0.25` regularly produces 10 misses in a row or 4 crits in a row, which players perceive as rigged. PRD ramps probability linearly with each miss, preserving expected value while bounding variance.',
     bookReference: 'USC CTIN 488; Dota 2 / Warcraft III Engine Docs',
-    educationalMiniGameImplementation: 'Use Markov PRD in small-sample classroom simulations (N ≤ 20 trials) so empirical frequencies match theoretical laws, and use a Fisher-Yates Shuffle Bag to guarantee 100% syllabus topic coverage in 45 minutes.'
+    educationalMiniGameImplementation: 'Place all target sight-words or multiplication facts into a Fisher-Yates Shuffle Bag so no child gets the same question 4 times in a row, and use Markov PRD for collectible sticker drops so no child suffers a "bad luck" drought.'
   },
   {
     domain: 'Optimization & Game Theory',
@@ -205,7 +205,7 @@ export const ROSETTA_ENTRIES: RosettaEntry[] = [
     gameConcept: 'Asymmetric Weapon/Character Balance & Intransitive Meta',
     paradigmShift: 'If one weapon has higher DPS, longer range, and faster recovery, the game collapses into a single dominant strategy. Place options on a multidimensional Pareto surface and weave Rock-Paper-Scissors cycles.',
     bookReference: 'Jesse Schell — The Art of Game Design; MIT CMS.608',
-    educationalMiniGameImplementation: 'Design engineering puzzles where tools sit on a Pareto frontier (e.g., Hash Table vs. B-Tree vs. Bloom Filter under varying RAM/latency constraints) so students must analyze trade-offs rather than memorize one answer.'
+    educationalMiniGameImplementation: 'In a primary-school habitat or bridge-building game, give materials kid-friendly trade-offs (Wood = cheap & light, Stone = strong & heavy, Rope = flexible & pulls) so children compare properties rather than picking one "best" block.'
   }
 ];
 

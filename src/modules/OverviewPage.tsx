@@ -81,45 +81,60 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
         </p>
 
         <div className="space-y-3 text-xs sm:text-sm">
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-2">
             <div className="font-bold text-blue-700">1. From Latency Elimination to Latency Shaping</div>
             <p className="text-zinc-600 leading-relaxed">
               In distributed systems, zero millisecond latency is the ideal.
               In game combat, instantaneous actions feel weightless and remove counter-play.
               Mastering game feel requires intentionally injecting structured latency: wind-up startup frames (telegraphing), hitstop freeze frames (communicating physical mass), and recovery frames (opportunity cost).
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-3 py-1.5 text-xs text-zinc-800">
+              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game Relation &amp; Implementation:</strong> When a student clicks &ldquo;Execute / Test Hypothesis&rdquo; in a 45-minute coding or physics lab, zero-millisecond instant grading encourages mindless trial-and-error spamming. Inject a <strong>1.5-second animated Startup Phase</strong> (visualizing signal propagation through their circuit/algorithm) and a <strong>200ms Diagnostic Hitstop freeze</strong> on the exact node where an error or invariant violation occurs so the student visually traces cause and effect.
+            </div>
           </div>
 
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-2">
             <div className="font-bold text-blue-700">2. From Mathematical Fairness to Perceived Fairness</div>
             <p className="text-zinc-600 leading-relaxed">
               A standard <code className="font-mono bg-zinc-100 px-1 py-0.5 rounded border border-zinc-200 text-zinc-900">Math.random() &lt; 0.20</code> Bernoulli trial is memoryless and fair to a statistician, but produces 12-miss droughts that enrage human players.
               Game systems engineers replace memoryless stochastics with Markov Pseudo-Random Distributions (PRD) and Fisher-Yates shuffle bags that dynamically shape variance while preserving expected value.
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-3 py-1.5 text-xs text-zinc-800">
+              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game Relation &amp; Implementation:</strong> In a 40-minute classroom mini-game, a student only performs 15&ndash;25 trials. Under raw <code className="font-mono">Math.random()</code>, a student might get 6 identical topic questions in a row or observe skewed small-sample probabilities that contradict the textbook law. Implement a <strong>Fisher-Yates Curriculum Shuffle Bag</strong> to guarantee every syllabus concept is tested once per cycle, and use <strong>Markov PRD</strong> for stochastic simulations so small-sample experiments converge reliably within 40 minutes.
+            </div>
           </div>
 
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-2">
             <div className="font-bold text-blue-700">3. From Monolithic OOP Callbacks to Decoupled Tag Chemistry</div>
             <p className="text-zinc-600 leading-relaxed">
               Scripting pairwise object interactions (<code className="font-mono bg-zinc-100 px-1 py-0.5 rounded border border-zinc-200 text-zinc-900">onSwordHitWoodenDoor</code>) scales at O(N&sup2;) and yields brittle code.
               Modern systems decompose entities into orthogonal property tags (<code className="font-mono bg-zinc-100 px-1 py-0.5 rounded border border-zinc-200 text-zinc-900">[Flammable, Conductive, Magnetic]</code>), authoring O(N) system rules that allow players to discover O(N&sup2;) emergent systemic behaviors.
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-3 py-1.5 text-xs text-zinc-800">
+              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game Relation &amp; Implementation:</strong> Hardcoded educational puzzles reject valid student solutions that don&rsquo;t match the teacher&rsquo;s exact keystroke sequence. Instead, attach orthogonal domain property tags (<code className="font-mono">[pH, Molarity, Conductive, Resistance]</code>) to lab components and grade via <strong>Output State Unit Tests</strong>, allowing students in a 45-minute lab to invent emergent, mathematically valid solutions.
+            </div>
           </div>
 
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-2">
             <div className="font-bold text-blue-700">4. From Constant Newtonian Forces to Level-Metric Piecewise Kinematics</div>
             <p className="text-zinc-600 leading-relaxed">
               Real-world constant gravity (g = 9.8 m/s&sup2;) makes platformers feel floaty and unresponsive.
               Game engineers parameterize movement from level design constraints (H<sub>max</sub>, t<sub>peak</sub>), deriving asymmetric piecewise accelerations (g<sub>fall</sub> &asymp; 2.4 &middot; g<sub>rise</sub>) that snap avatars crisply to the ground.
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-3 py-1.5 text-xs text-zinc-800">
+              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game Relation &amp; Implementation:</strong> Half of a university or K-12 class may be non-gamers. If an educational physics or geometry mini-game requires fussy pixel-perfect motor control, non-gamers waste 30 minutes fighting the mouse/keyboard. Parameterize all movement and drag-and-drop tools using <strong>Grid-Quantized Spatial Metrics</strong> and a <strong>24px Magnetic Snap Radius</strong> so conceptual understanding immediately translates into clean execution.
+            </div>
           </div>
 
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-2">
             <div className="font-bold text-blue-700">5. From Monotonic Progression to Sawtooth Flow Oscillation</div>
             <p className="text-zinc-600 leading-relaxed">
               A flat linear difficulty ramp causes cognitive exhaustion.
               Human psychology demands rhythmic oscillation: introducing mechanics in safety, escalating challenge to a peak climax, and dropping into an empowerment valley before beginning the next cycle.
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-3 py-1.5 text-xs text-zinc-800">
+              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game Relation &amp; Implementation:</strong> A continuous 45-minute exam ramp causes severe cognitive fatigue by minute 25. Partition the 45-minute mini-game into <strong>three 12-minute Kish&#333;tenketsu sawtooth cycles</strong> plus a 9-minute capstone: after each 12-minute concept test, reward the student with an <em>Automation Macro Block</em> that turns the previous hard calculation into a 1-click tool, creating a gratifying empowerment valley before the next concept begins.
+            </div>
           </div>
         </div>
       </section>
@@ -242,6 +257,11 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
                     <span className="text-zinc-600">{mod.gameDesignConcepts.join(', ')}</span>
                   </div>
                 </div>
+
+                <div className="mt-2 bg-blue-50/50 border border-blue-200 rounded p-2.5 text-xs text-zinc-800">
+                  <span className="font-semibold text-blue-800">30&ndash;60 Min Educational Mini-Game Implementation:</span>{' '}
+                  <span>{mod.educationalMiniGameImplementation}</span>
+                </div>
               </div>
             );
           })}
@@ -260,6 +280,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
                 <th className="py-2.5 px-3">University / Text</th>
                 <th className="py-2.5 px-3">Primary Authors</th>
                 <th className="py-2.5 px-3">Core Contribution Adopted in Course</th>
+                <th className="py-2.5 px-3">30&ndash;60 Min Educational Mini-Game Implementation</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-zinc-200 text-zinc-700">
@@ -267,26 +288,31 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
                 <td className="py-2.5 px-3 font-semibold text-zinc-900">MIT CMS.608 / 6.073</td>
                 <td className="py-2.5 px-3">Philip Tan, Jason Begy</td>
                 <td className="py-2.5 px-3">Treating games as formal cybernetic state machines; MDA framework; rule pruning.</td>
+                <td className="py-2.5 px-3">Prune non-essential UI chrome and lore so 100% of rules in a 45-minute session directly manipulate the target syllabus state machine.</td>
               </tr>
               <tr>
                 <td className="py-2.5 px-3 font-semibold text-zinc-900">Stanford CS146 / CS247G</td>
                 <td className="py-2.5 px-3">Christina Wodtke</td>
                 <td className="py-2.5 px-3">Playcentric human-computer interaction, spatial metrics, and mechanical prototyping.</td>
+                <td className="py-2.5 px-3">Prototype the core educational manipulative as a paper/greybox toy playable within 90 seconds before adding grading rubrics.</td>
               </tr>
               <tr>
                 <td className="py-2.5 px-3 font-semibold text-zinc-900">Game Feel (2008)</td>
                 <td className="py-2.5 px-3">Steve Swink</td>
                 <td className="py-2.5 px-3">The 240ms Human Processor Loop, ADSR control profiles, virtual tactile feedback.</td>
+                <td className="py-2.5 px-3">Bind invisible equations (e.g., Ohm&rsquo;s Law, Hooke&rsquo;s Law) to physical ADSR drag, spring stiffness, and camera lead for embodied intuition.</td>
               </tr>
               <tr>
                 <td className="py-2.5 px-3 font-semibold text-zinc-900">Game Mechanics (2012)</td>
                 <td className="py-2.5 px-3">Ernest Adams, Joris Dormans</td>
                 <td className="py-2.5 px-3">Machinations visual language for internal resource economies (Sources, Pools, Drains).</td>
+                <td className="py-2.5 px-3">Model biological, chemical, or network flows directly as interactive Sources, Pools, Converters, and Drains on the student&rsquo;s lab canvas.</td>
               </tr>
               <tr>
                 <td className="py-2.5 px-3 font-semibold text-zinc-900">A Theory of Fun (2004)</td>
                 <td className="py-2.5 px-3">Raph Koster</td>
                 <td className="py-2.5 px-3">Neurobiological pattern recognition and Shannon entropy reduction as the basis of fun.</td>
+                <td className="py-2.5 px-3">Use telemetry to detect when a student has compressed a concept (3 clean solves) and immediately layer in the next orthogonal rule twist.</td>
               </tr>
             </tbody>
           </table>

@@ -57,6 +57,9 @@ export const Module2Content: React.FC = () => {
               Photons emitted by the display hit the retina; acoustic waveforms hit the eardrum.
               Chemical rhodopsin phototransduction occurs, and electrical impulses travel along the optic nerve into the primary visual cortex (V1) buffer.
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Use pre-attentive visual channels (high-contrast color + motion pulse + distinct shape silhouette) on active variables so the student&rsquo;s 100ms Perceptual Processor locates the changing data node without scanning clutter.
+            </div>
           </div>
 
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
@@ -66,6 +69,9 @@ export const Module2Content: React.FC = () => {
               Working memory compares the visual input against stored mental models (e.g., "that red circle is an incoming fireball").
               The brain formulates an intentional motor response (e.g., "execute jump").
             </p>
+            <div className="border-l-2 border-indigo-500 bg-indigo-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Because novel academic reasoning stretches &tau;<sub>c</sub> from 70ms to 2,000ms+, offload working memory onto the canvas using persistent ghost previews and live trajectory arcs.
+            </div>
           </div>
 
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
@@ -74,6 +80,9 @@ export const Module2Content: React.FC = () => {
             <p className="text-zinc-600">
               Efferent nerve signals travel down the spinal cord into the hand muscles, contracting the flexor digitorum muscle to depress the physical gamepad button or spacebar.
             </p>
+            <div className="border-l-2 border-purple-500 bg-purple-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Minimize motor execution steps via single-click/drag interactions and generous 32px hit targets so students on laptop trackpads never fail due to motor precision.
+            </div>
           </div>
         </div>
 
@@ -90,11 +99,31 @@ export const Module2Content: React.FC = () => {
           The biological 240ms loop does not operate in isolation. It sits on top of physical hardware and software latencies:
         </p>
 
-        <ol className="list-decimal pl-6 space-y-1.5 text-sm text-zinc-800">
-          <li><strong>USB Polling Rate:</strong> 125Hz to 1000Hz (1ms to 8ms polling delay).</li>
-          <li><strong>Engine Frame Interval:</strong> At 60 FPS, each frame takes 16.66ms. If an input arrives 0.1ms after the input poll, it waits 16.5ms for the next frame tick.</li>
-          <li><strong>Double / Triple Buffering:</strong> Graphics driver swap chain queue introduces 1 to 3 frames of buffering (16.6ms to 50ms).</li>
-          <li><strong>Display Refresh &amp; Pixel Response:</strong> Monitor GtG response time (1ms to 15ms).</li>
+        <ol className="list-decimal pl-6 space-y-2 text-sm text-zinc-800">
+          <li>
+            <strong>USB Polling Rate:</strong> 125Hz to 1000Hz (1ms to 8ms polling delay).
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Sample pointer/touch events via coalesced browser events (<code>getCoalescedEvents()</code>) so drawing vectors or wiring circuits on 60Hz school Chromebooks never drops intermediate curve points.
+            </div>
+          </li>
+          <li>
+            <strong>Engine Frame Interval:</strong> At 60 FPS, each frame takes 16.66ms. If an input arrives 0.1ms after the input poll, it waits 16.5ms for the next frame tick.
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Decouple fixed-step educational simulation math (e.g., 120Hz RK4 physics or circuit solver) from the <code>requestAnimationFrame</code> render tick so simulation accuracy never drifts on low-end classroom laptops.
+            </div>
+          </li>
+          <li>
+            <strong>Double / Triple Buffering:</strong> Graphics driver swap chain queue introduces 1 to 3 frames of buffering (16.6ms to 50ms).
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Render dragged educational tokens using hardware-accelerated CSS/Canvas cursor layers so dragged items stay zero-latency locked to the student&rsquo;s mouse pointer.
+            </div>
+          </li>
+          <li>
+            <strong>Display Refresh &amp; Pixel Response:</strong> Monitor GtG response time (1ms to 15ms).
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Avoid thin 1px moving lines that ghost on budget 60Hz classroom LCD panels; use bold 3px high-contrast strokes with motion trails for moving signal packets.
+            </div>
+          </li>
         </ol>
 
         <div className="bg-amber-50/70 border-l-4 border-amber-500 p-4 text-xs sm:text-sm text-amber-950">
@@ -141,9 +170,19 @@ export const Module2Content: React.FC = () => {
           Instead, you invert the math. You ask your level designers for two geometric constraints:
         </p>
 
-        <ul className="list-disc pl-6 space-y-1 text-sm text-zinc-800">
-          <li><strong>H<sub>max</sub> (Jump Height):</strong> The exact maximum height in pixels or units the character must reach to clear obstacles (e.g., 120 pixels, exactly 3 grid tiles).</li>
-          <li><strong>t<sub>peak</sub> (Time to Apex):</strong> The exact duration in seconds from the moment the jump button is pressed until the character reaches zero vertical velocity at the apex (typically 0.28 to 0.38 seconds).</li>
+        <ul className="list-disc pl-6 space-y-2 text-sm text-zinc-800">
+          <li>
+            <strong>H<sub>max</sub> (Jump Height):</strong> The exact maximum height in pixels or units the character must reach to clear obstacles (e.g., 120 pixels, exactly 3 grid tiles).
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Align <code>H<sub>max</sub></code> directly to visible coordinate grid lines (e.g., 1 jump = exactly 4 integer units on the Cartesian y-axis) so students can read parabola heights and vertex coordinates by eye without messy decimals.
+            </div>
+          </li>
+          <li>
+            <strong>t<sub>peak</sub> (Time to Apex):</strong> The exact duration in seconds from the moment the jump button is pressed until the character reaches zero vertical velocity at the apex (typically 0.28 to 0.38 seconds).
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Set <code>t<sub>peak</sub> = 0.32s</code> for avatar traversal between puzzle stations so navigating across the lab takes seconds, preserving 90% of the 45-minute session for cognitive problem solving.
+            </div>
+          </li>
         </ul>
 
         <h4 className="text-base font-bold text-zinc-900 mt-2">Mathematical Derivation of v<sub>0</sub> and g<sub>rise</sub></h4>
@@ -197,28 +236,37 @@ export const Module2Content: React.FC = () => {
         </p>
 
         <div className="space-y-3 text-xs sm:text-sm">
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <div className="font-mono font-bold text-blue-700">1. ASYMMETRIC FALLING GRAVITY (g_fall &asymp; 2.2x to 3.0x g_rise)</div>
             <p className="text-zinc-700">
               Once vertical velocity drops below zero (v<sub>y</sub> &le; 0), immediately scale gravity: <code className="bg-zinc-100 px-1 py-0.5 rounded font-mono">activeG = g_rise * 2.4</code>.
               This snaps the avatar down to the ground briskly, eliminating the floaty sensation and returning grounded movement control to the player.
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Apply fast 2.5x settling gravity when dropping blocks, logic gates, or data packets into slots so students don&rsquo;t wait for slow animations during rapid hypothesis testing.
+            </div>
           </div>
 
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <div className="font-mono font-bold text-indigo-700">2. VARIABLE JUMP HEIGHT (EARLY RELEASE HOP)</div>
             <p className="text-zinc-700">
               If the player releases the Jump button while the character is still ascending (v<sub>y</sub> &gt; 0), immediately multiply current gravity by 2.5x or clamp v<sub>y</sub> = v<sub>y</sub> &middot; 0.5.
               This gives the player continuous analog control over jump height (tap for a micro-hop, hold for a maximum leap).
             </p>
+            <div className="border-l-2 border-indigo-500 bg-indigo-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Support both tap-to-increment (fine +1 step) and hold-to-accelerate (coarse sweep) on all numerical parameter sliders so students can dial in exact values effortlessly.
+            </div>
           </div>
 
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <div className="font-mono font-bold text-amber-700">3. APEX HANG TIME (|v_y| &lt; &epsilon;)</div>
             <p className="text-zinc-700">
               When vertical speed near the peak drops below a threshold (|v<sub>y</sub>| &lt; 1.5 px/frame), scale gravity by 0.4x for 3 to 5 frames.
               This produces an anti-gravity "hang" at the peak, granting a brief window of aerial maneuverability to line up difficult landings.
             </p>
+            <div className="border-l-2 border-amber-500 bg-amber-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> In a calculus or projectile physics mini-game, briefly slow simulation time by 0.4x as a particle passes through local extrema (<code>dy/dt = 0</code>) so the student clearly observes zero-slope tangent lines at the apex.
+            </div>
           </div>
         </div>
       </section>
@@ -255,13 +303,16 @@ export const Module2Content: React.FC = () => {
           The input is silently dropped. The character plummets into the pit without jumping. The player swears their keyboard is broken or the game ate their input.
         </p>
 
-        <div className="border border-blue-200 bg-blue-50/40 p-4 rounded-lg space-y-1 text-xs sm:text-sm">
+        <div className="border border-blue-200 bg-blue-50/40 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm">
           <div className="font-mono font-bold text-blue-900">THE COYOTE TIME SOLUTION:</div>
           <p className="text-zinc-800">
             Named after the cartoon character Wile E. Coyote, who pauses in mid-air before falling.
             When the avatar transitions from Grounded to Airborne without jumping, start a countdown timer: <code className="font-mono">coyoteTimer = 6 frames (~100ms)</code>.
             As long as <code className="font-mono">coyoteTimer &gt; 0</code>, treat the character as legally grounded and permit jump execution!
           </p>
+          <div className="border-l-2 border-blue-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
+            <strong>30&ndash;60 Min Educational Mini-Game:</strong> Grant a 150ms grace window on timed signal-routing switches or rhythm-based frequency gates so a student who understands the concept isn&rsquo;t penalized for pressing the trigger 3 frames after the packet passes the node.
+          </div>
         </div>
 
         <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
@@ -289,13 +340,16 @@ export const Module2Content: React.FC = () => {
           Under strict FSM rules, the player is still in the air. The input is discarded. When they touch down, the character comes to a dead stop.
         </p>
 
-        <div className="border border-blue-200 bg-blue-50/40 p-4 rounded-lg space-y-1 text-xs sm:text-sm">
+        <div className="border border-blue-200 bg-blue-50/40 p-4 rounded-lg space-y-1.5 text-xs sm:text-sm">
           <div className="font-mono font-bold text-blue-900">THE INPUT BUFFER SOLUTION:</div>
           <p className="text-zinc-800">
             When the Jump key is pressed while airborne, do not discard it.
             Push it into a FIFO ring buffer or set <code className="font-mono">jumpBufferTimer = 6 frames (~100ms)</code>.
             On every frame tick, if the character becomes grounded and <code className="font-mono">jumpBufferTimer &gt; 0</code>, immediately execute the jump on frame 0 of touchdown and consume the buffer!
           </p>
+          <div className="border-l-2 border-blue-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
+            <strong>30&ndash;60 Min Educational Mini-Game:</strong> Queue student interactions clicked while an animation or step-debugger transition is still playing (<code>actionQueue.push(cmd)</code>) and execute them on Frame 0 of state completion instead of ignoring clicks during UI transitions.
+          </div>
         </div>
 
         <h4 className="text-base font-bold text-zinc-900 mt-4">Production-Ready TypeScript Implementation</h4>
@@ -377,20 +431,29 @@ function updateCharacter(dt: number) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 my-2 text-xs sm:text-sm">
-          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
+          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
             <span className="font-bold text-blue-700">1. CONTROLS</span>
             <div className="font-semibold text-zinc-900">Physical Input Mapping</div>
             <p className="text-zinc-600">Analog stick deadzones, transfer curves, acceleration envelopes, temporal buffering, and polling frequencies.</p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Map controls 1:1 to the domain variable (e.g., mouse wheel = frequency, drag = vector magnitude) with zero nested sub-menus.
+            </div>
           </div>
-          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
+          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
             <span className="font-bold text-blue-700">2. CHARACTER</span>
             <div className="font-semibold text-zinc-900">Virtual Avatar Simulation</div>
             <p className="text-zinc-600">Collision AABBs, mass, momentum restitution, animation state blending, and squash &amp; stretch deformation.</p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Make the avatar or manipulated token visually reflect its mathematical state (e.g., glowing brighter with kinetic energy or expanding with array capacity).
+            </div>
           </div>
-          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
+          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
             <span className="font-bold text-blue-700">3. CAMERA</span>
             <div className="font-semibold text-zinc-900">Virtual Observer Lens</div>
             <p className="text-zinc-600">Framing, look-ahead lead vectors, smoothing filters, vertical deadzones, and framing composition.</p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Auto-frame both the manipulated input parameter and the resulting output graph inside the viewport simultaneously.
+            </div>
           </div>
         </div>
 
@@ -401,9 +464,19 @@ function updateCharacter(dt: number) {
           This produces severe problems:
         </p>
 
-        <ul className="list-disc pl-6 space-y-1 text-sm text-zinc-800">
-          <li><strong>Micro-Jitter:</strong> Every single step, collision resolution jitter, or small bump instantly shifts the entire monitor viewport, triggering nausea and eye strain.</li>
-          <li><strong>Zero Forward Horizon:</strong> With the player centered on screen, 50% of the display shows space the player has already walked through, while only 50% shows incoming obstacles in front of them.</li>
+        <ul className="list-disc pl-6 space-y-2 text-sm text-zinc-800">
+          <li>
+            <strong>Micro-Jitter:</strong> Every single step, collision resolution jitter, or small bump instantly shifts the entire monitor viewport, triggering nausea and eye strain.
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Never parent text labels, equations, or HUD readouts to a jittering physics body; anchor educational annotations to smoothed screen-space coordinates so students can read numbers effortlessly.
+            </div>
+          </li>
+          <li>
+            <strong>Zero Forward Horizon:</strong> With the player centered on screen, 50% of the display shows space the player has already walked through, while only 50% shows incoming obstacles in front of them.
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Offset the avatar or signal source to the left 25% of the viewport so 75% of the screen displays the upcoming circuit, graph, or level geometry ahead.
+            </div>
+          </li>
         </ul>
 
         <blockquote className="border-l-4 border-zinc-400 bg-zinc-50 pl-4 py-2 my-3 text-xs sm:text-sm italic text-zinc-700">
@@ -477,6 +550,9 @@ function updateCharacter(dt: number) {
               When a weapon strikes an enemy or a gem is collected, the engine freezes the simulation entirely for 3 to 6 frames (50ms to 100ms) before resuming motion.
               This momentary pause tricks the human visual cortex into feeling physical resistance and mass, transforming a hollow collision into a bone-crunching impact (used universally in <em>Super Smash Bros</em> and <em>Hollow Knight</em>).
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Pause the simulation for 150ms at the exact frame an invariant is satisfied or violated (e.g., resonant frequency reached or array out-of-bounds) so the student&rsquo;s eye registers the exact state snapshot.
+            </div>
           </div>
 
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
@@ -486,6 +562,9 @@ function updateCharacter(dt: number) {
               Naive screen shake adds random noise linearly. Professional camera shakes use a "trauma" float variable between 0.0 and 1.0, and displace the camera by <code className="font-mono">offset = maxAngle * trauma&sup2;</code>.
               Squaring the trauma ensures that minor impacts produce subtle rumbles while major explosions feel exponentially violent, decaying smoothly over 0.2 seconds.
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Apply localized trauma-squared shake only to the specific UI container or node experiencing overload (e.g., a shaking resistor overheating at <code>P = I&sup2;R</code>) while keeping surrounding text labels steady and readable.
+            </div>
           </div>
 
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
@@ -495,6 +574,9 @@ function updateCharacter(dt: number) {
               Originating from Disney’s 12 basic principles of animation, objects under acceleration stretch along their movement vector, and compress upon impact.
               The critical mathematical rule is <strong>volume conservation</strong>: s<sub>x</sub> &middot; s<sub>y</sub> &middot; s<sub>z</sub> = 1.0. If a character squashes to s<sub>y</sub> = 0.65 on landing, s<sub>x</sub> must expand to 1 / 0.65 &asymp; 1.54.
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Use area-preserving deformation (<code>s<sub>x</sub> &middot; s<sub>y</sub> = det(A)</code>) in linear algebra, fraction, and fluid-continuity mini-games so conservation laws are visually self-evident.
+            </div>
           </div>
 
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
@@ -504,6 +586,9 @@ function updateCharacter(dt: number) {
               Human auditory perception detects synchronization discrepancies exceeding 16ms.
               Sound effects must have an immediate attack transient (0ms rise time) aligned with the exact collision frame to ensure the brain binds the acoustic wave to the visual event.
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Map pitch frequency directly to numerical magnitude (sonification)—such as rising pitch for array element values during Quicksort partitioning—with sub-16ms WebAudio scheduling so students hear algorithmic convergence.
+            </div>
           </div>
         </div>
 

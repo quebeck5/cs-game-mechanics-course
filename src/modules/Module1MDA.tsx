@@ -24,6 +24,7 @@ interface MechanicRuleToggle {
   name: string;
   codeRule: string;
   dynamicEffect: string;
+  eduMiniGame: string;
   aestheticsDelta: {
     sensation: number;
     challenge: number;
@@ -40,6 +41,7 @@ const MDA_RULES: MechanicRuleToggle[] = [
     name: 'Blood-Ammo Coupling (Spells cost HP, Melee restores HP)',
     codeRule: 'onCast(): hp -= 15; onMeleeHit(): hp = min(maxHp, hp + 20);',
     dynamicEffect: 'Eliminates passive turtling: when low on HP, the player is forced to dash into close-quarters danger rather than hiding behind cover.',
+    eduMiniGame: '30–60 Min Edu Mini-Game: Make Hints cost Energy while solving a sub-step manually restores Energy, encouraging students to alternate between assisted and independent derivation.',
     aestheticsDelta: { sensation: 25, challenge: 35, discovery: 5, expression: 15, submission: -30, tension: 40 }
   },
   {
@@ -47,6 +49,7 @@ const MDA_RULES: MechanicRuleToggle[] = [
     name: 'Velocity-Scaled Damage Multiplier',
     codeRule: 'damage = baseDmg * (1.0 + norm(velocity) / maxSpeed);',
     dynamicEffect: 'Transforms spatial movement into an offensive resource; players chain wall-bounces and dashes before striking instead of standing still.',
+    eduMiniGame: '30–60 Min Edu Mini-Game: Scale Mastery XP by a streak multiplier when the student solves consecutive puzzles without relying on brute-force trial-and-error.',
     aestheticsDelta: { sensation: 35, challenge: 20, discovery: 15, expression: 35, submission: -10, tension: 20 }
   },
   {
@@ -54,6 +57,7 @@ const MDA_RULES: MechanicRuleToggle[] = [
     name: 'Single-Chance Corpse Recovery (Dark Souls / Hollow Knight)',
     codeRule: 'onDeath(): dropCurrencyAt(pos); if (dieBeforePickup) clearDroppedCurrency();',
     dynamicEffect: 'Creates an asymmetric risk spike on the journey back to the death location, turning routine traversal into a high-stakes retrieval mission.',
+    eduMiniGame: '30–60 Min Edu Mini-Game: When a test run fails, drop a "Bug Bounty Token" on the failing edge case; fixing that exact bug on the next run awards 2x diagnostic XP.',
     aestheticsDelta: { sensation: 5, challenge: 30, discovery: 10, expression: 0, submission: -25, tension: 45 }
   },
   {
@@ -61,6 +65,7 @@ const MDA_RULES: MechanicRuleToggle[] = [
     name: 'Harmonic Magnet & Zero-Penalty Misses',
     codeRule: 'onUpdate(): attractOrbs(radius=250); onMiss(): keepComboAlive();',
     dynamicEffect: 'Removes failure anxiety and execution stress; shifts cognitive load from survival to rhythmic audiovisual flow.',
+    eduMiniGame: '30–60 Min Edu Mini-Game: Enable during the first 5-minute onboarding sandbox so students can freely explore domain mechanics with zero failure anxiety.',
     aestheticsDelta: { sensation: 30, challenge: -35, discovery: 10, expression: 20, submission: 50, tension: -40 }
   }
 ];
@@ -518,6 +523,9 @@ export const Module1MDA: React.FC<Module1Props> = ({
               The exact structs, state variables, transitions, and algorithms you write in code.
               <em> Example:</em> <code>hp -= 15</code> when casting a spell; <code>hp += 20</code> on melee strike.
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Encode the mathematical or scientific domain equations directly as your simulation rules.
+            </div>
           </div>
 
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-2">
@@ -526,6 +534,9 @@ export const Module1MDA: React.FC<Module1Props> = ({
             <p className="text-xs text-zinc-600 leading-relaxed">
               How the mechanics behave at runtime when coupled with a human optimizer. You do not directly author dynamics; they <strong>emerge</strong> from rule interactions (e.g., aggressive close-range play when low on HP).
             </p>
+            <div className="border-l-2 border-indigo-500 bg-indigo-50/50 pl-2 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> The student&rsquo;s real-time hypothesis-testing loop (adjusting parameters, observing outputs, isolating variables).
+            </div>
           </div>
 
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-2">
@@ -534,6 +545,9 @@ export const Module1MDA: React.FC<Module1Props> = ({
             <p className="text-xs text-zinc-600 leading-relaxed">
               In MDA, aesthetics refers to the <strong>cognitive and emotional taxonomy</strong> evoked in the player: <em>Challenge, Sensation, Discovery, Expression, Submission, Tension</em>.
             </p>
+            <div className="border-l-2 border-violet-500 bg-violet-50/50 pl-2 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Target Discovery + Challenge + Sensation so the student achieves an authentic &ldquo;Aha!&rdquo; insight within 45 minutes.
+            </div>
           </div>
         </div>
 
@@ -581,9 +595,14 @@ export const Module1MDA: React.FC<Module1Props> = ({
                       {rule.codeRule}
                     </pre>
                     {active && (
-                      <p className="mt-2 text-xs text-blue-900 leading-relaxed">
-                        <strong className="text-blue-700 font-mono">&rarr; Emergent Dynamic (D):</strong> {rule.dynamicEffect}
-                      </p>
+                      <div className="mt-2 space-y-1.5">
+                        <p className="text-xs text-blue-900 leading-relaxed">
+                          <strong className="text-blue-700 font-mono">&rarr; Emergent Dynamic (D):</strong> {rule.dynamicEffect}
+                        </p>
+                        <div className="border-l-2 border-blue-500 bg-white/80 pl-2 py-1 text-xs text-zinc-800">
+                          {rule.eduMiniGame}
+                        </div>
+                      </div>
                     )}
                   </div>
                 );

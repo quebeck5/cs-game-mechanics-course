@@ -48,7 +48,7 @@ export const Module3Content: React.FC = () => {
         </div>
 
         <div className="space-y-3 text-xs sm:text-sm">
-          <div className="border border-red-200 bg-red-50/40 p-4 rounded-lg space-y-1">
+          <div className="border border-red-200 bg-red-50/40 p-4 rounded-lg space-y-1.5">
             <div className="font-mono font-bold text-red-800">CATEGORY 1: DOMINANT STRATEGIES (A &succ; B UNDER ALL STATES)</div>
             <div className="text-sm font-bold text-zinc-950">The Trivial Calculation Trap</div>
             <p className="text-zinc-700">
@@ -57,24 +57,33 @@ export const Module3Content: React.FC = () => {
               For example, if Weapon A deals 50 damage at 10 mana, while Weapon B deals 30 damage at 15 mana, Weapon B ceases to exist in the player's mind.
               Dominant choices destroy agency; the player does not make a creative decision, but merely computes the obvious maximum.
             </p>
+            <div className="border-l-2 border-red-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Prevent a single tool (e.g., a universal <code>Array.sort()</code> or infinite-wattage power source) from solving every level by attaching resource budgets (CPU cycles, memory bytes, thermal heat) that make the &ldquo;easy&rdquo; tool fail on constrained levels.
+            </div>
           </div>
 
-          <div className="border border-amber-200 bg-amber-50/40 p-4 rounded-lg space-y-1">
+          <div className="border border-amber-200 bg-amber-50/40 p-4 rounded-lg space-y-1.5">
             <div className="font-mono font-bold text-amber-800">CATEGORY 2: BLIND CHOICES (ZERO REASONABLE INFERENCE)</div>
             <div className="text-sm font-bold text-zinc-950">The Arbitrary Guess Trap</div>
             <p className="text-zinc-700">
               A blind choice occurs when the player must select between options with zero information or perceptual signifiers (e.g., choosing between two identical closed doors, where one leads to treasure and the other to instant spikes).
               Because the decision space contains no discernable pattern, success feels like unearned luck, and failure feels like unfair punishment.
             </p>
+            <div className="border-l-2 border-amber-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Never ask a student to guess a parameter value or formula constant blindly; always provide an interactive probe tool (e.g., an oscilloscope, packet inspector, or test-input previewer) so they can deduce the right choice before committing.
+            </div>
           </div>
 
-          <div className="border border-blue-200 bg-blue-50/40 p-4 rounded-lg space-y-1">
+          <div className="border border-blue-200 bg-blue-50/40 p-4 rounded-lg space-y-1.5">
             <div className="font-mono font-bold text-blue-800">CATEGORY 3: MEANINGFUL DECISIONS (ASYMMETRIC TRADE-OFFS)</div>
             <div className="text-sm font-bold text-zinc-950">The Pareto Frontier of Tactical Design</div>
             <p className="text-zinc-700">
               A choice is meaningful when each option occupies a unique point on a <strong>Pareto Frontier</strong> across multiple orthogonal trade-off axes:
               Speed vs. Safety, Resource Consumption vs. Immediate Output, Short-Term Survival vs. Long-Term Compounding, or High Certainty vs. High-Variance Upside.
             </p>
+            <div className="border-l-2 border-blue-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Design each 10-minute puzzle stage around a real-world engineering Pareto frontier (e.g., Time Complexity vs. Space Complexity, or Precision vs. Recall in an ML classifier mini-game) and grade the student on matching the trade-off to the level&rsquo;s specification.
+            </div>
           </div>
         </div>
 
@@ -87,38 +96,42 @@ export const Module3Content: React.FC = () => {
           <table className="w-full text-left">
             <thead>
               <tr className="border-b border-zinc-200 text-zinc-500">
-                <th className="pb-2">Weapon Archetype</th>
-                <th className="pb-2">Startup Window</th>
-                <th className="pb-2">Spatial Reach</th>
-                <th className="pb-2">Damage per Hit</th>
-                <th className="pb-2">Recovery (Punish Risk)</th>
-                <th className="pb-2">Tactical Purpose</th>
+                <th className="pb-2 pr-2">Weapon Archetype</th>
+                <th className="pb-2 pr-2">Startup Window</th>
+                <th className="pb-2 pr-2">Spatial Reach</th>
+                <th className="pb-2 pr-2">Damage per Hit</th>
+                <th className="pb-2 pr-2">Recovery (Punish Risk)</th>
+                <th className="pb-2 pr-2">Tactical Purpose</th>
+                <th className="pb-2">30&ndash;60 Min Edu Mini-Game Analog</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-zinc-100 text-zinc-800">
               <tr>
-                <td className="py-2 font-bold text-blue-700">Twin Daggers</td>
-                <td>5 frames (83ms)</td>
-                <td>48 px (Melee)</td>
-                <td>9 HP (Low)</td>
-                <td>8 frames (Extremely Safe)</td>
-                <td>Interrupting enemy startup; low risk</td>
+                <td className="py-2 pr-2 font-bold text-blue-700">Twin Daggers</td>
+                <td className="pr-2">5 frames (83ms)</td>
+                <td className="pr-2">48 px (Melee)</td>
+                <td className="pr-2">9 HP (Low)</td>
+                <td className="pr-2">8 frames (Extremely Safe)</td>
+                <td className="pr-2">Interrupting enemy startup; low risk</td>
+                <td className="font-sans text-zinc-700"><strong>L1 Cache / Hash Lookup:</strong> Instant <code>O(1)</code> response, small capacity, zero setup penalty.</td>
               </tr>
               <tr>
-                <td className="py-2 font-bold text-emerald-700">Halberd Spear</td>
-                <td>11 frames (183ms)</td>
-                <td>92 px (Long)</td>
-                <td>17 HP (Medium)</td>
-                <td>14 frames (Moderate)</td>
-                <td>Out-ranging enemies from safe distance</td>
+                <td className="py-2 pr-2 font-bold text-emerald-700">Halberd Spear</td>
+                <td className="pr-2">11 frames (183ms)</td>
+                <td className="pr-2">92 px (Long)</td>
+                <td className="pr-2">17 HP (Medium)</td>
+                <td className="pr-2">14 frames (Moderate)</td>
+                <td className="pr-2">Out-ranging enemies from safe distance</td>
+                <td className="font-sans text-zinc-700"><strong>Balanced B-Tree Index:</strong> Moderate <code>O(log n)</code> latency, wide range-query reach, safe general-purpose performance.</td>
               </tr>
               <tr>
-                <td className="py-2 font-bold text-amber-700">Seismic Hammer</td>
-                <td>20 frames (333ms)</td>
-                <td>68 px (Medium)</td>
-                <td>34 HP (Massive)</td>
-                <td>22 frames (Lethally Unsafe)</td>
-                <td>Punishing boss recovery windows for burst</td>
+                <td className="py-2 pr-2 font-bold text-amber-700">Seismic Hammer</td>
+                <td className="pr-2">20 frames (333ms)</td>
+                <td className="pr-2">68 px (Medium)</td>
+                <td className="pr-2">34 HP (Massive)</td>
+                <td className="pr-2">22 frames (Lethally Unsafe)</td>
+                <td className="pr-2">Punishing boss recovery windows for burst</td>
+                <td className="font-sans text-zinc-700"><strong>GPU Batch / MapReduce Job:</strong> High startup overhead, massive throughput burst on large datasets, costly if misconfigured.</td>
               </tr>
             </tbody>
           </table>
@@ -180,6 +193,9 @@ export const Module3Content: React.FC = () => {
               The character is locked into their spatial trajectory and cannot block or dodge.
               <strong> Biological Rule:</strong> Because human visual-motor reaction time is &asymp; 200ms (~12 frames at 60 FPS), any attack with F<sub>startup</sub> &lt; 12 frames cannot be dodged on reaction—it can only be anticipated on tactical prediction.
             </p>
+            <div className="border-l-2 border-amber-500 bg-amber-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Use a 1.5s visual wind-up phase when the student clicks &ldquo;Compile &amp; Run&rdquo; that highlights the input state vector entering the system, prompting the student to mentally predict the output before it arrives.
+            </div>
           </div>
 
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
@@ -189,6 +205,9 @@ export const Module3Content: React.FC = () => {
               The brief temporal window (typically 2 to 6 frames) during which the weapon’s collision volume is active in the world simulation.
               If the active hitbox intersects the enemy's hurtbox, damage and hitstun are applied.
             </p>
+            <div className="border-l-2 border-red-500 bg-red-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Animate the active evaluation of each unit test case (Normal Case, Boundary Case, Adversarial Edge Case) colliding against the student&rsquo;s algorithm or structure in real time.
+            </div>
           </div>
 
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
@@ -198,6 +217,9 @@ export const Module3Content: React.FC = () => {
               The follow-through animation phase. The hitbox is retracted and harmless, but the attacker is completely immobilized and unable to defend.
               If the attack missed ("whiffed"), the opponent has F<sub>recovery</sub> frames to close the distance and execute a guaranteed counter-strike ("Whiff Punish").
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> When a test run fails, hold the simulation in a 2-second diagnostic recovery state displaying the exact counterexample diff before resetting, discouraging mindless button spamming.
+            </div>
           </div>
         </div>
       </section>
@@ -219,9 +241,19 @@ export const Module3Content: React.FC = () => {
           </footer>
         </blockquote>
 
-        <ol className="list-decimal pl-6 space-y-1 text-sm text-zinc-800">
-          <li><strong>Attacker Recovery:</strong> The attacker must spend F<sub>recovery</sub> frames completing their follow-through animation.</li>
-          <li><strong>Defender Stun:</strong> The defender is locked in an involuntary flinch state (F<sub>hitstun</sub> if the attack hit, or F<sub>blockstun</sub> if the attack was blocked).</li>
+        <ol className="list-decimal pl-6 space-y-2 text-sm text-zinc-800">
+          <li>
+            <strong>Attacker Recovery:</strong> The attacker must spend F<sub>recovery</sub> frames completing their follow-through animation.
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Represents the cooldown/overhead time of the student&rsquo;s chosen algorithm or action (e.g., garbage collection pause or re-indexing cost).
+            </div>
+          </li>
+          <li>
+            <strong>Defender Stun:</strong> The defender is locked in an involuntary flinch state (F<sub>hitstun</sub> if the attack hit, or F<sub>blockstun</sub> if the attack was blocked).
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Represents how long the problem state is suppressed or buffered (e.g., how many seconds an incoming network packet wave is stalled by the student&rsquo;s load balancer).
+            </div>
+          </li>
         </ol>
 
         <p className="text-sm leading-relaxed text-zinc-800">
@@ -237,23 +269,29 @@ export const Module3Content: React.FC = () => {
         </p>
 
         <div className="space-y-3 text-xs sm:text-sm">
-          <div className="border border-emerald-200 bg-emerald-50/40 p-4 rounded-lg space-y-1">
+          <div className="border border-emerald-200 bg-emerald-50/40 p-4 rounded-lg space-y-1.5">
             <div className="font-mono font-bold text-emerald-800">CASE 1: POSITIVE FRAME ADVANTAGE (&Delta;F &gt; 0, "PLUS ON BLOCK / PLUS ON HIT")</div>
             <p className="text-zinc-700">
               The attacker recovers &Delta;F frames <em>before</em> the defender can act.
               The attacker retains absolute tactical initiative. If the attacker initiates another attack whose startup is faster than the defender's fastest option plus &Delta;F, the defender cannot interrupt.
             </p>
+            <div className="border-l-2 border-emerald-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> When a student chooses an asymptotically optimal algorithm (<code>O(log n)</code> vs <code>O(n)</code>), their worker finishes ahead of the arrival clock (<code>&Delta;F &gt; 0</code>), banking extra time to pre-compute or set up the next stage.
+            </div>
           </div>
 
-          <div className="border border-zinc-200 bg-zinc-100 p-4 rounded-lg space-y-1">
+          <div className="border border-zinc-200 bg-zinc-100 p-4 rounded-lg space-y-1.5">
             <div className="font-mono font-bold text-zinc-800">CASE 2: NEUTRAL FRAME ADVANTAGE (&Delta;F = 0)</div>
             <p className="text-zinc-700">
               Both entities return to idle on the exact same frame.
               Initiative is tied; the next encounter is decided purely by whose subsequent input has a faster startup window.
             </p>
+            <div className="border-l-2 border-zinc-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Occurs when the student&rsquo;s throughput exactly matches the arrival rate (<code>&lambda; = &mu;</code> in queueing theory); the system stays stable for now but has zero slack for upcoming burst waves.
+            </div>
           </div>
 
-          <div className="border border-red-200 bg-red-50/40 p-4 rounded-lg space-y-1">
+          <div className="border border-red-200 bg-red-50/40 p-4 rounded-lg space-y-1.5">
             <div className="font-mono font-bold text-red-800">CASE 3: NEGATIVE FRAME ADVANTAGE (&Delta;F &lt; 0, "MINUS ON BLOCK")</div>
             <p className="text-zinc-700">
               The defender recovers |&Delta;F| frames <em>before</em> the attacker finishes recovery.
@@ -264,6 +302,9 @@ export const Module3Content: React.FC = () => {
               <div>if (abs(&Delta;F) &lt; FastestDefenderStartup) &rarr; SAFE (-4 on block vs 6-frame jab)</div>
               <div className="pt-1 text-red-700 font-bold">// Punishable on Block: Defender has guaranteed unblockable counter-hit</div>
               <div className="text-red-700">if (abs(&Delta;F) &ge; FastestDefenderStartup) &rarr; PUNISHABLE (-12 on block vs 8-frame strike)</div>
+            </div>
+            <div className="border-l-2 border-red-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Choosing an <code>O(n&sup2;)</code> bubble sort on a large dataset leaves the student&rsquo;s CPU locked in recovery while the next wave arrives (<code>&Delta;F &ll; 0</code>), visually demonstrating algorithmic bottleneck punishment.
             </div>
           </div>
         </div>
@@ -298,9 +339,19 @@ export const Module3Content: React.FC = () => {
           </p>
         </div>
 
-        <ul className="list-disc pl-6 space-y-1 text-sm text-zinc-800">
-          <li><strong>Affordance:</strong> The actual physical or logical properties that determine what actions are possible (e.g., a door affords pushing; a boss attack affords dodging).</li>
-          <li><strong>Signifier:</strong> The perceptual signal that communicates <em>how</em> and <em>when</em> that affordance can be interacted with (e.g., a flat metal push-plate on a door; an expanding red circle beneath a boss).</li>
+        <ul className="list-disc pl-6 space-y-2 text-sm text-zinc-800">
+          <li>
+            <strong>Affordance:</strong> The actual physical or logical properties that determine what actions are possible (e.g., a door affords pushing; a boss attack affords dodging).
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Give interactive mathematical objects true manipulation affordances (e.g., a parabola curve itself can be grabbed at its vertex or roots and dragged directly on the coordinate plane).
+            </div>
+          </li>
+          <li>
+            <strong>Signifier:</strong> The perceptual signal that communicates <em>how</em> and <em>when</em> that affordance can be interacted with (e.g., a flat metal push-plate on a door; an expanding red circle beneath a boss).
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Render tactile grab-handle dots, hover cursors, and directional arrows directly on the vertex and roots of the parabola so the student immediately sees they are draggable without reading instructions.
+            </div>
+          </li>
         </ul>
 
         <p className="text-sm leading-relaxed text-zinc-800">
@@ -328,20 +379,29 @@ export const Module3Content: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 my-2 text-xs sm:text-sm">
-          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
+          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
             <span className="font-bold text-blue-700">1. ACOUSTIC SIGNIFIER (&Delta;t = -400ms)</span>
             <div className="font-semibold text-zinc-950">Ear-Before-Eye Priming</div>
             <p className="text-zinc-600">Human auditory processing takes ~10ms compared to ~50ms for visual processing. A distinctive audio chime primes attention before visual action begins.</p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Play a distinct rising acoustic tone 400ms before a critical state transition (e.g., buffer saturation or resonance peak) so the student looks at the right node in time.
+            </div>
           </div>
-          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
+          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
             <span className="font-bold text-blue-700">2. SILHOUETTE EXAGGERATION (&Delta;t = -300ms)</span>
             <div className="font-semibold text-zinc-950">Visual Anticipation Pose</div>
             <p className="text-zinc-600">The enemy character pulls back their weapon, raises both arms, or flares energy particles, clearly breaking their idle silhouette.</p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Visually swell the silhouette and border thickness of a logic gate or server node that is about to trigger an exception or state flip.
+            </div>
           </div>
-          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
+          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
             <span className="font-bold text-blue-700">3. SPATIAL DECAL RING (&Delta;t = -200ms)</span>
             <div className="font-semibold text-zinc-950">Exact Boundary Projection</div>
             <p className="text-zinc-600">An expanding circular or cone decal renders on the collision mesh, displaying the exact geometric boundary that will become lethal.</p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Project dashed preview rings or field-line decals showing the exact spatial radius of a magnetic field, wireless router, or blast wave before execution.
+            </div>
           </div>
         </div>
 
@@ -381,9 +441,19 @@ export const Module3Content: React.FC = () => {
           </p>
         </div>
 
-        <ul className="list-disc pl-6 space-y-1 text-sm text-zinc-800">
-          <li><strong>Vertices (V):</strong> Discrete spatial zones, rooms, arenas, or resource nodes.</li>
-          <li><strong>Edges (E):</strong> Traversal paths, corridors, doorways, or elevators connecting zones.</li>
+        <ul className="list-disc pl-6 space-y-2 text-sm text-zinc-800">
+          <li>
+            <strong>Vertices (V):</strong> Discrete spatial zones, rooms, arenas, or resource nodes.
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Map each Vertex <code>V<sub>i</sub></code> to a discrete, self-contained 4-to-5 minute micro-concept lab room (8 to 10 vertices total for a 45-minute session).
+            </div>
+          </li>
+          <li>
+            <strong>Edges (E):</strong> Traversal paths, corridors, doorways, or elevators connecting zones.
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Gate directed edges <code>E(u, v)</code> by competency locks (requiring a concept badge or tool unlocked in node <code>u</code>) rather than arbitrary keys.
+            </div>
+          </li>
         </ul>
 
         <h4 className="text-base font-bold text-zinc-900 mt-3">The Curse of the Linear Corridor: Trees and Cut Vertices</h4>
@@ -394,9 +464,19 @@ export const Module3Content: React.FC = () => {
         <p className="text-sm leading-relaxed text-zinc-800">
           Linear corridors suffer from severe architectural drawbacks:
         </p>
-        <ul className="list-disc pl-6 space-y-1 text-sm text-zinc-800">
-          <li>Zero navigational choice: The player can only move forward or backward along a single path.</li>
-          <li>Backtracking fatigue: If the player finds a key in Room 4 that unlocks a door in Room 1, they must re-traverse Rooms 3 and 2 through already-cleared, empty territory.</li>
+        <ul className="list-disc pl-6 space-y-2 text-sm text-zinc-800">
+          <li>
+            <strong>Zero navigational choice:</strong> The player can only move forward or backward along a single path.
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Eliminates student agency and causes total session failure if a single intermediate puzzle phrasing doesn&rsquo;t click with the student.
+            </div>
+          </li>
+          <li>
+            <strong>Backtracking fatigue:</strong> If the player finds a key in Room 4 that unlocks a door in Room 1, they must re-traverse Rooms 3 and 2 through already-cleared, empty territory.
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Never force a student to manually walk back through solved rooms in a 45-minute session; provide instant 1-click node teleportation on the Knowledge Graph HUD map.
+            </div>
+          </li>
         </ul>
 
         <h4 className="text-base font-bold text-zinc-900 mt-3">The Cyclic Metroidvania Graph &amp; One-Way Valves</h4>
@@ -405,20 +485,29 @@ export const Module3Content: React.FC = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 my-2 text-xs sm:text-sm">
-          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
+          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
             <span className="font-bold text-blue-700">1. CENTRAL HUB NODES (deg(V) &ge; 3)</span>
             <div className="font-semibold text-zinc-950">Orienting Anchors</div>
             <p className="text-zinc-600">High-degree vertices (such as Firelink Shrine) that connect to multiple branching wings, providing a constant spatial anchor.</p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Use a Central Interactive Sandbox Hub where all newly unlocked tools and visualizers accumulate, anchoring the student&rsquo;s progress across all 3 learning wings.
+            </div>
           </div>
-          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
+          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
             <span className="font-bold text-blue-700">2. FLANKING CYCLES</span>
             <div className="font-semibold text-zinc-950">Alternative Paths</div>
             <p className="text-zinc-600">Loops that provide multiple routes around hazardous choke points, allowing stealth players or high-mobility builds to flank enemies.</p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Offer two parallel representations for difficult concepts (e.g., an Algebraic Path and a Geometric/Visual Path) that converge on the same node, accommodating different learning styles.
+            </div>
           </div>
-          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
+          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
             <span className="font-bold text-blue-700">3. ONE-WAY SHORTCUT VALVES</span>
             <div className="font-semibold text-zinc-950">Spatial Eureka Moments</div>
             <p className="text-zinc-600">Directed edges that are locked from side A, requiring a long treacherous loop to reach side B. Once unlocked from side B, the edge becomes bidirectional, permanently connecting deep dungeon zones back to safety.</p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Place a visible &ldquo;Locked Challenge Door&rdquo; in the Minute-2 Hub that requires a theorem learned at Minute 30; returning to unlock it delivers a massive pedagogical Eureka moment.
+            </div>
           </div>
         </div>
 

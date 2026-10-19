@@ -242,28 +242,37 @@ export const Module5ProbabilityBalance: React.FC<Module5Props> = ({
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs">
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <div className="text-red-700 font-bold">1. TRUE RNG (Memoryless i.i.d.)</div>
             <div className="text-sm font-bold text-zinc-950">P(hit | N misses) = p = 0.25</div>
             <p className="text-zinc-600 font-sans">
               Geometric distribution with heavy right tail. Produces frustrating dry spells and bursty first-hit critical streaks.
             </p>
+            <div className="font-sans border-l-2 border-red-500 bg-red-50/50 pl-2 py-1 text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Avoid raw <code>Math.random()</code> for small-sample classroom demos (<code>N &lt; 25</code>), as tail streaks skew empirical observations.
+            </div>
           </div>
 
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <div className="text-blue-700 font-bold">2. MARKOV PRD (Valve / Blizzard)</div>
             <div className="text-sm font-bold text-zinc-950">P(N) = min(1.0, C &middot; N) (C &asymp; 0.085)</div>
             <p className="text-zinc-600 font-sans">
               Starts at 8.5% on hit 1 and increments by +8.5% per miss until reaching 100% at N=12. Eliminates both lucky openers and 15-miss droughts.
             </p>
+            <div className="font-sans border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Use Markov PRD so rare scientific events (e.g., 25% recessive traits) reliably manifest within 10–12 student trials.
+            </div>
           </div>
 
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <div className="text-emerald-700 font-bold">3. SHUFFLE BAG (Tetris 7-Bag)</div>
             <div className="text-sm font-bold text-zinc-950">Sampling Without Replacement</div>
             <p className="text-zinc-600 font-sans">
               Places exact quotas into an array, Fisher-Yates shuffles it, and dispenses items sequentially. Enforces hard mathematical variance bounds.
             </p>
+            <div className="font-sans border-l-2 border-emerald-500 bg-emerald-50/50 pl-2 py-1 text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Put all syllabus topic variants into a Fisher-Yates Shuffle Bag so 100% of learning objectives are covered in 45 minutes.
+            </div>
           </div>
         </div>
 

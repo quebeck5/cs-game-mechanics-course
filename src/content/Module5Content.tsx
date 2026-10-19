@@ -56,7 +56,7 @@ export const Module5Content: React.FC = () => {
         </div>
 
         <div className="space-y-3 text-xs sm:text-sm">
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <div className="font-mono font-bold text-blue-700">1. THE CLUSTERING ILLUSION (STREAK BIAS)</div>
             <p className="text-zinc-700 leading-relaxed">
               In any true random uniform sequence, items clump together into apparent streaks.
@@ -68,21 +68,30 @@ export const Module5Content: React.FC = () => {
             <p className="text-zinc-700 text-xs mt-1">
               There is an almost 80% chance of a 10-miss drought! When this occurs during a boss fight, the player concludes the RNG algorithm is bugged or rigged.
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Prevent random clustering of identical problem types or unlucky particle spawns during a 45-minute lab by using stratified sampling so students don&rsquo;t misinterpret random streaks as a causal law.
+            </div>
           </div>
 
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <div className="font-mono font-bold text-blue-700">2. THE GAMBLER'S FALLACY (NEGATIVE RECENCY)</div>
             <p className="text-zinc-700 leading-relaxed">
               Humans intuitively assume that after five consecutive misses, a hit is "due."
               When the sixth attack misses, psychological frustration escalates non-linearly because the player feels their cognitive expectation was violated.
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> In probability and statistics mini-games, explicitly visualize the memoryless sample tree alongside empirical rolls so students confront and overcome the Gambler&rsquo;s Fallacy firsthand.
+            </div>
           </div>
 
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <div className="font-mono font-bold text-blue-700">3. FIRST-ROUND LUCK SPIKES (THE OPENING BURST)</div>
             <p className="text-zinc-700 leading-relaxed">
               Conversely, landing three critical hits in the opening 2 seconds of a multiplayer match produces an unearned instant kill, stripping the victim of all counter-play agency and leaving the victor unsatisfied.
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Never allow an accidental lucky parameter initialization on Trial 1 to auto-pass a level; require the student&rsquo;s solution to hold across 3 distinct seed states before awarding mastery.
+            </div>
           </div>
         </div>
 
@@ -135,6 +144,9 @@ export const Module5Content: React.FC = () => {
                 The player assesses the randomized board state, calculates combinatorial permutations, and selects the optimal path. The randomness provides the puzzle; the player provides the solution.
               </p>
             </div>
+            <div className="border-l-2 border-emerald-500 bg-white/90 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Randomize the starting dataset, graph weights, or target coordinates per student session seed so every student solves a fresh, cheat-proof instance using the same underlying theorem.
+            </div>
           </div>
 
           {/* Output Randomness */}
@@ -151,19 +163,31 @@ export const Module5Content: React.FC = () => {
                 If the penalty for a failure roll is catastrophic (e.g., permanent character death), the player feels robbed because their sound tactical reasoning was overruled by an unmanageable dice roll.
               </p>
             </div>
+            <div className="border-l-2 border-red-500 bg-white/90 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Eliminate output randomness from deterministic subjects (math, physics, CS); only use output randomness when the learning objective itself is stochastic (e.g., noisy communication channels or quantum measurement).
+            </div>
           </div>
         </div>
 
         <h4 className="text-base font-bold text-zinc-900 mt-4">Three Engineering Safeguards for Output Randomness:</h4>
-        <ul className="list-disc pl-6 space-y-2 text-sm text-zinc-800">
+        <ul className="list-disc pl-6 space-y-2.5 text-sm text-zinc-800">
           <li>
             <strong>1. Graceful Degradation (Glancing Blows):</strong> Rather than binary Hit/Miss (100% or 0%), map misses to 40% partial damage or secondary status debuffs. The player’s turn is never completely wasted.
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Award partial credit and visual proximity feedback (e.g., &ldquo;85% Signal Integrity — Phase offset by 12&deg;&rdquo;) rather than binary Pass/Fail when a student&rsquo;s solution is close.
+            </div>
           </li>
           <li>
             <strong>2. Deterministic Telegraphing:</strong> Give players warning of heavy enemy critical strikes or randomized status procs 1 turn or 60 frames in advance, allowing them to reposition or pop defensive shields.
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Telegraph upcoming stochastic disturbances (e.g., &ldquo;Solar Flare Noise Spike in 5s&rdquo; in a coding/networking mini-game) so students can actively test their error-correcting code (ECC) under load.
+            </div>
           </li>
           <li>
             <strong>3. Risk Mitigation Consumables:</strong> Provide players with consumable rerolls, luck tokens, or positioning options that convert 95% probabilities into guaranteed 100% certainty when it matters most.
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Give students engineering redundancy tools (e.g., checksum parity bits, backup capacitors, or retry policies) that turn unreliable 90% components into 99.99% fault-tolerant systems.
+            </div>
           </li>
         </ul>
       </section>
@@ -218,6 +242,9 @@ export const Module5Content: React.FC = () => {
           <div className="text-zinc-700">Attack 3: P(3) = 25.4%</div>
           <div className="text-zinc-700">Attack 6: P(6) = 50.8%</div>
           <div className="text-zinc-700">Attack 12: P(12) = 100.0% (Hard ceiling: drought cannot exceed 11 misses)</div>
+          <div className="font-sans border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-zinc-800">
+            <strong>30&ndash;60 Min Educational Mini-Game:</strong> Guarantees that a 25% rare event (e.g., a cache miss, packet collision, or recessive allele) is observed by the student at least once every 12 steps during a short classroom lab.
+          </div>
         </div>
 
         <p className="text-sm leading-relaxed text-zinc-800">
@@ -294,26 +321,35 @@ export const Module5Content: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 my-3 text-xs sm:text-sm">
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <span className="font-bold text-blue-700">1. WIN RATE VS. PICK RATE</span>
             <div className="font-semibold text-zinc-950">Outlier Detection</div>
             <p className="text-zinc-600">
               Plotting hero pick frequency vs. match win percentage. High pick rate + high win rate indicates an overpowered dominant strategy requiring immediate nerf. Low pick rate + high win rate indicates an effective niche specialist.
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Plot <strong>Tool Usage Rate vs. First-Try Solve Rate</strong> to spot degenerate &ldquo;cheese&rdquo; tools (95% usage + 100% pass without learning) vs. confusingly designed tools (5% usage + high error rate).
+            </div>
           </div>
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <span className="font-bold text-indigo-700">2. TIME-TO-KILL (TTK) HISTOGRAMS</span>
             <div className="font-semibold text-zinc-950">Pacing Distribution</div>
             <p className="text-zinc-600">
               Measuring the exact millisecond duration of combat encounters across weapon classes. Bimodal distributions reveal unbalanced weapons that bypass counter-play windows.
             </p>
+            <div className="border-l-2 border-indigo-500 bg-indigo-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Track <strong>Time-to-Mastery (TTM) Histograms</strong> per level and across the whole game to ensure the 10th&ndash;90th percentile session duration stays tightly bounded between 32 and 55 minutes.
+            </div>
           </div>
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <span className="font-bold text-emerald-700">3. SPATIAL DEATH HEATMAPS</span>
             <div className="font-semibold text-zinc-950">Geometry Validation</div>
             <p className="text-zinc-600">
               Aggregating coordinate death and objective capture events onto level collision geometry to detect choke points, spawn camping zones, and underutilized map regions.
             </p>
+            <div className="border-l-2 border-emerald-500 bg-emerald-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Aggregate <strong>Misconception &amp; Undo Heatmaps</strong> onto the puzzle canvas or AST nodes so instructors see the exact step where students get stuck during the 45-minute lab.
+            </div>
           </div>
         </div>
       </section>

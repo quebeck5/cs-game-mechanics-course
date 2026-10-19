@@ -416,28 +416,37 @@ export const Module3DecisionsSpace: React.FC<Module3Props> = ({
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs">
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <div className="text-amber-700 font-bold">1. STARTUP FRAMES (Telegraph)</div>
             <div className="text-zinc-950 text-sm font-bold">Commitment &amp; Readability</div>
             <p className="text-zinc-600 font-sans">
               Wind-up animation before hitbox emission. Provides &ge; 200ms for defender reaction and locks the attacker into a spatial commitment.
             </p>
+            <div className="font-sans border-l-2 border-amber-500 bg-amber-50/50 pl-2 py-1 text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Use a 1.5s pre-execution preview when the student clicks &ldquo;Test Hypothesis&rdquo; so they mentally predict the output before evaluation.
+            </div>
           </div>
 
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <div className="text-red-700 font-bold">2. ACTIVE FRAMES (Hitbox)</div>
             <div className="text-zinc-950 text-sm font-bold">Spatial Intersection Window</div>
             <p className="text-zinc-600 font-sans">
               The discrete interval where the collision volume is active in world space. High damage attacks typically possess narrower active windows.
             </p>
+            <div className="font-sans border-l-2 border-red-500 bg-red-50/50 pl-2 py-1 text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Visually step through each test case (Normal, Boundary, Edge Case) colliding against the student&rsquo;s solution.
+            </div>
           </div>
 
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <div className="text-blue-700 font-bold">3. RECOVERY FRAMES (Punish Cost)</div>
             <div className="text-zinc-950 text-sm font-bold">Vulnerability Opportunity Cost</div>
             <p className="text-zinc-600 font-sans">
               Upon whiff or block, attacker cannot act for F<sub>recovery</sub> frames. Frame Advantage is &Delta;F = F<sub>stun</sub> &minus; F<sub>recovery</sub>.
             </p>
+            <div className="font-sans border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Enforce a brief 2.0s diagnostic cooldown on failed test runs to prevent mindless trial-and-error button spamming.
+            </div>
           </div>
         </div>
 

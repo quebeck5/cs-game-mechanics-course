@@ -60,6 +60,9 @@ export const Module1Content: React.FC = () => {
             <p className="text-zinc-600">
               A state of affairs that can be described without referencing the game’s rules. In Golf, the pre-lusory goal is depositing a 1.68-inch sphere into a 4.25-inch hole in the turf. In Chess, it is trapping the opponent's wooden King piece so it has no legal moves.
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game:</strong> State the concrete, visual target outcome at second 0 of each level (e.g., &ldquo;Deliver 100V to the hospital grid&rdquo; or &ldquo;Sort the 16 cargo crates in ascending weight&rdquo;) so the student immediately understands the end goal without reading a syllabus rubric.
+            </div>
           </div>
 
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
@@ -68,6 +71,9 @@ export const Module1Content: React.FC = () => {
             <p className="text-zinc-600">
               Rules that explicitly forbid the most efficient physical or logical means of reaching the pre-lusory goal. If an enterprise engineer optimized Golf, the optimal algorithm is trivial: walk to the hole and drop the ball inside. Time complexity: O(d). Error rate: 0%. The constitutive rules mandate that you stand 400 yards away and swat the sphere with an absurdly thin piece of bent metal.
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game:</strong> Block naive brute-forcing via resource caps. In a sorting mini-game, forbid manual drag-and-drop swapping and restrict the student to a comparator-swapper crane with a strict <code>N &middot; log<sub>2</sub>(N)</code> energy battery so only divide-and-conquer algorithms succeed.
+            </div>
           </div>
 
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
@@ -76,6 +82,9 @@ export const Module1Content: React.FC = () => {
             <p className="text-zinc-600">
               The severely restricted subset of actions permitted by the rules. You may hit the golf ball with a club, but you may not throw it, carry it, or kick it. You may move a Chess Knight in an L-shape, but you may not slide it diagonally across the board.
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game:</strong> Make the permitted player verbs isomorphic to the target operators of the subject (e.g., in a Linear Algebra mini-game, the only permitted player verbs are <code>Scale</code>, <code>Rotate</code>, and <code>Shear</code> matrix transformations applied to the level geometry).
+            </div>
           </div>
 
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
@@ -84,6 +93,9 @@ export const Module1Content: React.FC = () => {
             <p className="text-zinc-600">
               The psychological state where the player willingly embraces these inefficient, arbitrary constraints solely because they make the resulting activity possible. If you are forced at gunpoint to play Golf, you are not playing a game; you are performing labor under duress.
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game:</strong> Preserve voluntary curiosity during a mandatory 45-minute class session by offering optional &ldquo;Optimization Star Challenges&rdquo; (e.g., solve in &le;5 lines) and zero-penalty sandbox experimentation rather than coercive countdown timers that induce test anxiety.
+            </div>
           </div>
         </div>
 
@@ -97,12 +109,18 @@ export const Module1Content: React.FC = () => {
           However, not all friction is good friction. Game developers distinguish between two categories of resistance:
         </p>
 
-        <ul className="list-disc pl-6 space-y-2 text-sm text-zinc-800">
+        <ul className="list-disc pl-6 space-y-3 text-sm text-zinc-800">
           <li>
             <strong>Constitutive Friction (Good Resistance):</strong> Obstacles engineered to test cognitive processing, spatial anticipation, or motor execution within the player's flow corridor. Overcoming constitutive friction releases dopamine and fosters a sense of competence.
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game:</strong> Place all resistance inside the <em>domain problem</em> itself—such as requiring the student to balance voltage drops across parallel branches or resolve a deadlock between two philosopher threads.
+            </div>
           </li>
           <li>
             <strong>Extraneous Friction (Bad Resistance):</strong> Arbitrary obstacles caused by unresponsive controls, confusing visual affordances, dropped input frames, unskippable cutscenes, or untelegraphed instant deaths. Extraneous friction triggers cognitive fatigue and frustration rather than mastery.
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game:</strong> Eliminate all arithmetic drudgery and UI friction—provide built-in live calculators on hover, instant 1-key Undo/Redo (<code>Ctrl+Z</code>), and instant level restarts (<code>R</code> key &lt; 50ms) so zero minutes of the 45-minute session are wasted on tedious re-entry.
+            </div>
           </li>
         </ul>
 
@@ -167,6 +185,9 @@ export const Module1Content: React.FC = () => {
             <p className="text-zinc-600">
               The formal rules, algorithms, data representations, state machine tables, and physics update functions written by the software engineer. Mechanics are deterministic, static at rest, and completely controlled by the programmer.
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game:</strong> Encode the exact mathematical law of the syllabus (e.g., Snell&rsquo;s Law <code>n<sub>1</sub>sin(&theta;<sub>1</sub>) = n<sub>2</sub>sin(&theta;<sub>2</sub>)</code> or Kirchhoff&rsquo;s Current Law) as the deterministic simulation tick function.
+            </div>
           </div>
 
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
@@ -175,6 +196,9 @@ export const Module1Content: React.FC = () => {
             <p className="text-zinc-600">
               The execution trace generated when human player input couples with mechanics over time. Dynamics encompass emergent behaviors, economic flows, pacing oscillations, and tactical strategies that arise at runtime.
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game:</strong> Design the interactive loop of hypothesis &rarr; parameter tweak &rarr; real-time visual feedback trace so students observe emergent trade-offs (e.g., increasing refractive index bends the beam sharper but triggers total internal reflection).
+            </div>
           </div>
 
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
@@ -183,6 +207,9 @@ export const Module1Content: React.FC = () => {
             <p className="text-zinc-600">
               The emotional, psychological, and neurobiological response evoked in the player as they interact with the dynamic system. Crucially, aesthetics in MDA does NOT mean graphics or visual art; it means the taxonomy of "fun".
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong className="text-blue-900">30&ndash;60 Min Educational Mini-Game:</strong> Target the epistemic emotion of <em>&ldquo;Eureka! / Insight&rdquo;</em>—the neurobiological rush when a complex abstract formula suddenly clicks into intuitive visual clarity.
+            </div>
           </div>
         </div>
 
@@ -232,45 +259,69 @@ export const Module1Content: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 my-2 text-xs">
-          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
+          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
             <span className="font-bold text-blue-700">1. Sensation</span>
             <div className="font-semibold text-zinc-900">Visceral Sensory Pleasure</div>
             <p className="text-zinc-600">Tactile motor response, responsive controls, visual feedback, sound design (e.g., <em>Geometry Wars, Rez</em>).</p>
+            <div className="border-t border-zinc-100 pt-1 text-[11px] text-blue-950">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Sonify waveforms and render fluid/field shaders in real time as students drag sliders.
+            </div>
           </div>
-          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
+          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
             <span className="font-bold text-blue-700">2. Fantasy</span>
             <div className="font-semibold text-zinc-900">Make-Believe &amp; Immersion</div>
             <p className="text-zinc-600">Inhabiting an alternate reality, role-playing a fictional persona (e.g., <em>Skyrim, Elite Dangerous</em>).</p>
+            <div className="border-t border-zinc-100 pt-1 text-[11px] text-blue-950">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Frame the 45-min lab as a concrete role (e.g., &ldquo;Mars Rover Telemetry Engineer&rdquo; or &ldquo;ICU Virologist&rdquo;) in a single 15-second briefing.
+            </div>
           </div>
-          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
+          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
             <span className="font-bold text-blue-700">3. Narrative</span>
             <div className="font-semibold text-zinc-900">Dramatic Progression</div>
             <p className="text-zinc-600">Story, character arcs, emotional catharsis, escalating stakes (e.g., <em>The Last of Us, Disco Elysium</em>).</p>
+            <div className="border-t border-zinc-100 pt-1 text-[11px] text-blue-950">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Use a 3-act escalating incident log (Anomaly &rarr; Cascade &rarr; System Stabilization) delivered via non-blocking side-panel alerts.
+            </div>
           </div>
-          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
+          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
             <span className="font-bold text-blue-700">4. Challenge</span>
             <div className="font-semibold text-zinc-900">Mastery &amp; Competence</div>
             <p className="text-zinc-600">Overcoming difficult obstacles through skill acquisition, problem-solving (e.g., <em>Dark Souls, Celeste</em>).</p>
+            <div className="border-t border-zinc-100 pt-1 text-[11px] text-blue-950">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Present a final 10-minute Capstone Boss Puzzle that requires synthesizing all 3 sub-concepts under strict cost/latency constraints.
+            </div>
           </div>
-          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
+          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
             <span className="font-bold text-blue-700">5. Fellowship</span>
             <div className="font-semibold text-zinc-900">Social Interdependence</div>
             <p className="text-zinc-600">Cooperation, communication, team coordination, communal bonds (e.g., <em>Left 4 Dead, World of Warcraft</em>).</p>
+            <div className="border-t border-zinc-100 pt-1 text-[11px] text-blue-950">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Support asymmetric 2-player classroom pairing (Student A controls Producer/Sender, Student B controls Consumer/Receiver).
+            </div>
           </div>
-          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
+          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
             <span className="font-bold text-blue-700">6. Discovery</span>
             <div className="font-semibold text-zinc-900">Uncharted Exploration</div>
             <p className="text-zinc-600">Mapping unfamiliar territory, uncovering hidden mechanics or secrets (e.g., <em>Outer Wilds, Metroid</em>).</p>
+            <div className="border-t border-zinc-100 pt-1 text-[11px] text-blue-950">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Let students uncover the formula empirically by probing an unknown black-box system before revealing the formal equation.
+            </div>
           </div>
-          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
+          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
             <span className="font-bold text-blue-700">7. Expression</span>
             <div className="font-semibold text-zinc-900">Creative Agency</div>
             <p className="text-zinc-600">Self-expression, building, customizing, choosing unique playstyles (e.g., <em>Minecraft, Armored Core</em>).</p>
+            <div className="border-t border-zinc-100 pt-1 text-[11px] text-blue-950">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Allow open-ended sandbox architecture where students compare pareto histograms of their custom circuit/code against classmates.
+            </div>
           </div>
-          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
+          <div className="border border-zinc-200 bg-white p-3 rounded space-y-1.5">
             <span className="font-bold text-blue-700">8. Submission</span>
             <div className="font-semibold text-zinc-900">Abiding Routine / Zen</div>
             <p className="text-zinc-600">Rhythmic relaxation, low-cognitive-load ritual, unwinding (e.g., <em>Animal Crossing, Tetris</em>).</p>
+            <div className="border-t border-zinc-100 pt-1 text-[11px] text-blue-950">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Use brief 90-second rhythmic consolidation intervals between hard conceptual spikes so working memory can consolidate.
+            </div>
           </div>
         </div>
 
@@ -340,24 +391,30 @@ export const Module1Content: React.FC = () => {
         </p>
 
         <div className="space-y-3 text-xs sm:text-sm">
-          <div className="border border-red-200 bg-red-50/40 p-4 rounded-lg space-y-1">
+          <div className="border border-red-200 bg-red-50/40 p-4 rounded-lg space-y-1.5">
             <div className="font-mono font-bold text-red-800">REGIME 1: MAXIMAL ENTROPY (dH/dt &asymp; 0, H &asymp; H_max) &rarr; ANXIETY &amp; NOISE</div>
             <p className="text-zinc-700">
               When a system presents observations with zero discernable structure—such as enemy attacks that have zero startup frames, random untelegraphed instant deaths, or completely erratic physics—the player's neural network cannot extract a compression model.
               Entropy remains maximal. The player experiences cognitive overload, helplessness, and acute anxiety.
             </p>
+            <div className="border-l-2 border-red-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Happens when a mini-game dumps a full 15-parameter simulator on the student at Minute 1; prevent this by locking 13 parameters and isolating a single observable cause-and-effect relationship per level.
+            </div>
           </div>
 
-          <div className="border border-blue-200 bg-blue-50/40 p-4 rounded-lg space-y-1">
+          <div className="border border-blue-200 bg-blue-50/40 p-4 rounded-lg space-y-1.5">
             <div className="font-mono font-bold text-blue-800">REGIME 2: ACTIVE COMPRESSION (dH/dt &lt; 0) &rarr; DOPAMINE &amp; FLOW</div>
             <p className="text-zinc-700">
               The system presents a rich, non-trivial state space that possesses hidden regularities.
               As the player experiments, their brain constructs predictive heuristics (e.g., "enemy knights always swing twice before their shield drops," or "dashing cancels recovery frames").
               The rate of entropy reduction is high. The player experiences the neurobiological state colloquially known as "fun" or "grokking".
             </p>
+            <div className="border-l-2 border-blue-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Target Mins 5&ndash;40 for this regime by designing puzzles where the academic theorem is the hidden regularity—when the student deduces the invariant rule (e.g., Kirchhoff's Current Law in a circuit puzzle), their brain fires a massive dopamine reward.
+            </div>
           </div>
 
-          <div className="border border-zinc-200 bg-zinc-100 p-4 rounded-lg space-y-1">
+          <div className="border border-zinc-200 bg-zinc-100 p-4 rounded-lg space-y-1.5">
             <div className="font-mono font-bold text-zinc-700">REGIME 3: ZERO REMAINING ENTROPY (H &rarr; 0) &rarr; IMMEDIATE BOREDOM</div>
             <p className="text-zinc-700">
               Once the mental model is 100% predictive and the state space is completely compressed, no further entropy can be extracted.
@@ -365,6 +422,9 @@ export const Module1Content: React.FC = () => {
               Once a computer science student derives the minimax tree and recognizes that optimal play forces an invariant draw, <code>H = 0</code>.
               The game is "solved." The brain immediately halts dopamine release, and the game becomes unbearably dull.
             </p>
+            <div className="border-l-2 border-zinc-500 bg-white/80 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Once the student solves 3 consecutive puzzles with zero errors (proving <code>H = 0</code> for that sub-concept), immediately auto-advance or unlock a macro-tool that automates that step rather than forcing 10 more repetitive drill levels.
+            </div>
           </div>
         </div>
 
@@ -410,9 +470,19 @@ export const Module1Content: React.FC = () => {
           In classical game design literature, the Flow Channel is depicted as a linear corridor between two boundary zones:
         </p>
 
-        <ul className="list-disc pl-6 space-y-1 text-sm text-zinc-800">
-          <li><strong>The Anxiety Zone (Challenge &gt;&gt; Skill):</strong> The task overwhelms the player's computational and motor capacity, causing stress and surrender.</li>
-          <li><strong>The Boredom Zone (Skill &gt;&gt; Challenge):</strong> The task demands trivial effort, reducing entropy reduction to zero and inducing apathy.</li>
+        <ul className="list-disc pl-6 space-y-2 text-sm text-zinc-800">
+          <li>
+            <strong>The Anxiety Zone (Challenge &gt;&gt; Skill):</strong> The task overwhelms the player's computational and motor capacity, causing stress and surrender.
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Detect anxiety within 90 seconds via telemetry (e.g., 3 failed submissions or 45s of mouse inactivity) and dynamically spawn contextual scaffolding hints or highlight the faulty node so the student never stalls out of the 45-minute session.
+            </div>
+          </li>
+          <li>
+            <strong>The Boredom Zone (Skill &gt;&gt; Challenge):</strong> The task demands trivial effort, reducing entropy reduction to zero and inducing apathy.
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Detect mastery when a student solves a stage in under 30 seconds on their first attempt, offering a &ldquo;Fast-Track Express Gate&rdquo; that skips drill variants and jumps straight to the twist challenge.
+            </div>
+          </li>
         </ul>
 
         <h4 className="text-base font-bold text-zinc-900 mt-2">The Critical Flaw of Flat Linear Pacing</h4>
@@ -443,18 +513,30 @@ export const Module1Content: React.FC = () => {
           The sawtooth wave comprises four deliberate physiological phases:
         </p>
 
-        <ol className="list-decimal pl-6 space-y-2 text-sm text-zinc-800">
+        <ol className="list-decimal pl-6 space-y-2.5 text-sm text-zinc-800">
           <li>
             <strong>Introduction (Low Tension Valley):</strong> A new mechanic or enemy type is introduced in a safe, controlled environment where failure has zero consequence. Challenge drops, allowing the player to safely begin pattern compression.
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Mins 0&ndash;3 of each 12-minute cycle: introduce the new concept (e.g., an <code>INDEX</code> lookup or a <code>while</code> loop block) in a single-screen interactive sandbox with zero timers and instant undo.
+            </div>
           </li>
           <li>
             <strong>Development (Rising Tension Slope):</strong> The mechanic is layered with previously mastered obstacles, demanding higher cognitive integration and spatial accuracy.
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Mins 3&ndash;8 of each cycle: combine the new mechanic with constraints from the previous cycle (e.g., indexing under a memory-bandwidth budget).
+            </div>
           </li>
           <li>
             <strong>Twist / Climax (Peak Tension Spike):</strong> A boss battle, timed escape sequence, or complex exam room forces the player to execute the mechanic under severe pressure. Tension peaks near the anxiety threshold.
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Mins 8&ndash;10 of each cycle: present a diagnostic &ldquo;Boss Anomaly&rdquo; (e.g., an adversarial traffic surge or edge-case input) that tests whether the student truly grokked the underlying invariant rather than memorizing a pattern.
+            </div>
           </li>
           <li>
             <strong>Empowerment Valley (Rest &amp; Catharsis):</strong> Following the climax, difficulty drops sharply. The player is granted a reward, safe narrative dialogue, or the opportunity to use their newly mastered power to effortlessly defeat earlier enemy types. This allows the parasympathetic nervous system to recover before the next cycle begins.
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 mt-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Mins 10&ndash;12 of each cycle: reward the student by encapsulating their manual solution into a reusable 1-click macro chip and letting them vaporize a swarm of earlier manual problems in 30 seconds.
+            </div>
           </li>
         </ol>
       </section>
@@ -477,6 +559,9 @@ export const Module1Content: React.FC = () => {
               A toy has no explicit rules, no victory conditions, no points, and no fail states.
               A ball, a yo-yo, or a sandbox are toys. You interact with them simply because the physical manipulation itself is intrinsically satisfying.
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Build the core domain object—such as a draggable vector arrow, a fluid pressure valve, or a live regex highlighter—with spring physics, crisp audio clicks, and immediate visual response so students love playing with it before any grading rubric appears.
+            </div>
           </div>
 
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
@@ -486,6 +571,9 @@ export const Module1Content: React.FC = () => {
               A game takes a toy and wraps it with constitutive rules, win/loss conditions, scores, and competitive constraints.
               Basketball takes a rubber ball (toy) and introduces a hoop, a shot clock, and a traveling rule (game).
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Educational Mini-Game:</strong> Layer the curriculum syllabus on top of the tactile toy as a sequence of 8–10 structured puzzle goals, resource budgets, and star ratings that guide the student through the 45-minute lesson plan.
+            </div>
           </div>
         </div>
 
@@ -518,13 +606,23 @@ export const Module1Content: React.FC = () => {
         </p>
 
         <div className="bg-emerald-50 border-l-4 border-emerald-600 p-4 text-xs sm:text-sm text-emerald-950">
-          <span className="font-bold">Summary for Chapter 1:</span>
-          <ol className="list-decimal pl-5 mt-2 space-y-1">
-            <li>Games require voluntary acceptance of inefficient means to achieve goals (Suits' Lusory Attitude).</li>
-            <li>Engineers author Mechanics; players experience Aesthetics; Dynamics emerge in between (Hunicke et al. MDA).</li>
-            <li>Fun is the cognitive sensation of pattern extraction and entropy reduction over time (Koster's Information Theory).</li>
-            <li>Difficulty must oscillate in a sawtooth wave to prevent psychological burnout (Csikszentmihalyi's Flow).</li>
-            <li>Validate the intrinsic tactile joy of the core toy before constructing rules, goals, or narrative systems.</li>
+          <span className="font-bold">Summary for Chapter 1 (with 30&ndash;60 Min Educational Mini-Game Blueprint):</span>
+          <ol className="list-decimal pl-5 mt-2 space-y-1.5">
+            <li>
+              <strong>Lusory Attitude (Suits):</strong> Games require voluntary acceptance of inefficient means to achieve goals. <em>(Mini-Game: Block brute-force hardcoding so the student must use the target CS/math algorithm to solve the 45-minute challenge.)</em>
+            </li>
+            <li>
+              <strong>MDA Bidirectional Loop (Hunicke et al.):</strong> Engineers author Mechanics; players experience Aesthetics; Dynamics emerge in between. <em>(Mini-Game: Start from the desired student &ldquo;Aha!&rdquo; Aesthetic and work backward to the minimal ruleset that fits in a 45-minute session.)</em>
+            </li>
+            <li>
+              <strong>Cognitive Entropy Reduction (Koster):</strong> Fun is the cognitive sensation of pattern extraction and entropy reduction over time. <em>(Mini-Game: Make the learning objective itself the hidden systemic pattern that compresses puzzle entropy.)</em>
+            </li>
+            <li>
+              <strong>Sawtooth Flow Pacing (Csikszentmihalyi):</strong> Difficulty must oscillate in a sawtooth wave to prevent psychological burnout. <em>(Mini-Game: Structure the 45-minute session into three 12-minute tension-and-release cycles plus a 9-minute synthesis.)</em>
+            </li>
+            <li>
+              <strong>The Toy Principle (Miyamoto):</strong> Validate the intrinsic tactile joy of the core toy before constructing rules, goals, or narrative systems. <em>(Mini-Game: Open with a 3-minute zero-penalty interactive sandbox using a tactile domain manipulative.)</em>
+            </li>
           </ol>
         </div>
       </section>

@@ -488,28 +488,37 @@ export const Module2GameFeel: React.FC<Module2Props> = ({
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs">
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <div className="text-blue-700 font-bold">1. INITIAL JUMP VELOCITY (v₀)</div>
             <div className="text-base text-zinc-950 font-bold">v₀ = (2 &middot; H_max) / t_peak</div>
             <p className="text-zinc-600 font-sans">
               Current: <strong className="text-blue-800">{Math.round(v0)} px/s</strong>
             </p>
+            <div className="font-sans border-l-2 border-blue-500 bg-blue-50/50 pl-2 py-1 text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Derive initial impulse from exact grid-tile heights so student trajectories align with integer coordinate lines.
+            </div>
           </div>
 
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <div className="text-indigo-700 font-bold">2. RISING GRAVITY (g_rise)</div>
             <div className="text-base text-zinc-950 font-bold">g_rise = (2 &middot; H_max) / t_peak&sup2;</div>
             <p className="text-zinc-600 font-sans">
               Current: <strong className="text-indigo-800">{Math.round(gRise)} px/s&sup2;</strong>
             </p>
+            <div className="font-sans border-l-2 border-indigo-500 bg-indigo-50/50 pl-2 py-1 text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Keep <code>t_peak &le; 0.35s</code> so moving between lab stations never wastes classroom time.
+            </div>
           </div>
 
-          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
+          <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <div className="text-amber-700 font-bold">3. ASYMMETRIC FALL &amp; APEX HANG</div>
             <div className="text-base text-zinc-950 font-bold">g_fall = k &middot; g_rise (k &asymp; 2.4)</div>
             <p className="text-zinc-600 font-sans">
               Snaps the player briskly to the ground on descent while granting fine control at the peak.
             </p>
+            <div className="font-sans border-l-2 border-amber-500 bg-amber-50/50 pl-2 py-1 text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Use fast 2.4x settling on dropped puzzle blocks and brief apex slowdown at <code>dy/dt = 0</code> extrema.
+            </div>
           </div>
         </div>
 

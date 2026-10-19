@@ -189,6 +189,9 @@ export const Module4SystemsEconomy: React.FC<Module4Props> = ({
               <em>Example:</em> Securing a kill in a MOBA grants gold and XP, elevating stats and making subsequent kills easier.
               <strong> Danger:</strong> Unchecked positive feedback creates "Dead Time", where the victor is mathematically determined early but the match continues.
             </p>
+            <div className="border-l-2 border-red-500 bg-red-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Use positive feedback on mastery streaks to unlock macro-tools that fast-forward advanced students past basic drills into higher-order synthesis challenges.
+            </div>
           </div>
 
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-2">
@@ -201,6 +204,9 @@ export const Module4SystemsEconomy: React.FC<Module4Props> = ({
               <em>Example:</em> Trailing players in <em>Mario Kart</em> draw potent items; expanding empires in RTS games incur steep upkeep costs.
               <strong> Danger:</strong> Aggressive negative feedback punishes skillful play.
             </p>
+            <div className="border-l-2 border-blue-500 bg-blue-50/50 pl-2.5 py-1 text-xs text-zinc-800">
+              <strong>30&ndash;60 Min Edu Mini-Game:</strong> Apply negative feedback on repeated errors (injecting visual scaffolding traces or slowing incoming wave rates) so struggling students never stall out of the 45-minute session.
+            </div>
           </div>
         </div>
 

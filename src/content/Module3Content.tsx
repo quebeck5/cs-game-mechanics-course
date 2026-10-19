@@ -28,6 +28,13 @@ export const Module3Content: React.FC = () => {
           In interactive software, whenever the user is presented with a choice between actions A<sub>1</sub>, A<sub>2</sub>, &hellip;, A<sub>n</sub>, the resulting decision space falls into one of three mathematical categories:
         </p>
 
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;A good game is a series of interesting decisions.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; Sid Meier, <em>Sid Meier's Memoir!: A Life in Computer Games</em> (W. W. Norton &amp; Company, 2020, p. 182)
+          </footer>
+        </blockquote>
+
         <div className="space-y-3 text-xs sm:text-sm">
           <div className="border border-red-200 bg-red-50/40 p-4 rounded-lg space-y-1">
             <div className="font-mono font-bold text-red-800">CATEGORY 1: DOMINANT STRATEGIES (A &succ; B UNDER ALL STATES)</div>
@@ -133,6 +140,13 @@ export const Module3Content: React.FC = () => {
           In every critically acclaimed action title (such as <em>Street Fighter, Dark Souls, Monster Hunter, Hades</em>, and <em>Hollow Knight</em>), every attack action is modeled as an <strong>uninterruptible 3-stage pushdown automaton</strong>:
         </p>
 
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;Human perception is only so fast, so you&rsquo;re acting on information that&rsquo;s a few sixtieths of a second old; some of your moves are made on reaction, but many of your moves are essentially made in a double-blind situation.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; David Sirlin, <em>Playing to Win: Becoming the Champion</em> / <em>Designing Yomi</em> (Sirlin Games, 2010)
+          </footer>
+        </blockquote>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-3 text-xs sm:text-sm">
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <div className="font-mono font-bold text-amber-700">STAGE 1: STARTUP (F_startup)</div>
@@ -173,6 +187,13 @@ export const Module3Content: React.FC = () => {
         <p className="text-sm leading-relaxed text-zinc-800">
           When an active attack connects with an opponent, two concurrent timers are initiated:
         </p>
+
+        <blockquote className="border-l-4 border-zinc-400 bg-zinc-50 pl-4 py-2 my-3 text-xs sm:text-sm italic text-zinc-700">
+          &ldquo;Very often in competitive play, a player will forgo the obvious safe option in order to test counters and discover which moves leave them with frame advantage.&rdquo;
+          <footer className="not-italic text-xs text-zinc-500 font-medium mt-1">
+            &mdash; David Sirlin, <em>Playing to Win: Becoming the Champion</em> (Lulu, 2005, Chapter 3)
+          </footer>
+        </blockquote>
 
         <ol className="list-decimal pl-6 space-y-1 text-sm text-zinc-800">
           <li><strong>Attacker Recovery:</strong> The attacker must spend F<sub>recovery</sub> frames completing their follow-through animation.</li>
@@ -234,6 +255,13 @@ export const Module3Content: React.FC = () => {
           In <em>The Design of Everyday Things</em>, cognitive scientist Donald Norman distinguished between two core principles of interaction design:
         </p>
 
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;Affordances define what actions are possible; signifiers specify how people discover those possibilities: signifiers are signs, perceptual signals of what can be done.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; Don Norman, <em>The Design of Everyday Things: Revised and Expanded Edition</em> (Basic Books, 2013, p. 19)
+          </footer>
+        </blockquote>
+
         <ul className="list-disc pl-6 space-y-1 text-sm text-zinc-800">
           <li><strong>Affordance:</strong> The actual physical or logical properties that determine what actions are possible (e.g., a door affords pushing; a boss attack affords dodging).</li>
           <li><strong>Signifier:</strong> The perceptual signal that communicates <em>how</em> and <em>when</em> that affordance can be interacted with (e.g., a flat metal push-plate on a door; an expanding red circle beneath a boss).</li>
@@ -243,6 +271,13 @@ export const Module3Content: React.FC = () => {
           In <em>The Gamer's Brain</em>, neuroscientist Celia Hodent emphasizes that in fast-paced action combat, players do not have time to consciously deliberate.
           To make difficult encounters feel fair rather than cheap, games deploy a <strong>3-Stage Sensory Telegraph Architecture</strong>:
         </p>
+
+        <blockquote className="border-l-4 border-zinc-400 bg-zinc-50 pl-4 py-2 my-3 text-xs sm:text-sm italic text-zinc-700">
+          &ldquo;At its core, UX is about understanding the gamer's brain: understanding human capabilities and limitations to anticipate how a game will be perceived, the emotions it will elicit, and how players will interact with it.&rdquo;
+          <footer className="not-italic text-xs text-zinc-500 font-medium mt-1">
+            &mdash; Celia Hodent, <em>The Gamer's Brain: How Neuroscience and UX Can Impact Video Game Design</em> (CRC Press, 2017, p. 3)
+          </footer>
+        </blockquote>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 my-2 text-xs sm:text-sm">
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
@@ -278,6 +313,13 @@ export const Module3Content: React.FC = () => {
           Level design is not merely the artistic placement of meshes and textures; at its core, level design is <strong>Graph Theory</strong>.
           Every level can be abstracted as a directed graph G = (V, E) where:
         </p>
+
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;Machinations is a visual language for diagramming game economies, and a tool for drawing, and above all, simulating them without writing code.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; Ernest Adams &amp; Joris Dormans, <em>Game Mechanics: Advanced Game Design</em> (New Riders, 2012, p. 57)
+          </footer>
+        </blockquote>
 
         <ul className="list-disc pl-6 space-y-1 text-sm text-zinc-800">
           <li><strong>Vertices (V):</strong> Discrete spatial zones, rooms, arenas, or resource nodes.</li>

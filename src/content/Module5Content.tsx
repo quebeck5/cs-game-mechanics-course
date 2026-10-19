@@ -36,6 +36,13 @@ export const Module5Content: React.FC = () => {
           Consequently, players suffer from well-documented cognitive biases:
         </p>
 
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;When directly compared or weighted against each other, losses loom larger than gains.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; Daniel Kahneman, <em>Thinking, Fast and Slow</em> (Farrar, Straus and Giroux, 2011, p. 282) / Amos Tversky &amp; Daniel Kahneman (<em>Econometrica</em>, 1979)
+          </footer>
+        </blockquote>
+
         <div className="space-y-3 text-xs sm:text-sm">
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">
             <div className="font-mono font-bold text-blue-700">1. THE CLUSTERING ILLUSION (STREAK BIAS)</div>
@@ -81,6 +88,13 @@ export const Module5Content: React.FC = () => {
         <p className="text-sm leading-relaxed text-zinc-800">
           In <em>Building Blocks of Tabletop Game Design</em> (CRC Press, 2019), theorist Geoff Engelstein established a critical architectural distinction based on when stochastic variance occurs relative to player decision-making:
         </p>
+
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;Input randomness informs the decision before it is made, presenting a problem to be solved; output randomness resolves the decision after it is made, determining the outcome.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; Geoff Engelstein &amp; Isaac Shalev, <em>Building Blocks of Tabletop Game Design: An Encyclopedia of Mechanisms</em> (CRC Press, 2019, p. 248)
+          </footer>
+        </blockquote>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-3 text-xs sm:text-sm">
           {/* Input Randomness */}
@@ -145,6 +159,13 @@ export const Module5Content: React.FC = () => {
           Popularized by Blizzard Entertainment (<em>Warcraft III</em>) and Valve (<em>Dota 2</em>), the PRD algorithm replaces stationary Bernoulli trials with a dynamic state variable N:
         </p>
 
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;In a pseudo-random distribution, the probability increases with every unsuccessful attempt, smoothing out statistical extremes while keeping the long-term average identical to the target probability.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; Valve Corporation, <em>Dota 2 Mechanics Specification</em> (Valve Developer Community, 2013)
+          </footer>
+        </blockquote>
+
         <div className="font-mono bg-zinc-100 p-3 rounded border border-zinc-200 text-xs sm:text-sm text-center text-zinc-900">
           P(N) = min(1.0, C &middot; N)
         </div>
@@ -173,6 +194,13 @@ export const Module5Content: React.FC = () => {
           Instead of rolling a random piece from 1 to 7 on every spawn (which could mathematically generate six consecutive Z-tetrominoes), the engine places all 7 unique pieces into a bag, performs a Fisher-Yates shuffle, and dispenses them one by one until empty before refilling:
         </p>
 
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;The Random Generator generates sequences of all seven tetrominoes in a random permutation, ensuring that every piece appears exactly once per cycle and eliminating catastrophic droughts.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; The Tetris Company, <em>Tetris Design Guideline</em> (2002/2009)
+          </footer>
+        </blockquote>
+
         <div className="font-mono bg-zinc-100 p-2.5 rounded border border-zinc-200 text-xs text-zinc-900">
           // 7-Bag invariant guarantees max gap between any identical piece is 12:
           [I, J, L, O, S, T, Z] &rarr; Shuffle &rarr; [O, S, T, Z, J, L, I] | [I, Z, ...]
@@ -197,6 +225,13 @@ export const Module5Content: React.FC = () => {
           Leading studios architect their core game logic to run in a <strong>headless mode</strong> (decoupled from rendering, audio, and OS windowing).
           This allows automated test runners to simulate millions of match ticks per second across cloud worker clusters using three primary telemetry heuristics:
         </p>
+
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;Given the opportunity, players will optimize the fun out of a game.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; Soren Johnson, <em>Designer Notes</em> (Gamasutra, 2011)
+          </footer>
+        </blockquote>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 my-3 text-xs sm:text-sm">
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1">

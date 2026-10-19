@@ -30,8 +30,11 @@ export const Module1Content: React.FC = () => {
           However, in 1978, philosopher Bernard Suits published <em>The Grasshopper: Games, Life and Utopia</em>, presenting what remains the foundational definition of gameplay in formal academic literature:
         </p>
 
-        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 p-4 italic text-sm text-zinc-800 my-3">
-          "To play a game is to attempt to achieve a specific state of affairs [pre-lusory goal], using only means permitted by rules [lusory means], where the rules prohibit more efficient in favor of less efficient means [constitutive rules], and where the rules are accepted just because they make possible such activity [lusory attitude]."
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;To play a game is to attempt to achieve a specific state of affairs [pre-lusory goal], using only means permitted by rules [lusory means], where the rules prohibit more efficient in favor of less efficient means [constitutive rules], and where the rules are accepted just because they make possible such activity [lusory attitude]. In short: playing a game is the voluntary attempt to overcome unnecessary obstacles.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; Bernard Suits, <em>The Grasshopper: Games, Life and Utopia</em> (University of Toronto Press, 1978, p. 41)
+          </footer>
         </blockquote>
 
         <p className="text-sm leading-relaxed text-zinc-800">
@@ -91,6 +94,13 @@ export const Module1Content: React.FC = () => {
           </li>
         </ul>
 
+        <blockquote className="border-l-4 border-zinc-400 bg-zinc-50 pl-4 py-2.5 my-3 text-xs sm:text-sm italic text-zinc-700">
+          &ldquo;Meaningful play emerges from the interaction between players and the system of the game, as well as from the context in which the game is played.&rdquo;
+          <footer className="not-italic text-xs text-zinc-500 font-medium mt-1">
+            &mdash; Katie Salen &amp; Eric Zimmerman, <em>Rules of Play: Game Design Fundamentals</em> (MIT Press, 2004, p. 34)
+          </footer>
+        </blockquote>
+
         <div className="bg-amber-50/70 border-l-4 border-amber-500 p-4 text-xs sm:text-sm text-amber-950">
           <span className="font-bold">Architectural Takeaway:</span> Your job as a game systems engineer is not to eliminate difficulty or streamline state transitions. Your job is to construct an elegant, mathematically coherent set of unnecessary obstacles that reward player mastery.
         </div>
@@ -106,6 +116,13 @@ export const Module1Content: React.FC = () => {
           In 2004, Robin Hunicke (USC / Funomena), Marc LeBlanc (Sega / EA), and Robert Zubek (Zynga / Northwestern) authored <em>MDA: A Formal Approach to Game Design and Game Research</em>.
           The framework established a formal architectural abstraction that decouples game development into three operational layers:
         </p>
+
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;From the designer’s perspective, mechanics generate dynamics that generate aesthetics, all of which condition the player’s perspective: aesthetics set the player’s expectations, which are met through dynamics and mechanics.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; Robin Hunicke, Marc LeBlanc, &amp; Robert Zubek, <em>MDA: A Formal Approach to Game Design and Game Research</em> (AAAI Press, 2004, p. 2)
+          </footer>
+        </blockquote>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 my-3 text-xs sm:text-sm">
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
@@ -158,6 +175,13 @@ export const Module1Content: React.FC = () => {
           When a playtester says "this game isn't fun," that feedback is useless to an engineer. It is like a user reporting "the website is bad."
           To diagnose and fix game systems, LeBlanc categorized "fun" into eight distinct, actionable aesthetic categories:
         </p>
+
+        <blockquote className="border-l-4 border-zinc-400 bg-zinc-50 pl-4 py-2 my-3 text-xs sm:text-sm italic text-zinc-700">
+          &ldquo;In discussing the aesthetic goals of a game, we want to walk away from words like &lsquo;fun&rsquo; and &lsquo;gameplay&rsquo;, and towards a more refined vocabulary.&rdquo;
+          <footer className="not-italic text-xs text-zinc-500 font-medium mt-1">
+            &mdash; Marc LeBlanc, <em>MDA: A Formal Approach to Game Design and Game Research</em> (AAAI Press, 2004, p. 2)
+          </footer>
+        </blockquote>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 my-2 text-xs">
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
@@ -218,6 +242,13 @@ export const Module1Content: React.FC = () => {
           In his seminal work <em>A Theory of Fun for Game Design</em> (2004), veteran designer Raph Koster approached the question of why humans play from an evolutionary and information-theoretic perspective.
           Why did human biology evolve to reward sitting in front of abstract simulations with intense neurochemical pleasure?
         </p>
+
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;Fun is just another word for learning. With games, learning is the drug.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; Raph Koster, <em>A Theory of Fun for Game Design</em> (Paraglyph Press, 2004, p. 40)
+          </footer>
+        </blockquote>
 
         <p className="text-sm leading-relaxed text-zinc-800">
           The human brain is a <strong>lossy pattern-compression engine</strong>.
@@ -291,6 +322,13 @@ export const Module1Content: React.FC = () => {
         <p className="text-sm leading-relaxed text-zinc-800">
           In 1990, psychologist Mihaly Csikszentmihalyi formalized the concept of <strong>Flow</strong>: a state of deep absorption and optimal experience that occurs when there is an exact equilibrium between the challenges presented by an activity and the skills possessed by the actor.
         </p>
+
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;The optimal state of inner experience is one in which there is order in consciousness; this happens when psychic energy is invested in realistic goals, and when skills match the opportunities for action.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; Mihaly Csikszentmihalyi, <em>Flow: The Psychology of Optimal Experience</em> (Harper &amp; Row, 1990, p. 6)
+          </footer>
+        </blockquote>
 
         <p className="text-sm leading-relaxed text-zinc-800">
           In classical game design literature, the Flow Channel is depicted as a linear corridor between two boundary zones:
@@ -379,8 +417,11 @@ export const Module1Content: React.FC = () => {
           The fatal pitfall for computer scientists is building the extrinsic game layer (menus, scoring, levels, quest logs, multiplayer lobbies) before ensuring the underlying toy is intrinsically pleasurable.
         </p>
 
-        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 p-4 italic text-sm text-zinc-800 my-2">
-          "If moving Mario through an empty, untextured white room with nothing to interact with isn't fun, World 1-1 will never be fun." &mdash; Shigeru Miyamoto
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-2">
+          &ldquo;A good idea is something that does not solve just one single problem, but rather can solve multiple problems at once.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; Shigeru Miyamoto, <em>Iwata Asks: New Super Mario Bros. Wii</em> (Nintendo, 2009)
+          </footer>
         </blockquote>
 
         <p className="text-sm leading-relaxed text-zinc-800">

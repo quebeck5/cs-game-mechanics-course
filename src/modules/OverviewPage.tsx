@@ -50,6 +50,13 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
           If an enterprise engineer were tasked with optimizing <em>Super Mario Bros.</em>, the optimal solution would be a single button that triggers the victory screen immediately.
           In game development, <strong>friction is the entire medium</strong>: the engineer's objective is to construct formal mathematical rules whose dynamic interaction evokes targeted psychological and physical sensations.
         </p>
+
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;The game is not the experience; the game enables the experience, but it is not the experience.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; Jesse Schell, <em>The Art of Game Design: A Book of Lenses</em> (Morgan Kaufmann / CRC Press, 2008, p. 10)
+          </footer>
+        </blockquote>
       </section>
 
       {/* The Five Mental Model Shifts */}

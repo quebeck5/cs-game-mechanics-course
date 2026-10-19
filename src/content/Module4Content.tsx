@@ -29,6 +29,13 @@ export const Module4Content: React.FC = () => {
           any interactive game simulation can be modeled as a closed-loop feedback regulator comprising four fundamental subsystems:
         </p>
 
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;Feedback is the property of being able to adjust future conduct by past performance.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; Norbert Wiener, <em>The Human Use of Human Beings: Cybernetics and Society</em> (Houghton Mifflin, 1950, p. 33)
+          </footer>
+        </blockquote>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-3 text-xs sm:text-sm">
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <div className="font-mono font-bold text-blue-700">1. SENSOR (STATE EVALUATION)</div>
@@ -80,6 +87,13 @@ export const Module4Content: React.FC = () => {
           Feedback loops dictate whether a system converges to a stable equilibrium point or diverges toward an extreme state.
           Understanding when to apply positive vs. negative feedback is the single most critical mathematical skill in systems design.
         </p>
+
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;Negative feedback stabilizes a game, dampening differences between players, while positive feedback systems destabilize the game by amplifying advantages for players who are ahead.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; Katie Salen &amp; Eric Zimmerman, <em>Rules of Play: Game Design Fundamentals</em> (MIT Press, 2004, Chapter 18, p. 216)
+          </footer>
+        </blockquote>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-3 text-xs sm:text-sm">
           {/* Positive Feedback */}
@@ -156,6 +170,13 @@ export const Module4Content: React.FC = () => {
           In <em>Game Mechanics: Advanced Game Design</em> (New Riders, 2012), Ernest Adams and Joris Dormans established <strong>Machinations</strong>, a formal diagrammatic language based on Petri nets and system dynamics to model tangible (gold, ammunition, health points) and intangible (threat, reputation, mana) resource economies.
         </p>
 
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;Machinations is a visual language for diagramming game economies, and a tool for drawing, and above all, simulating them without writing code.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; Ernest Adams &amp; Joris Dormans, <em>Game Mechanics: Advanced Game Design</em> (New Riders / Pearson, 2012, p. 57)
+          </footer>
+        </blockquote>
+
         <p className="text-sm leading-relaxed text-zinc-800">
           The framework models every economic system through five canonical node primitives connected by resource and state connection arcs:
         </p>
@@ -216,6 +237,13 @@ export const Module4Content: React.FC = () => {
         <h3 className="text-xl font-bold text-zinc-950 border-b border-zinc-200 pb-2">
           4. Emergent Systems Architecture: The Orthogonal Chemistry Matrix
         </h3>
+
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;Emergent behavior occurs when a system acts in an organized fashion beyond the sum capabilities of its individual parts.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; Harvey Smith, <em>The Future of Game Design: Moving Beyond Deus Ex and Other Old Ideas</em> (GDC, 2001)
+          </footer>
+        </blockquote>
         
         <p className="text-sm leading-relaxed text-zinc-800">
           In traditional object-oriented game programming, interactions between objects are implemented via bespoke, pairwise inheritance callbacks:
@@ -238,6 +266,13 @@ export const Module4Content: React.FC = () => {
           In systemic games such as <em>The Legend of Zelda: Breath of the Wild</em>, <em>Spelunky</em>, and <em>Noita</em>, developers deploy an <strong>orthogonal chemistry engine</strong>.
           Entities do not possess hardcoded interactions; instead, entities are simple compositions of physical tags and properties:
         </p>
+
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;A powerful tool we have for making change easier is decoupling; when we say two pieces of code are &lsquo;decoupled&rsquo;, we mean a change in one usually doesn&rsquo;t require a change in the other.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; Robert Nystrom, <em>Game Programming Patterns</em> (Genever Benning, 2014, p. 195)
+          </footer>
+        </blockquote>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-2 text-xs font-mono">
           <div className="border border-zinc-200 bg-white p-3 rounded">

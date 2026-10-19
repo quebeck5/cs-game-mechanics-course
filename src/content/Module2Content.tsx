@@ -30,6 +30,13 @@ export const Module2Content: React.FC = () => {
           Every physical interaction between a player and a game simulation requires traversing three discrete biological pipeline stages:
         </p>
 
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;The Model Human Processor can be viewed as an information processing system consisting of three interacting subsystems: a perceptual system, a cognitive system, and a motor system.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; Stuart K. Card, Thomas P. Moran, &amp; Allen Newell, <em>The Psychology of Human-Computer Interaction</em> (Lawrence Erlbaum Associates, 1983, p. 24)
+          </footer>
+        </blockquote>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-3 text-xs sm:text-sm">
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
             <div className="font-mono font-bold text-blue-700">1. PERCEPTUAL PROCESSOR (&tau;<sub>p</sub> &asymp; 100ms)</div>
@@ -96,6 +103,13 @@ export const Module2Content: React.FC = () => {
           In a video game, spending 1.1 seconds floating in the air feels like swimming through maple syrup.
           Furthermore, real Newtonian gravity is perfectly symmetric: rising takes the exact same duration as falling.
         </p>
+
+        <blockquote className="border-l-4 border-zinc-400 bg-zinc-50 pl-4 py-2.5 my-3 text-xs sm:text-sm italic text-zinc-700">
+          &ldquo;I didn&rsquo;t want the player&rsquo;s controls to be another hurdle toward getting into the game, so Andy spent a lot of time tweaking them to feel smooth.&rdquo;
+          <footer className="not-italic text-xs text-zinc-500 font-medium mt-1">
+            &mdash; Derek Yu, <em>Spelunky</em> (Boss Fight Books, 2016, p. 58)
+          </footer>
+        </blockquote>
 
         <h4 className="text-base font-bold text-zinc-900 mt-2">The Parameter Inversion: Spatial Metrics First</h4>
         <p className="text-sm leading-relaxed text-zinc-800">
@@ -226,6 +240,13 @@ export const Module2Content: React.FC = () => {
           </p>
         </div>
 
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;All are centered around widening timing/positioning windows, so that everything is fudged a tiny bit in the player's favor. I think this is a big reason why Celeste can feel kind even though it's very difficult &mdash; it wants you to succeed.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; Maddy Thorson, <em>Celeste and Forgiveness</em> (Matt Makes Games Design Postmortem, 2020)
+          </footer>
+        </blockquote>
+
         <h4 className="text-base font-bold text-zinc-900 mt-4">Scenario B: The Pre-Landing Disconnect (Input Buffering)</h4>
         <p className="text-sm leading-relaxed text-zinc-800">
           Conversely, when falling toward a platform and intending to bunny-hop immediately upon landing, players routinely press Jump 50ms <em>before</em> their feet touch the surface.
@@ -300,6 +321,13 @@ function updateCharacter(dt: number) {
           In <em>Game Feel: A Game Designer's Guide to Virtual Sensation</em> (2008), Steve Swink established that real-time game feel is governed by the tight coupling of the <strong>3Cs</strong>:
         </p>
 
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;Game feel is real-time control of virtual objects in a simulated space, with interactions emphasized by polish.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; Steve Swink, <em>Game Feel: A Game Designer's Guide to Virtual Sensation</em> (CRC Press, 2008, p. 1)
+          </footer>
+        </blockquote>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 my-2 text-xs sm:text-sm">
           <div className="border border-zinc-200 bg-white p-3 rounded space-y-1">
             <span className="font-bold text-blue-700">1. CONTROLS</span>
@@ -330,6 +358,13 @@ function updateCharacter(dt: number) {
           <li><strong>Zero Forward Horizon:</strong> With the player centered on screen, 50% of the display shows space the player has already walked through, while only 50% shows incoming obstacles in front of them.</li>
         </ul>
 
+        <blockquote className="border-l-4 border-zinc-400 bg-zinc-50 pl-4 py-2 my-3 text-xs sm:text-sm italic text-zinc-700">
+          &ldquo;Instead of keeping the character rigidly locked dead-center, target lead shifts focus in the direction of motion to show more of what is ahead rather than what has already been traversed.&rdquo;
+          <footer className="not-italic text-xs text-zinc-500 font-medium mt-1">
+            &mdash; Itay Keren, <em>Scroll Back: The Theory and Practice of Cameras in Side-Scrollers</em> (Game Developers Conference, 2015)
+          </footer>
+        </blockquote>
+
         <h4 className="text-base font-bold text-zinc-900 mt-3">The PID / Exponential Lead-Ahead Camera</h4>
         <p className="text-sm leading-relaxed text-zinc-800">
           Modern cameras use an exponential decay filter combined with a velocity lead-ahead vector:
@@ -354,6 +389,13 @@ function updateCharacter(dt: number) {
           In 2012, Dutch developers Martin Jonasson and Petri Purho delivered their renowned presentation <em>Juice It or Lose It</em>.
           <strong>Juice</strong> refers to the non-functional audiovisual feedback that amplifies the tactile impact of player actions without altering underlying game rules.
         </p>
+
+        <blockquote className="border-l-4 border-blue-600 bg-zinc-50 pl-4 py-2.5 italic text-sm text-zinc-800 my-3">
+          &ldquo;A juicy game feels alive and responds to everything you do &mdash; tons of cascading action and response for minimal user input.&rdquo;
+          <footer className="not-italic text-xs text-zinc-600 font-medium mt-1">
+            &mdash; Martin Jonasson &amp; Petri Purho, <em>Juice It or Lose It</em> (Nordic Game Conference, 2012)
+          </footer>
+        </blockquote>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-3 text-xs sm:text-sm">
           <div className="border border-zinc-200 bg-white p-4 rounded-lg space-y-1.5">
@@ -391,6 +433,22 @@ function updateCharacter(dt: number) {
               Sound effects must have an immediate attack transient (0ms rise time) aligned with the exact collision frame to ensure the brain binds the acoustic wave to the visual event.
             </p>
           </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 my-2">
+          <blockquote className="border-l-4 border-zinc-400 bg-zinc-50 pl-4 py-2 text-xs sm:text-sm italic text-zinc-700">
+            &ldquo;Adding screen shake and a few frames of sleep when you hit something makes the player feel like they are doing real damage.&rdquo;
+            <footer className="not-italic text-xs text-zinc-500 font-medium mt-1">
+              &mdash; Jan Willem Nijman, <em>The Art of Screenshake</em> (Vlambeer / INDIGO, 2013)
+            </footer>
+          </blockquote>
+
+          <blockquote className="border-l-4 border-zinc-400 bg-zinc-50 pl-4 py-2 text-xs sm:text-sm italic text-zinc-700">
+            &ldquo;This action gives the illusion of weight and volume to a character as it moves; the most important rule to remember is that the volume must remain constant.&rdquo;
+            <footer className="not-italic text-xs text-zinc-500 font-medium mt-1">
+              &mdash; Frank Thomas &amp; Ollie Johnston, <em>The Illusion of Life: Disney Animation</em> (Hyperion, 1981, p. 47)
+            </footer>
+          </blockquote>
         </div>
       </section>
     </article>
